@@ -374,7 +374,8 @@ for _ = 1, CONFIG.lilyPads do
 		Enum.PartType.Cylinder,
 		Vector3.new(0.15, r * 2, r * 2),
 		CFrame.new(pos + Vector3.yAxis * 0.08)
-			* CFrame.Angles(0, rng:NextNumber(0, math.pi), math.rad(90)),
+			* CFrame.Angles(0, rng:NextNumber(0, math.pi), 0)
+			* CFrame.Angles(0, 0, math.rad(90)),
 		Color3.fromRGB(70, 120, 58),
 		Enum.Material.Grass
 	)
