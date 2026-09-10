@@ -75,3 +75,9 @@ rojo sourcemap default.project.json -o sourcemap.json
 curl -sSL -o globalTypes.d.luau https://raw.githubusercontent.com/JohnnyMorganz/luau-lsp/main/scripts/globalTypes.d.luau
 luau-lsp analyze --definitions=globalTypes.d.luau --sourcemap=sourcemap.json src
 ```
+
+## Swamp
+
+`tools/BuildSwamp.lua` carves a swamp wherever you put a Part named `SwampRegion`. Scale the part over the area in top view with its bottom resting on the ground, then paste the script into the Command Bar. It clears the trees inside an irregular blob (parked in `Workspace.SwampRemovedTrees`, not deleted), lowers the terrain to murky water with a mud shore, and builds bare leaning dead trees, one giant strangler-fig tree with buttress and aerial roots, lily pads, reeds and a mist emitter, all under `Workspace.Swamp`. Rerun to rebuild, delete the folder to remove.
+
+`src/client/SwampAtmosphere.client.lua` thickens the fog while the player is inside the zone the builder tags `SwampZone`, and eases it back on the way out.
