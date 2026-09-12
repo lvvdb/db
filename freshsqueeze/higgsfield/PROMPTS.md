@@ -89,7 +89,18 @@ Working locally with ffmpeg installed, skip the Action: download the clips as `c
 
 ## Caption sync
 
-The four caption switch points are `BEATS` in `js/main.js`. With four equal 5-second clips the natural boundaries are 0.25, 0.50 and 0.75 of scroll progress. They were tuned after watching the footage so each caption changes just after the picture does; move them there if the clips are regenerated.
+The frame scrub runs over the first 85 percent of the stage (`SCRUB_END` in `js/main.js`) and the last frame holds for the rest, so the full red field stays up while the order caption is read. The caption switch points are `BEATS = [0, 0.29, 0.50, 0.80]`, set from what the footage actually does:
+
+| Frame | Stage progress | What happens |
+| --- | --- | --- |
+| 1 to 29 | 0.00 to 0.28 | whole melon, light breathing |
+| 30 | 0.26 | the cut line appears |
+| 36 to 55 | 0.31 to 0.48 | cross-section faces camera |
+| 56 | 0.49 | first drip, juice starts to rise |
+| 60 to 88 | 0.53 to 0.78 | pour, red flood climbs past the melon |
+| 90 to 96 | 0.80 to 0.85 | frame is all juice, then holds to 1.00 |
+
+Regenerate a clip and these move. Re-read a contact sheet of the new frames and reset `BEATS`; never recut the footage to match the code.
 
 ## Re-generating a single beat
 

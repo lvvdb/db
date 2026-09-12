@@ -14,9 +14,13 @@
     window.FRESH_FRAMES || {}
   );
 
-  // Progress at which each caption takes over. Keep in sync with the beat
-  // boundaries in tools/make-placeholder-frames.py and higgsfield/PROMPTS.md.
-  const BEATS = [0, 0.28, 0.58, 0.86];
+  // Progress at which each caption takes over, tuned to the Higgsfield
+  // footage (see the beat map in higgsfield/PROMPTS.md): the cut opens at
+  // frame 30, the pour starts at 56, the frame is all juice from about 90.
+  const BEATS = [0, 0.29, 0.5, 0.8];
+  // The frame scrub finishes at this fraction of the stage; the last frame
+  // (the full red field) holds for the rest so the order caption gets room.
+  const SCRUB_END = 0.85;
 
   const stage = document.getElementById("stage");
   const sticky = document.getElementById("stage-sticky");
@@ -141,7 +145,7 @@
     const scrollable = Math.max(1, rect.height - vh);
     const p = Math.min(1, Math.max(0, -rect.top / scrollable));
 
-    target = Math.round(p * (cfg.count - 1));
+    target = Math.round(Math.min(1, p / SCRUB_END) * (cfg.count - 1));
     render();
 
     let beat = 0;

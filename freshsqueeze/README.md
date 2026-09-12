@@ -33,9 +33,9 @@ Either way the script writes 96 frames, `frames/poster.jpg` and `frames/manifest
 
 ## How the scrub works
 
-`section.stage` is 450vh tall. Inside it, `.stage__sticky` is 100svh and `position: sticky`, so it pins while the section scrolls through. `js/main.js` turns the section's scroll position into progress 0 to 1, picks `round(progress * 95)` from the frame list, and draws it cover-fit on the canvas with the subject column (60% of frame width) kept on screen at every viewport size.
+`section.stage` is 450vh tall. Inside it, `.stage__sticky` is 100svh and `position: sticky`, so it pins while the section scrolls through. `js/main.js` turns the section's scroll position into progress 0 to 1, picks `round(min(1, progress / 0.85) * 95)` from the frame list, and draws it cover-fit on the canvas with the subject column (60% of frame width) kept on screen at every viewport size.
 
-Captions switch at `BEATS = [0, 0.28, 0.58, 0.86]`. Those four numbers are the contract between the copy, the footage and the placeholder generator. Change them in `js/main.js` if the real clips land their beats elsewhere.
+Captions switch at `BEATS = [0, 0.29, 0.50, 0.80]`, and the scrub itself finishes at 85% of the stage so the final red frame holds under the order caption. Those numbers are the contract between the copy and the footage. Change them in `js/main.js` if the clips are regenerated.
 
 Frames load in a coarse-to-fine order (every 8th, then 4th, then 2nd, then the rest) so the whole sequence is scrubbable within about a second on a normal connection, sharpening as the rest arrive.
 
