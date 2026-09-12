@@ -43,6 +43,10 @@ jobs:
             esac
             mkdir -p "$(dirname "$path")"
             curl -fsSL --retry 3 --retry-delay 2 -o "$path" "$url"
+            # keyframes come down as large PNGs; store them as JPEG when the path says so
+            if [[ "$path" == *.jpg ]] && [ "$(file -b --mime-type "$path")" = "image/png" ]; then
+              ffmpeg -y -loglevel error -i "$path" -q:v 2 "$path.tmp.jpg" && mv "$path.tmp.jpg" "$path"
+            fi
             echo "fetched $path ($(stat -c %s "$path") bytes)"
           done
 
@@ -72,4 +76,5 @@ jobs:
           git add -A freshsqueeze
           if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
           git commit -m "Fetch Higgsfield media into freshsqueeze"
-          git push
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"

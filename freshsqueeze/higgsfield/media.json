@@ -1,6 +1,21 @@
 {
   "files": [
-    {"url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HntCHc4OZmLdKlrxYLK1p1NNsb/hf_20260912_020508_96df24c8-6a4e-4021-9b91-8b534107322f.png", "path": "freshsqueeze/higgsfield/keyframes/k0.png"}
+    {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HntCHc4OZmLdKlrxYLK1p1NNsb/hf_20260912_020508_96df24c8-6a4e-4021-9b91-8b534107322f.png",
+      "path": "freshsqueeze/higgsfield/keyframes/k0-whole.jpg"
+    },
+    {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HntCHc4OZmLdKlrxYLK1p1NNsb/hf_20260912_020753_93c72ab6-18c0-4fb9-b66f-1cdde4d00256.png",
+      "path": "freshsqueeze/higgsfield/keyframes/k1-split.jpg"
+    },
+    {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HntCHc4OZmLdKlrxYLK1p1NNsb/hf_20260912_020753_2b244200-f855-4a21-bf60-ca8485624106.png",
+      "path": "freshsqueeze/higgsfield/keyframes/k2-pour.jpg"
+    },
+    {
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HntCHc4OZmLdKlrxYLK1p1NNsb/hf_20260912_020753_f27af087-7808-4676-b98b-79dbdfdc7f15.png",
+      "path": "freshsqueeze/higgsfield/keyframes/k3-full.jpg"
+    }
   ],
   "clips": [],
   "count": 96
