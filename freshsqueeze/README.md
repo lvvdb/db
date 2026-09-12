@@ -1,6 +1,6 @@
 # Fresh Squeeze website
 
-Scroll-driven landing page for a cold-pressed juice brand. The hero is a pinned canvas that scrubs a 96-frame sequence as you scroll, the pattern behind Apple-style product pages. The frames come from four chained Higgsfield clips. Until those are generated, a procedural placeholder sequence keeps the page fully working end to end.
+Scroll-driven landing page for a cold-pressed juice brand. The hero is a pinned canvas that scrubs a 96-frame sequence as you scroll, the pattern behind Apple-style product pages. The frames come from four Higgsfield clips generated keyframe to keyframe. `tools/make-placeholder-frames.py` can still produce a procedural stand-in sequence if the footage is ever missing.
 
 No build step, no framework. Open `index.html` or drop the folder on any static host.
 
@@ -13,11 +13,15 @@ npx serve .
 
 Or `python3 -m http.server 8000` and open `http://localhost:8000`.
 
-## Swap in the Higgsfield footage
+## The footage
 
-1. Add the Higgsfield connector to Claude (`https://mcp.higgsfield.ai/mcp` under Customize, then Connectors) and generate the hero still plus four clips using `higgsfield/PROMPTS.md`.
-2. Save them as `clip-01.mp4` to `clip-04.mp4` in one folder.
-3. Run the extract script. It concatenates the clips, samples 96 frames evenly, writes `frames/manifest.js` and `frames/poster.jpg`, and replaces the placeholders.
+The hero frames come from Higgsfield: a whole watermelon in tropical key light, cut open, poured, and finally a full field of red juice under the order button. `higgsfield/PROMPTS.md` has every prompt, model and credit cost, and the beat table.
+
+To regenerate or extend it:
+
+1. Generate keyframes and clips on Higgsfield (the MCP connector at `https://mcp.higgsfield.ai/mcp` works from any Claude chat).
+2. Put the result URLs in `higgsfield/media.json` and push. The `Fetch Higgsfield media` Action pulls them in, runs the extraction, and commits `frames/`.
+3. Or, with ffmpeg installed locally, download the clips as `clip-01.mp4` to `clip-04.mp4` and run:
 
 ```
 higgsfield/extract-frames.sh ~/Downloads/freshsqueeze-clips
@@ -25,7 +29,7 @@ higgsfield/extract-frames.sh ~/Downloads/freshsqueeze-clips
 
 Windows: `.\higgsfield\extract-frames.ps1 -Clips C:\path\to\clips`
 
-Reload the page. Nothing else changes.
+Either way the script writes 96 frames, `frames/poster.jpg` and `frames/manifest.js`. Reload and nothing else changes.
 
 ## How the scrub works
 
@@ -45,9 +49,12 @@ Frames load in a coarse-to-fine order (every 8th, then 4th, then 2nd, then the r
 | `css/styles.css` | Tokens (light, dark, and system), stage, sections. |
 | `js/main.js` | Scroll scrub, caption beats, nav state. No dependencies. |
 | `frames/` | `frame_0001.jpg` to `frame_0096.jpg`, `poster.jpg`, `manifest.js`. Generated. |
-| `higgsfield/PROMPTS.md` | Hero still and four clip prompts, chaining steps, beat map. |
+| `higgsfield/PROMPTS.md` | Every prompt used, models, credits, beat map, how to regenerate one beat. |
+| `higgsfield/media.json` | URLs the fetch Action pulls into the repo. |
+| `higgsfield/keyframes/` | The four stills the clips interpolate between. |
 | `higgsfield/extract-frames.sh` and `.ps1` | Clips in, frames out. |
-| `tools/make-placeholder-frames.py` | Regenerates the stand-in sequence (Pillow). |
+| `tools/make-placeholder-frames.py` | Procedural stand-in sequence (Pillow), no longer used by default. |
+| `.github/workflows/fetch-media.yml` | Pulls Higgsfield media into the branch and extracts frames on the runner. |
 
 ## Deploy
 

@@ -17,6 +17,11 @@
       "path": "freshsqueeze/higgsfield/keyframes/k3-full.jpg"
     }
   ],
-  "clips": [],
+  "clips": [
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3HntCHc4OZmLdKlrxYLK1p1NNsb/hf_20260912_021120_6162292c-75db-4eb2-a820-ad6021b1e85e.mp4",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3HntCHc4OZmLdKlrxYLK1p1NNsb/hf_20260912_021120_730bc607-f582-44ff-8cae-1498acb57d1a.mp4",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3HntCHc4OZmLdKlrxYLK1p1NNsb/hf_20260912_021131_7e5217ea-cc75-4a60-ba39-776a174964eb.mp4",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3HntCHc4OZmLdKlrxYLK1p1NNsb/hf_20260912_021120_74711819-cd80-420f-b0f2-9d9ca81ec115.mp4"
+  ],
   "count": 96
 }
