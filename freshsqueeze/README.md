@@ -1,6 +1,6 @@
 # Fresh Squeeze website
 
-Scroll-driven landing page for a cold-pressed juice brand. The hero is a pinned canvas that scrubs a 96-frame sequence as you scroll, the pattern behind Apple-style product pages. The frames come from four Higgsfield clips generated keyframe to keyframe. `tools/make-placeholder-frames.py` can still produce a procedural stand-in sequence if the footage is ever missing.
+Scroll-driven landing page for FreshSqueeze, a Broward FL pressed-juice brand. The hero is a pinned canvas that scrubs a 96-frame sequence as you scroll, the pattern behind Apple-style product pages. The frames come from four Higgsfield clips generated keyframe to keyframe. `tools/make-placeholder-frames.py` can still produce a procedural stand-in sequence if the footage is ever missing.
 
 No build step, no framework. Open `index.html` or drop the folder on any static host.
 

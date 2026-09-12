@@ -1,4 +1,4 @@
-/* Fresh Squeeze — scroll-scrubbed frame stage.
+/* Fresh Squeeze: scroll-scrubbed frame stage.
  *
  * The stage is a tall section with a sticky, viewport-high child. As the
  * section scrolls through, progress 0..1 picks a frame from the sequence in

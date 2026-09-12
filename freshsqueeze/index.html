@@ -4,63 +4,72 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fresh Squeeze</title>
-<meta name="description" content="Cold-pressed juice squeezed at 5 a.m. and on your doorstep by 8. Weekly boxes in returnable glass. Nothing heated, nothing added.">
-<meta name="theme-color" content="#0B1F19">
+<meta name="description" content="Natural pressed fruit juices from Broward County, Florida. Watermelon and Watermelon Pineapple in the black label bottle. Catering for all events. Order by DM on Instagram.">
+<meta name="theme-color" content="#0F0D0C">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Barlow+Condensed:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="preload" as="image" href="frames/frame_0001.jpg">
 </head>
 <body>
-<a class="skip" href="#lineup">Skip to the juices</a>
+<a class="skip" href="#lineup">Skip to the flavors</a>
 
 <header class="nav" id="nav">
-  <a class="nav__brand" href="#top" aria-label="Fresh Squeeze, back to top">
+  <a class="nav__brand" href="#top" aria-label="FreshSqueeze, back to top">
+    <!-- CSS/SVG stand-in for the round badge: black disc, rainbow ring, watermelon slice. The client's badge PNG can replace this svg in the same 30px box. -->
     <svg class="nav__mark" viewBox="0 0 32 32" aria-hidden="true">
-      <circle cx="16" cy="16" r="15" fill="currentColor" opacity=".18"></circle>
-      <circle cx="16" cy="16" r="12.5" fill="none" stroke="currentColor" stroke-width="2"></circle>
-      <path d="M16 16 L16 3.5 A12.5 12.5 0 0 1 26.8 9.8 Z M16 16 L28.5 16 A12.5 12.5 0 0 1 22.2 26.8 Z M16 16 L9.8 26.8 A12.5 12.5 0 0 1 3.5 16 Z" fill="currentColor"></path>
+      <circle cx="16" cy="16" r="16" fill="var(--stage-ground)"></circle>
+      <path d="M16 2.75 A13.25 13.25 0 0 1 29.25 16" fill="none" stroke="var(--badge-magenta)" stroke-width="2.5"></path>
+      <path d="M29.25 16 A13.25 13.25 0 0 1 16 29.25" fill="none" stroke="var(--badge-orange)" stroke-width="2.5"></path>
+      <path d="M16 29.25 A13.25 13.25 0 0 1 2.75 16" fill="none" stroke="var(--pine)" stroke-width="2.5"></path>
+      <path d="M2.75 16 A13.25 13.25 0 0 1 16 2.75" fill="none" stroke="var(--rind)" stroke-width="2.5"></path>
+      <path d="M7.5 12.5 A8.5 8.5 0 0 0 24.5 12.5 Z" fill="var(--rind)"></path>
+      <path d="M8.7 12.5 A7.3 7.3 0 0 0 23.3 12.5 Z" fill="var(--stage-ink)"></path>
+      <path d="M9.5 12.5 A6.5 6.5 0 0 0 22.5 12.5 Z" fill="var(--melon)"></path>
+      <circle cx="13.2" cy="14.6" r="0.9" fill="var(--stage-ground)"></circle>
+      <circle cx="18.6" cy="15.4" r="0.9" fill="var(--stage-ground)"></circle>
+      <circle cx="15.6" cy="17.4" r="0.9" fill="var(--stage-ground)"></circle>
     </svg>
-    <span>Fresh Squeeze</span>
+    <span class="nav__word">FreshSqueeze</span>
   </a>
   <nav class="nav__links" aria-label="Primary">
-    <a href="#lineup">Juices</a>
-    <a href="#process">How it's made</a>
-    <a href="#subscribe">Subscribe</a>
+    <a href="#lineup">Flavors</a>
+    <a href="#events">Catering</a>
+    <a href="#order">Order</a>
   </nav>
-  <a class="btn btn--nav" href="#subscribe">Order now</a>
+  <a class="btn btn--tape btn--nav" href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">DM to order</a>
 </header>
 
 <main id="top">
 
-  <section class="stage" id="stage" aria-label="Fresh Squeeze, from whole orange to full bottle">
+  <section class="stage" id="stage" aria-label="FreshSqueeze, from a whole watermelon to red juice">
     <div class="stage__sticky" id="stage-sticky">
-      <img class="stage__poster" src="frames/poster.jpg" alt="A whole orange rising into dawn light, moments before it is pressed" width="1280" height="720" decoding="async" fetchpriority="high">
+      <img class="stage__poster" src="frames/poster.jpg" alt="A whole watermelon on a near-black ground under warm tropical light, moments before it is cut" width="1280" height="720" decoding="async" fetchpriority="high">
       <canvas class="stage__canvas" id="stage-canvas" aria-hidden="true"></canvas>
       <div class="stage__scrim" aria-hidden="true"></div>
 
       <div class="stage__captions">
         <div class="caption is-active" data-beat="0">
-          <p class="eyebrow">Cold-pressed. Delivered daily.</p>
-          <h1>Squeezed at 5 a.m. At your door by 8.</h1>
-          <p class="lede">Juice pressed the morning it arrives. Not last week. Not last month.</p>
+          <p class="eyebrow">Natural pressed fruit juices</p>
+          <h1>Start with a whole watermelon.</h1>
+          <p class="lede">Providing you with your daily wellness. One drink at a time. Broward, FL.</p>
         </div>
         <div class="caption" data-beat="1">
-          <p class="eyebrow">How we press</p>
-          <h2>Never heated. Never from concentrate.</h2>
-          <p class="lede">3,000 PSI of pressure and zero heat. The enzymes survive. So does the flavor.</p>
+          <p class="eyebrow">Cut open</p>
+          <h2>That red is the fruit.</h2>
+          <p class="lede">One fruit, pressed and bottled.</p>
         </div>
         <div class="caption" data-beat="2">
-          <p class="eyebrow">Shelf life</p>
-          <h2>Three days fresh. That's the point.</h2>
-          <p class="lede">No preservatives means a short shelf life. We call that a feature.</p>
+          <p class="eyebrow">Pressed</p>
+          <h2>Now it pours.</h2>
+          <p class="lede">Two flavors right now: Watermelon, and Watermelon Pineapple. Both this red.</p>
         </div>
         <div class="caption caption--cta" data-beat="3">
-          <p class="eyebrow">Weekly box</p>
-          <h2>Pick your first box.</h2>
-          <p class="lede">Six bottles, every week. Pause or skip whenever.</p>
-          <a class="btn btn--ink" href="#subscribe">Build my box</a>
+          <p class="eyebrow">Order by DM</p>
+          <h2><span class="strip">Get a bottle.</span></h2>
+          <p class="lede"><span class="strip">Orders and event bookings go through Instagram. Message @freshsqueeze5.</span></p>
+          <a class="btn btn--tape" href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">DM to order</a>
         </div>
       </div>
 
@@ -73,152 +82,256 @@
   </section>
 
   <section class="section lineup" id="lineup">
-    <div class="section__head">
-      <p class="eyebrow">The lineup</p>
-      <h2>Four juices. Pressed before sunrise.</h2>
-      <p class="section__note">Every cap lists what went in, by the piece, and the hour it was pressed. Nothing else goes in.</p>
-    </div>
-    <ul class="bottles">
-      <li class="bottle-card">
-        <div class="bottle bottle--sunrise" aria-hidden="true"><span class="bottle__cap"></span><span class="bottle__label">Sunrise</span></div>
-        <h3>Sunrise</h3>
-        <p class="bottle-card__mix">Valencia orange, blood orange, a knuckle of ginger.</p>
-        <p class="stamp">3 oranges · 355 ml · 130 kcal</p>
-      </li>
-      <li class="bottle-card">
-        <div class="bottle bottle--field" aria-hidden="true"><span class="bottle__cap"></span><span class="bottle__label">Field</span></div>
-        <h3>Field Green</h3>
-        <p class="bottle-card__mix">Cucumber, celery, green apple, lemon, spinach.</p>
-        <p class="stamp">2 cucumbers · 355 ml · 90 kcal</p>
-      </li>
-      <li class="bottle-card">
-        <div class="bottle bottle--root" aria-hidden="true"><span class="bottle__cap"></span><span class="bottle__label">Root</span></div>
-        <h3>Root Red</h3>
-        <p class="bottle-card__mix">Beet, carrot, apple, ginger.</p>
-        <p class="stamp">2 beets · 355 ml · 110 kcal</p>
-      </li>
-      <li class="bottle-card">
-        <div class="bottle bottle--zest" aria-hidden="true"><span class="bottle__cap"></span><span class="bottle__label">Zest</span></div>
-        <h3>Pink Zest</h3>
-        <p class="bottle-card__mix">Pink grapefruit, lime, mint.</p>
-        <p class="stamp">2 grapefruit · 355 ml · 105 kcal</p>
-      </li>
-    </ul>
-  </section>
+    <p class="eyebrow section__eyebrow">The lineup</p>
+    <div class="wrap">
+      <div class="section__head section__head--split">
+        <h2>Watermelon. Watermelon Pineapple.</h2>
+        <div class="section__note">
+          <p>Two flavors. Both watermelon red. Each comes in a tall clear plastic bottle with the black label: the round badge, the flavor name in white capitals, a fruit illustration, and a small nutrition panel.</p>
+          <!-- confirm with client: any flavors beyond the two seen on the bottles -->
+          <p>Other flavors: ask by DM.</p>
+        </div>
+      </div>
 
-  <section class="section process" id="process">
-    <div class="section__head">
-      <p class="eyebrow">How it's made</p>
-      <h2>Picked, pressed, at your door. Inside 24 hours.</h2>
-      <p class="section__note">The cap stamp is the pressed time. Count forward three days and that's the last morning to drink it.</p>
-    </div>
-    <ol class="steps">
-      <li class="step">
-        <span class="step__n">1</span>
-        <h3>Picked</h3>
-        <p>Fruit comes from farms within 200 miles and is pressed within a day of arriving. Nothing sits in a warehouse.</p>
-        <p class="stamp">Day 0 · 14:00</p>
-      </li>
-      <li class="step">
-        <span class="step__n">2</span>
-        <h3>Pressed</h3>
-        <p>A hydraulic press at 3,000 PSI. No spinning blades that warm the juice, no pasteurizing after.</p>
-        <p class="stamp">Day 1 · 05:00</p>
-      </li>
-      <li class="step">
-        <span class="step__n">3</span>
-        <h3>Delivered</h3>
-        <p>Glass bottles, cold-packed, on your doorstep before 8. Leave the empties out and we take them back.</p>
-        <p class="stamp">Day 1 · 08:00</p>
-      </li>
-    </ol>
-  </section>
-
-  <section class="section subscribe" id="subscribe">
-    <div class="section__head">
-      <p class="eyebrow">Subscribe</p>
-      <h2>Two boxes. One delivery morning.</h2>
-      <p class="section__note">Swap flavors any week. Pause, skip, or cancel from your phone. No calls, no forms.</p>
-    </div>
-    <div class="plans">
-      <article class="plan">
-        <h3>Starter box</h3>
-        <p class="plan__price"><span class="plan__amount">$42</span><span class="plan__per">per week</span></p>
-        <p class="plan__meta">6 bottles · $7.00 each</p>
-        <ul class="plan__list">
-          <li>Any mix of the four juices</li>
-          <li>Delivered one morning a week</li>
-          <li>$1 back per glass bottle returned</li>
-        </ul>
-        <a class="btn" href="#subscribe">Start with 6</a>
-      </article>
-      <article class="plan plan--featured">
-        <p class="plan__tag">Most ordered</p>
-        <h3>Household box</h3>
-        <p class="plan__price"><span class="plan__amount">$78</span><span class="plan__per">per week</span></p>
-        <p class="plan__meta">12 bottles · $6.50 each</p>
-        <ul class="plan__list">
-          <li>Everything in the Starter box</li>
-          <li>Two delivery mornings a week</li>
-          <li>Insulated cooler bag with your first box</li>
-        </ul>
-        <a class="btn btn--accent" href="#subscribe">Start with 12</a>
-      </article>
+      <!-- bottles--two sizes the grid for the two confirmed cards; remove it when the hidden cards below are confirmed and shown -->
+      <ul class="bottles bottles--two" role="list">
+        <li class="bottle-card">
+          <div class="bottle bottle--watermelon" aria-hidden="true">
+            <span class="bottle__cap"></span>
+            <span class="bottle__label">
+              <span class="bottle__badge"></span>
+              <span class="bottle__name">Watermelon</span>
+              <span class="bottle__panel"></span>
+            </span>
+          </div>
+          <h3>Watermelon</h3>
+          <p class="bottle-card__line">Red from the shoulder to the base.</p>
+        </li>
+        <li class="bottle-card">
+          <div class="bottle bottle--wp" aria-hidden="true">
+            <span class="bottle__cap"></span>
+            <span class="bottle__label">
+              <span class="bottle__badge"></span>
+              <span class="bottle__name">Watermelon Pineapple</span>
+              <span class="bottle__panel"></span>
+            </span>
+          </div>
+          <h3>Watermelon Pineapple</h3>
+          <p class="bottle-card__line">Watermelon and pineapple. Same red bottle, same black label.</p>
+        </li>
+        <li class="bottle-card bottle-card--ask" hidden>
+          <!-- confirm with client: Pineapple is implied by the badge character, not seen as a bottle. Remove the hidden attribute once confirmed. -->
+          <div class="bottle bottle--pineapple bottle--ask" aria-hidden="true">
+            <span class="bottle__cap"></span>
+            <span class="bottle__label">
+              <span class="bottle__badge"></span>
+              <span class="bottle__name">Pineapple</span>
+              <span class="bottle__panel"></span>
+            </span>
+          </div>
+          <h3>Pineapple</h3>
+          <a class="chip chip--ask" href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">Ask by DM</a>
+          <p class="bottle-card__line">The one in sunglasses on the badge.</p>
+        </li>
+        <li class="bottle-card bottle-card--ask" hidden>
+          <!-- confirm with client: Orange is implied by the badge character, not seen as a bottle. Remove the hidden attribute once confirmed. -->
+          <div class="bottle bottle--orange bottle--ask" aria-hidden="true">
+            <span class="bottle__cap"></span>
+            <span class="bottle__label">
+              <span class="bottle__badge"></span>
+              <span class="bottle__name">Orange</span>
+              <span class="bottle__panel"></span>
+            </span>
+          </div>
+          <h3>Orange</h3>
+          <a class="chip chip--ask" href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">Ask by DM</a>
+          <p class="bottle-card__line">On the badge, holding a drink.</p>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <section class="section faq" id="faq">
-    <div class="section__head">
-      <p class="eyebrow">Before you order</p>
-      <h2>The questions we get most.</h2>
+  <section class="section panel--label label" id="label">
+    <p class="eyebrow section__eyebrow">Read the label</p>
+    <div class="wrap">
+      <div class="label__grid">
+        <div class="badge">
+          <!-- Client badge PNG: drop it at assets/badge.png (square, 640px or larger) and it fills this slot. Until it lands the inline SVG below renders. The three fruit characters appear only in the client's PNG; they are never hand drawn here. -->
+          <object class="badge__img" data="assets/badge.png" type="image/png" role="img" aria-label="The FreshSqueeze badge: a black disc with a rainbow ring, the script wordmark, and a green ribbon that reads Natural Pressed Fruit Juices">
+            <svg class="badge__svg" viewBox="0 0 320 320" aria-hidden="true">
+              <circle cx="160" cy="160" r="160" fill="var(--stage-ground)"></circle>
+              <path d="M160 14 A146 146 0 0 1 306 160" fill="none" stroke="var(--badge-magenta)" stroke-width="14"></path>
+              <path d="M306 160 A146 146 0 0 1 160 306" fill="none" stroke="var(--badge-orange)" stroke-width="14"></path>
+              <path d="M160 306 A146 146 0 0 1 14 160" fill="none" stroke="var(--pine)" stroke-width="14"></path>
+              <path d="M14 160 A146 146 0 0 1 160 14" fill="none" stroke="var(--rind)" stroke-width="14"></path>
+              <circle cx="160" cy="160" r="134" fill="none" stroke="var(--stage-ink)" stroke-width="2"></circle>
+              <text class="badge__word" x="160" y="152" text-anchor="middle" textLength="232" lengthAdjust="spacingAndGlyphs">FreshSqueeze</text>
+              <g transform="rotate(-3 160 214)">
+                <path d="M48 196 L272 196 L262 214 L272 232 L48 232 L58 214 Z" fill="var(--rind)"></path>
+                <text class="badge__ribbon" x="160" y="220" text-anchor="middle" textLength="184" lengthAdjust="spacingAndGlyphs">Natural pressed fruit juices</text>
+              </g>
+            </svg>
+          </object>
+        </div>
+        <div class="label__body">
+          <h2>Four words on the ribbon.</h2>
+          <p class="section__note">The round badge is on every bottle. Its parts, named.</p>
+          <ol class="callouts" role="list">
+            <li class="callout">
+              <span class="tag" aria-hidden="true">1</span>
+              <div><h3>The fruit characters</h3><p>A pineapple in sunglasses, an orange, and a watermelon slice, each holding a drink.</p></div>
+            </li>
+            <li class="callout">
+              <span class="tag" aria-hidden="true">2</span>
+              <div><h3>The script wordmark</h3><p>FreshSqueeze, one word, in a playful script.</p></div>
+            </li>
+            <li class="callout">
+              <span class="tag" aria-hidden="true">3</span>
+              <div><h3>The ribbon</h3><p>Green, and it carries the four words: NATURAL PRESSED FRUIT JUICES.</p></div>
+            </li>
+            <li class="callout">
+              <span class="tag" aria-hidden="true">4</span>
+              <div><h3>The ring</h3><p>Magenta to orange to yellow to green, all the way around.</p></div>
+            </li>
+            <li class="callout">
+              <span class="tag" aria-hidden="true">5</span>
+              <div><h3>The flavor name</h3><p>Bold white capitals on the black label. WATERMELON. WATERMELON PINEAPPLE.</p></div>
+            </li>
+            <li class="callout">
+              <span class="tag" aria-hidden="true">6</span>
+              <div><h3>The nutrition panel</h3><p>Small, on the label, on every bottle.</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
     </div>
-    <div class="faq__list">
-      <details>
-        <summary>How long does a bottle keep?</summary>
-        <p>Three days from the pressed time on the cap, kept cold. Shake before you drink. It separates because nothing is added to stop it.</p>
-      </details>
-      <details>
-        <summary>Why glass?</summary>
-        <p>Glass takes on no flavor and it comes back to us. Rinse it, leave it out on delivery morning, and $1 comes off your next box.</p>
-      </details>
-      <details>
-        <summary>What if I'm not home?</summary>
-        <p>Every box ships in an insulated bag with ice packs good for six hours on a doorstep. Tell us a spot in the shade and we'll use it.</p>
-      </details>
-      <details>
-        <summary>Can I change my mix?</summary>
-        <p>Until 9 p.m. the night before delivery. After that the press list is locked and the fruit is already cut.</p>
-      </details>
+  </section>
+
+  <section class="section events" id="events">
+    <p class="eyebrow section__eyebrow">Catering</p>
+    <div class="wrap">
+      <div class="section__head section__head--split">
+        <h2>Refreshing drinks for ALL events.</h2>
+        <p class="section__note">FreshSqueeze is based in Broward County. Pricing and details come back in the DM.</p>
+      </div>
+      <ul class="formats" role="list">
+        <li class="format"><h3>Parties</h3><p>Birthdays, cookouts, showers.</p></li>
+        <li class="format"><h3>Weddings</h3><p>Rehearsals and receptions.</p></li>
+        <li class="format"><h3>Corporate</h3><p>Offices, lunches, team days.</p></li>
+        <li class="format"><h3>School events</h3><p>Games, fairs, field days.</p></li>
+        <li class="format"><h3>Community events</h3><p>Block parties and festivals.</p></li>
+        <li class="format"><h3>Everything else</h3><p>If it has a crowd, ask.</p></li>
+      </ul>
+      <div class="dm-box">
+        <p class="dm-box__text">Send the date, the headcount, and the address. We reply on Instagram.</p>
+        <a class="btn btn--tape" href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">Book by DM</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section broward" id="broward">
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track">
+        <span>Natural pressed fruit juices</span><span>Broward FL</span><span>Grow with us</span>
+        <span>Natural pressed fruit juices</span><span>Broward FL</span><span>Grow with us</span>
+      </div>
+    </div>
+    <p class="eyebrow section__eyebrow">Broward, FL</p>
+    <div class="wrap">
+      <p class="broward__big">Broward FL</p>
+      <div class="broward__grid">
+        <div>
+          <h2>Grow with us.</h2>
+          <p class="section__note">Orders and event bookings go through Instagram.</p>
+        </div>
+        <blockquote class="bio">
+          <p>Providing you with your daily wellness. One drink at a time. BROWARD FL. Catering refreshing drinks for ALL events. Grow with us.</p>
+          <cite><a href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">@freshsqueeze5</a> on Instagram</cite>
+        </blockquote>
+      </div>
+      <ul class="statements" role="list">
+        <li>Based in Broward.</li>
+        <li>Sold at events.</li>
+        <li>Ordered by DM.</li>
+      </ul>
+      <p class="broward__link"><a class="textlink" href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">Follow on Instagram</a></p>
+    </div>
+  </section>
+
+  <section class="section questions" id="questions">
+    <p class="eyebrow section__eyebrow">Before you DM</p>
+    <div class="wrap split">
+      <div class="split__head">
+        <h2>Short answers.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>How do I order?</summary>
+          <p>Send a DM to <a href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">@freshsqueeze5</a> with the flavors and how many.</p>
+        </details>
+        <details>
+          <summary>Do you cater?</summary>
+          <p>Yes. ALL events, from parties to corporate. Put the date, the headcount, and the address in the <a href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">DM</a>.</p>
+        </details>
+        <details>
+          <summary>Where are you?</summary>
+          <p>Broward County, Florida. Events are posted on <a href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">Instagram</a>.</p>
+        </details>
+        <details>
+          <summary>Which flavors?</summary>
+          <p>Watermelon and Watermelon Pineapple. Ask by <a href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">DM</a> for anything else.</p>
+        </details>
+        <details>
+          <summary>Glass or plastic?</summary>
+          <p>Plastic bottles with the black label.</p>
+        </details>
+        <details>
+          <summary>Prices and sizes?</summary>
+          <p>Ask in the <a href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">message</a> and the current answer comes back in the reply.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section order" id="order">
+    <p class="eyebrow section__eyebrow">Order by DM</p>
+    <div class="wrap">
+      <div class="order__box">
+        <h2>DM us to order.</h2>
+        <p class="order__lede">A person reads it and answers.</p>
+        <ol class="steps" role="list">
+          <li class="step"><span class="tag" aria-hidden="true">1</span><span>Open Instagram</span></li>
+          <li class="step"><span class="tag" aria-hidden="true">2</span><span>Send the flavors or the event</span></li>
+          <li class="step"><span class="tag" aria-hidden="true">3</span><span>We reply and set it up</span></li>
+        </ol>
+        <a class="handle" href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">@freshsqueeze5</a>
+        <p class="order__bio">Providing you with your daily wellness. One drink at a time.</p>
+        <div class="order__actions">
+          <a class="btn btn--tape" href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">DM to order</a>
+          <a class="btn btn--ghost" href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">Book an event</a>
+        </div>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
-  <div class="footer__brand">
-    <span class="footer__wordmark">Fresh Squeeze</span>
-    <p>Pressed daily, delivered cold. Nothing heated, nothing added.</p>
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <a class="footer__wordmark" href="#top">FreshSqueeze</a>
+      <p>Natural pressed fruit juices. Broward, FL.</p>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="#lineup">Flavors</a>
+      <a href="#events">Catering</a>
+      <a href="#questions">Questions</a>
+      <a href="https://instagram.com/freshsqueeze5" target="_blank" rel="noopener">Instagram</a>
+      <a href="#top">Back to top</a>
+    </nav>
+    <p class="footer__grow">Grow with us.</p>
+    <p class="footer__fine">© 2026 FreshSqueeze. Broward County, Florida.</p>
   </div>
-  <div class="footer__cols">
-    <div>
-      <p class="eyebrow">Shop</p>
-      <a href="#lineup">Juices</a>
-      <a href="#subscribe">Subscribe</a>
-      <a href="#subscribe">Gift a box</a>
-    </div>
-    <div>
-      <p class="eyebrow">Company</p>
-      <a href="#process">Our farms</a>
-      <a href="#faq">Bottle returns</a>
-      <a href="#faq">Deliveries</a>
-    </div>
-    <div>
-      <p class="eyebrow">Help</p>
-      <a href="#faq">Questions</a>
-      <a href="#faq">Contact</a>
-    </div>
-  </div>
-  <p class="footer__fine">© 2026 Fresh Squeeze. A pressed time on every cap.</p>
 </footer>
 
 <script src="frames/manifest.js"></script>
