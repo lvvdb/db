@@ -1,0 +1,82 @@
+name: Fetch Higgsfield media
+
+# Pulls generated media into the branch it is dispatched on. The runner has
+# open internet, so this is the hand-off from Higgsfield's CDN into git:
+# keyframes are committed as files, clips are downloaded to a temp folder,
+# turned into the frame sequence by freshsqueeze/higgsfield/extract-frames.sh,
+# and only the frames are committed.
+
+on:
+  workflow_dispatch:
+    inputs:
+      files:
+        description: 'JSON array of {"url": "https://...", "path": "freshsqueeze/..."} to fetch and commit'
+        required: false
+        default: '[]'
+      clips:
+        description: 'JSON array of clip URLs in play order; when non-empty, frames are extracted and committed'
+        required: false
+        default: '[]'
+      count:
+        description: 'Frames to sample across all clips'
+        required: false
+        default: '96'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch files into the repo
+        env:
+          FILES: ${{ inputs.files }}
+        run: |
+          set -euo pipefail
+          echo "$FILES" | jq -c '.[]' | while read -r entry; do
+            url="$(jq -r .url <<<"$entry")"
+            path="$(jq -r .path <<<"$entry")"
+            case "$path" in
+              freshsqueeze/*) ;;
+              *) echo "refusing path outside freshsqueeze/: $path"; exit 1 ;;
+            esac
+            case "$path" in
+              *..*) echo "refusing path with ..: $path"; exit 1 ;;
+            esac
+            mkdir -p "$(dirname "$path")"
+            curl -fsSL --retry 3 --retry-delay 2 -o "$path" "$url"
+            echo "fetched $path ($(stat -c %s "$path") bytes)"
+          done
+
+      - name: Download clips and extract frames
+        env:
+          CLIPS: ${{ inputs.clips }}
+          COUNT: ${{ inputs.count }}
+        run: |
+          set -euo pipefail
+          n="$(echo "$CLIPS" | jq 'length')"
+          if [ "$n" -eq 0 ]; then echo "no clips"; exit 0; fi
+          mkdir -p /tmp/clips
+          i=0
+          echo "$CLIPS" | jq -r '.[]' | while read -r url; do
+            i=$((i+1))
+            curl -fsSL --retry 3 --retry-delay 2 -o "$(printf '/tmp/clips/clip-%02d.mp4' "$i")" "$url"
+          done
+          ls -la /tmp/clips
+          ffmpeg -version | head -1
+          bash freshsqueeze/higgsfield/extract-frames.sh /tmp/clips "$COUNT" 1280
+          ls freshsqueeze/frames | head -3
+          cat freshsqueeze/frames/manifest.js
+
+      - name: Commit and push
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A freshsqueeze
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "Fetch Higgsfield media into freshsqueeze"
+          git push
