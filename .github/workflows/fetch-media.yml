@@ -1,26 +1,23 @@
 name: Fetch Higgsfield media
 
-# Pulls generated media into the branch it is dispatched on. The runner has
-# open internet, so this is the hand-off from Higgsfield's CDN into git:
-# keyframes are committed as files, clips are downloaded to a temp folder,
-# turned into the frame sequence by freshsqueeze/higgsfield/extract-frames.sh,
-# and only the frames are committed.
+# Hand-off from Higgsfield's CDN into git. Runs whenever
+# freshsqueeze/higgsfield/media.json changes on any branch. The runner has
+# open internet, fetches the listed keyframes into the repo, downloads the
+# listed clips to a temp folder, turns them into the frame sequence with
+# freshsqueeze/higgsfield/extract-frames.sh, and commits the result back to
+# the same branch. Commits made with GITHUB_TOKEN do not re-trigger this.
+#
+# media.json shape:
+# {
+#   "files": [{"url": "https://...", "path": "freshsqueeze/higgsfield/keyframes/k0.png"}],
+#   "clips": ["https://...clip-01.mp4", "https://...clip-02.mp4"],
+#   "count": 96
+# }
 
 on:
-  workflow_dispatch:
-    inputs:
-      files:
-        description: 'JSON array of {"url": "https://...", "path": "freshsqueeze/..."} to fetch and commit'
-        required: false
-        default: '[]'
-      clips:
-        description: 'JSON array of clip URLs in play order; when non-empty, frames are extracted and committed'
-        required: false
-        default: '[]'
-      count:
-        description: 'Frames to sample across all clips'
-        required: false
-        default: '96'
+  push:
+    branches: ['**']
+    paths: ['freshsqueeze/higgsfield/media.json']
 
 permissions:
   contents: write
@@ -32,11 +29,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Fetch files into the repo
-        env:
-          FILES: ${{ inputs.files }}
         run: |
           set -euo pipefail
-          echo "$FILES" | jq -c '.[]' | while read -r entry; do
+          jq -c '.files // [] | .[]' freshsqueeze/higgsfield/media.json | while read -r entry; do
             url="$(jq -r .url <<<"$entry")"
             path="$(jq -r .path <<<"$entry")"
             case "$path" in
@@ -52,23 +47,21 @@ jobs:
           done
 
       - name: Download clips and extract frames
-        env:
-          CLIPS: ${{ inputs.clips }}
-          COUNT: ${{ inputs.count }}
         run: |
           set -euo pipefail
-          n="$(echo "$CLIPS" | jq 'length')"
-          if [ "$n" -eq 0 ]; then echo "no clips"; exit 0; fi
+          n="$(jq '.clips // [] | length' freshsqueeze/higgsfield/media.json)"
+          if [ "$n" -eq 0 ]; then echo "no clips listed"; exit 0; fi
+          count="$(jq -r '.count // 96' freshsqueeze/higgsfield/media.json)"
           mkdir -p /tmp/clips
           i=0
-          echo "$CLIPS" | jq -r '.[]' | while read -r url; do
+          jq -r '.clips[]' freshsqueeze/higgsfield/media.json | while read -r url; do
             i=$((i+1))
             curl -fsSL --retry 3 --retry-delay 2 -o "$(printf '/tmp/clips/clip-%02d.mp4' "$i")" "$url"
           done
           ls -la /tmp/clips
           ffmpeg -version | head -1
-          bash freshsqueeze/higgsfield/extract-frames.sh /tmp/clips "$COUNT" 1280
-          ls freshsqueeze/frames | head -3
+          bash freshsqueeze/higgsfield/extract-frames.sh /tmp/clips "$count" 1280
+          ls freshsqueeze/frames | wc -l
           cat freshsqueeze/frames/manifest.js
 
       - name: Commit and push
