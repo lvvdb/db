@@ -43,7 +43,7 @@ ffmpeg -nostdin -y -loglevel error -i "$TMP/master.mp4" \
 
 N="$(ls "$OUT"/frame_*.jpg | wc -l | tr -d ' ')"
 cp "$OUT/frame_0001.jpg" "$OUT/poster.jpg"
-read -r W H < <(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0:s=' ' "$OUT/frame_0001.jpg")
+read -r W H < <(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 "$OUT/frame_0001.jpg" | tr ',' ' ')
 
 # 4. Manifest the page reads on load.
 cat > "$OUT/manifest.js" <<EOF
