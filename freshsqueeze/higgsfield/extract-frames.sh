@@ -29,7 +29,7 @@ for f in "$CLIPS"/*.mp4; do
   printf "file '%s'\n" "$(cd "$(dirname "$f")" && pwd)/$(basename "$f")" >> "$TMP/list.txt"
 done
 [ -s "$TMP/list.txt" ] || { echo "no .mp4 files in $CLIPS"; exit 1; }
-ffmpeg -y -loglevel error -f concat -safe 0 -i "$TMP/list.txt" -c:v libx264 -pix_fmt yuv420p -an "$TMP/master.mp4"
+ffmpeg -nostdin -y -loglevel error -f concat -safe 0 -i "$TMP/list.txt" -c:v libx264 -pix_fmt yuv420p -an "$TMP/master.mp4"
 
 # 2. Sample rate that spreads COUNT frames evenly over the whole duration.
 DUR="$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$TMP/master.mp4")"
@@ -38,7 +38,7 @@ FPS="$(awk -v c="$COUNT" -v d="$DUR" 'BEGIN { printf "%.6f", c / d }')"
 # 3. Extract, downsize, JPEG quality 3 (~85%).
 mkdir -p "$OUT"
 rm -f "$OUT"/frame_*.jpg
-ffmpeg -y -loglevel error -i "$TMP/master.mp4" \
+ffmpeg -nostdin -y -loglevel error -i "$TMP/master.mp4" \
   -vf "fps=$FPS,scale=$WIDTH:-2" -frames:v "$COUNT" -q:v 3 "$OUT/frame_%04d.jpg"
 
 N="$(ls "$OUT"/frame_*.jpg | wc -l | tr -d ' ')"
