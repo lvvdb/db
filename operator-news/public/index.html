@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News · db's OS</title>
+  <link rel="stylesheet" href="/news.css" />
+</head>
+<body>
+  <main class="news" id="news">
+    <header class="news-head">
+      <div>
+        <h1>News</h1>
+        <p class="muted" id="updated">Loading…</p>
+      </div>
+      <button class="btn" id="refresh" type="button" title="Refresh all sources now">↻ Refresh</button>
+    </header>
+
+    <details class="brief" id="brief" open hidden>
+      <summary><span>Today's brief</span><small class="muted" id="brief-meta"></small></summary>
+      <ul id="brief-list"></ul>
+    </details>
+
+    <nav class="tabs" id="tabs" aria-label="Categories"></nav>
+
+    <div class="controls">
+      <input type="search" id="q" placeholder="Search headlines, sources…" aria-label="Search" />
+      <div class="seg" role="group" aria-label="Time range">
+        <button type="button" data-range="day">Today</button>
+        <button type="button" data-range="week" class="on">This week</button>
+      </div>
+      <label class="threshold" title="Hide items scored below this">
+        Min relevance <input type="range" id="threshold" min="0" max="90" step="5" value="40" />
+        <output id="threshold-val">40</output>
+      </label>
+    </div>
+
+    <div class="layout">
+      <section class="feed">
+        <div class="hero" id="hero"></div>
+        <div class="grid" id="grid"></div>
+        <p class="empty" id="empty" hidden></p>
+      </section>
+      <aside class="side">
+        <section class="panel">
+          <h2>Sources <small class="muted" id="src-summary"></small></h2>
+          <ul class="sources" id="sources"></ul>
+        </section>
+        <section class="panel">
+          <h2>Worth a click</h2>
+          <ul class="worth" id="worth"></ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <script type="module" src="/news.js"></script>
+</body>
+</html>

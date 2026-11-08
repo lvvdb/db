@@ -1,0 +1,16 @@
+{
+  "name": "operator-news",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "News page for Operator (db's OS): curated AI / web dev / outreach feed with LLM rewrites",
+  "scripts": {
+    "start": "node server.js",
+    "refresh": "node server.js --once"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.6.0",
+    "zod": "^3.23.8"
+  }
+}
