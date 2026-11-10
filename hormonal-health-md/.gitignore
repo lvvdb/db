@@ -1,6 +1,8 @@
 node_modules/
 dist/
 dist-drafts/
+dist-staging/
+.vercel/
 .astro/
 .DS_Store
 *.log

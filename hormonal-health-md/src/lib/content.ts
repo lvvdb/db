@@ -3,6 +3,11 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 // Drafts are built only when SHOW_DRAFTS=1 (npm run build:drafts) or in `astro dev`.
 export const SHOW_DRAFTS = process.env.SHOW_DRAFTS === '1' || import.meta.env.DEV;
 
+// SITE_STAGING=1 makes a review build: every page is noindex, robots.txt blocks all
+// crawlers and a banner says it is a preview. Used for the Vercel review deployment so
+// placeholders and unreviewed copy can never be indexed or mistaken for the live site.
+export const STAGING = process.env.SITE_STAGING === '1';
+
 type Name = 'treatments' | 'conditions' | 'areas' | 'mobileIv' | 'learn';
 
 export async function entries<N extends Name>(name: N): Promise<CollectionEntry<N>[]> {

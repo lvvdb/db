@@ -8,7 +8,7 @@ import sansUrl from '@fontsource-variable/instrument-sans/files/instrument-sans-
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { clinic } from '../config/clinic';
-import { entries, paths, SHOW_DRAFTS } from '../lib/content';
+import { entries, paths, STAGING } from '../lib/content';
 import { abs, breadcrumbNode, clinicNode, graph, pageNode, websiteNode } from '../lib/schema';
 import { descriptionWithSlot, titleWithSlot } from '../lib/seo';
 
@@ -60,6 +60,12 @@ const {
 } = Astro.props;
 
 const title = slot ? titleWithSlot(rawTitle, typeof slot === 'string' ? slot : undefined) : rawTitle;
+const hidden = noindex || STAGING;
+const banner =
+  notice ??
+  (STAGING
+    ? 'Preview build for review. This is not the live site. Yellow markers are facts the clinic still needs to confirm.'
+    : undefined);
 const description = slot ? descriptionWithSlot(rawDescription) : rawDescription;
 
 const canonical = abs(path);
@@ -96,7 +102,7 @@ const ogLocale = lang === 'es' ? 'es_US' : 'en_US';
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'} />
+    <meta name="robots" content={hidden ? (STAGING ? 'noindex, nofollow' : 'noindex, follow') : 'index, follow, max-image-preview:large'} />
     {path === '/' && clinic.googleSiteVerification && (
       <meta name="google-site-verification" content={clinic.googleSiteVerification} />
     )}
@@ -125,7 +131,7 @@ const ogLocale = lang === 'es' ? 'es_US' : 'en_US';
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    {notice && <div class="notice" role="status">{notice}</div>}
+    {banner && <div class="notice" role="status">{banner}</div>}
     <Header path={path} />
     <main id="main">
       <slot />

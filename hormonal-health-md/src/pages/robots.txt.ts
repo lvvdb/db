@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { clinic } from '../config/clinic';
+import { STAGING } from '../lib/content';
 
 // Crawlers that feed AI answers and AI search. Allowed while clinic.allowAiCrawlers is
 // true, so the clinic can be cited in ChatGPT, Claude, Perplexity and Google AI results.
@@ -18,6 +19,12 @@ const AI_BOTS = [
 ];
 
 export const GET: APIRoute = () => {
+  if (STAGING) {
+    // Review build: keep every crawler out.
+    return new Response(`User-agent: *\nDisallow: /\n\nSitemap: ${clinic.site}/sitemap.xml\n`, {
+      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+    });
+  }
   const lines = ['User-agent: *', 'Allow: /', ''];
   for (const bot of AI_BOTS) {
     lines.push(`User-agent: ${bot}`, clinic.allowAiCrawlers ? 'Allow: /' : 'Disallow: /', '');

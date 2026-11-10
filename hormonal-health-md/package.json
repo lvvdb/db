@@ -17,7 +17,9 @@
     "qa": "node scripts/qa.mjs",
     "check": "npm run build && npm run qa",
     "check:launch": "npm run build && node scripts/qa.mjs --launch",
-    "check:sources": "node scripts/check-sources.mjs"
+    "check:sources": "node scripts/check-sources.mjs",
+    "build:staging": "SITE_STAGING=1 SHOW_DRAFTS=1 astro build --outDir dist-staging && node scripts/gen-redirects.mjs --staging dist-staging",
+    "preview:staging": "node scripts/serve.mjs dist-staging 4323"
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "^0.4.7",

@@ -40,5 +40,19 @@ const vercel = {
     headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
   })),
 };
+// `--staging <dir>` writes a review-build config into that output folder only: the same
+// rules plus a sitewide noindex header. The committed files above are left untouched.
+const stagingAt = process.argv.indexOf('--staging');
+if (stagingAt !== -1) {
+  const dir = path.resolve(root, process.argv[stagingAt + 1]);
+  const staging = {
+    ...vercel,
+    headers: [{ source: '/(.*)', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }],
+  };
+  await writeFile(path.join(dir, 'vercel.json'), JSON.stringify(staging, null, 2) + '\n');
+  console.log(`staging vercel.json written to ${path.relative(root, dir)}/`);
+  process.exit(0);
+}
+
 await writeFile(path.join(root, 'vercel.json'), JSON.stringify(vercel, null, 2) + '\n');
 console.log(`redirects: ${data.redirects.length} rules, ${data.gone.length} retired patterns`);
