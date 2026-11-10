@@ -388,7 +388,8 @@ if (warnings.length) md.push('', '## Warnings', '', ...warnings.map((w) => `- ${
 if (errors.length) md.push('', '## Errors', '', ...errors.map((e) => `- ${e}`));
 md.push('');
 
-if (distName === 'dist') {
+// The launch gate only reports. It never rewrites the audit, so running it leaves the repo clean.
+if (distName === 'dist' && !LAUNCH) {
   await mkdir(path.join(root, 'docs'), { recursive: true });
   await writeFile(path.join(root, 'docs/site-audit.md'), md.join('\n'));
 }
@@ -400,4 +401,4 @@ if (errors.length) {
   console.log(`\n${errors.length} errors:\n  ` + errors.join('\n  '));
   process.exit(1);
 }
-console.log('\nAll checks passed.' + (distName === 'dist' ? ' Report written to docs/site-audit.md' : ''));
+console.log('\nAll checks passed.' + (distName === 'dist' && !LAUNCH ? ' Report written to docs/site-audit.md' : ''));
