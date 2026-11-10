@@ -24,8 +24,8 @@ sources:
     url: "https://doi.org/10.1097/GME.0000000000002028"
   - label: "Stuenkel CA, et al. Treatment of Symptoms of the Menopause: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2015."
     url: "https://doi.org/10.1210/jc.2015-2236"
-  - label: "U.S. Food and Drug Administration. The FDA Warns that Biotin May Interfere with Lab Tests: FDA Safety Communication."
-    url: "https://www.fda.gov/medical-devices/safety-communications/update-fda-warns-biotin-may-interfere-lab-tests-fda-safety-communication"
+  - label: "National Institutes of Health, Office of Dietary Supplements. Biotin: Fact Sheet for Health Professionals."
+    url: "https://ods.od.nih.gov/factsheets/Biotin-HealthProfessional/"
 ---
 
 The tests depend on who you are and what is being treated. Men considering testosterone therapy need two fasting morning testosterone tests, plus LH, FSH, a blood count and often a PSA. Most women over 45 starting menopause hormone therapy do not need hormone levels at all, but they do need a health check and some baseline labs.
@@ -90,7 +90,7 @@ A little preparation avoids a wasted trip:
 
 1. Book a morning appointment if testosterone is being measured.
 2. Fast if you have been asked to. Drink water.
-3. Ask whether to pause biotin and for how long. The [FDA has warned](https://www.fda.gov/medical-devices/safety-communications/update-fda-warns-biotin-may-interfere-lab-tests-fda-safety-communication) that it can interfere with lab tests.
+3. Ask whether to pause biotin and for how long. It can cause falsely high or low results on some tests, as the [NIH Office of Dietary Supplements](https://ods.od.nih.gov/factsheets/Biotin-HealthProfessional/) explains.
 4. If you still have periods, note the first day of your last one.
 5. Reschedule if you are unwell. Short-term illness shifts hormone levels.
 6. Bring a list of your medications and supplements.

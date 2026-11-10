@@ -40,8 +40,8 @@ sources:
     url: "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/"
   - label: "National Institutes of Health, Office of Dietary Supplements. Iron: Fact Sheet for Health Professionals."
     url: "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/"
-  - label: "U.S. Food and Drug Administration. The FDA Warns that Biotin May Interfere with Lab Tests: FDA Safety Communication."
-    url: "https://www.fda.gov/medical-devices/safety-communications/update-fda-warns-biotin-may-interfere-lab-tests-fda-safety-communication"
+  - label: "National Institutes of Health, Office of Dietary Supplements. Biotin: Fact Sheet for Health Professionals."
+    url: "https://ods.od.nih.gov/factsheets/Biotin-HealthProfessional/"
 ---
 
 ## What is included?

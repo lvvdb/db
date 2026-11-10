@@ -26,7 +26,7 @@ sources:
     url: "https://doi.org/10.1001/jama.2013.278040"
   - label: "U.S. Preventive Services Task Force. Hormone Therapy for the Primary Prevention of Chronic Conditions in Postmenopausal Persons. JAMA. 2022."
     url: "https://doi.org/10.1001/jama.2022.18625"
-  - label: "Elimination of the Black Box Warning on Menopausal Hormone Therapy. PubMed record 41687116."
+  - label: "Sriprasert I, Hodis HN, et al. Elimination of the Black Box Warning on Menopausal Hormone Therapy. Obstet Gynecol. 2026."
     url: "https://pubmed.ncbi.nlm.nih.gov/41687116/"
 ---
 

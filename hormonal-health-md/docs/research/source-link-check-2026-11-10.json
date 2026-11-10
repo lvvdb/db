@@ -1,0 +1,797 @@
+[
+  {
+    "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0456/Sections/0456.47.html",
+    "status": "OK",
+    "foundTitle": "F.S. 456.47 Use of telehealth to provide services. (Online Sunshine, Statutes & Constitution: View Statutes)",
+    "siteLabel": "Florida Statutes, section 456.47. Use of telehealth to provide services.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10. Served over https after upgrade. Page shows statute text; para (2)(c) restricts telehealth prescribing only for Schedule II (with listed exceptions); History note includes 's. 1, ch. 2022-26', consistent with the site's '2022 amendment' wording. The cited link uses http://; the https:// form of the same URL loaded.",
+    "citedIn": [
+      "src/content/learn/trt-telemedicine-florida.md:24",
+      "src/content/learn/trt-telemedicine-florida.md:37",
+      "src/pages/telehealth.astro:39"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1001/jama.2013.278040",
+    "status": "OK",
+    "foundTitle": "Menopausal Hormone Therapy and Health Outcomes During the Intervention and Extended Poststopping Phases of the Women’s Health Initiative Randomized Trials | first author: Manson | JAMA | 2013 | journal-article",
+    "siteLabel": "Manson JE, et al. Menopausal Hormone Therapy and Health Outcomes During the Intervention and Extended Poststopping Phases of the Women's Health Initiative Randomized Trials. JAMA. 2013.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/is-hormone-therapy-safe-after-menopause.md:26"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1001/jama.2022.18625",
+    "status": "OK",
+    "foundTitle": "Hormone Therapy for the Primary Prevention of Chronic Conditions in Postmenopausal Persons | first author: US Preventive Services Task Force | JAMA | 2022 | journal-article",
+    "siteLabel": "U.S. Preventive Services Task Force. Hormone Therapy for the Primary Prevention of Chronic Conditions in Postmenopausal Persons. JAMA. 2022.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/is-hormone-therapy-safe-after-menopause.md:28"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1001/jama.2022.8970",
+    "status": "OK",
+    "foundTitle": "Vitamin, Mineral, and Multivitamin Supplementation to Prevent Cardiovascular Disease and Cancer | first author: US Preventive Services Task Force | JAMA | 2022 | journal-article",
+    "siteLabel": "U.S. Preventive Services Task Force. Vitamin, Mineral, and Multivitamin Supplementation to Prevent Cardiovascular Disease and Cancer. JAMA. 2022.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/treatments/nutrition-and-supplements.md:36",
+      "src/content/treatments/nutrition-and-supplements.md:69"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1001/jama.288.3.321",
+    "status": "OK",
+    "foundTitle": "Risks and Benefits of Estrogen Plus Progestin in Healthy Postmenopausal Women: Principal Results From the Women's Health Initiative Randomized Controlled Trial | first author: Writing Group for the Women's Health Initiative Investigators | JAMA: The Journal of the American Medical Association | 2002 | journal-article",
+    "siteLabel": "Rossouw JE, et al. Risks and Benefits of Estrogen Plus Progestin in Healthy Postmenopausal Women: Principal Results From the Women's Health Initiative Randomized Controlled Trial. JAMA. 2002.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session. Crossref lists the first author as 'Writing Group for the Women's Health Initiative Investigators'; the site label 'Rossouw JE, et al.' is the conventional citation (Rossouw is listed first in PubMed and in the reference list of PMID 41687116).",
+    "citedIn": [
+      "src/content/learn/is-hormone-therapy-safe-after-menopause.md:24",
+      "src/content/learn/is-hormone-therapy-safe-after-menopause.md:37"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1001/jamainternmed.2014.8063",
+    "status": "OK",
+    "foundTitle": "Duration of Menopausal Vasomotor Symptoms Over the Menopause Transition | first author: Avis | JAMA Internal Medicine | 2015 | journal-article",
+    "siteLabel": "Avis NE, et al. Duration of Menopausal Vasomotor Symptoms Over the Menopause Transition. JAMA Intern Med. 2015.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/conditions/menopause.md:34"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1002/art.41142",
+    "status": "OK",
+    "foundTitle": "2019 American College of Rheumatology/Arthritis Foundation Guideline for the Management of Osteoarthritis of the Hand, Hip, and Knee | first author: Kolasinski | Arthritis & Rheumatology | 2020 | journal-article",
+    "siteLabel": "Kolasinski SL, et al. 2019 American College of Rheumatology/Arthritis Foundation Guideline for the Management of Osteoarthritis of the Hand, Hip, and Knee. Arthritis Rheumatol. 2020.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/treatments/joint-pain.md:36",
+      "src/content/treatments/joint-pain.md:59"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1016/j.juro.2018.05.004",
+    "status": "OK",
+    "foundTitle": "Erectile Dysfunction: AUA Guideline | first author: Burnett | Journal of Urology | 2018 | journal-article",
+    "siteLabel": "Burnett AL, et al. Erectile Dysfunction: AUA Guideline. J Urol. 2018.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/conditions/erectile-dysfunction.md:30",
+      "src/content/conditions/erectile-dysfunction.md:63",
+      "src/content/treatments/sexual-health.md:38",
+      "src/content/treatments/sexual-health.md:55",
+      "src/pages/men.astro:64"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1016/j.mayocp.2012.06.015",
+    "status": "OK",
+    "foundTitle": "The Princeton III Consensus Recommendations for the Management of Erectile Dysfunction and Cardiovascular Disease | first author: Nehra | Mayo Clinic Proceedings | 2012 | journal-article",
+    "siteLabel": "Nehra A, et al. The Princeton III Consensus Recommendations for the Management of Erectile Dysfunction and Cardiovascular Disease. Mayo Clin Proc. 2012.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/conditions/erectile-dysfunction.md:34",
+      "src/content/treatments/sexual-health.md:40"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1056/NEJMoa1506119",
+    "status": "OK",
+    "foundTitle": "Effects of Testosterone Treatment in Older Men | first author: Snyder | New England Journal of Medicine | 2016 | journal-article",
+    "siteLabel": "Snyder PJ, et al. Effects of Testosterone Treatment in Older Men. N Engl J Med. 2016.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/how-long-does-trt-take-to-work.md:26",
+      "src/content/learn/how-long-does-trt-take-to-work.md:76"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1056/NEJMoa2032183",
+    "status": "OK",
+    "foundTitle": "Once-Weekly Semaglutide in Adults with Overweight or Obesity | first author: Wilding | New England Journal of Medicine | 2021 | journal-article",
+    "siteLabel": "Wilding JPH, et al. Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP 1). N Engl J Med. 2021.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/how-glp1-weight-loss-medications-work.md:22",
+      "src/content/learn/how-glp1-weight-loss-medications-work.md:64",
+      "src/content/treatments/medical-weight-loss.md:38"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1056/NEJMoa2206038",
+    "status": "OK",
+    "foundTitle": "Tirzepatide Once Weekly for the Treatment of Obesity | first author: Jastreboff | New England Journal of Medicine | 2022 | journal-article",
+    "siteLabel": "Jastreboff AM, et al. Tirzepatide Once Weekly for the Treatment of Obesity (SURMOUNT-1). N Engl J Med. 2022.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/how-glp1-weight-loss-medications-work.md:24",
+      "src/content/learn/how-glp1-weight-loss-medications-work.md:64",
+      "src/content/treatments/medical-weight-loss.md:40"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1056/NEJMoa2215025",
+    "status": "OK",
+    "foundTitle": "Cardiovascular Safety of Testosterone-Replacement Therapy | first author: Lincoff | New England Journal of Medicine | 2023 | journal-article",
+    "siteLabel": "Lincoff AM, et al. Cardiovascular Safety of Testosterone-Replacement Therapy (TRAVERSE). N Engl J Med. 2023.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/treatments/testosterone-therapy.md:44"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1056/NEJMoa2307563",
+    "status": "OK",
+    "foundTitle": "Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes | first author: Lincoff | New England Journal of Medicine | 2023 | journal-article",
+    "siteLabel": "Lincoff AM, et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes (SELECT). N Engl J Med. 2023.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/how-glp1-weight-loss-medications-work.md:28",
+      "src/content/learn/how-glp1-weight-loss-medications-work.md:87"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1089/acm.2008.0410",
+    "status": "OK",
+    "foundTitle": "Intravenous Micronutrient Therapy (Myers' Cocktail) for Fibromyalgia: A Placebo-Controlled Pilot Study | first author: Ali | The Journal of Alternative and Complementary Medicine | 2009 | journal-article",
+    "siteLabel": "Ali A, et al. Intravenous micronutrient therapy (Myers' Cocktail) for fibromyalgia: a placebo-controlled pilot study. J Altern Complement Med. 2009.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/treatments/iv-therapy.md:42"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1089/thy.2014.0028",
+    "status": "OK",
+    "foundTitle": "Guidelines for the Treatment of Hypothyroidism: Prepared by the American Thyroid Association Task Force on Thyroid Hormone Replacement | first author: Jonklaas | Thyroid® | 2014 | journal-article",
+    "siteLabel": "Jonklaas J, et al. Guidelines for the Treatment of Hypothyroidism: American Thyroid Association. Thyroid. 2014.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session. Full title adds 'Prepared by the American Thyroid Association Task Force on Thyroid Hormone Replacement'.",
+    "citedIn": [
+      "src/content/conditions/always-tired.md:32"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1097/GME.0000000000002028",
+    "status": "OK",
+    "foundTitle": "The 2022 hormone therapy position statement of The North American Menopause Society | first author: None | Menopause | 2022 | journal-article",
+    "siteLabel": "The Menopause Society. The 2022 Hormone Therapy Position Statement. Menopause. 2022.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session. Crossref title says 'of The North American Menopause Society' (the society's name before its 2023 rename to The Menopause Society); same document.",
+    "citedIn": [
+      "src/content/conditions/menopause.md:30",
+      "src/content/conditions/menopause.md:75",
+      "src/content/conditions/perimenopause.md:32",
+      "src/content/learn/bioidentical-vs-traditional-hormones.md:22",
+      "src/content/learn/bioidentical-vs-traditional-hormones.md:63",
+      "src/content/learn/blood-tests-before-hormone-therapy.md:24",
+      "src/content/learn/blood-tests-before-hormone-therapy.md:51",
+      "src/content/learn/does-insurance-cover-hormone-therapy.md:22",
+      "src/content/learn/does-insurance-cover-hormone-therapy.md:63",
+      "src/content/learn/is-hormone-therapy-safe-after-menopause.md:22",
+      "src/content/learn/is-hormone-therapy-safe-after-menopause.md:59",
+      "src/content/learn/perimenopause-testing.md:26",
+      "src/content/treatments/hormone-therapy-for-women.md:40",
+      "src/content/treatments/hormone-therapy-for-women.md:61",
+      "src/pages/lab-testing.astro:78",
+      "src/pages/women.astro:63"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1097/GME.00000000000022",
+    "status": "BAD",
+    "foundTitle": "Resource not found. (Crossref HTTP 404)",
+    "siteLabel": "The Menopause Society. The 2023 Nonhormone Therapy Position Statement. Menopause. 2023.",
+    "replacementUrl": "https://doi.org/10.1097/GME.0000000000002200",
+    "note": "Truncated DOI: api.crossref.org/works/10.1097/GME.00000000000022 returns HTTP 404 'Resource not found.' and the DOI is absent from a Crossref filter query. The replacement DOI 10.1097/GME.0000000000002200 is confirmed in Crossref as 'The 2023 nonhormone therapy position statement of The North American Menopause Society', Menopause, 2023-06, and is the DOI the site already uses for the same label in src/content/conditions/menopause.md. Confirmed via Crossref metadata; the doi.org redirect itself was not loaded.",
+    "citedIn": [
+      "src/pages/women.astro:64"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1097/GME.0000000000002200",
+    "status": "OK",
+    "foundTitle": "The 2023 nonhormone therapy position statement of The North American Menopause Society | first author: (no author listed; society statement) | Menopause | 2023 | journal-article",
+    "siteLabel": "The Menopause Society. The 2023 Nonhormone Therapy Position Statement. Menopause. 2023.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session. Crossref title says 'of The North American Menopause Society'; same document as the label.",
+    "citedIn": [
+      "src/content/conditions/menopause.md:32"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1097/gme.0b013e31824d8f40",
+    "status": "OK",
+    "foundTitle": "Executive summary of the Stages of Reproductive Aging Workshop + 10 | first author: Harlow | Menopause | 2012 | journal-article",
+    "siteLabel": "Harlow SD, et al. Executive summary of the Stages of Reproductive Aging Workshop + 10. Menopause. 2012.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/conditions/perimenopause.md:30",
+      "src/content/learn/perimenopause-testing.md:22",
+      "src/content/learn/perimenopause-testing.md:37",
+      "src/pages/women.astro:65"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1111/dom.14725",
+    "status": "OK",
+    "foundTitle": "Weight regain and cardiometabolic effects after withdrawal of semaglutide: The STEP 1 trial extension | first author: Wilding | Diabetes, Obesity and Metabolism | 2022 | journal-article",
+    "siteLabel": "Wilding JPH, et al. Weight regain and cardiometabolic effects after withdrawal of semaglutide: the STEP 1 trial extension. Diabetes Obes Metab. 2022.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/how-glp1-weight-loss-medications-work.md:26",
+      "src/content/learn/how-glp1-weight-loss-medications-work.md:91",
+      "src/content/treatments/medical-weight-loss.md:42"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1210/clinem/dgae290",
+    "status": "OK",
+    "foundTitle": "Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline | first author: Demay | The Journal of Clinical Endocrinology & Metabolism | 2024 | journal-article",
+    "siteLabel": "Demay MB, et al. Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2024.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/treatments/nutrition-and-supplements.md:38",
+      "src/content/treatments/nutrition-and-supplements.md:83"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1210/jc.2007-1972",
+    "status": "OK",
+    "foundTitle": "Hypothalamic-Pituitary-Testicular Axis Disruptions in Older Men Are Differentially Linked to Age and Modifiable Risk Factors: The European Male Aging Study | first author: Wu | The Journal of Clinical Endocrinology & Metabolism | 2008 | journal-article",
+    "siteLabel": "Wu FCW, et al. Hypothalamic-Pituitary-Testicular Axis Disruptions in Older Men Are Differentially Linked to Age and Modifiable Risk Factors: The European Male Aging Study. J Clin Endocrinol Metab. 2008.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/normal-testosterone-levels-by-age.md:28",
+      "src/content/learn/normal-testosterone-levels-by-age.md:52"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1210/jc.2011-0179",
+    "status": "OK",
+    "foundTitle": "Evaluation and Treatment of Adult Growth Hormone Deficiency: An Endocrine Society Clinical Practice Guideline | first author: Molitch | The Journal of Clinical Endocrinology & Metabolism | 2011 | journal-article",
+    "siteLabel": "Molitch ME, et al. Evaluation and Treatment of Adult Growth Hormone Deficiency: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2011.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/treatments/growth-hormone-therapy.md:36",
+      "src/content/treatments/growth-hormone-therapy.md:61"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1210/jc.2014-3415",
+    "status": "OK",
+    "foundTitle": "Pharmacological Management of Obesity: An Endocrine Society Clinical Practice Guideline | first author: Apovian | The Journal of Clinical Endocrinology & Metabolism | 2015 | journal-article",
+    "siteLabel": "Apovian CM, et al. Pharmacological Management of Obesity: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2015.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/treatments/medical-weight-loss.md:46"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1210/jc.2015-2236",
+    "status": "OK",
+    "foundTitle": "Treatment of Symptoms of the Menopause: An Endocrine Society Clinical Practice Guideline | first author: Stuenkel | The Journal of Clinical Endocrinology & Metabolism | 2015 | journal-article",
+    "siteLabel": "Stuenkel CA, et al. Treatment of Symptoms of the Menopause: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2015.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/bioidentical-vs-traditional-hormones.md:28",
+      "src/content/learn/bioidentical-vs-traditional-hormones.md:81",
+      "src/content/learn/blood-tests-before-hormone-therapy.md:26",
+      "src/content/treatments/hormone-therapy-for-women.md:42"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1210/jc.2016-1271",
+    "status": "OK",
+    "foundTitle": "Compounded Bioidentical Hormones in Endocrinology Practice: An Endocrine Society Scientific Statement | first author: Santoro | The Journal of Clinical Endocrinology & Metabolism | 2016 | journal-article",
+    "siteLabel": "Santoro N, et al. Compounded Bioidentical Hormones in Endocrinology Practice: An Endocrine Society Scientific Statement. J Clin Endocrinol Metab. 2016.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/bioidentical-vs-traditional-hormones.md:26",
+      "src/content/learn/bioidentical-vs-traditional-hormones.md:67"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1210/jc.2016-2935",
+    "status": "OK",
+    "foundTitle": "Harmonized Reference Ranges for Circulating Testosterone Levels in Men of Four Cohort Studies in the United States and Europe | first author: Travison | The Journal of Clinical Endocrinology & Metabolism | 2017 | journal-article",
+    "siteLabel": "Travison TG, et al. Harmonized Reference Ranges for Circulating Testosterone Levels in Men of Four Cohort Studies in the United States and Europe. J Clin Endocrinol Metab. 2017.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/normal-testosterone-levels-by-age.md:24",
+      "src/content/learn/normal-testosterone-levels-by-age.md:37"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1210/jc.2018-00229",
+    "status": "OK",
+    "foundTitle": "Testosterone Therapy in Men With Hypogonadism: An Endocrine Society* Clinical Practice Guideline | first author: Bhasin | The Journal of Clinical Endocrinology & Metabolism | 2018 | journal-article",
+    "siteLabel": "Bhasin S, et al. Testosterone Therapy in Men With Hypogonadism: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2018.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/conditions/low-testosterone.md:30",
+      "src/content/conditions/low-testosterone.md:60",
+      "src/content/learn/blood-tests-before-hormone-therapy.md:22",
+      "src/content/learn/blood-tests-before-hormone-therapy.md:35",
+      "src/content/learn/does-insurance-cover-hormone-therapy.md:24",
+      "src/content/learn/does-insurance-cover-hormone-therapy.md:51",
+      "src/content/learn/how-long-does-trt-take-to-work.md:24",
+      "src/content/learn/how-long-does-trt-take-to-work.md:82",
+      "src/content/learn/normal-testosterone-levels-by-age.md:22",
+      "src/content/learn/testosterone-injections-vs-pellets-vs-cream.md:22",
+      "src/content/learn/testosterone-injections-vs-pellets-vs-cream.md:49",
+      "src/content/learn/trt-cost-florida.md:22",
+      "src/content/learn/trt-cost-florida.md:64",
+      "src/content/learn/trt-telemedicine-florida.md:28",
+      "src/content/learn/trt-telemedicine-florida.md:69",
+      "src/content/treatments/sexual-health.md:42",
+      "src/content/treatments/testosterone-therapy.md:40",
+      "src/content/treatments/testosterone-therapy.md:65",
+      "src/pages/lab-testing.astro:77",
+      "src/pages/men.astro:63"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1210/jc.2019-01603",
+    "status": "OK",
+    "foundTitle": "Global Consensus Position Statement on the Use of Testosterone Therapy for Women | first author: Davis | The Journal of Clinical Endocrinology & Metabolism | 2019 | journal-article",
+    "siteLabel": "Davis SR, et al. Global Consensus Position Statement on the Use of Testosterone Therapy for Women. J Clin Endocrinol Metab. 2019.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/treatments/hormone-therapy-for-women.md:114",
+      "src/content/treatments/hormone-therapy-for-women.md:46"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1210/jcem.87.2.8201",
+    "status": "OK",
+    "foundTitle": "Age Trends in the Level of Serum Testosterone and Other Hormones in Middle-Aged Men: Longitudinal Results from the Massachusetts Male Aging Study | first author: Feldman | The Journal of Clinical Endocrinology & Metabolism | 2002 | journal-article",
+    "siteLabel": "Feldman HA, et al. Age Trends in the Level of Serum Testosterone and Other Hormones in Middle-Aged Men: Longitudinal Results from the Massachusetts Male Aging Study. J Clin Endocrinol Metab. 2002.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/normal-testosterone-levels-by-age.md:26"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.1530/EJE-11-0221",
+    "status": "OK",
+    "foundTitle": "Onset of effects of testosterone treatment and time span until maximum effects are achieved | first author: Saad | European Journal of Endocrinology | 2011 | journal-article",
+    "siteLabel": "Saad F, et al. Onset of effects of testosterone treatment and time span until maximum effects are achieved. Eur J Endocrinol. 2011.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/learn/how-long-does-trt-take-to-work.md:22",
+      "src/content/learn/how-long-does-trt-take-to-work.md:33",
+      "src/content/treatments/testosterone-therapy.md:46",
+      "src/content/treatments/testosterone-therapy.md:95"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.17226/25791",
+    "status": "OK",
+    "foundTitle": "The Clinical Utility of Compounded Bioidentical Hormone Therapy | first author: National Academies of Sciences, Engineering, and Medicine (committee authors) | (book, National Academies Press) | 2020 | edited-book",
+    "siteLabel": "National Academies of Sciences, Engineering, and Medicine. The Clinical Utility of Compounded Bioidentical Hormone Therapy. 2020.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session. Book DOI; Crossref type edited-book, issued 2020-09-22.",
+    "citedIn": [
+      "src/content/learn/bioidentical-vs-traditional-hormones.md:24",
+      "src/content/learn/bioidentical-vs-traditional-hormones.md:67",
+      "src/content/learn/does-insurance-cover-hormone-therapy.md:26",
+      "src/content/learn/does-insurance-cover-hormone-therapy.md:63",
+      "src/content/treatments/hormone-therapy-for-women.md:44",
+      "src/content/treatments/hormone-therapy-for-women.md:61"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.4158/GL-2019-0405",
+    "status": "OK",
+    "foundTitle": "American Association of Clinical Endocrinologists and American College of Endocrinology Guidelines for Management of Growth Hormone Deficiency in Adults and Patients Transitioning from Pediatric to Adult Care | first author: Yuen | Endocrine Practice | 2019 | journal-article",
+    "siteLabel": "Yuen KCJ, et al. AACE and ACE Guidelines for Management of Growth Hormone Deficiency in Adults and Patients Transitioning From Pediatric to Adult Care. Endocr Pract. 2019.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/treatments/growth-hormone-therapy.md:38"
+    ]
+  },
+  {
+    "url": "https://doi.org/10.7326/0003-4819-146-2-200701160-00005",
+    "status": "OK",
+    "foundTitle": "Systematic Review: The Safety and Efficacy of Growth Hormone in the Healthy Elderly | first author: Liu | Annals of Internal Medicine | 2007 | journal-article",
+    "siteLabel": "Liu H, et al. Systematic Review: The Safety and Efficacy of Growth Hormone in the Healthy Elderly. Ann Intern Med. 2007.",
+    "replacementUrl": "",
+    "note": "Verified via Crossref REST API (api.crossref.org) fetched through Firecrawl scrape on 2026-11-10; doi.org itself was not resolvable from this session.",
+    "citedIn": [
+      "src/content/treatments/growth-hormone-therapy.md:40",
+      "src/content/treatments/growth-hormone-therapy.md:73"
+    ]
+  },
+  {
+    "url": "https://medlineplus.gov/dehydration.html",
+    "status": "OK",
+    "foundTitle": "Dehydration: MedlinePlus",
+    "siteLabel": "MedlinePlus, National Library of Medicine. Dehydration.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10.",
+    "citedIn": [
+      "src/content/learn/what-to-expect-mobile-iv-visit.md:22",
+      "src/content/learn/what-to-expect-mobile-iv-visit.md:92"
+    ]
+  },
+  {
+    "url": "https://medlineplus.gov/fatigue.html",
+    "status": "OK",
+    "foundTitle": "Fatigue: MedlinePlus",
+    "siteLabel": "MedlinePlus, National Library of Medicine. Fatigue.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10.",
+    "citedIn": [
+      "src/content/conditions/always-tired.md:30"
+    ]
+  },
+  {
+    "url": "https://medlineplus.gov/lab-tests/testosterone-levels-test/",
+    "status": "OK",
+    "foundTitle": "Testosterone Levels Test: MedlinePlus Medical Test",
+    "siteLabel": "MedlinePlus, National Library of Medicine. Testosterone Levels Test.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10.",
+    "citedIn": [
+      "src/content/conditions/low-testosterone.md:34"
+    ]
+  },
+  {
+    "url": "https://mqa-internet.doh.state.fl.us/MQASearchServices/HealthCareProviders",
+    "status": "OK",
+    "foundTitle": "FL DOH MQA Search Portal | License Verification",
+    "siteLabel": "INLINE: <a href=\"https://mqa-internet.doh.state.fl.us/MQASearchServices/HealthCareProviders\" rel=\"noopener\" target=\"_blank\">Search the Florida Department of Health licence database</a>",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10.",
+    "citedIn": [
+      "src/pages/team.astro:87"
+    ]
+  },
+  {
+    "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/",
+    "status": "OK",
+    "foundTitle": "Iron - Health Professional Fact Sheet",
+    "siteLabel": "National Institutes of Health, Office of Dietary Supplements. Iron: Fact Sheet for Health Professionals.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10.",
+    "citedIn": [
+      "src/content/treatments/nutrition-and-supplements.md:42"
+    ]
+  },
+  {
+    "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/",
+    "status": "OK",
+    "foundTitle": "Magnesium - Health Professional Fact Sheet",
+    "siteLabel": "National Institutes of Health, Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10.",
+    "citedIn": [
+      "src/content/learn/what-to-expect-mobile-iv-visit.md:26"
+    ]
+  },
+  {
+    "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+    "status": "OK",
+    "foundTitle": "Vitamin B12 - Health Professional Fact Sheet",
+    "siteLabel": "National Institutes of Health, Office of Dietary Supplements. Vitamin B12: Fact Sheet for Health Professionals.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10.",
+    "citedIn": [
+      "src/content/treatments/iv-therapy.md:40",
+      "src/content/treatments/iv-therapy.md:72",
+      "src/content/treatments/nutrition-and-supplements.md:40",
+      "src/content/treatments/nutrition-and-supplements.md:87"
+    ]
+  },
+  {
+    "url": "https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/",
+    "status": "OK",
+    "foundTitle": "Vitamin C - Health Professional Fact Sheet",
+    "siteLabel": "National Institutes of Health, Office of Dietary Supplements. Vitamin C: Fact Sheet for Health Professionals.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10.",
+    "citedIn": [
+      "src/content/learn/what-to-expect-mobile-iv-visit.md:24",
+      "src/content/treatments/iv-therapy.md:38"
+    ]
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41687116/",
+    "status": "OK",
+    "foundTitle": "Elimination of the Black Box Warning on Menopausal Hormone Therapy - PubMed",
+    "siteLabel": "Elimination of the Black Box Warning on Menopausal Hormone Therapy. PubMed record 41687116.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10. Record: Sriprasert I, Hodis HN, Mack WJ, Rosser M, Evans ML, Xu X, Wright JD. Obstetrics and Gynecology 2026 May;147(5):642-. doi:10.1097/AOG.0000000000006226. A journal article (secondary source), not an FDA document. Abstract: 'the U.S. Department of Health and Human Services and the FDA announced removal of the boxed warning on November 10, 2025.' Official-source candidates returned by WebSearch but NOT loaded (do not treat as verified): https://www.fda.gov/news-events/press-announcements/hhs-advances-womens-health-removes-misleading-fda-warnings-hormone-replacement-therapy ; https://www.hhs.gov/press-room/hhs-advances-womens-health-removes-misleading-fda-warnings-hormone-replacement-therapy.html ; https://www.hhs.gov/press-room/fact-sheet-fda-initiates-removal-of-black-box-warnings-from-menopausal-hormone-replacement-therapy-products.html ; https://www.fda.gov/news-events/press-announcements/fda-approves-labeling-changes-menopausal-hormone-therapy-products",
+    "citedIn": [
+      "src/content/learn/is-hormone-therapy-safe-after-menopause.md:30"
+    ]
+  },
+  {
+    "url": "https://www.acog.org/womens-health/faqs/perimenopausal-bleeding-and-bleeding-after-menopause",
+    "status": "OK",
+    "foundTitle": "Perimenopausal Bleeding and Bleeding After Menopause | ACOG",
+    "siteLabel": "American College of Obstetricians and Gynecologists. Perimenopausal Bleeding and Bleeding After Menopause.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10.",
+    "citedIn": [
+      "src/content/conditions/perimenopause.md:34",
+      "src/content/learn/perimenopause-testing.md:30",
+      "src/content/learn/perimenopause-testing.md:94"
+    ]
+  },
+  {
+    "url": "https://www.auanet.org/guidelines-and-quality/guidelines/testosterone-deficiency-guideline",
+    "status": "UNVERIFIED",
+    "foundTitle": "Testosterone Deficiency Guideline - American Urological Association (search-result title)",
+    "siteLabel": "American Urological Association. Evaluation and Management of Testosterone Deficiency guideline.",
+    "replacementUrl": "",
+    "note": "NOT LOADED: WebFetch cannot resolve any external host in this session and the Firecrawl daily credit allowance ran out before this URL was fetched. One WebSearch (standard) restricted to the site domain returned this exact URL with the title shown in foundTitle, so the URL is indexed and the title matches; live status not confirmed.",
+    "citedIn": [
+      "src/content/conditions/low-testosterone.md:32",
+      "src/content/learn/normal-testosterone-levels-by-age.md:30",
+      "src/content/learn/testosterone-injections-vs-pellets-vs-cream.md:24",
+      "src/content/learn/trt-cost-florida.md:24",
+      "src/content/treatments/testosterone-therapy.md:42"
+    ]
+  },
+  {
+    "url": "https://www.congress.gov/bill/110th-congress/house-bill/6353",
+    "status": "UNVERIFIED",
+    "foundTitle": "H.R.6353 - 110th Congress (2007-2008): Ryan Haight Online Pharmacy Consumer Protection Act of 2008 (search-result title)",
+    "siteLabel": "Ryan Haight Online Pharmacy Consumer Protection Act of 2008, H.R. 6353, 110th Congress.",
+    "replacementUrl": "",
+    "note": "NOT LOADED: WebFetch cannot resolve any external host in this session and the Firecrawl daily credit allowance ran out before this URL was fetched. One WebSearch (standard) restricted to the site domain returned this exact URL with the title shown in foundTitle, so the URL is indexed and the title matches; live status not confirmed.",
+    "citedIn": [
+      "src/content/learn/trt-telemedicine-florida.md:26"
+    ]
+  },
+  {
+    "url": "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-cautions-about-using-testosterone-products-low-testosterone-due",
+    "status": "BAD",
+    "foundTitle": "Page Not Found | FDA (HTTP 404)",
+    "siteLabel": "U.S. Food and Drug Administration. Drug Safety Communication on testosterone products for low testosterone due to aging.",
+    "replacementUrl": "",
+    "note": "Live fetch through Firecrawl on 2026-11-10 returned HTTP 404 with the body 'Page Not Found'. Fetched once; no retry was possible (credits exhausted). Caveat: a WebSearch result still lists this exact www.fda.gov URL (described as issued 3 March 2015 with a 2/28/2025 update), so either the search index is stale or the 404 was transient; re-check in a browser. No load-verified replacement. Candidates seen in search results but NOT loaded: https://fda.gov/media/91048/download (FDA PDF) and the same path on the mirror host cacmap.fda.gov.",
+    "citedIn": [
+      "src/content/treatments/testosterone-therapy.md:48"
+    ]
+  },
+  {
+    "url": "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss",
+    "status": "OK",
+    "foundTitle": "FDA’s Concerns with Unapproved GLP-1 Drugs Used for Weight Loss | FDA",
+    "siteLabel": "U.S. Food and Drug Administration. FDA's Concerns with Unapproved GLP-1 Drugs Used for Weight Loss.",
+    "replacementUrl": "https://www.fda.gov/drugs/drug-alerts-and-statements/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10. The cited URL redirects to the canonical URL given in replacementUrl (page dated 2026-10-01); the old link still works, updating is optional.",
+    "citedIn": [
+      "src/content/learn/how-glp1-weight-loss-medications-work.md:30",
+      "src/content/learn/how-glp1-weight-loss-medications-work.md:97",
+      "src/content/treatments/medical-weight-loss.md:44",
+      "src/content/treatments/medical-weight-loss.md:75"
+    ]
+  },
+  {
+    "url": "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/testosterone-information",
+    "status": "OK",
+    "foundTitle": "Testosterone Information | FDA",
+    "siteLabel": "U.S. Food and Drug Administration. Testosterone Information.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10. Page modified 2026-06-23.",
+    "citedIn": [
+      "src/content/learn/testosterone-injections-vs-pellets-vs-cream.md:26"
+    ]
+  },
+  {
+    "url": "https://www.fda.gov/medical-devices/home-use-tests/menopause",
+    "status": "OK",
+    "foundTitle": "Menopause | FDA (Home Use Tests)",
+    "siteLabel": "U.S. Food and Drug Administration. Home Use Tests: Menopause.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10. Quotes: 'This is a qualitative test -- you find out whether or not you have elevated FSH levels, not if you definitely are in menopause or perimenopause.' / 'These tests will accurately detect FSH about 9 out of 10 times. This test does not detect menopause or perimenopause. As you grow older, your FSH levels may rise and fall during your menstrual cycle.' / 'A positive test indicates that you may be in a stage of menopause. If you have a positive test, or if you have any symptoms of menopause, you should see your doctor.' / 'You should not assume that a negative test means you have not reached menopause'. Supports the site's sentence.",
+    "citedIn": [
+      "src/content/learn/perimenopause-testing.md:28",
+      "src/content/learn/perimenopause-testing.md:49"
+    ]
+  },
+  {
+    "url": "https://www.fda.gov/medical-devices/safety-communications/update-fda-warns-biotin-may-interfere-lab-tests-fda-safety-communication",
+    "status": "BAD",
+    "foundTitle": "Page Not Found | FDA (HTTP 404)",
+    "siteLabel": "U.S. Food and Drug Administration. The FDA Warns that Biotin May Interfere with Lab Tests: FDA Safety Communication.",
+    "replacementUrl": "",
+    "note": "Live fetch through Firecrawl on 2026-11-10 returned HTTP 404 with the body 'Page Not Found'. Fetched once; no retry was possible. A WebSearch restricted to fda.gov did not return this safety communication at any fda.gov URL, and an exact-title search returned only third-party copies. No replacement for the same document was found. Related FDA pages seen in search results but NOT loaded (different documents): https://www.fda.gov/medical-devices/in-vitro-diagnostics/biotin-interference-troponin-lab-tests-assays-subject-biotin-interference ; https://www.fda.gov/media/127915/download (guidance 'Testing for Biotin Interference in In Vitro Diagnostic Devices').",
+    "citedIn": [
+      "src/content/learn/blood-tests-before-hormone-therapy.md:28",
+      "src/content/learn/blood-tests-before-hormone-therapy.md:93",
+      "src/content/treatments/nutrition-and-supplements.md:44",
+      "src/pages/lab-testing.astro:79"
+    ]
+  },
+  {
+    "url": "https://www.federalregister.gov/d/2025-24123",
+    "status": "OK",
+    "foundTitle": "Fourth Temporary Extension of COVID-19 Telemedicine Flexibilities for Prescription of Controlled Medications (Federal Register)",
+    "siteLabel": "Drug Enforcement Administration and Department of Health and Human Services. Fourth Temporary Extension of COVID-19 Telemedicine Flexibilities for Prescription of Controlled Medications. Federal Register document 2025-24123.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10. Short link redirects to https://www.federalregister.gov/documents/2025/12/31/2025-24123/fourth-temporary-extension-of-covid-19-telemedicine-flexibilities-for-prescription-of-controlled . DEA jointly with HHS; temporary rule. DATES: 'This rule is effective January 1, 2026 through December 31, 2026.'",
+    "citedIn": [
+      "src/content/learn/trt-telemedicine-florida.md:22",
+      "src/content/learn/trt-telemedicine-florida.md:45",
+      "src/pages/telehealth.astro:104",
+      "src/pages/telehealth.astro:38"
+    ]
+  },
+  {
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2018/09/ftc-brings-first-ever-action-targeting-iv-cocktail-therapy-marketer",
+    "status": "OK",
+    "foundTitle": "FTC Brings First-ever Action Targeting “iV Cocktail” Therapy Marketer | Federal Trade Commission",
+    "siteLabel": "Federal Trade Commission. FTC Brings First-Ever Action Targeting IV Cocktail Therapy Marketer. 2018.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10. Published 2018-09-20.",
+    "citedIn": [
+      "src/content/learn/what-to-expect-mobile-iv-visit.md:28",
+      "src/content/treatments/iv-therapy.md:44"
+    ]
+  },
+  {
+    "url": "https://www.irs.gov/publications/p502",
+    "status": "OK",
+    "foundTitle": "Publication 502 (2025), Medical and Dental Expenses | Internal Revenue Service",
+    "siteLabel": "Internal Revenue Service. Publication 502, Medical and Dental Expenses.",
+    "replacementUrl": "",
+    "note": "Loaded live (HTTP 200) through Firecrawl scrape on 2026-11-10.",
+    "citedIn": [
+      "src/content/learn/does-insurance-cover-hormone-therapy.md:28",
+      "src/content/learn/does-insurance-cover-hormone-therapy.md:91",
+      "src/content/learn/trt-cost-florida.md:26",
+      "src/content/learn/trt-cost-florida.md:57",
+      "src/pages/pricing.astro:161"
+    ]
+  },
+  {
+    "url": "https://www.law.cornell.edu/uscode/text/21/333",
+    "status": "UNVERIFIED",
+    "foundTitle": "21 U.S. Code § 333 - Penalties (search-result title)",
+    "siteLabel": "21 U.S. Code 333(e). Prohibited distribution of human growth hormone.",
+    "replacementUrl": "",
+    "note": "NOT LOADED: WebFetch cannot resolve any external host in this session and the Firecrawl daily credit allowance ran out before this URL was fetched. One WebSearch (standard) restricted to the site domain returned this exact URL with the title shown in foundTitle, so the URL is indexed and the title matches; live status not confirmed. The section is titled 'Penalties'; the search summary describes subsection (e) as the human growth hormone provision, which is what the label refers to.",
+    "citedIn": [
+      "src/content/treatments/growth-hormone-therapy.md:42",
+      "src/content/treatments/growth-hormone-therapy.md:69"
+    ]
+  },
+  {
+    "url": "https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia",
+    "status": "UNVERIFIED",
+    "foundTitle": "Anemia - Iron-Deficiency Anemia (search-result title)",
+    "siteLabel": "National Heart, Lung, and Blood Institute. Iron-Deficiency Anemia.",
+    "replacementUrl": "",
+    "note": "NOT LOADED: WebFetch cannot resolve any external host in this session and the Firecrawl daily credit allowance ran out before this URL was fetched. One WebSearch (standard) restricted to the site domain returned this exact URL with the title shown in foundTitle, so the URL is indexed and the title matches; live status not confirmed.",
+    "citedIn": [
+      "src/content/conditions/always-tired.md:34"
+    ]
+  },
+  {
+    "url": "https://www.nhlbi.nih.gov/health/sleep-apnea",
+    "status": "UNVERIFIED",
+    "foundTitle": "Sleep Apnea - What Is Sleep Apnea? (search-result title)",
+    "siteLabel": "National Heart, Lung, and Blood Institute. Sleep Apnea.",
+    "replacementUrl": "",
+    "note": "NOT LOADED: WebFetch cannot resolve any external host in this session and the Firecrawl daily credit allowance ran out before this URL was fetched. One WebSearch (standard) restricted to the site domain returned this exact URL with the title shown in foundTitle, so the URL is indexed and the title matches; live status not confirmed.",
+    "citedIn": [
+      "src/content/conditions/always-tired.md:36"
+    ]
+  },
+  {
+    "url": "https://www.nia.nih.gov/health/menopause/what-menopause",
+    "status": "UNVERIFIED",
+    "foundTitle": "What Is Menopause? (search-result title)",
+    "siteLabel": "National Institute on Aging. What Is Menopause?",
+    "replacementUrl": "",
+    "note": "NOT LOADED: WebFetch cannot resolve any external host in this session and the Firecrawl daily credit allowance ran out before this URL was fetched. One WebSearch (standard) restricted to the site domain returned this exact URL with the title shown in foundTitle, so the URL is indexed and the title matches; live status not confirmed.",
+    "citedIn": [
+      "src/content/conditions/menopause.md:36",
+      "src/content/conditions/perimenopause.md:36"
+    ]
+  },
+  {
+    "url": "https://www.niams.nih.gov/health-topics/osteoarthritis",
+    "status": "UNVERIFIED",
+    "foundTitle": "Osteoarthritis Symptoms, Causes & Risk Factors (search-result title)",
+    "siteLabel": "National Institute of Arthritis and Musculoskeletal and Skin Diseases. Osteoarthritis.",
+    "replacementUrl": "",
+    "note": "NOT LOADED: WebFetch cannot resolve any external host in this session and the Firecrawl daily credit allowance ran out before this URL was fetched. One WebSearch (standard) restricted to the site domain returned this exact URL with the title shown in foundTitle, so the URL is indexed and the title matches; live status not confirmed.",
+    "citedIn": [
+      "src/content/treatments/joint-pain.md:38"
+    ]
+  },
+  {
+    "url": "https://www.nice.org.uk/guidance/ng23",
+    "status": "UNVERIFIED",
+    "foundTitle": "Overview | Menopause: identification and management (NG23) (search-result title)",
+    "siteLabel": "National Institute for Health and Care Excellence. Menopause: identification and management (NG23).",
+    "replacementUrl": "",
+    "note": "NOT LOADED: WebFetch cannot resolve any external host in this session and the Firecrawl daily credit allowance ran out before this URL was fetched. One WebSearch (standard) restricted to the site domain returned this exact URL with the title shown in foundTitle, so the URL is indexed and the title matches; live status not confirmed. Search summary says the guideline was last updated 15 April 2026.",
+    "citedIn": [
+      "src/content/learn/perimenopause-testing.md:24",
+      "src/content/learn/perimenopause-testing.md:45"
+    ]
+  },
+  {
+    "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/erectile-dysfunction",
+    "status": "UNVERIFIED",
+    "foundTitle": "Erectile Dysfunction (ED) - NIDDK (search-result title)",
+    "siteLabel": "National Institute of Diabetes and Digestive and Kidney Diseases. Erectile Dysfunction (ED).",
+    "replacementUrl": "",
+    "note": "NOT LOADED: WebFetch cannot resolve any external host in this session and the Firecrawl daily credit allowance ran out before this URL was fetched. One WebSearch (standard) restricted to the site domain returned this exact URL with the title shown in foundTitle, so the URL is indexed and the title matches; live status not confirmed.",
+    "citedIn": [
+      "src/content/treatments/sexual-health.md:44"
+    ]
+  },
+  {
+    "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/erectile-dysfunction/symptoms-causes",
+    "status": "UNVERIFIED",
+    "foundTitle": "Symptoms & Causes of Erectile Dysfunction - NIDDK (search-result title)",
+    "siteLabel": "National Institute of Diabetes and Digestive and Kidney Diseases. Symptoms and Causes of Erectile Dysfunction.",
+    "replacementUrl": "",
+    "note": "NOT LOADED: WebFetch cannot resolve any external host in this session and the Firecrawl daily credit allowance ran out before this URL was fetched. One WebSearch (standard) restricted to the site domain returned this exact URL with the title shown in foundTitle, so the URL is indexed and the title matches; live status not confirmed.",
+    "citedIn": [
+      "src/content/conditions/erectile-dysfunction.md:32"
+    ]
+  }
+]

@@ -44,8 +44,8 @@ sources:
     url: "https://doi.org/10.1056/NEJMoa2215025"
   - label: "Saad F, et al. Onset of effects of testosterone treatment and time span until maximum effects are achieved. Eur J Endocrinol. 2011."
     url: "https://doi.org/10.1530/EJE-11-0221"
-  - label: "U.S. Food and Drug Administration. Drug Safety Communication on testosterone products for low testosterone due to aging."
-    url: "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-cautions-about-using-testosterone-products-low-testosterone-due"
+  - label: "U.S. Food and Drug Administration. Testosterone Information."
+    url: "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/testosterone-information"
 ---
 
 ## What is testosterone replacement therapy?

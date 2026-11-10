@@ -250,6 +250,7 @@ Stated plainly, so nothing here is mistaken for a finding.
 
 ### What I checked only partly
 
+- **Source links.** All 63 external sources cited on the site were checked. 50 loaded and matched their citation. 10 could not be loaded before the fetch tool ran out of credits and were confirmed by search results only: the AUA testosterone guideline, congress.gov, the Cornell statute page, two NHLBI pages, the NIA, NIAMS and NICE pages and two NIDDK pages. 3 were wrong and are fixed: one DOI I had truncated, and two FDA pages that returned "not found", now replaced with FDA's testosterone information page and the NIH biotin fact sheet. Raw results are in [`research/source-link-check-2026-11-10.json`](./research/source-link-check-2026-11-10.json). Re-check the ten before launch.
 - **Listings.** I saw the two Yelp listings, MapQuest, Birdeye and trtmap in search results. A full listing-by-listing audit was not completed. The playbook covers it in step 3.1.
 - **Redirects.** Tested locally, not on the live host, because the host is not known.
 - **JSON-LD.** Every block parses and has the properties its type needs, and every internal reference resolves. It has not been through Google's Rich Results Test, which needs a public URL.
