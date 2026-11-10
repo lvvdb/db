@@ -58,10 +58,10 @@ const waves = [428, 462, 502, 546, 588].map((y, i) => {
     <rect y="392" width="480" height="3" fill="#ffe2a8" opacity=".55"></rect>
     {
       reflections.map((r) => (
-        <rect x={r.x} y={r.y} width={r.w} height="5" rx="2.500" fill="#ffd9a0" opacity={r.o} />
+        <rect x={r.x} y={r.y} width={r.w} height="5" rx="2.5" fill="#ffd9a0" opacity={r.o} />
       ))
     }
-    <g class="sunrise__waves" fill="none" stroke="#cde4da" stroke-width="1.500" stroke-linecap="round">
+    <g class="sunrise__waves" fill="none" stroke="#cde4da" stroke-width="1.5" stroke-linecap="round">
       {waves.map((w) => <path d={w.d} opacity={w.o} />)}
     </g>
   </g>

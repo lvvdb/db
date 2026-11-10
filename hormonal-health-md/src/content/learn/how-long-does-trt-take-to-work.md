@@ -63,6 +63,12 @@ Several things move the curve:
 - **Whether the dose is right.** A level that is still below the normal range will not deliver the full effect.
 - **What else is going on.** Poor sleep, heavy drinking, depression and excess weight all blunt the response.
 
+## When do side effects show up?
+
+On a similar clock to the benefits. Oilier skin or acne can appear in the first weeks. Red blood cell counts begin to rise at around three months and peak between nine and twelve, which is exactly when follow-up labs are scheduled to catch it.
+
+Sperm production starts to fall within the first few months of treatment, often before a man notices anything. If you might want children, raise it before you start, because it changes the plan.
+
 ## What if I feel nothing after three months?
 
 Then two things need checking. First, your blood level: if it is still low, the dose or the form needs adjusting. Second, the diagnosis: if your level is solidly in the normal range and nothing has changed, testosterone was probably not the main cause of your symptoms.

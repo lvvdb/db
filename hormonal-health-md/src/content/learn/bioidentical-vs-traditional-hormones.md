@@ -74,6 +74,14 @@ Compounded hormones are mixed to order by a pharmacy. They are legal, and they a
 
 None of that means every compounded product is harmful. It means nobody has checked.
 
+## What about testosterone and DHEA in bioidentical programs?
+
+Many bioidentical packages add testosterone or DHEA alongside estrogen and progesterone. The evidence for those is much narrower than the marketing suggests.
+
+For testosterone, the only use supported by international consensus is low sexual desire that causes distress in women after menopause. There is no FDA-approved testosterone product for women, so doses have to be kept carefully within the normal female range. For DHEA, a vaginal form is FDA-approved to treat painful sex after menopause. Routine DHEA tablets or creams for energy or wellbeing are not recommended by the [Endocrine Society](https://doi.org/10.1210/jc.2015-2236).
+
+If either is offered to you, ask what it is meant to treat and how your levels will be monitored.
+
 ## When is compounding reasonable?
 
 When an approved product genuinely will not work for you. The usual reasons are an allergy to an ingredient in the commercial product, or a need for a dose or form that is not manufactured. Some progesterone capsules contain peanut oil, for example, which matters for anyone with a peanut allergy.

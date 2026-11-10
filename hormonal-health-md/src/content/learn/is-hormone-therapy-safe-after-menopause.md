@@ -24,6 +24,8 @@ sources:
     url: "https://doi.org/10.1001/jama.288.3.321"
   - label: "Manson JE, et al. Menopausal Hormone Therapy and Health Outcomes During the Intervention and Extended Poststopping Phases of the Women's Health Initiative Randomized Trials. JAMA. 2013."
     url: "https://doi.org/10.1001/jama.2013.278040"
+  - label: "U.S. Preventive Services Task Force. Hormone Therapy for the Primary Prevention of Chronic Conditions in Postmenopausal Persons. JAMA. 2022."
+    url: "https://doi.org/10.1001/jama.2022.18625"
   - label: "Elimination of the Black Box Warning on Menopausal Hormone Therapy. PubMed record 41687116."
     url: "https://pubmed.ncbi.nlm.nih.gov/41687116/"
 ---
@@ -61,6 +63,12 @@ That is why the [2022 position statement](https://doi.org/10.1097/GME.0000000000
 It appears to. Estrogen delivered through the skin by patch, gel or spray does not pass through the liver first, and in observational studies it carries a lower risk of blood clots than tablets. Micronized progesterone may have a more favorable profile than older synthetic progestins.
 
 Low-dose vaginal estrogen is in a different category altogether. It treats dryness and urinary symptoms with very little absorbed into the bloodstream.
+
+## Does it protect the heart, bones or brain?
+
+Bones, yes. Hormone therapy prevents the bone loss that follows menopause and lowers fracture risk, and that is an approved reason to use it. The heart and brain are different. Despite earlier hopes, hormone therapy is not recommended to prevent heart disease or dementia, and the U.S. Preventive Services Task Force advises against taking it solely to prevent chronic conditions.
+
+So the reason to start is symptoms, or bone protection in women at risk. Any other benefit is a possible bonus, not the purpose.
 
 ## Who should not take hormone therapy?
 

@@ -26,6 +26,17 @@ const ways = [
     path: '/mobile-iv/hallandale-beach',
   },
 ].filter(Boolean) as { icon: string; label: string; text: string; path: string }[];
+
+// Built as one string so no stray spaces land before the commas.
+const cityLinks = [
+  `<a href="/contact">${clinic.city}</a>`,
+  ...areas.map((a) => `<a href="${paths.areas(a.id)}">${a.data.city}</a>`),
+];
+const servingHtml =
+  cityLinks.slice(0, -1).join(', ') +
+  ' and ' +
+  cityLinks[cityLinks.length - 1] +
+  ', with <a href="/telehealth">telehealth across Florida</a>.';
 ---
 
 <section class="local" aria-labelledby="local-title">
@@ -99,14 +110,7 @@ const ways = [
 
   <p class="local__serving">
     <span>Serving</span>
-    <a href="/contact">{clinic.city}</a>{
-      areas.map((a, i) => (
-        <>
-          {i === areas.length - 1 ? ' and ' : ', '}
-          <a href={paths.areas(a.id)}>{a.data.city}</a>
-        </>
-      ))
-    }, with <a href="/telehealth">telehealth across Florida</a>.
+    <Fragment set:html={servingHtml} />
   </p>
 </section>
 

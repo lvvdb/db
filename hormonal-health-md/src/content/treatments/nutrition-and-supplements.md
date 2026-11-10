@@ -88,6 +88,12 @@ Only when you cannot absorb the vitamin by mouth. B12 injections are the standar
 
 If your level is normal, an injection will not add energy. For fluids and vitamins by vein, see [IV therapy](/treatments/iv-therapy).
 
+## What does a nutrition visit involve?
+
+The first visit is mostly questions. We ask what a normal day of eating looks like, when you eat, what you drink, how you sleep and how much you move. We look at your lab results alongside that, because a food diary and a blood panel together explain far more than either one alone.
+
+You leave with a short list of changes ranked by how much difference they will make, not a rigid meal plan you will abandon in two weeks. Follow-up visits check what stuck, repeat any labs that were off and adjust from there.
+
 ## How does nutrition fit with hormone therapy or weight loss?
 
 It decides how well the treatment holds up. During [medical weight loss](/treatments/medical-weight-loss), enough protein and regular resistance training protect muscle while fat comes off. On testosterone or menopause hormone therapy, the same habits support strength, bone and energy.

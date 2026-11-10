@@ -78,6 +78,12 @@ Several common conditions cause the same fatigue, mood change and weight gain th
 
 Finding one of these does not rule out a hormone problem. People often have both.
 
+## Can I order these tests myself?
+
+You can buy many of these tests directly from consumer lab services, and for some people that is a convenient first look. Two cautions apply. A testosterone sample taken at the wrong time of day, or while you are ill, can mislead you. And a number without your history attached is easy to over-read.
+
+If you already have results, bring them. A clinician can tell you which are usable, which need repeating and what is still missing.
+
 ## How should I prepare for the blood draw?
 
 A little preparation avoids a wasted trip:

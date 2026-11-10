@@ -69,6 +69,12 @@ Testosterone peaks in the early morning and falls through the day, and the drop 
 
 Illness, poor sleep and heavy training the day before can all pull a result down for a short time.
 
+## How accurate is a testosterone test?
+
+It depends on the method and the laboratory. Different testing methods can give noticeably different numbers from the same blood sample, especially at the low end of the range where decisions get made. That is one reason the same man can be called normal by one lab and low by another.
+
+The Centers for Disease Control and Prevention runs a program that certifies laboratories whose testosterone results meet an accuracy standard, and guidelines recommend using a certified lab where possible. It is also why repeat tests should be done at the same lab, so that you are comparing like with like.
+
 ## What if my level is low-normal and I still feel bad?
 
 Then the number is one piece of information, not the answer. A low-normal level with clear symptoms is a reason to look further: repeat the test, measure free testosterone and check the conditions that mimic low testosterone, including thyroid problems, sleep apnea, depression and medication effects.

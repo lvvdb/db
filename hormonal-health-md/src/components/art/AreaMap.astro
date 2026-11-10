@@ -72,8 +72,8 @@ const is = (k: string) => (active === k ? 'on' : undefined);
       <text x="190" y="128" text-anchor="middle" class={is('hollywood')}>HOLLYWOOD</text>
       <text x="170" y="210" text-anchor="middle" class={is('hallandale-beach')}>HALLANDALE BEACH</text>
       <text x="344" y="438" text-anchor="middle" class={is('aventura')}>AVENTURA</text>
-      <text x="458" y="432" class={is('sunny-isles-beach')}>SUNNY ISLES</text>
-      <text x="458" y="448" class={is('sunny-isles-beach')}>BEACH</text>
+      <text x="456" y="432" class:list={['sm', is('sunny-isles-beach')]}>SUNNY ISLES</text>
+      <text x="456" y="446" class:list={['sm', is('sunny-isles-beach')]}>BEACH</text>
     </g>
     <g class="minor">
       <text x="458" y="352">Golden Beach</text>
@@ -82,19 +82,19 @@ const is = (k: string) => (active === k ? 'on' : undefined);
 
     <!-- landmarks -->
     <g class="mark">
-      <circle cx="304" cy="262" r="3.500"></circle>
+      <circle cx="304" cy="262" r="3.5"></circle>
       <text x="278" y="270" text-anchor="end">Gulfstream Park</text>
-      <circle cx="306" cy="404" r="3.500"></circle>
+      <circle cx="306" cy="404" r="3.5"></circle>
       <text x="278" y="410" text-anchor="end">Aventura Mall</text>
     </g>
 
     <!-- the clinic -->
     <g class="pin">
       <circle cx="346" cy="266" r="16" class="pin__pulse"></circle>
-      <circle cx="346" cy="266" r="7.500" class="pin__dot"></circle>
-      <path d="M346 258.500v-28" class="pin__stem"></path>
+      <circle cx="346" cy="266" r="7.5" class="pin__dot"></circle>
+      <path d="M346 258.5v-28" class="pin__stem"></path>
       <rect x="262" y="196" width="168" height="34" rx="17" class="pin__tag"></rect>
-      <text x="346" y="217.500" text-anchor="middle" class="pin__name">Hormonal Health MD</text>
+      <text x="346" y="217.5" text-anchor="middle" class="pin__name">Hormonal Health MD</text>
     </g>
 
     <!-- compass -->
@@ -134,14 +134,14 @@ const is = (k: string) => (active === k ? 'on' : undefined);
   .swell path {
     fill: none;
     stroke: #fff;
-    stroke-width: 1.500;
+    stroke-width: 1.5;
     stroke-linecap: round;
     opacity: 0.8;
   }
   .zone {
     fill: rgb(242 112 61 / 0.13);
     stroke: rgb(242 112 61 / 0.55);
-    stroke-width: 1.500;
+    stroke-width: 1.5;
     stroke-dasharray: 5 5;
   }
   .road path {
@@ -150,7 +150,7 @@ const is = (k: string) => (active === k ? 'on' : undefined);
     stroke-width: 5;
     stroke-linecap: round;
     paint-order: stroke;
-    filter: drop-shadow(0 0 0.600px rgb(15 46 41 / 0.35));
+    filter: drop-shadow(0 0 0.6px rgb(15 46 41 / 0.35));
   }
   .county {
     fill: none;
@@ -162,7 +162,7 @@ const is = (k: string) => (active === k ? 'on' : undefined);
   .rlabel text {
     fill: var(--muted);
     font-family: var(--font-body);
-    font-size: 9.500px;
+    font-size: 9.5px;
     font-weight: 600;
     letter-spacing: 0.02em;
   }
@@ -173,6 +173,10 @@ const is = (k: string) => (active === k ? 'on' : undefined);
     font-weight: 700;
     letter-spacing: 0.16em;
     opacity: 0.62;
+  }
+  .city text.sm {
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
   }
   .city text.on {
     fill: var(--sun-deep);
@@ -188,7 +192,7 @@ const is = (k: string) => (active === k ? 'on' : undefined);
   .mark circle {
     fill: var(--sea-deep);
     stroke: #fff;
-    stroke-width: 1.500;
+    stroke-width: 1.5;
   }
   .mark text {
     fill: var(--sea-deep);
@@ -199,16 +203,16 @@ const is = (k: string) => (active === k ? 'on' : undefined);
   .pin__pulse {
     fill: rgb(242 112 61 / 0.25);
     transform-origin: 346px 266px;
-    animation: ping 2.800s ease-out infinite;
+    animation: ping 2.8s ease-out infinite;
   }
   .pin__dot {
     fill: var(--sun);
     stroke: #fff;
-    stroke-width: 2.500;
+    stroke-width: 2.5;
   }
   .pin__stem {
     stroke: var(--ink);
-    stroke-width: 1.500;
+    stroke-width: 1.5;
   }
   .pin__tag {
     fill: var(--ink);
@@ -216,7 +220,7 @@ const is = (k: string) => (active === k ? 'on' : undefined);
   .pin__name {
     fill: var(--cream);
     font-family: var(--font-body);
-    font-size: 12.500px;
+    font-size: 12.5px;
     font-weight: 650;
   }
   .compass circle {
@@ -226,7 +230,7 @@ const is = (k: string) => (active === k ? 'on' : undefined);
   .compass path {
     fill: none;
     stroke: var(--ink);
-    stroke-width: 1.500;
+    stroke-width: 1.5;
     stroke-linecap: round;
     stroke-linejoin: round;
   }

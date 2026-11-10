@@ -70,6 +70,22 @@ It depends on who orders them and where. Tests ordered to diagnose a condition a
 
 Some clinics will give you an itemized receipt to submit to your insurer for possible reimbursement. [[CONFIRM: whether the clinic provides itemized receipts for insurance reimbursement]]
 
+## What about Medicare?
+
+Medicare drug plans cover many FDA-approved hormone medications when they are medically necessary, but each Part D plan keeps its own list of covered drugs and its own rules. A product covered by one plan can be excluded by another, and prior authorization is common for testosterone.
+
+Compounded hormones are generally not covered. If you are on Medicare, check your plan's formulary for the exact product and strength before you fill a prescription, and ask your clinician whether a covered alternative would work as well.
+
+## What does paying out of pocket usually involve?
+
+Paying directly is common in hormone care, and it does not have to mean paying full price for everything. The parts can be split:
+
+- **The visit** is paid to the clinic.
+- **The lab work** can often be run at a negotiated cash price, which is frequently lower than the list price billed to insurers.
+- **The prescription** is filled at a pharmacy of your choice, where you can still use your insurance or a pharmacy discount program.
+
+Asking for each of those prices separately is the simplest way to compare clinics fairly.
+
 ## Can I use an HSA or FSA?
 
 Generally yes. Under [IRS rules](https://www.irs.gov/publications/p502), doctor visits, laboratory fees and prescription medication are qualified medical expenses. That makes these accounts a practical way to pay for care at a clinic that does not take insurance. [[CONFIRM: whether HSA and FSA cards are accepted]]

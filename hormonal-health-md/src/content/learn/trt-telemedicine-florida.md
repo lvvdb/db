@@ -71,6 +71,18 @@ Anything that involves your body directly:
 - **Blood pressure and measurements.**
 - **Pellet placement** or a clinic-administered injection, if that is the form you use.
 
+## How does a telehealth TRT visit actually go?
+
+A well-run video visit follows the same steps as an office visit, in a different order of travel:
+
+1. You describe your symptoms, history and medications on a video call.
+2. The clinician orders morning blood work, which you have drawn in person.
+3. A second call reviews the results. If the first testosterone level is low, a repeat test is ordered before any diagnosis.
+4. If treatment is appropriate, you discuss the forms, the risks and the monitoring plan, and decide together.
+5. The prescription goes to a pharmacy, and follow-up labs are booked for three to six months later.
+
+If a service skips from step one to step five, it has left out the part that makes the diagnosis.
+
 ## What are the warning signs of a poor telehealth service?
 
 Convenience is fine. Skipped steps are not. Be cautious of any service that:

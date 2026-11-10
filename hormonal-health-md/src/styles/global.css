@@ -276,12 +276,12 @@ address {
   text-align: center;
   justify-items: center;
 }
-.section-head p {
+.section-head p:not(.eyebrow) {
   font-size: var(--step-1);
   line-height: 1.5;
   color: var(--muted);
 }
-.section--ink .section-head p {
+.section--ink .section-head p:not(.eyebrow) {
   color: rgb(251 248 242 / 0.72);
 }
 
@@ -692,7 +692,7 @@ mark.confirm {
   margin-top: 0.6em;
 }
 .prose p {
-  margin: 0;
+  margin-bottom: 0;
 }
 .prose strong {
   color: var(--ink);

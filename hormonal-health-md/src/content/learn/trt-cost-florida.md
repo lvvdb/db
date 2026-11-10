@@ -72,6 +72,18 @@ Monitoring is a recurring cost for as long as you stay on treatment, and it is n
 
 If a clinic does not mention follow-up labs at all, ask why.
 
+## What hidden costs should I plan for?
+
+A few items often sit outside the headline price:
+
+- **Supplies** such as syringes, needles and alcohol swabs for injections
+- **Add-on medications** that some clinics include in a protocol by default. Ask what each one is for and whether you need it.
+- **Shipping**, if medication is mailed to you
+- **Extra visits or labs** if your dose needs adjusting in the first few months
+- **Fees for missed appointments** or for pausing a membership
+
+None of these is unreasonable. They should simply be on the page before you agree to anything.
+
 ## What should I ask before I sign up?
 
 Ask these six questions anywhere you are considering, including here:

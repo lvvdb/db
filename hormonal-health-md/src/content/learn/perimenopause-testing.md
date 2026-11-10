@@ -63,6 +63,12 @@ The conditions that imitate perimenopause. This is where blood work earns its pl
 
 Low iron deserves special mention. Heavy perimenopausal periods drain it, and low iron causes fatigue and brain fog that get blamed on hormones.
 
+## Should I order a big hormone panel anyway?
+
+Probably not. Large panels sold online can include dozens of markers, from saliva cortisol curves to hormone ratios. The more things you measure, the more likely one will fall outside its range by chance, and that sends people chasing problems they do not have.
+
+Testing works best when it answers a specific question raised by your symptoms. A handful of well-chosen tests, interpreted by someone who knows your history, is worth more than a long report with no context. If a result does not change what you would do next, it was not worth the money.
+
 ## When does hormone testing actually help?
 
 In a few specific situations:
