@@ -26,9 +26,9 @@ Yes, in the parts of Hollywood we can reach reliably from our clinic. East Holly
 
 The current service boundary and fee: [[CONFIRM: mobile service area and fee]]
 
-## Who books a mobile IV in Hollywood?
+## When does a mobile IV make sense in Hollywood?
 
-Two groups, mostly. Residents who are getting over a stomach bug, a long flight or a rough weekend and do not want to drive. And visitors staying on Hollywood Beach who have overdone the sun and need fluids. Both get the same screening before anything is started.
+When getting to a clinic is the hard part. That might be a resident recovering from a stomach bug or a long flight who should not be driving, or a visitor on Hollywood Beach who has had too much sun and needs fluids. Everyone gets the same screening before anything is started.
 
 If you are sick with a high fever, cannot keep any fluids down or feel faint, you need urgent care or an emergency department, not a wellness drip. We will tell you that on the phone.
 

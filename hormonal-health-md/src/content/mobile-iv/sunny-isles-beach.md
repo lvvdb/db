@@ -26,7 +26,7 @@ Yes. Our mobile team travels down A1A from Hallandale Beach, passing through Gol
 
 ## How does a visit work in an oceanfront tower?
 
-Sunny Isles Beach is almost all high-rise, so the logistics matter more here than anywhere else we go. Before the appointment:
+Sunny Isles Beach is almost all high-rise, so access is the main thing to arrange. Add us to your visitor list, tell us where to park and let us know if the elevator needs a fob. Before the appointment:
 
 - Put our name on your visitor list with the concierge
 - Tell us whether to use valet, guest parking or the service entrance
@@ -42,7 +42,7 @@ Your health history, your medications and allergies, your blood pressure and you
 
 ## Which areas of Sunny Isles Beach can you reach?
 
-The oceanfront buildings along Collins Avenue are the core of our coverage. On the bay side we come to Golden Shores, Winston Towers, Atlantic Isle and Poinciana Island. The south end near Sunny Isles Boulevard is the furthest point from our clinic, so tell us your cross street when you call.
+Sunny Isles Beach is a narrow strip, with oceanfront buildings along Collins Avenue and Golden Shores, Winston Towers, Atlantic Isle and Poinciana Island on the bay side. The south end near Sunny Isles Boulevard is the furthest point from our clinic, so tell us your cross street when you call. Our current coverage: [[CONFIRM: mobile service area and fee]]
 
 ## What is on the menu and what does it cost?
 
@@ -50,7 +50,7 @@ Hydration and vitamin blends, the same ones we give in the clinic. Ingredients a
 
 ## I am only here for the season. Is that a problem?
 
-Not for IV therapy. Many of our Sunny Isles Beach patients spend part of the year elsewhere. If you want ongoing care such as hormone therapy while you are here, see how that works on our [Sunny Isles Beach page](/areas/sunny-isles-beach).
+Not for IV therapy, which is a single visit. If you want ongoing care such as hormone therapy while you are here, see how that works on our [Sunny Isles Beach page](/areas/sunny-isles-beach).
 
 ## How do I book?
 

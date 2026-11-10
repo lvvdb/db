@@ -1,6 +1,6 @@
 ---
 title: "Bioidentical Hormone Therapy in Hallandale Beach, FL"
-description: "Hot flashes, night sweats, poor sleep? Hormone therapy for women, including FDA-approved bioidentical options, planned by a licensed clinician."
+description: "Hot flashes, night sweats, poor sleep? Hormone therapy for women, including FDA-approved bioidentical options, from a licensed clinician."
 eyebrow: "Bioidentical hormone therapy in Hallandale Beach, FL"
 headline: "Sleep, steady moods and a clear head, *with hormones matched to you.*"
 lede: "Hormone therapy is the most effective treatment for hot flashes and night sweats. We help you decide whether it fits your history, which form makes sense and how to use it safely."

@@ -68,7 +68,7 @@ Thyroid disease, iron deficiency, depression, anxiety and chronic sleep loss all
 
 ## When should I see someone sooner?
 
-Changing periods are expected, but some bleeding patterns need a prompt evaluation:
+Irregular periods are expected in perimenopause, but very heavy bleeding, bleeding between periods or after sex, and periods closer than three weeks apart are not. Those patterns need a prompt evaluation to rule out other causes:
 
 - Bleeding heavy enough to soak a pad or tampon every hour for several hours
 - Bleeding that lasts much longer than usual

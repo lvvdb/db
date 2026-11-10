@@ -72,7 +72,7 @@ Supplements make sense when there is a documented deficiency or a clear reason y
 
 ## Who actually runs low on vitamin D, B12 and iron?
 
-Some groups are much more likely to be low, and knowing whether you are in one tells us what to test.
+Older adults, people on metformin or acid reducers, women with heavy periods, people who eat little animal food and people who get little sun are the most likely to run low. Knowing whether you are in one of those groups tells us what to test.
 
 | Nutrient | More likely to be low if you | How it is corrected |
 | --- | --- | --- |

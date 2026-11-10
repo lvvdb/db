@@ -26,7 +26,7 @@ Yes. Aventura is the city directly south of our clinic, a straight run down Bisc
 
 ## Where in Aventura do you go?
 
-Most visits are to the condo towers around the Country Club Drive loop and to the gated communities east of Biscayne: Williams Island, Mystic Pointe, Porto Vita and The Waterways. We also come to Turnberry Isle and Aventura Lakes.
+Aventura is mostly condo towers around the Country Club Drive loop and gated communities east of Biscayne: Williams Island, Mystic Pointe, Porto Vita and The Waterways, with Turnberry Isle and Aventura Lakes alongside. Which of these our mobile team reaches: [[CONFIRM: mobile service area and fee]]
 
 If you are near the southern edge of the city around the Lehman Causeway, mention it when you call so we can confirm you are inside the service area.
 

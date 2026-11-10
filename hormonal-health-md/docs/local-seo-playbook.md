@@ -308,7 +308,7 @@ Subject: Local health resource for [building or organization name]
 
 Hi [Name],
 
-I am with Hormonal Health MD, a medical clinic at 501 Golden Isles Dr in Hallandale Beach. Several of your [residents / members / clients] already come to us, and we thought it would be useful to introduce ourselves properly.
+I am with Hormonal Health MD, a medical clinic at 501 Golden Isles Dr in Hallandale Beach. We are close to [building or organization name] and wanted to introduce ourselves properly.
 
 We evaluate and treat hormone, weight and energy problems, and we offer a mobile IV service to buildings nearby. If you keep a list of local providers or run a newsletter, we would be glad to be included, and we are happy to write a short, practical piece on a topic your readers ask about.
 

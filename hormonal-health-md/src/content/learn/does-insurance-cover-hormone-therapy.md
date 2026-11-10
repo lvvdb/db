@@ -92,7 +92,7 @@ Generally yes. Under [IRS rules](https://www.irs.gov/publications/p502), doctor 
 
 ## How do I check my own plan?
 
-Call the number on your insurance card, or log in to the plan's website, and ask five questions:
+Call the number on your insurance card, or log in to your plan's website, and ask about the exact medication and strength you have been prescribed. Coverage is decided product by product, so general answers are not enough. Ask these five questions:
 
 1. Is this specific medication on the formulary, and on which tier?
 2. Does it need prior authorization?

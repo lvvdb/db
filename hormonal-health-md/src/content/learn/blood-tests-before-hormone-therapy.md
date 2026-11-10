@@ -32,7 +32,7 @@ The tests depend on who you are and what is being treated. Men considering testo
 
 ## Which tests do men need before testosterone therapy?
 
-Men need proof of a low level and a set of safety baselines. The [Endocrine Society guideline](https://doi.org/10.1210/jc.2018-00229) is specific about both.
+Men need two fasting morning testosterone tests to prove the level is low, plus LH and FSH to find the cause, and a blood count and PSA as safety baselines. The [Endocrine Society guideline](https://doi.org/10.1210/jc.2018-00229) is specific about each.
 
 | Test | Why it is done |
 | --- | --- |
@@ -86,7 +86,7 @@ If you already have results, bring them. A clinician can tell you which are usab
 
 ## How should I prepare for the blood draw?
 
-A little preparation avoids a wasted trip:
+Book a morning appointment, fast if you have been asked to, and bring a list of everything you take. Those three steps prevent most repeat tests. The full checklist:
 
 1. Book a morning appointment if testosterone is being measured.
 2. Fast if you have been asked to. Drink water.

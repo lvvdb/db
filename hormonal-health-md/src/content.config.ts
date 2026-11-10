@@ -19,6 +19,8 @@ const base = {
   // draft = only built when SHOW_DRAFTS=1 (always noindex)
   status: z.enum(['live', 'hold', 'draft']).default('live'),
   holdReason: z.string().optional(),
+  // A confirmed price or differentiator for the title tag, e.g. "From $99". Leave unset until real.
+  titleSlot: z.string().max(16).optional(),
   faqs: z.array(faq).default([]),
   sources: z.array(source).default([]),
 };

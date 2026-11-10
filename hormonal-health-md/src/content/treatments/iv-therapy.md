@@ -1,6 +1,6 @@
 ---
 title: "IV Therapy in Hallandale Beach, FL | Hormonal Health MD"
-description: "IV hydration and vitamin drips with a health screening first. Get your drip at our Hallandale Beach clinic or have our mobile team come to your door."
+description: "IV hydration and vitamin drips with a health screening first. Visit our Hallandale Beach clinic or have our mobile team come to you."
 eyebrow: "IV therapy in Hallandale Beach, FL"
 headline: "Hydration and vitamins by IV, *in the clinic or at your door.*"
 lede: "IV therapy delivers fluids, electrolytes and vitamins straight into a vein. Every visit starts with a health screening, and you can come to the clinic or have our mobile team come to you."
@@ -88,7 +88,7 @@ Every infusion follows a screening. [[CONFIRM: who performs the pre-infusion hea
 
 ## What happens during a visit?
 
-A visit takes about an hour from start to finish. Here is the usual sequence:
+A visit takes about an hour from start to finish. You are screened first, a small catheter is placed in your arm, the drip runs for 30 to 60 minutes while you are monitored, and you leave with aftercare instructions. The usual sequence:
 
 1. A health screening: your history, medications, allergies and why you are booking.
 2. Vital signs, including blood pressure and heart rate.
@@ -113,7 +113,7 @@ Each city has its own page with the areas covered and how visits work in that ci
 
 Choose the clinic if you want the lowest cost, are already coming in for labs or a visit, or want a clinician on site. Choose mobile if you feel too unwell to drive, are staying in a hotel, or want to treat a group at home. The drips are the same.
 
-| | In clinic | Mobile |
+| Compare | In clinic | Mobile |
 | --- | --- | --- |
 | Where | 501 Golden Isles Dr, Suite 204-C | Your home, condo, hotel or office |
 | Cost | Drip price only | Drip price plus a travel fee |

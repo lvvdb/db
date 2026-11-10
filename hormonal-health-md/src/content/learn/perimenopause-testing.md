@@ -71,7 +71,7 @@ Testing works best when it answers a specific question raised by your symptoms. 
 
 ## When does hormone testing actually help?
 
-In a few specific situations:
+Hormone testing helps when you are under 45, when you have no periods to go by because of surgery or a hormonal IUD, or when your symptoms do not fit the usual pattern. In those situations a result changes what happens next:
 
 - **You are under 45.** Changes this early are less expected, so testing supports the diagnosis.
 - **You are under 40.** Possible premature ovarian insufficiency needs a proper workup, including repeated FSH tests weeks apart.
@@ -80,7 +80,7 @@ In a few specific situations:
 
 ## What should I track at home?
 
-Your own record is often more useful than a lab result. For two or three months, note:
+Track your period dates and flow, hot flashes, nights of poor sleep and mood changes for two or three months. That record shows the pattern that defines perimenopause, and it is often more useful than a lab result. Note:
 
 - The first day of each period and how heavy it was
 - Hot flashes and night sweats, roughly how many

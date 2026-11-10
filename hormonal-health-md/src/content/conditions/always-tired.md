@@ -44,7 +44,7 @@ Fatigue that lasts more than a few weeks and is not explained by an obvious life
 
 ## What are the most common medical causes?
 
-These account for most cases we see, and all of them are testable:
+The usual causes are too little or poor-quality sleep, sleep apnea, low iron, an underactive thyroid, blood sugar problems, low vitamin B12, depression or anxiety, and medication side effects. Each one leaves clues, and each can be checked.
 
 | Cause | Clues | How it is checked |
 | --- | --- | --- |
@@ -71,7 +71,7 @@ If your results come back normal, that is useful too. It shifts attention to sle
 
 ## When is fatigue a warning sign?
 
-See a doctor promptly if tiredness comes with any of the following:
+Tiredness needs prompt medical attention when it arrives with unexplained weight loss, fever, night sweats, breathlessness, chest pain, bleeding or fainting. Those combinations can point to something serious, so do not wait for a routine appointment. See a doctor soon if you have any of these:
 
 - Weight loss you cannot explain
 - Fevers or drenching night sweats

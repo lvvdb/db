@@ -40,7 +40,7 @@ The word says nothing about where a product is made, how it is tested or whether
 
 ## Which FDA-approved hormones are bioidentical?
 
-More than most people realize. You do not need a specialty pharmacy to get one.
+Estradiol in patches, gels, sprays, tablets and vaginal products is bioidentical, and so is micronized progesterone in capsules. Both are FDA-approved and stocked by ordinary pharmacies, so you do not need a specialty pharmacy or a custom mix to get one.
 
 | Bioidentical and FDA-approved | Form |
 | --- | --- |
@@ -90,7 +90,7 @@ In those cases compounding is a sensible medical decision made for a specific re
 
 ## How do I choose?
 
-Ask three questions of any prescription you are offered:
+Choose by asking whether the product is FDA-approved, why a compounded version would be needed if it is not, and how your dose will be adjusted. Put these three questions to anyone offering you a prescription:
 
 1. Is this product FDA-approved?
 2. If it is compounded, what is the specific reason an approved product will not do?

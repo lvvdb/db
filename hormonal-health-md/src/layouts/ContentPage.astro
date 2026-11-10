@@ -29,6 +29,7 @@ interface Props {
   schema?: (Record<string, unknown> | null)[];
   medical?: boolean;
   ogType?: 'website' | 'article';
+  slot?: boolean | string;
 }
 
 const {
@@ -49,6 +50,7 @@ const {
   schema = [],
   medical = true,
   ogType = 'website',
+  slot = false,
 } = Astro.props;
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -73,6 +75,7 @@ const notice =
   medical={medical}
   ogType={ogType}
   notice={notice}
+  slot={slot}
   schema={[...schema, faqNode(path, faqs)]}
 >
   <section class="phero">

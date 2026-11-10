@@ -31,11 +31,11 @@ If Collins is slow, the other way is west over the William Lehman Causeway to Bi
 
 [[CONFIRM: parking and building access at 501 Golden Isles Dr, including visitor parking, elevator and suite directions]]
 
-## Where in Sunny Isles Beach do your patients live?
+## Which parts of Sunny Isles Beach are within reach?
 
-Mostly in the oceanfront towers along Collins Avenue, with others on the bay side in Golden Shores, Winston Towers, Atlantic Isle and Poinciana Island. Plenty are here for the season and travel the rest of the year, and we plan visits and blood work around that.
+All of it. The city is a narrow strip, with oceanfront towers along Collins Avenue and Golden Shores, Winston Towers, Atlantic Isle and Poinciana Island on the bay side. If you are here for only part of the year, visits and blood work can be planned around the months you are in Florida.
 
-For mobile IV, the stretch of Sunny Isles Beach our team covers today is: [[CONFIRM: mobile service area and fee]]
+For mobile IV, the stretch of Sunny Isles Beach our team covers is: [[CONFIRM: mobile service area and fee]]
 
 ## What do people from Sunny Isles Beach ask us for?
 

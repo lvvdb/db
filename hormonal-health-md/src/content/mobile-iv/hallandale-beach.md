@@ -1,6 +1,6 @@
 ---
 title: "Mobile IV in Hallandale Beach, FL | Hormonal Health MD"
-description: "Mobile IV therapy from a clinic actually in Hallandale Beach. Health screening first, then hydration and vitamin drips at your home, condo or hotel."
+description: "Mobile IV from a clinic actually in Hallandale Beach. Health screening first, then hydration or vitamin drips at your home, condo or hotel."
 eyebrow: "Mobile IV therapy in Hallandale Beach, FL"
 headline: "IV therapy at your door, *from the clinic down the street.*"
 lede: "Our mobile team leaves from Golden Isles Drive, inside Hallandale Beach, so we are coming from a few blocks away and not from another county. Same screening and same drips as in the clinic."
@@ -34,7 +34,7 @@ The exact boundary and the travel fee for each part of the city: [[CONFIRM: mobi
 
 ## What should I arrange with my building?
 
-Most condo buildings here have a front desk, a guard gate or both. Three things make the visit smooth:
+Register us as a visitor, tell us where guests park and pick a comfortable spot with good light. Most condo buildings here have a front desk, a guard gate or both, so these three steps make the visit smooth:
 
 1. Register us as a visitor before we arrive.
 2. Tell us where guests are allowed to park, or whether there is valet.

@@ -62,7 +62,7 @@ Most drips run 30 to 60 minutes, depending on the volume and what is in the bag.
 
 ## What are the risks?
 
-For healthy adults the risks are low, and they are worth knowing:
+For healthy adults the risks are low. The common ones are bruising and a sore vein, and the uncommon ones are infection, fluid leaking into the tissue and, in people with heart or kidney problems, fluid overload. In full:
 
 - **Bruising or soreness** at the site, which is common and minor
 - **Infiltration**, where fluid leaks into the surrounding tissue and causes swelling
@@ -73,7 +73,7 @@ For healthy adults the risks are low, and they are worth knowing:
 
 ## Who should not book a mobile IV?
 
-Check with your own doctor first, or choose a clinic setting, if you have:
+People with heart failure, kidney disease, uncontrolled blood pressure or a pregnancy should not book a mobile IV without medical clearance. Check with your own doctor first, or choose a clinic setting, if you have:
 
 - Heart failure or another significant heart condition
 - Kidney disease
@@ -99,7 +99,7 @@ Keep the dressing on for an hour or so and avoid heavy lifting with that arm for
 
 ## How do I get ready?
 
-A few simple things make the visit smoother:
+Eat something light, drink a glass of water, wear sleeves that roll up and have your medication list to hand. A few minutes of preparation makes the IV easier to place and the visit quicker:
 
 1. Eat something light and drink a glass of water beforehand.
 2. Wear sleeves that roll up easily.

@@ -74,7 +74,7 @@ So the reason to start is symptoms, or bone protection in women at risk. Any oth
 
 ## Who should not take hormone therapy?
 
-Hormone therapy is generally avoided if you have:
+Women with a history of breast cancer, a previous blood clot, stroke or heart attack, unexplained vaginal bleeding or active liver disease are generally advised against systemic hormone therapy. It is usually avoided if you have:
 
 - A history of breast cancer or another estrogen-sensitive cancer
 - Vaginal bleeding that has not been explained
@@ -91,7 +91,7 @@ The change reflects the same re-reading of the evidence described above. It does
 
 ## How is safety managed in practice?
 
-By matching the treatment to the person and then checking in:
+By matching the treatment to the person, using the lowest dose that works and reviewing it regularly. In practice that means a full history first, a route chosen for your risk profile and a check at least once a year:
 
 1. A full history before anything is prescribed, including family history.
 2. Blood pressure and up-to-date screening, including a mammogram.

@@ -9,7 +9,7 @@ import { faqNode, serviceNode } from '../lib/schema';
 const path = '/lab-testing';
 const title = 'Hormone Blood Test in Hallandale Beach | Hormonal Health MD';
 const description =
-  'Hormone blood tests for men and women, plus thyroid, metabolic and nutrient panels. Results explained by a clinician. No obligation to start treatment.';
+  'Hormone, thyroid, metabolic and nutrient blood tests for men and women. Results explained by a clinician. No obligation to start treatment.';
 const crumbs = [
   { name: 'Home', path: '/' },
   { name: 'Lab testing', path },
@@ -91,6 +91,7 @@ const sources = [
   crumbs={crumbs}
   medical
   hasAside
+  slot
   schema={[serviceNode({ path, name: 'Hormone and wellness lab testing', description }), faqNode(path, faqs)]}
 >
   <LabPanel slot="aside" title="Your results" />

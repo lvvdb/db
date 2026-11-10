@@ -72,7 +72,7 @@ None is risk-free, and none is clearly safer overall. Every form can raise your 
 
 ## How do I choose?
 
-Start from your life, then check it against your labs. A few questions usually settle it:
+Start from your routine and your household, then check the choice against your labs. Comfort with needles, children or a partner at home, cost and how stable your dose is usually settle it. Ask yourself:
 
 - Are you comfortable with a weekly injection, or would you avoid it?
 - Do you have young children or a partner at home, which makes gel transfer a real concern?

@@ -56,7 +56,7 @@ A sensible check includes blood pressure, cholesterol, blood sugar, thyroid func
 
 ## What else could it be?
 
-A few conditions imitate menopause closely enough to be worth ruling out:
+Thyroid problems, low iron, depression, anxiety, medication side effects and sleep apnea can all imitate menopause. They cause sweats, palpitations, exhaustion and mood changes of their own, and they are common at the same age, so they are worth ruling out:
 
 - **Thyroid problems**, which cause heat intolerance, sweats, palpitations and mood changes
 - **Low iron or anemia**, which cause fatigue and poor concentration

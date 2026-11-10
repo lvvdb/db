@@ -10,6 +10,7 @@ import Footer from '../components/Footer.astro';
 import { clinic } from '../config/clinic';
 import { entries, paths, SHOW_DRAFTS } from '../lib/content';
 import { abs, breadcrumbNode, clinicNode, graph, pageNode, websiteNode } from '../lib/schema';
+import { descriptionWithSlot, titleWithSlot } from '../lib/seo';
 
 interface Props {
   title: string;
@@ -32,11 +33,17 @@ interface Props {
   ogType?: 'website' | 'article';
   /** Shown in a bar across the top when a page is a draft or on hold. */
   notice?: string;
+  /**
+   * Service and local pages pass `true` so a confirmed site-wide differentiator
+   * ("Open 7 Days") joins the title and description when it fits. A string is a
+   * confirmed page-level slot such as "From $99".
+   */
+  slot?: boolean | string;
 }
 
 const {
-  title,
-  description,
+  title: rawTitle,
+  description: rawDescription,
   path,
   noindex = false,
   updated,
@@ -49,7 +56,11 @@ const {
   alternates = [],
   ogType = 'website',
   notice,
+  slot = false,
 } = Astro.props;
+
+const title = slot ? titleWithSlot(rawTitle, typeof slot === 'string' ? slot : undefined) : rawTitle;
+const description = slot ? descriptionWithSlot(rawDescription) : rawDescription;
 
 const canonical = abs(path);
 const services = fullClinic

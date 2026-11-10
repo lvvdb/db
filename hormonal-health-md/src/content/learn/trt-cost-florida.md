@@ -58,7 +58,7 @@ Health savings and flexible spending accounts can generally be used for doctor v
 
 ## Why do clinic prices vary so much?
 
-Because clinics sell different things under the same name. Three differences explain most of the gap:
+Because clinics sell different things under the same name. One price may bundle visits, labs and medication, while another covers the prescription alone. Three differences explain most of the gap:
 
 - **What is bundled.** One price may cover everything, or only the medication.
 - **How often you are seen.** More frequent visits and labs cost more, though the [Endocrine Society](https://doi.org/10.1210/jc.2018-00229) schedule of a check at three to six months and then yearly is the standard to measure against.
@@ -74,7 +74,7 @@ If a clinic does not mention follow-up labs at all, ask why.
 
 ## What hidden costs should I plan for?
 
-A few items often sit outside the headline price:
+Plan for supplies, add-on medications, shipping, extra visits while your dose is adjusted and any membership fees. These often sit outside the headline price, so ask about each one before you compare clinics:
 
 - **Supplies** such as syringes, needles and alcohol swabs for injections
 - **Add-on medications** that some clinics include in a protocol by default. Ask what each one is for and whether you need it.
@@ -86,7 +86,7 @@ None of these is unreasonable. They should simply be on the page before you agre
 
 ## What should I ask before I sign up?
 
-Ask these six questions anywhere you are considering, including here:
+Ask what is included, what is billed separately, how often you will be monitored and who reviews your labs. A clinic that answers plainly is usually a clinic that treats you plainly. Put these six questions to any clinic, including this one:
 
 1. Is lab work included, or billed separately each time?
 2. Is the medication included, and which form is it?

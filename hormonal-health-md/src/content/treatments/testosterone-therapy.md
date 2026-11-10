@@ -1,6 +1,6 @@
 ---
 title: "TRT Clinic in Hallandale Beach, FL | Hormonal Health MD"
-description: "Low T symptoms? Get two morning blood tests, a licensed clinician and testosterone therapy only if your labs support it. Hallandale Beach clinic or online."
+description: "Low T symptoms? Get two morning blood tests and testosterone therapy only if your labs support it. Hallandale Beach clinic or online."
 eyebrow: "Testosterone therapy in Hallandale Beach, FL"
 headline: "Energy, drive and strength back, *proven by your labs first.*"
 lede: "Testosterone replacement therapy works when low testosterone is really the problem. We confirm that with blood tests before anything is prescribed, then monitor you so the dose stays right."
@@ -113,7 +113,7 @@ Monitoring is what separates treatment from guesswork. Expect a visit and labs t
 
 ## Who should not start TRT?
 
-TRT is not right for everyone. The Endocrine Society advises against starting it if you:
+Men who want children soon, men with breast or prostate cancer, and men with a high red blood cell count, untreated severe sleep apnea or a recent heart attack or stroke should not start TRT. The Endocrine Society advises against starting it if you:
 
 - Plan to father a child in the near future
 - Have breast cancer or prostate cancer

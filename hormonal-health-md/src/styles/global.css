@@ -431,6 +431,12 @@ address {
   padding: 0.55rem 1.1rem;
   font-size: 0.94rem;
 }
+@media (max-width: 30rem) {
+  .btn {
+    white-space: normal;
+    text-align: center;
+  }
+}
 .btn-row {
   display: flex;
   flex-wrap: wrap;
@@ -774,6 +780,11 @@ mark.confirm {
   border: 1px solid var(--line);
   border-radius: var(--r-md);
   background: var(--paper);
+}
+.table-scroll:focus-visible {
+  outline: 2px solid var(--sun);
+  outline-offset: 3px;
+  border-radius: var(--r-md);
 }
 .prose th,
 .prose td {

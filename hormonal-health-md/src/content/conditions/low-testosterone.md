@@ -63,7 +63,7 @@ A proper workup then adds LH and FSH to locate the cause, and often free testost
 
 ## What else could it be?
 
-Several conditions feel just like low testosterone, and many men have more than one at once:
+Thyroid problems, depression, sleep apnea, diabetes, medication side effects and blood vessel disease all cause the same tiredness, low mood and low sex drive as low testosterone. Many men have more than one at once, which is why they are tested together:
 
 - **Thyroid problems**, which cause fatigue, weight change and low mood
 - **Depression or chronic stress**

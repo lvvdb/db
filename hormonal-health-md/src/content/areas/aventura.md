@@ -18,7 +18,7 @@ faqs:
   - q: "Can your mobile team get into gated communities like Williams Island?"
     a: "Yes, as long as you add us to your guest list or call the gate ahead of the visit. Tell us your building name and any visitor parking or valet rules when you book. [[CONFIRM: mobile service area and fee]]"
   - q: "I live in Aventura part of the year. Can I still be a patient?"
-    a: "Yes. Many people here are seasonal. In-person visits and labs happen while you are in town, and follow-up by video is available while you are physically in Florida. [[CONFIRM: policy for patients who spend part of the year outside Florida]]"
+    a: "Yes. In-person visits and labs happen while you are in town, and follow-up by video is available while you are physically in Florida. [[CONFIRM: policy for patients who spend part of the year outside Florida]]"
 ---
 
 ## How do I get to the clinic from Aventura?
@@ -33,11 +33,11 @@ From Williams Island, Mystic Pointe or the Country Club Drive loop, it is usuall
 
 Call us from the car if you cannot find the entrance and someone will talk you in.
 
-## Which parts of Aventura do you see patients from?
+## Which parts of Aventura are closest to the clinic?
 
-People come to us from across the city: the towers around Country Club Drive, Williams Island, Turnberry Isle, Mystic Pointe, The Waterways, Porto Vita and Aventura Lakes. If you live or work near Aventura Hospital on Biscayne, you are already most of the way here.
+All of Aventura is a short drive from us: the towers around Country Club Drive, Williams Island, Turnberry Isle, Mystic Pointe, The Waterways, Porto Vita and Aventura Lakes. The north end of the city is nearest, and if you live or work near Aventura Hospital on Biscayne, you are already most of the way here.
 
-For mobile IV visits, the buildings and communities we currently reach in Aventura are: [[CONFIRM: mobile service area and fee]]
+For mobile IV visits, the buildings and communities our team reaches in Aventura are: [[CONFIRM: mobile service area and fee]]
 
 ## What do Aventura patients come to us for?
 

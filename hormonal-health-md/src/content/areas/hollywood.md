@@ -35,11 +35,11 @@ It depends which part of Hollywood you start in. There are three easy routes, an
 
 The address is 501 Golden Isles Drive, Suite 204-C. [[CONFIRM: parking and building access at 501 Golden Isles Dr, including visitor parking, elevator and suite directions]]
 
-## Which Hollywood neighborhoods do your patients come from?
+## Which Hollywood neighborhoods are closest?
 
-East Hollywood is closest: Hollywood Lakes, Downtown, Parkside, Park East and the beach. We also see people from Hollywood Hills and Emerald Hills who use I-95 to get here.
+East Hollywood is closest: Hollywood Lakes, Downtown, Parkside, Park East and the beach. Hollywood Hills and Emerald Hills are further west, and from there I-95 is the quickest way down.
 
-Mobile IV coverage in Hollywood is narrower than our clinic catchment because of travel time. The areas the mobile team reaches today: [[CONFIRM: mobile service area and fee]]
+Mobile IV coverage depends on travel time from the clinic, so it may not reach every part of Hollywood. The areas the mobile team covers: [[CONFIRM: mobile service area and fee]]
 
 ## What brings Hollywood patients in?
 

@@ -56,7 +56,7 @@ Testosterone does not do this alone. The men who see the biggest change are the 
 
 ## Why is my timeline different from someone else's?
 
-Several things move the curve:
+Because your starting level, the form of testosterone, your dose and your general health all change how fast you respond. Two men on the same prescription can be weeks apart. The main factors:
 
 - **How low you started.** Men with very low levels usually notice more, sooner.
 - **The form you use.** Injections raise levels within days, while gels take a couple of weeks to reach a steady state.

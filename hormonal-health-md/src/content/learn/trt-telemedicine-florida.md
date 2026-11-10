@@ -54,7 +54,7 @@ Here is how this clinic handles it: [[CONFIRM: telehealth prescribing policy]]
 
 ## Which parts of TRT work well by video?
 
-Most of the talking does. These visits rarely need you in the room:
+Most of the conversation does. Discussing symptoms, reviewing lab results, choosing a form and dose, and routine follow-ups all work well by video, because none of them needs a physical exam. These visits rarely need you in the room:
 
 - The first conversation about symptoms and history
 - Reviewing your lab results
@@ -64,7 +64,7 @@ Most of the talking does. These visits rarely need you in the room:
 
 ## What always has to be done in person?
 
-Anything that involves your body directly:
+Blood draws, physical exams, blood pressure checks and any procedure such as pellet placement have to happen in person. Video cannot replace anything that involves your body directly:
 
 - **Blood draws.** Two morning tests before diagnosis, then monitoring labs at three to six months and at least yearly, as the [Endocrine Society](https://doi.org/10.1210/jc.2018-00229) recommends.
 - **A physical exam**, when your clinician needs one.
@@ -73,7 +73,7 @@ Anything that involves your body directly:
 
 ## How does a telehealth TRT visit actually go?
 
-A well-run video visit follows the same steps as an office visit, in a different order of travel:
+A well-run video visit follows the same steps as an office visit: history first, then blood work, then results, then a decision. Only the blood draw needs you to travel. The usual sequence:
 
 1. You describe your symptoms, history and medications on a video call.
 2. The clinician orders morning blood work, which you have drawn in person.
@@ -85,7 +85,7 @@ If a service skips from step one to step five, it has left out the part that mak
 
 ## What are the warning signs of a poor telehealth service?
 
-Convenience is fine. Skipped steps are not. Be cautious of any service that:
+The warning signs are skipped steps: no morning blood tests, no questions about fertility or prostate health, no follow-up labs and no contact with the prescriber. Convenience is fine, but be cautious of any service that:
 
 - Offers testosterone without two morning blood tests
 - Does not ask about fertility plans, prostate health or sleep apnea

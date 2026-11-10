@@ -24,7 +24,7 @@ const alternates = esLive
 
 const title = 'Hormone Clinic in Hallandale Beach, FL | Hormonal Health MD';
 const description =
-  'Tired, foggy or not yourself? Get labs, a licensed clinician and a plan built around you. In clinic in Hallandale Beach, online or at your door.';
+  'Tired, foggy or not yourself? Get labs, a licensed clinician and a plan built around you. In Hallandale Beach, online or at your door.';
 
 const symptoms = [
   { icon: 'battery', label: 'Tired all the time', text: 'Sleep does not fix it and coffee stopped working.', path: '/conditions/always-tired' },
@@ -79,6 +79,7 @@ const faqs = [
   path="/"
   updated="2026-11-09"
   fullClinic
+  slot
   alternates={alternates}
   schema={[faqNode('/', faqs)]}
 >
@@ -269,8 +270,8 @@ const faqs = [
         <h2>A real clinic in <em>Golden Isles.</em></h2>
         <p class="lede">
           We are at {clinic.street}, {clinic.suite}, just south of Hallandale Beach Blvd between
-          US-1 and the Intracoastal. Patients drive in from across south Broward and northeast
-          Miami-Dade.
+          US-1 and the Intracoastal. That puts us a short drive from most of south Broward and
+          northeast Miami-Dade.
         </p>
         <ul class="area__list">
           <li><a href="/contact"><strong>Hallandale Beach</strong><span>The clinic</span><Icon name="arrow" /></a></li>

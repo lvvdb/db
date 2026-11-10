@@ -1,6 +1,6 @@
 ---
 title: "ED Treatment in Hallandale Beach, FL | Hormonal Health MD"
-description: "Erectile dysfunction is common and treatable. Get a private evaluation, labs and a treatment plan from a licensed clinician in Hallandale Beach or online."
+description: "ED is common and treatable. Get a private evaluation, labs and a treatment plan from a licensed clinician in Hallandale Beach or online."
 eyebrow: "Erectile dysfunction treatment in Hallandale Beach, FL"
 headline: "Find the real cause of ED, *then treat it properly.*"
 lede: "Erection problems usually have a physical cause you can test for. We check your hormones, blood sugar and circulation risk, then build a plan that fits, in a private visit."

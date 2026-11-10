@@ -14,9 +14,11 @@ The site is built, statically rendered and passes every automated check. It is *
 | Extra pages in the drafts build | 14 (12 articles, the answers hub, a Spanish draft) |
 | Automated checks | All passing: unique titles, descriptions and H1s, one primary search per page, JSON-LD, links, sitemap, redirects, city-page overlap, compliance copy |
 | Redirects | 14 of 14 land on a live page in one hop |
-| Highest copy overlap between two city pages | 19.2% (limit was about a third) |
-| Facts awaiting the clinic | 66 distinct, 226 markers across 34 pages |
+| Highest copy overlap between two city pages | 18.8% (limit was about a third) |
+| Facts awaiting the clinic | 66 distinct, 228 markers across 34 pages |
 | Mobile lab performance | LCP 1.2 to 1.6s, CLS 0 to 0.08, no JavaScript files, about 300KB per page |
+| Accessibility and layout | 0 automated accessibility violations and 0 horizontal overflow across all 48 pages at phone, tablet and desktop widths |
+| Cited sources | 60 of 62 loaded and matched, 2 refuse automated requests |
 
 Three things to know before reading further:
 
@@ -270,7 +272,7 @@ Stated plainly, so nothing here is mistaken for a finding.
 
 | The brief said | What I did | Why |
 | --- | --- | --- |
-| Put "open 7 days" in titles and meta descriptions | Built it as one switch in `src/config/clinic.ts`, set to off | The clinic's contact page says Sunday closed and one Yelp listing agrees. A title that turns out to be false costs trust and breaks consistency with Google. Flip `openSevenDays` to true and it appears in the utility bar and homepage at once. Add it to titles then. |
+| Put "open 7 days" in titles and meta descriptions | Built it as one switch in `src/config/clinic.ts`, set to off | The clinic's contact page says Sunday closed, and a Yelp listing and the Birdeye listing disagree with the homepage too. A title that turns out to be false costs trust and breaks consistency with Google. Set `openSevenDays` to true and it appears in the utility bar, the homepage, 15 title tags and 10 meta descriptions at once, each still within its length limit. I tested that with the switch on, then turned it back off. |
 | Build in the same project as the revamp | Built a standalone project in `hormonal-health-md/` | No revamp existed in this repository. |
 | Use the revamp's assessment flow | Built a two-minute symptom sorter that runs in the browser and stores nothing | CTAs needed a destination. It collects no health data, so it needs no privacy sign-off. The existing Google Form collects date of birth and address alongside 57 symptoms, which deserves a privacy review of its own. |
 | Build /es | Built it as a draft that only appears once Spanish is confirmed and a human has reviewed it | You asked for no raw machine translation. Mine is exactly that until someone checks it. |
@@ -279,6 +281,19 @@ Stated plainly, so nothing here is mistaken for a finding.
 | FAQPage markup where FAQs exist | Any FAQ whose answer still contains a marker is left out of the markup | Markup must never carry a placeholder. |
 
 ---
+
+## Second pass: what changed after the first hand-back
+
+A quality pass over the finished site, done on 10 November.
+
+| Area | What I found | What I did |
+| --- | --- | --- |
+| Phone layout | A long button label pushed 8 pages wider than the screen at 390px | Buttons now wrap on narrow screens. All 48 pages are clean at 390, 768 and 1440px. |
+| Accessibility | Scrollable tables could not be reached by keyboard, the top bar sat outside a landmark, one table had an empty header cell | Fixed. An automated audit (axe-core, WCAG 2.1 A and AA plus best practice) now reports 0 violations on every page at phone and desktop widths. That is an automated result, not a manual screen reader test. |
+| Direct answers | About 40 sections opened with a one-line lead-in to a list instead of answering the question | Each was rewritten as a direct answer. The median first paragraph under a question heading is now about 42 words, and `npm run check` warns when one falls under 22. |
+| Claims about patients | Several city pages said where patients come from or who books, which I cannot know | Rewritten as plain geography, or replaced with a `[[CONFIRM]]` marker where it was really a coverage claim. |
+| Title and description slots | Titles were fixed strings, so confirming a differentiator would have meant editing every page | A confirmed differentiator now flows into titles and descriptions automatically when it fits. A page can also carry its own slot, such as a price, with `titleSlot` in its frontmatter. |
+| Source links | 10 unconfirmed, 2 dead FDA pages | Re-checked with webclaw. See "What I could not verify". `npm run check:sources` repeats it. |
 
 ## How to run it
 

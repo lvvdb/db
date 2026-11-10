@@ -64,6 +64,15 @@ docs/
   research/               Raw search re-run and live-site inventory from 9 November 2026
 ```
 
+## Titles, descriptions and confirmed differentiators
+
+Titles and descriptions are written per page and stay under 60 and 155 characters. Two things can add to them automatically, and only when the result still fits:
+
+- **Site-wide:** set `openSevenDays: true` in `src/config/clinic.ts` and "Open 7 Days" joins the title and description of every service and local page, plus the top bar and the homepage.
+- **Per page:** add `titleSlot: "From $99"` to a page's frontmatter once that price is confirmed, and it takes the slot on that page.
+
+Neither should be set until the fact is true.
+
 ## Page status
 
 Each Markdown page has a `status` in its frontmatter.
@@ -99,6 +108,7 @@ Add `'es'` to `languages` in `src/config/clinic.ts` and set `spanishReviewed: tr
 - No broken internal link and no orphan page
 - `sitemap.xml` lists every indexable page and nothing else
 - No two city pages share more than about a third of their copy
+- The first paragraph under each question heading is a real answer, with a warning below 22 words
 - Every redirect lands on a live page in one hop
 - No brand-name weight loss drug in a title or heading, no growth hormone positioned for anti-aging or performance in a heading, no banned phrases, no dashes used as punctuation, no ad pixel or session replay script
 

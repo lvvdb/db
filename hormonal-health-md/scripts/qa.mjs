@@ -272,6 +272,24 @@ for (const p of pages) {
   for (const img of p.body.match(/<img\b[^>]*>/g) || []) if (!/\salt="/.test(img)) err(p.url, 'image without alt text');
 }
 
+// ------------------------------------------ direct answer under each question
+// Markdown headings carry an id, which separates them from FAQ and source headings.
+for (const p of pages) {
+  if (!p.article) continue;
+  const re = /<h2 id="(?!faq-title)[^"]*"[^>]*>([\s\S]*?)<\/h2>\s*<(p|ul|ol|div|table)\b[^>]*>([\s\S]*?)<\/\2>/g;
+  let m;
+  while ((m = re.exec(p.article))) {
+    const heading = text(m[1]);
+    if (m[2] !== 'p') {
+      warn(p.url, `"${heading}" opens with a ${m[2] === 'div' ? 'table' : 'list'}, not a direct answer`);
+      continue;
+    }
+    if (/class="confirm"/.test(m[3])) continue; // waiting on a fact from the clinic
+    const n = text(m[3]).split(' ').filter(Boolean).length;
+    if (n < 22) warn(p.url, `answer under "${heading}" is only ${n} words (aim for 40 to 60)`);
+  }
+}
+
 // ------------------------------------------------------- redirects, live
 const redirects = JSON.parse(await readFile(path.join(root, 'src/data/redirects.json'), 'utf8'));
 const server = await createStaticServer(dist);

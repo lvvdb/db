@@ -22,6 +22,7 @@ interface Props {
   primary?: { label: string; href: string };
   schema?: (Record<string, unknown> | null)[];
   cta?: boolean;
+  slot?: boolean | string;
 }
 const p = Astro.props;
 ---
@@ -38,6 +39,7 @@ const p = Astro.props;
   fullClinic={p.fullClinic}
   pageType={p.pageType}
   schema={p.schema}
+  slot={p.slot}
 >
   <PageHero
     crumbs={p.crumbs}

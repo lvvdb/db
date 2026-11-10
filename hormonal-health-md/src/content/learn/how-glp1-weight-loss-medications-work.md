@@ -42,7 +42,7 @@ The medications are engineered versions that last for days, which is why most ar
 
 ## How do they cause weight loss?
 
-Three effects work together:
+They lower appetite, keep you full for longer and steady your blood sugar. The combined effect is that you eat less without constant hunger, which is what makes the weight loss larger than with earlier medications. The three effects:
 
 - **Appetite.** They act on areas of the brain that control hunger and reward, so you think about food less.
 - **Fullness.** They slow stomach emptying, so a meal keeps you satisfied longer.
@@ -52,7 +52,7 @@ People often describe the result as the background noise about food going quiet.
 
 ## Who qualifies?
 
-The FDA-approved criteria for chronic weight management are:
+Adults with a body mass index of 30 or higher qualify, as do adults with a BMI of 27 or higher who have a weight-related health condition. Those are the FDA-approved criteria for chronic weight management:
 
 - A BMI of 30 or higher, or
 - A BMI of 27 or higher with at least one weight-related condition, such as high blood pressure, type 2 diabetes, high cholesterol, sleep apnea or cardiovascular disease
@@ -67,12 +67,7 @@ Everyone in those trials also had lifestyle support. Some people lose much more 
 
 ## What are the side effects?
 
-Mostly digestive, and mostly while the dose is going up:
-
-- Nausea
-- Constipation or diarrhea
-- Vomiting
-- Reflux and bloating
+The common side effects are digestive: nausea, constipation, diarrhea, vomiting, reflux and bloating. They are most noticeable while the dose is being increased and usually ease once it is steady.
 
 Eating smaller meals, stopping when full and raising the dose slowly all help. Less common but serious problems include gallstones and inflammation of the pancreas. Severe abdominal pain needs prompt medical attention.
 

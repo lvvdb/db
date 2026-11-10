@@ -66,7 +66,7 @@ That makes an ED visit a good moment to check blood pressure, cholesterol and bl
 
 ## What should I test?
 
-A short list of tests covers the common causes:
+Start with a morning testosterone level, a blood sugar test, a cholesterol panel and a blood pressure reading. Together they cover the hormonal, metabolic and blood vessel causes behind most erectile dysfunction, and guidelines recommend the testosterone test for every man with ED.
 
 - **Morning total testosterone**, recommended for every man with ED
 - **Fasting glucose or A1c**
