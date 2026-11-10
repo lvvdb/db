@@ -1,0 +1,54 @@
+---
+// Interior pages written as .astro files: hero, free-form sections, closing CTA.
+import Base from './Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+
+interface Props {
+  path: string;
+  title: string;
+  description: string;
+  eyebrow: string;
+  headline: string;
+  lede: string;
+  updated: string;
+  crumbs: { name: string; path: string }[];
+  noindex?: boolean;
+  notice?: string;
+  medical?: boolean;
+  fullClinic?: boolean;
+  pageType?: string;
+  hasAside?: boolean;
+  primary?: { label: string; href: string };
+  schema?: (Record<string, unknown> | null)[];
+  cta?: boolean;
+}
+const p = Astro.props;
+---
+
+<Base
+  title={p.title}
+  description={p.description}
+  path={p.path}
+  updated={p.updated}
+  crumbs={p.crumbs}
+  noindex={p.noindex}
+  notice={p.notice}
+  medical={p.medical}
+  fullClinic={p.fullClinic}
+  pageType={p.pageType}
+  schema={p.schema}
+>
+  <PageHero
+    crumbs={p.crumbs}
+    eyebrow={p.eyebrow}
+    headline={p.headline}
+    lede={p.lede}
+    hasAside={p.hasAside}
+    primary={p.primary}
+  >
+    <slot name="aside" slot="aside" />
+  </PageHero>
+  <slot />
+  {p.cta !== false && <CtaBand />}
+</Base>

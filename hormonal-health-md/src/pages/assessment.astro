@@ -1,0 +1,474 @@
+---
+// A two-minute symptom sorter. It runs entirely in the browser: nothing a visitor
+// selects is saved, sent or tracked. The only analytics event is the name
+// "assessment_complete" with the page path, and only if analytics is configured.
+import Simple from '../layouts/Simple.astro';
+import Icon from '../components/Icon.astro';
+import { clinic, nap } from '../config/clinic';
+import { entries, paths } from '../lib/content';
+
+const path = '/assessment';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Assessment', path },
+];
+const conditions = await entries('conditions');
+
+const shared = [
+  { id: 'tired', label: 'Tired most of the time' },
+  { id: 'sleep', label: 'Poor or broken sleep' },
+  { id: 'fog', label: 'Brain fog or poor focus' },
+  { id: 'mood', label: 'Low mood, anxiety or irritability' },
+  { id: 'weight', label: 'Weight gain that will not shift' },
+  { id: 'libido', label: 'Low sex drive' },
+];
+const men = [
+  { id: 'morning', label: 'Fewer morning erections' },
+  { id: 'ed', label: 'Erections are less reliable' },
+  { id: 'muscle', label: 'Losing muscle or strength' },
+];
+const women = [
+  { id: 'cycle', label: 'Periods have changed or become irregular' },
+  { id: 'flash', label: 'Hot flashes or night sweats' },
+  { id: 'dry', label: 'Vaginal dryness or pain with sex' },
+];
+---
+
+<Simple
+  path={path}
+  title="Hormone Symptom Assessment | Hormonal Health MD"
+  description="A free two-minute symptom assessment for men and women. See which hormone, thyroid or metabolic tests fit your symptoms. Nothing you answer is stored."
+  eyebrow="Two-minute symptom assessment"
+  headline="Tell us what is going on. *We will point you to the right test.*"
+  lede="Tick what applies and see which symptoms page, lab panel and treatment are worth a look. Your answers stay on this device. Nothing is saved, sent or tracked."
+  updated="2026-11-09"
+  crumbs={crumbs}
+  primary={{ label: 'Begin', href: '#quiz' }}
+  cta={false}
+>
+  <section class="section section--paper" id="quiz">
+    <div class="wrap--narrow">
+      <form class="quiz" id="quiz-form" novalidate>
+        <fieldset>
+          <legend><span>1</span> Who is this for?</legend>
+          <div class="quiz__who">
+            <label><input type="radio" name="who" value="men" /><span><Icon name="pulse" /> A man</span></label>
+            <label><input type="radio" name="who" value="women" /><span><Icon name="flame" /> A woman</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>2</span> What have you noticed? Tick all that apply.</legend>
+          <div class="quiz__opts">
+            {shared.map((o) => <label><input type="checkbox" name="s" value={o.id} /><span>{o.label}</span></label>)}
+            {men.map((o) => <label data-for="men"><input type="checkbox" name="s" value={o.id} /><span>{o.label}</span></label>)}
+            {women.map((o) => <label data-for="women"><input type="checkbox" name="s" value={o.id} /><span>{o.label}</span></label>)}
+          </div>
+        </fieldset>
+
+        <button class="btn btn--primary" type="submit">Show my next steps <Icon name="arrow" class="i-arrow" /></button>
+        <p class="quiz__privacy"><Icon name="shield" /> Runs in your browser only. This is not a diagnosis.</p>
+      </form>
+
+      <noscript>
+        <p class="quiz__nojs">
+          The assessment needs JavaScript. You can go straight to the symptom pages below, or call
+          us on {clinic.phoneDisplay}.
+        </p>
+      </noscript>
+
+      <div class="result" id="quiz-result" hidden tabindex="-1" aria-live="polite">
+        <p class="eyebrow">Your next steps</p>
+        <h2>Based on what you ticked, <em>start here.</em></h2>
+        <ul class="result__list" id="quiz-list"></ul>
+        <div class="result__panel">
+          <span class="icon-badge"><Icon name="flask" /></span>
+          <p><strong>Lab panel to ask about:</strong> <span id="quiz-panel"></span>. <a href="/lab-testing">See lab testing</a></p>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn--sun" href={nap.telHref} data-event="call_click">
+            <Icon name="phone" /> Call <span data-phone>{clinic.phoneDisplay}</span>
+          </a>
+          <a class="btn btn--ghost" href="/contact">Directions and hours</a>
+          <button class="btn btn--ghost" type="button" id="quiz-reset">Start over</button>
+        </div>
+        <p class="small muted">
+          When you call, tell us which symptoms you ticked. A clinician decides what to test after
+          talking with you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Or go straight to a symptom</p>
+        <h2>Pick what sounds <em>most like you.</em></h2>
+      </div>
+      <div class="grid grid--3">
+        {
+          conditions.map((c, i) => (
+            <a class="card" href={paths.conditions(c.id)}>
+              <span class:list={['icon-badge', i % 2 ? 'icon-badge--sun' : '']}><Icon name={c.data.icon} /></span>
+              <h3>{c.data.navLabel}</h3>
+              <p>{c.data.cardBlurb}</p>
+              <span class="card__more">Is this me? <Icon name="arrow" /></span>
+            </a>
+          ))
+        }
+        <a class="card" href="/treatments/medical-weight-loss">
+          <span class="icon-badge icon-badge--sun"><Icon name="scale" /></span>
+          <h3>Weight that will not move</h3>
+          <p>You eat well and train, and the scale ignores you.</p>
+          <span class="card__more">Medical weight loss <Icon name="arrow" /></span>
+        </a>
+      </div>
+      <p class="urgent">
+        <strong>This is not for emergencies.</strong> Chest pain, trouble breathing or sudden weakness:
+        call 911. Thoughts of harming yourself: call or text 988.
+      </p>
+    </div>
+  </section>
+
+  <script is:inline>
+    (function () {
+      var form = document.getElementById('quiz-form');
+      var result = document.getElementById('quiz-result');
+      var list = document.getElementById('quiz-list');
+      var panel = document.getElementById('quiz-panel');
+      if (!form) return;
+
+      var PAGES = {
+        lowt: ['/conditions/low-testosterone', 'Signs of low testosterone', 'Low drive, fewer morning erections and loss of muscle are the pattern a morning testosterone test is for.'],
+        ed: ['/conditions/erectile-dysfunction', 'Erectile dysfunction: causes and testing', 'Erection changes usually have a physical cause, and they are a reason to check your heart and blood sugar too.'],
+        peri: ['/conditions/perimenopause', 'Perimenopause', 'Changing cycles with sleep, mood or temperature symptoms point to the transition before menopause.'],
+        meno: ['/conditions/menopause', 'Menopause symptoms and treatment', 'Hot flashes, night sweats and dryness respond well to treatment, hormonal or not.'],
+        tired: ['/conditions/always-tired', 'Always tired', 'Fatigue, fog and poor sleep have a short list of testable causes: thyroid, iron, blood sugar, B12 and more.'],
+        weight: ['/treatments/medical-weight-loss', 'Medical weight loss', 'A metabolic panel shows what is working against you before any plan is made.'],
+        libidoW: ['/treatments/hormone-therapy-for-women', 'Hormone therapy for women', 'Low desire in women often travels with other hormone changes and is worth raising at a visit.'],
+      };
+
+      function sync() {
+        var who = (form.querySelector('input[name=who]:checked') || {}).value;
+        form.querySelectorAll('[data-for]').forEach(function (el) {
+          var show = el.getAttribute('data-for') === who;
+          el.hidden = !show;
+          if (!show) el.querySelector('input').checked = false;
+        });
+      }
+      form.addEventListener('change', sync);
+      sync();
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var who = (form.querySelector('input[name=who]:checked') || {}).value;
+        var s = {};
+        form.querySelectorAll('input[name=s]:checked').forEach(function (i) { s[i.value] = 1; });
+        var score = {};
+        function add(k, n) { score[k] = (score[k] || 0) + n; }
+
+        if (who === 'men') {
+          if (s.libido) add('lowt', 2);
+          if (s.morning) add('lowt', 2);
+          if (s.muscle) add('lowt', 2);
+          if (s.ed) add('ed', 3);
+          if (s.tired || s.mood) add('lowt', 1);
+        }
+        if (who === 'women') {
+          if (s.cycle) add('peri', 3);
+          if (s.flash) add(s.cycle ? 'peri' : 'meno', 3);
+          if (s.dry) add('meno', 2);
+          if (s.libido) add('libidoW', 2);
+          if ((s.sleep || s.mood) && (s.cycle || s.flash)) add(s.cycle ? 'peri' : 'meno', 1);
+        }
+        if (s.tired) add('tired', 2);
+        if (s.fog) add('tired', 1);
+        if (s.sleep) add('tired', 1);
+        if (s.mood) add('tired', 1);
+        if (s.weight) add('weight', 3);
+
+        var keys = Object.keys(score).sort(function (a, b) { return score[b] - score[a]; }).slice(0, 3);
+        if (!keys.length) keys = ['tired'];
+
+        list.innerHTML = '';
+        keys.forEach(function (k) {
+          var p = PAGES[k];
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          a.href = p[0];
+          var strong = document.createElement('strong');
+          strong.textContent = p[1];
+          var span = document.createElement('span');
+          span.textContent = p[2];
+          a.appendChild(strong);
+          a.appendChild(span);
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+
+        var panels = [];
+        if (score.lowt || score.ed) panels.push("men's hormone panel");
+        if (score.peri || score.meno || score.libidoW) panels.push("women's hormone panel");
+        if (score.tired) panels.push('thyroid and nutrient panels');
+        if (score.weight) panels.push('metabolic panel');
+        panel.textContent = panels.length ? panels.join(', ') : 'thyroid and nutrient panels';
+
+        result.hidden = false;
+        result.focus();
+        result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (window.hhmdTrack) window.hhmdTrack('assessment_complete');
+      });
+
+      document.getElementById('quiz-reset').addEventListener('click', function () {
+        form.reset();
+        sync();
+        result.hidden = true;
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    })();
+  </script>
+</Simple>
+
+<style>
+  .quiz {
+    display: grid;
+    gap: 2.25rem;
+    padding: clamp(1.5rem, 4vw, 2.75rem);
+    border: 1px solid var(--line);
+    border-radius: var(--r-xl);
+    background: var(--cream);
+    box-shadow: var(--shadow-md);
+  }
+  .quiz fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .quiz legend {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.1rem;
+    padding: 0;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+  .quiz legend span {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 650;
+  }
+  .quiz__who,
+  .quiz__opts {
+    display: grid;
+    gap: 0.6rem;
+  }
+  @media (min-width: 36rem) {
+    .quiz__who,
+    .quiz__opts {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .quiz label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  .quiz label[hidden] {
+    display: none;
+  }
+  .quiz input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+  }
+  .quiz label span {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    min-height: 3.4rem;
+    padding: 0.8rem 1rem 0.8rem 3rem;
+    border: 1.5px solid var(--line-strong);
+    border-radius: var(--r-md);
+    background: var(--paper);
+    color: var(--ink);
+    font-weight: 560;
+    line-height: 1.3;
+    transition:
+      border-color 0.2s var(--ease),
+      background-color 0.2s var(--ease),
+      box-shadow 0.2s var(--ease);
+  }
+  .quiz label span::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-top: -0.65rem;
+    border: 1.5px solid var(--line-strong);
+    border-radius: 6px;
+    background: var(--paper);
+    transition:
+      background-color 0.2s var(--ease),
+      border-color 0.2s var(--ease);
+  }
+  .quiz input[type='radio'] + span::before {
+    border-radius: 50%;
+  }
+  .quiz label span :global(svg) {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: var(--sun-deep);
+  }
+  .quiz input:checked + span {
+    border-color: var(--ink);
+    background: var(--sea-soft);
+    box-shadow: 0 0 0 3px rgb(205 228 218 / 0.9);
+  }
+  .quiz input:checked + span::before {
+    border-color: var(--ink);
+    background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fbf8f2' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E")
+        center / 85% no-repeat,
+      var(--ink);
+  }
+  .quiz input:focus-visible + span {
+    outline: 2px solid var(--sun);
+    outline-offset: 3px;
+  }
+  .quiz .btn {
+    justify-self: start;
+  }
+  .quiz__privacy {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: -1rem 0 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+  .quiz__privacy :global(svg) {
+    width: 1.05rem;
+    height: 1.05rem;
+    color: var(--sea-deep);
+  }
+  .quiz__nojs {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: var(--r-md);
+    background: var(--sun-soft);
+    color: var(--ink);
+  }
+
+  .result {
+    margin-top: 2.5rem;
+    padding: clamp(1.5rem, 4vw, 2.75rem);
+    border-radius: var(--r-xl);
+    background: var(--ink);
+    color: rgb(251 248 242 / 0.82);
+    outline: none;
+    scroll-margin-top: 7rem;
+  }
+  .result .eyebrow {
+    color: var(--sun-2);
+  }
+  .result h2 {
+    margin: 0.9rem 0 1.5rem;
+    color: var(--cream);
+    font-size: var(--step-3);
+  }
+  .result h2 em {
+    color: var(--sun-2);
+  }
+  .result__list {
+    display: grid;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+    list-style: none;
+  }
+  .result__list :global(a) {
+    display: grid;
+    gap: 0.25rem;
+    padding: 1rem 1.15rem;
+    border: 1px solid var(--line-light);
+    border-radius: var(--r-md);
+    color: rgb(251 248 242 / 0.78);
+    text-decoration: none;
+    transition:
+      background-color 0.2s var(--ease),
+      border-color 0.2s var(--ease);
+  }
+  .result__list :global(a:hover) {
+    border-color: var(--sun-2);
+    background: rgb(251 248 242 / 0.06);
+  }
+  .result__list :global(strong) {
+    color: var(--cream);
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .result__list :global(span) {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .result__panel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.15rem;
+    border-radius: var(--r-md);
+    background: rgb(251 248 242 / 0.08);
+  }
+  .result__panel p {
+    margin: 0;
+  }
+  .result__panel strong {
+    color: var(--cream);
+  }
+  .result a:not(.btn) {
+    color: var(--sea);
+  }
+  .result .btn--ghost {
+    border-color: var(--line-light);
+    background: transparent;
+    color: var(--cream);
+  }
+  .result .btn--ghost:hover {
+    border-color: var(--cream);
+    background: rgb(251 248 242 / 0.08);
+    color: var(--cream);
+  }
+  .result .muted {
+    margin-top: 1.25rem;
+    color: rgb(251 248 242 / 0.6);
+  }
+  .urgent {
+    margin-top: 2.5rem;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--sun);
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    background: var(--sun-soft);
+    color: var(--ink);
+  }
+</style>

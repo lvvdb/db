@@ -1,0 +1,191 @@
+---
+// /men and /women: who we treat, what we check, where to go next.
+import Base from './Base.astro';
+import PageHero from '../components/PageHero.astro';
+import LabPanel from '../components/art/LabPanel.astro';
+import Icon from '../components/Icon.astro';
+import Steps from '../components/Steps.astro';
+import Faq from '../components/Faq.astro';
+import TrustBlock from '../components/TrustBlock.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { entries, paths } from '../lib/content';
+import { faqNode } from '../lib/schema';
+
+interface Props {
+  path: string;
+  name: string;
+  audience: 'men' | 'women';
+  title: string;
+  description: string;
+  eyebrow: string;
+  headline: string;
+  lede: string;
+  updated: string;
+  panelTitle: string;
+  panelRows: { label: string; at: number; status: 'Low' | 'In range' | 'High' | 'Borderline' }[];
+  checkTitle: string;
+  checkIntro: string[];
+  checks: { name: string; why: string }[];
+  conditionIds: string[];
+  symptomTitle: string;
+  treatmentTitle: string;
+  faqs: { q: string; a: string }[];
+  sources: { label: string; url: string }[];
+}
+const p = Astro.props;
+const conditions = (await entries('conditions')).filter((c) => p.conditionIds.includes(c.id));
+const treatments = (await entries('treatments')).filter((t) => t.data.audience.includes(p.audience));
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: p.name, path: p.path },
+];
+---
+
+<Base
+  title={p.title}
+  description={p.description}
+  path={p.path}
+  updated={p.updated}
+  crumbs={crumbs}
+  medical
+  schema={[faqNode(p.path, p.faqs)]}
+>
+  <PageHero crumbs={crumbs} eyebrow={p.eyebrow} headline={p.headline} lede={p.lede} hasAside>
+    <LabPanel slot="aside" title={p.panelTitle} rows={p.panelRows} />
+  </PageHero>
+
+  <section class="section section--paper">
+    <div class="wrap aud">
+      <div class="aud__copy">
+        <p class="eyebrow">What we check</p>
+        <h2 set:html={p.checkTitle} />
+        {p.checkIntro.map((t) => <p set:html={t} />)}
+        <a class="link-arrow" href="/lab-testing">See lab testing <Icon name="arrow" /></a>
+      </div>
+      <dl class="aud__checks">
+        {
+          p.checks.map((c) => (
+            <div>
+              <dt>{c.name}</dt>
+              <dd>{c.why}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Start with a symptom</p>
+        <h2 set:html={p.symptomTitle} />
+      </div>
+      <div class="grid grid--3">
+        {
+          conditions.map((c, i) => (
+            <a class="card" href={paths.conditions(c.id)}>
+              <span class:list={['icon-badge', i % 2 ? 'icon-badge--sun' : '']}><Icon name={c.data.icon} /></span>
+              <h3>{c.data.navLabel}</h3>
+              <p>{c.data.cardBlurb}</p>
+              <span class="card__more">Is this me? <Icon name="arrow" /></span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Treatments</p>
+        <h2 set:html={p.treatmentTitle} />
+      </div>
+      <div class="grid grid--3">
+        {
+          treatments.map((t) => (
+            <a class="card" href={paths.treatments(t.id)}>
+              <span class="icon-badge"><Icon name={t.data.icon} /></span>
+              <h3>{t.data.navLabel}</h3>
+              <p>{t.data.cardBlurb}</p>
+              <span class="card__more">Learn more <Icon name="arrow" /></span>
+            </a>
+          ))
+        }
+      </div>
+      <div class="btn-row" style="margin-top:2rem">
+        <a class="btn btn--ghost" href="/pricing"><Icon name="tag" /> Pricing</a>
+        <a class="btn btn--ghost" href="/team"><Icon name="people" /> Meet the team</a>
+        <a class="btn btn--ghost" href="/telehealth"><Icon name="video" /> Telehealth</a>
+        <a class="btn btn--ghost" href="/areas"><Icon name="pin" /> Areas we serve</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps />
+
+  <section class="section">
+    <div class="wrap--narrow">
+      <div class="section-head">
+        <p class="eyebrow">Questions</p>
+        <h2>What people <em>ask first.</em></h2>
+      </div>
+      <Faq faqs={p.faqs} />
+      <TrustBlock updated={p.updated} sources={p.sources} />
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .aud {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4.5rem);
+  }
+  @media (min-width: 62rem) {
+    .aud {
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: start;
+    }
+    .aud__copy {
+      position: sticky;
+      top: 7rem;
+    }
+  }
+  .aud__copy > * + * {
+    margin-top: 1.2rem;
+  }
+  .aud__copy h2 {
+    font-size: var(--step-3);
+  }
+  .aud__checks {
+    display: grid;
+    margin: 0;
+    border-top: 1px solid var(--line);
+  }
+  .aud__checks div {
+    display: grid;
+    gap: 0.3rem 1.5rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  @media (min-width: 36rem) {
+    .aud__checks div {
+      grid-template-columns: 12rem 1fr;
+    }
+  }
+  .aud__checks dt {
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+  .aud__checks dd {
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+</style>

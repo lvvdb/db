@@ -1,0 +1,130 @@
+---
+import Simple from '../layouts/Simple.astro';
+import Icon from '../components/Icon.astro';
+import { clinic } from '../config/clinic';
+
+const path = '/team';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Team', path },
+];
+const confirmed = clinic.team.length > 0;
+const roles = [
+  { icon: 'stethoscope', title: 'Prescribing clinician', text: 'Reviews your history and labs, makes the diagnosis and is responsible for every prescription.' },
+  { icon: 'drop', title: 'Nursing and IV team', text: 'Draws blood, places IVs and monitors you during infusions, in the clinic and on mobile visits.' },
+  { icon: 'leaf', title: 'Nutrition', text: 'Builds the eating and supplement plan that sits alongside your treatment.' },
+  { icon: 'phone', title: 'Front desk', text: 'Books visits, answers questions about cost and makes sure you know how to prepare.' },
+];
+---
+
+<Simple
+  path={path}
+  title="Hormone Care Team in Hallandale Beach | Hormonal Health MD"
+  description="Meet the licensed clinicians at Hormonal Health MD in Hallandale Beach: who reviews your labs, who prescribes and how to verify a Florida licence."
+  eyebrow="Hormone care team in Hallandale Beach, FL"
+  headline="Know exactly *who is treating you.*"
+  lede="You should be able to see the name, licence and training of anyone who prescribes for you. Here is who you will meet and how to check their credentials for yourself."
+  updated="2026-11-09"
+  crumbs={crumbs}
+  noindex={!confirmed}
+  notice={confirmed ? undefined : 'On hold: hidden from search engines until clinician names, credentials and licence numbers are confirmed.'}
+  pageType="AboutPage"
+>
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Clinicians</p>
+        <h2>The people behind <em>your plan.</em></h2>
+      </div>
+      {
+        confirmed ? (
+          <div class="grid grid--3">
+            {clinic.team.map((m) => (
+              <article class="card" id={m.name.toLowerCase().replace(/[^a-z]+/g, '-')}>
+                <span class="icon-badge"><Icon name="stethoscope" /></span>
+                <h3>{m.name}, {m.credentials}</h3>
+                <p><strong>{m.role}</strong></p>
+                <p>{m.bio}</p>
+                <p class="small muted">Florida licence {m.license}</p>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div class="grid grid--3">
+            <article class="card">
+              <span class="icon-badge"><Icon name="stethoscope" /></span>
+              <h3>[[CONFIRM: clinician name and credentials]]</h3>
+              <p>[[CONFIRM: role, Florida licence number, board certifications and a short biography]]</p>
+              <p>[[CONFIRM: professional photograph]]</p>
+            </article>
+            <article class="card">
+              <span class="icon-badge icon-badge--sun"><Icon name="people" /></span>
+              <h3>[[CONFIRM: names and licences of other prescribers and nurses]]</h3>
+              <p>[[CONFIRM: who performs IV infusions and mobile visits, and who supervises them]]</p>
+            </article>
+            <article class="card">
+              <span class="icon-badge"><Icon name="leaf" /></span>
+              <h3>[[CONFIRM: name and license of the person providing nutrition counseling]]</h3>
+              <p>[[CONFIRM: owner or medical director of the clinic]]</p>
+            </article>
+          </div>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap two-col">
+      <div class="prose">
+        <h2>How do I check a clinician's licence?</h2>
+        <p>
+          Every physician, physician assistant, nurse practitioner and nurse in Florida is listed in
+          the state's public licence database. You can search any name and see the licence type,
+          whether it is active and any discipline on record. We encourage you to do it for us and
+          for any clinic you are considering.
+        </p>
+        <p>
+          <a href="https://mqa-internet.doh.state.fl.us/MQASearchServices/HealthCareProviders" rel="noopener" target="_blank">Search the Florida Department of Health licence database</a>
+        </p>
+
+        <h2>How does the team work together?</h2>
+        <p>
+          One clinician is responsible for your diagnosis and your prescriptions, and the rest of
+          the team works from the same chart. The person who draws your blood, the person who
+          reviews it and the person who answers the phone all know your plan.
+        </p>
+
+        <h2>What do you stand for?</h2>
+        <ul>
+          <li>Labs before prescriptions, every time.</li>
+          <li>Treatment only when the diagnosis supports it.</li>
+          <li>Monitoring on the schedule the guidelines set.</li>
+          <li>Plain answers about cost, risk and what the evidence shows.</li>
+          <li>No growth hormone for anti-aging or performance, and no promises of results.</li>
+        </ul>
+        <p>
+          Read more <a href="/about">about the clinic</a>, see <a href="/pricing">pricing</a>, or
+          start with the <a href="/assessment">assessment</a>.
+        </p>
+      </div>
+      <div class="roles">
+        {
+          roles.map((r) => (
+            <div class="card">
+              <span class="icon-badge"><Icon name={r.icon} /></span>
+              <h3>{r.title}</h3>
+              <p>{r.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Simple>
+
+<style>
+  .roles {
+    display: grid;
+    gap: 1rem;
+  }
+</style>

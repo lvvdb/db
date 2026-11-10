@@ -1,0 +1,60 @@
+---
+import Simple from '../../layouts/Simple.astro';
+import Icon from '../../components/Icon.astro';
+import { entries, paths } from '../../lib/content';
+
+const path = '/conditions';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Symptoms', path },
+];
+const conditions = await entries('conditions');
+---
+
+<Simple
+  path={path}
+  title="Symptoms We Evaluate | Hormonal Health MD, Hallandale Beach"
+  description="Not sure what is wrong? Start from the symptom: fatigue, low testosterone, perimenopause, menopause or erectile dysfunction. See causes and what to test."
+  eyebrow="Symptoms we evaluate"
+  headline="Start with how you feel. *We will work out why.*"
+  lede="You do not need a diagnosis to come in. Each page below explains what the symptom could mean, what else to rule out, which tests answer the question and when to act quickly."
+  updated="2026-11-09"
+  crumbs={crumbs}
+>
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="grid grid--3">
+        {
+          conditions.map((c, i) => (
+            <a class="card" href={paths.conditions(c.id)}>
+              <span class:list={['icon-badge', i % 2 ? 'icon-badge--sun' : '']}><Icon name={c.data.icon} /></span>
+              <h2 class="h3">{c.data.navLabel}</h2>
+              <p>{c.data.lede}</p>
+              <span class="card__more">Is this me? <Icon name="arrow" /></span>
+            </a>
+          ))
+        }
+        <a class="card" href="/assessment" style="background:var(--ink);border-color:var(--ink)">
+          <span class="icon-badge icon-badge--ink"><Icon name="spark" /></span>
+          <h2 class="h3" style="color:var(--cream)">More than one of these?</h2>
+          <p style="color:rgb(251 248 242 / .75)">Most people have overlapping symptoms. The two-minute assessment sorts them and suggests where to start.</p>
+          <span class="card__more" style="color:var(--sun-2)">Take the assessment <Icon name="arrow" /></span>
+        </a>
+      </div>
+      <div class="btn-row" style="margin-top:2.5rem">
+        <a class="btn btn--ghost" href="/treatments">All treatments</a>
+        <a class="btn btn--ghost" href="/lab-testing"><Icon name="flask" /> Lab testing</a>
+        <a class="btn btn--ghost" href="/men">Men's health</a>
+        <a class="btn btn--ghost" href="/women">Women's health</a>
+      </div>
+    </div>
+  </section>
+</Simple>
+
+<style>
+  .h3 {
+    font-size: var(--step-2);
+    font-variation-settings: 'opsz' 40;
+    line-height: 1.15;
+  }
+</style>

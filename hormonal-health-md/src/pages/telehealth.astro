@@ -1,0 +1,158 @@
+---
+import Simple from '../layouts/Simple.astro';
+import Faq from '../components/Faq.astro';
+import TrustBlock from '../components/TrustBlock.astro';
+import { faqNode, serviceNode } from '../lib/schema';
+
+const path = '/telehealth';
+const title = 'Telehealth Hormone Therapy in Florida | Hormonal Health MD';
+const description =
+  'Video visits for hormone therapy, weight loss and follow-up care if you are in Florida, backed by a real clinic in Hallandale Beach. See what can be done online.';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Telehealth', path },
+];
+const faqs = [
+  {
+    q: 'Can I get TRT through telehealth in Florida?',
+    a: 'Parts of TRT care, yes: consults, lab reviews, dose changes and follow-ups all work by video. Testosterone is a controlled substance, so whether the prescription itself needs an in-person exam first depends on federal rules that currently run through December 31, 2026, and on our clinical policy. [[CONFIRM: telehealth prescribing policy]]',
+  },
+  {
+    q: 'Do I have to live near Hallandale Beach?',
+    a: 'No, but you must be physically in Florida at the time of each video visit, because clinicians are licensed state by state. [[CONFIRM: telemedicine available statewide]]',
+  },
+  {
+    q: 'Where do I get blood drawn if I live far from the clinic?',
+    a: '[[CONFIRM: partner lab locations for telehealth patients outside South Florida]]',
+  },
+  {
+    q: 'Can I use telehealth while I am travelling out of state?',
+    a: 'No. Our clinicians can only see you by video while you are located in Florida. If you spend part of the year elsewhere, we schedule visits and labs around the time you are here.',
+  },
+  {
+    q: 'What does a telehealth visit cost?',
+    a: '[[CONFIRM: follow-up visit fee]] See [pricing](/pricing).',
+  },
+];
+const sources = [
+  { label: 'Drug Enforcement Administration and Department of Health and Human Services. Fourth Temporary Extension of COVID-19 Telemedicine Flexibilities for Prescription of Controlled Medications. Federal Register document 2025-24123.', url: 'https://www.federalregister.gov/d/2025-24123' },
+  { label: 'Florida Statutes, section 456.47. Use of telehealth to provide services.', url: 'http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0456/Sections/0456.47.html' },
+];
+---
+
+<Simple
+  path={path}
+  title={title}
+  description={description}
+  eyebrow="Telehealth hormone therapy in Florida"
+  headline="See your clinician *from anywhere in Florida.*"
+  lede="Plenty of visits do not need a waiting room. Video appointments cover consults, results and follow-ups for people who are in Florida, with a physical clinic behind them when you need one."
+  updated="2026-11-09"
+  crumbs={crumbs}
+  medical
+  schema={[
+    serviceNode({ path, name: 'Telehealth hormone and wellness care', description, areas: ['Florida'] }),
+    faqNode(path, faqs),
+  ]}
+>
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What works online</p>
+        <h2>Video for the talking, <em>the clinic for the rest.</em></h2>
+      </div>
+      <div class="table-scroll">
+        <table class="ptable">
+          <thead>
+            <tr><th scope="col">Part of your care</th><th scope="col">By video</th><th scope="col">In person</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>First conversation about symptoms</td><td>Yes</td><td>Also available</td></tr>
+            <tr><td>Blood draw</td><td>No</td><td>At the clinic or a lab near you</td></tr>
+            <tr><td>Reviewing lab results</td><td>Yes</td><td>Also available</td></tr>
+            <tr><td>Physical exam and measurements</td><td>No</td><td>Yes</td></tr>
+            <tr><td>Follow-ups and dose changes</td><td>Usually</td><td>When an exam is needed</td></tr>
+            <tr><td>Prescriptions for controlled medications</td><td>[[CONFIRM: telehealth prescribing policy]]</td><td>Yes</td></tr>
+            <tr><td>IV therapy and procedures</td><td>No</td><td>Clinic or mobile visit</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap--narrow">
+      <div class="prose">
+        <h2>Who can use telehealth?</h2>
+        <p>
+          Anyone who is physically in Florida at the time of the visit. Medical licences are issued
+          by each state, so the rule is about where you are sitting during the call, not where you
+          live. That makes video visits a good fit for patients across South Florida and for those
+          further away who cannot drive to Hallandale Beach. [[CONFIRM: telemedicine available statewide]]
+        </p>
+
+        <h2>Can testosterone be prescribed by telehealth in Florida?</h2>
+        <p>
+          It can be legally possible, but it is not automatic, and the rules are temporary.
+          Testosterone is a Schedule III controlled substance. Florida law has allowed telehealth
+          prescribing of Schedule III to V medications since 2022. Federal law normally requires at
+          least one in-person medical evaluation before a controlled substance is prescribed.
+        </p>
+        <p>
+          That federal requirement has been relaxed since 2020 under temporary rules. As of
+          November 2026, the
+          <a href="https://www.federalregister.gov/d/2025-24123" rel="noopener nofollow" target="_blank">current extension from the DEA and HHS</a>
+          runs through December 31, 2026. These rules have been extended four times and may change
+          again, so anything written here should be checked against the current position.
+        </p>
+        <p>
+          Separately from what the law permits, a clinic decides what is clinically responsible.
+          Our policy on when an in-person visit is required before testosterone or other controlled
+          medications are prescribed: [[CONFIRM: telehealth prescribing policy]]
+        </p>
+
+        <h2>How does a video visit work?</h2>
+        <ol>
+          <li>Book a time by calling the clinic.</li>
+          <li>You receive a secure link. [[CONFIRM: telehealth platform and how patients receive the visit link]]</li>
+          <li>Join from a phone, tablet or computer in a private spot with a good connection.</li>
+          <li>Have your medication list and any recent lab results in front of you.</li>
+          <li>Afterwards, any prescriptions go to your pharmacy and lab orders are sent to you.</li>
+        </ol>
+
+        <h2>Is a video visit private?</h2>
+        <p>
+          It should be exactly as private as a visit in the clinic. Your records are protected
+          health information under federal privacy law either way. [[CONFIRM: telehealth platform is
+          HIPAA compliant and covered by a business associate agreement]]
+        </p>
+
+        <h2>What if I need labs?</h2>
+        <p>
+          Blood has to be drawn in person. If you are near Hallandale Beach, come to the clinic.
+          If you are elsewhere in Florida: [[CONFIRM: partner lab locations for telehealth patients outside South Florida]]
+          See <a href="/lab-testing">lab testing</a> for what each panel covers and how to prepare.
+        </p>
+
+        <h2>Which services can start by telehealth?</h2>
+        <p>
+          The conversation can start online for most of what we do, including
+          <a href="/treatments/testosterone-therapy">testosterone therapy</a>,
+          <a href="/treatments/hormone-therapy-for-women">hormone therapy for women</a>,
+          <a href="/treatments/medical-weight-loss">medical weight loss</a>,
+          <a href="/treatments/sexual-health">sexual health</a> and
+          <a href="/treatments/nutrition-and-supplements">nutrition</a>.
+          <a href="/treatments/iv-therapy">IV therapy</a> is always in person, at the clinic or
+          through our mobile service. Costs are on the <a href="/pricing">pricing page</a>, and you can
+          see who you will be speaking to on the <a href="/team">team page</a>.
+        </p>
+      </div>
+
+      <section style="margin-top:clamp(3rem,6vw,4.5rem)">
+        <h2 style="font-size:var(--step-3);margin-bottom:1.5rem">Telehealth: questions people ask</h2>
+        <Faq faqs={faqs} />
+      </section>
+      <TrustBlock updated="2026-11-09" sources={sources} />
+    </div>
+  </section>
+</Simple>

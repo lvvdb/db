@@ -1,0 +1,193 @@
+---
+import Simple from '../layouts/Simple.astro';
+import Faq from '../components/Faq.astro';
+import Icon from '../components/Icon.astro';
+import TrustBlock from '../components/TrustBlock.astro';
+import LabPanel from '../components/art/LabPanel.astro';
+import { faqNode, serviceNode } from '../lib/schema';
+
+const path = '/lab-testing';
+const title = 'Hormone Blood Test in Hallandale Beach | Hormonal Health MD';
+const description =
+  'Hormone blood tests for men and women, plus thyroid, metabolic and nutrient panels. Results explained by a clinician. No obligation to start treatment.';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Lab testing', path },
+];
+const panels = [
+  {
+    icon: 'pulse',
+    name: "Men's hormone panel",
+    who: 'Low drive, fatigue, erection changes, loss of muscle',
+    items: ['Total testosterone, drawn in the morning', 'Free testosterone and SHBG', 'LH and FSH', 'Estradiol and prolactin', 'Blood count and PSA'],
+    more: '/conditions/low-testosterone',
+  },
+  {
+    icon: 'flame',
+    name: "Women's hormone panel",
+    who: 'Cycle changes, hot flashes, poor sleep, low mood',
+    items: ['Estradiol and FSH', 'Thyroid function', 'Prolactin', 'Blood count and ferritin', 'Testosterone, when relevant'],
+    more: '/conditions/perimenopause',
+  },
+  {
+    icon: 'sun',
+    name: 'Thyroid panel',
+    who: 'Tiredness, weight change, feeling cold or wired',
+    items: ['TSH', 'Free T4', 'Free T3 and thyroid antibodies when indicated'],
+    more: '/conditions/always-tired',
+  },
+  {
+    icon: 'scale',
+    name: 'Metabolic panel',
+    who: 'Weight gain, energy crashes, family history of diabetes',
+    items: ['A1c and fasting glucose', 'Cholesterol panel', 'Liver and kidney function'],
+    more: '/treatments/medical-weight-loss',
+  },
+  {
+    icon: 'leaf',
+    name: 'Nutrient panel',
+    who: 'Fatigue, hair shedding, restricted diet, heavy periods',
+    items: ['Vitamin D', 'Vitamin B12 and folate', 'Ferritin and iron studies', 'Blood count'],
+    more: '/treatments/nutrition-and-supplements',
+  },
+];
+const faqs = [
+  {
+    q: 'How much does a hormone blood test cost?',
+    a: '[[CONFIRM: panels and prices]] See [pricing](/pricing).',
+  },
+  {
+    q: 'Do I need to fast before a hormone test?',
+    a: 'For testosterone, a fasting morning sample is preferred. If cholesterol or blood sugar are being checked, you will usually be asked to fast for 8 to 12 hours. Water is fine. We tell you exactly what to do when you book.',
+  },
+  {
+    q: 'What time of day should I be tested?',
+    a: 'Morning, ideally before 10am, if testosterone is on the panel, because levels fall through the day. Thyroid, metabolic and nutrient tests are less time sensitive.',
+  },
+  {
+    q: 'Do I have to start treatment afterwards?',
+    a: 'No. Many people come only for testing. A clinician explains your results, you get a copy, and what you do next is up to you.',
+  },
+  {
+    q: 'Can I bring results from another lab?',
+    a: 'Yes. Bring anything from the last few months. We may repeat a test if it was drawn at the wrong time of day or if a low result needs confirming, which guidelines require before a diagnosis of low testosterone.',
+  },
+];
+const sources = [
+  { label: 'Bhasin S, et al. Testosterone Therapy in Men With Hypogonadism: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2018.', url: 'https://doi.org/10.1210/jc.2018-00229' },
+  { label: 'The Menopause Society. The 2022 Hormone Therapy Position Statement. Menopause. 2022.', url: 'https://doi.org/10.1097/GME.0000000000002028' },
+  { label: 'U.S. Food and Drug Administration. The FDA Warns that Biotin May Interfere with Lab Tests: FDA Safety Communication.', url: 'https://www.fda.gov/medical-devices/safety-communications/update-fda-warns-biotin-may-interfere-lab-tests-fda-safety-communication' },
+];
+---
+
+<Simple
+  path={path}
+  title={title}
+  description={description}
+  eyebrow="Hormone blood tests in Hallandale Beach, FL"
+  headline="Stop guessing. *Get the numbers.*"
+  lede="A blood panel is the fastest, least expensive way to find out whether hormones, thyroid, blood sugar or a deficiency is behind how you feel. A clinician explains every result."
+  updated="2026-11-09"
+  crumbs={crumbs}
+  medical
+  hasAside
+  schema={[serviceNode({ path, name: 'Hormone and wellness lab testing', description }), faqNode(path, faqs)]}
+>
+  <LabPanel slot="aside" title="Your results" />
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Panels</p>
+        <h2>Pick the panel that <em>matches the problem.</em></h2>
+        <p>
+          These are the panels a workup usually draws from. The exact panels the clinic sells, and
+          the price of each: [[CONFIRM: panels and prices]]
+        </p>
+      </div>
+      <div class="grid grid--3">
+        {
+          panels.map((p, i) => (
+            <div class="card panel-card">
+              <span class:list={['icon-badge', i % 2 ? 'icon-badge--sun' : '']}><Icon name={p.icon} /></span>
+              <h3>{p.name}</h3>
+              <p>{p.who}</p>
+              <ul>{p.items.map((it) => <li>{it}</li>)}</ul>
+              <a class="card__more" href={p.more}>When to consider it <Icon name="arrow" /></a>
+            </div>
+          ))
+        }
+        <a class="card" href="/assessment" style="background:var(--ink);border-color:var(--ink)">
+          <span class="icon-badge icon-badge--ink"><Icon name="spark" /></span>
+          <h3 style="color:var(--cream)">Not sure which one?</h3>
+          <p style="color:rgb(251 248 242 / .75)">Answer a few questions and we will point you to the panel that fits your symptoms.</p>
+          <span class="card__more" style="color:var(--sun-2)">Take the assessment <Icon name="arrow" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap--narrow">
+      <div class="prose">
+        <h2>Why do labs come first?</h2>
+        <p>
+          Because symptoms overlap. Fatigue, low mood, weight gain and low sex drive can come from
+          testosterone, thyroid, iron, blood sugar, sleep or several at once. Treating the wrong
+          one wastes months. A panel tells you which is which, and it gives you a baseline to
+          measure any treatment against.
+        </p>
+        <p>
+          Guidelines also require it. A diagnosis of low testosterone, for example, needs two low
+          morning results as well as symptoms.
+        </p>
+
+        <h2>How do I prepare for a blood test?</h2>
+        <p>
+          Book a morning slot, drink water and bring a list of everything you take. A few details
+          make the difference between a result you can trust and one that has to be repeated.
+        </p>
+        <ul>
+          <li><strong>Testosterone:</strong> have blood drawn in the morning, ideally fasting.</li>
+          <li><strong>Cholesterol and blood sugar:</strong> you may be asked to fast for 8 to 12 hours.</li>
+          <li><strong>Biotin:</strong> this supplement can distort hormone and thyroid results. Ask us how long to stop it beforehand.</li>
+          <li><strong>Your cycle:</strong> if you still have periods, note the first day of your last one.</li>
+          <li><strong>Illness:</strong> wait until you have recovered from a fever or infection, because short-term illness shifts hormone levels.</li>
+        </ul>
+
+        <h2>Where is blood drawn, and how fast are results?</h2>
+        <p>[[CONFIRM: where blood is drawn and how soon results are available]]</p>
+
+        <h2>Who explains my results?</h2>
+        <p>
+          A licensed clinician goes through each number with you: what it measures, where yours
+          sits and what, if anything, to do about it. You get a copy to keep or share with your
+          own doctor. [[CONFIRM: clinician name and credentials]]
+        </p>
+
+        <h2>Do I have to start treatment?</h2>
+        <p>
+          No. Testing stands alone. If everything is normal, we will say so and suggest where else
+          to look. If something is off, you will hear the options and can take your time. See
+          <a href="/pricing">pricing</a> for costs and the <a href="/team">team page</a> for who you will meet.
+        </p>
+
+        <h2>What happens if something is abnormal?</h2>
+        <p>
+          It depends on the finding. Low testosterone leads to a repeat test and a conversation
+          about <a href="/treatments/testosterone-therapy">testosterone therapy</a>. Menopause-related
+          changes point to <a href="/treatments/hormone-therapy-for-women">hormone therapy for women</a>.
+          Blood sugar and weight findings lead to <a href="/treatments/medical-weight-loss">medical weight loss</a>,
+          and deficiencies to <a href="/treatments/nutrition-and-supplements">nutrition and supplements</a>.
+          Anything outside our scope is referred to the right specialist.
+        </p>
+      </div>
+
+      <section style="margin-top:clamp(3rem,6vw,4.5rem)">
+        <h2 style="font-size:var(--step-3);margin-bottom:1.5rem">Lab testing: questions people ask</h2>
+        <Faq faqs={faqs} />
+      </section>
+      <TrustBlock updated="2026-11-09" sources={sources} />
+    </div>
+  </section>
+</Simple>

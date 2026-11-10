@@ -1,0 +1,66 @@
+---
+import Audience from '../layouts/Audience.astro';
+---
+
+<Audience
+  path="/men"
+  name="Men's health"
+  audience="men"
+  title="Men's Health Clinic in Hallandale Beach | Hormonal Health MD"
+  description="Low energy, low drive or weight creeping up? Get a full men's health workup with labs and a licensed clinician. Hallandale Beach clinic or online."
+  eyebrow="Men's health clinic in Hallandale Beach, FL"
+  headline="Tired, softer, less driven? *Get the full workup.*"
+  lede="Most men are told it is just age. Sometimes it is testosterone, and often it is something else you can fix. We test for all of it, then treat what the numbers show."
+  updated="2026-11-09"
+  panelTitle="Men's panel"
+  panelRows={[
+    { label: 'Total testosterone', at: 16, status: 'Low' },
+    { label: 'Free testosterone', at: 24, status: 'Borderline' },
+    { label: 'LH and FSH', at: 48, status: 'In range' },
+    { label: 'Hematocrit', at: 55, status: 'In range' },
+    { label: 'PSA', at: 40, status: 'In range' },
+    { label: 'A1c', at: 76, status: 'High' },
+  ]}
+  checkTitle="One visit, <em>the whole picture.</em>"
+  checkIntro={[
+    'Fatigue, low sex drive, erection problems and stubborn weight share the same handful of causes. Checking one hormone and stopping there misses most of them.',
+    'A men&rsquo;s health workup here covers hormones, metabolic health and the safety markers you need on record before any treatment starts.',
+  ]}
+  checks={[
+    { name: 'Testosterone', why: 'Total testosterone on two separate mornings, with free testosterone when the result is borderline.' },
+    { name: 'Pituitary signals', why: 'LH and FSH show whether a low level starts in the testicles or in the brain, which changes the treatment.' },
+    { name: 'Blood sugar and cholesterol', why: 'Diabetes and blood vessel disease are leading causes of both fatigue and erectile dysfunction.' },
+    { name: 'Thyroid', why: 'An underactive thyroid looks a lot like low testosterone and is simple to treat.' },
+    { name: 'Blood count and PSA', why: 'Baselines that keep testosterone therapy safe, checked before you start and again on follow-up.' },
+    { name: 'Sleep, medication, alcohol', why: 'No blood test covers these, so we ask. Sleep apnea and several common prescriptions lower testosterone.' },
+  ]}
+  conditionIds={['low-testosterone', 'erectile-dysfunction', 'always-tired']}
+  symptomTitle="Which one <em>sounds like you?</em>"
+  treatmentTitle="Treatments for men, <em>matched to your labs.</em>"
+  faqs={[
+    {
+      q: 'Is this a low T clinic?',
+      a: 'We diagnose and treat low testosterone, and we do it by the guidelines: symptoms plus two low morning blood tests before anyone is prescribed anything. We also look for the other causes of the same symptoms, because many men who feel this way have normal testosterone. See [testosterone therapy](/treatments/testosterone-therapy).',
+    },
+    {
+      q: 'What happens at the first visit?',
+      a: 'A conversation about your symptoms, health history and medications, a blood pressure check and a blood draw or a lab order. Morning appointments are best because testosterone is measured early in the day. You do not leave with a prescription on day one. Results come first.',
+    },
+    {
+      q: 'I am in my 30s. Is that too young for this?',
+      a: 'No. Low testosterone and erectile dysfunction happen in younger men too, and when they do it is a stronger reason to look for a cause such as weight, sleep apnea, medication or past steroid use. If you want children, tell us, because that changes which treatments are suitable.',
+    },
+    {
+      q: 'Can I do this without coming in?',
+      a: 'Partly. Follow-ups and lab reviews often work by video if you are in Florida. Blood draws are in person, and prescriptions for controlled medications such as testosterone follow federal and state rules about in-person exams. See [telehealth](/telehealth).',
+    },
+    {
+      q: 'Where is the clinic?',
+      a: 'At 501 Golden Isles Dr, Suite 204-C, Hallandale Beach, just south of Hallandale Beach Blvd and east of US-1. Men drive in from [Aventura](/areas/aventura), [Hollywood](/areas/hollywood) and [Sunny Isles Beach](/areas/sunny-isles-beach).',
+    },
+  ]}
+  sources={[
+    { label: 'Bhasin S, et al. Testosterone Therapy in Men With Hypogonadism: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2018.', url: 'https://doi.org/10.1210/jc.2018-00229' },
+    { label: 'Burnett AL, et al. Erectile Dysfunction: AUA Guideline. J Urol. 2018.', url: 'https://doi.org/10.1016/j.juro.2018.05.004' },
+  ]}
+/>

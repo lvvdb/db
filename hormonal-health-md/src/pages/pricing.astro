@@ -1,0 +1,174 @@
+---
+import Simple from '../layouts/Simple.astro';
+import Faq from '../components/Faq.astro';
+import Icon from '../components/Icon.astro';
+import { faqNode } from '../lib/schema';
+
+const path = '/pricing';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Pricing', path },
+];
+const rows = [
+  { s: 'First consultation', w: 'History, exam and a plan for which labs you need', p: '[[CONFIRM: consultation fee]]', l: '/assessment' },
+  { s: 'Lab panels', w: 'Blood draw, the panel and a results review with a clinician', p: '[[CONFIRM: panels and prices]]', l: '/lab-testing' },
+  { s: 'Testosterone therapy', w: 'Visits, medication and monitoring labs', p: '[[CONFIRM: TRT program price and what it includes]]', l: '/treatments/testosterone-therapy' },
+  { s: 'Hormone therapy for women', w: 'Visits, prescriptions and follow-up', p: "[[CONFIRM: women's hormone therapy program price and what it includes]]", l: '/treatments/hormone-therapy-for-women' },
+  { s: 'Medical weight loss', w: 'Visits, labs and medication where prescribed', p: '[[CONFIRM: medical weight loss program price and what it includes]]', l: '/treatments/medical-weight-loss' },
+  { s: 'Sexual health', w: 'Evaluation, labs and treatment plan', p: '[[CONFIRM: sexual health visit price and what it includes]]', l: '/treatments/sexual-health' },
+  { s: 'IV therapy', w: 'Per drip, in the clinic', p: '[[CONFIRM: drip menu and prices]]', l: '/treatments/iv-therapy' },
+  { s: 'Mobile IV travel fee', w: 'Added to the drip price when we come to you', p: '[[CONFIRM: mobile service area and fee]]', l: '/mobile-iv/hallandale-beach' },
+  { s: 'Follow-up visit', w: 'In person or by video', p: '[[CONFIRM: follow-up visit fee]]', l: '/telehealth' },
+];
+const faqs = [
+  {
+    q: 'Does insurance cover TRT?',
+    a: 'Sometimes. Insurers that cover testosterone usually want two low morning blood tests, symptoms and a qualifying diagnosis on record, and many require prior approval. Compounded testosterone and pellets are rarely covered. Whether this clinic bills insurance at all: [[CONFIRM: insurance and payment policy]]',
+  },
+  {
+    q: 'Can I pay with an HSA or FSA card?',
+    a: 'Under IRS rules, doctor visits, lab fees and prescription medication generally count as qualified medical expenses for HSA and FSA funds. IV therapy for general wellness may not. [[CONFIRM: whether HSA and FSA cards are accepted]]',
+  },
+  {
+    q: 'Is there a contract or membership?',
+    a: '[[CONFIRM: membership or pay-per-visit model, minimum term and cancellation policy]]',
+  },
+  {
+    q: 'What is the cheapest way to find out if I have a hormone problem?',
+    a: 'A lab panel. It costs far less than a treatment program, the results are yours to keep, and there is no obligation to start anything. See [lab testing](/lab-testing).',
+  },
+];
+---
+
+<Simple
+  path={path}
+  title="Hormone Therapy Cost in Florida | Hormonal Health MD"
+  description="What hormone therapy, TRT, weight loss care and IV drips cost, what drives the price and whether insurance or HSA funds apply. Know before you commit."
+  eyebrow="Hormone therapy cost in Florida"
+  headline="Know what you will pay, *before you commit.*"
+  lede="Hormone care has three costs: lab work, clinician visits and medication. Here is how each works at our clinic, and the questions worth asking any clinic before you sign anything."
+  updated="2026-11-09"
+  crumbs={crumbs}
+  schema={[faqNode(path, faqs)]}
+>
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Price list</p>
+        <h2>What each service <em>costs.</em></h2>
+        <p>Prices are confirmed by the clinic before this page goes live. Nothing here is an estimate.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="ptable">
+          <thead>
+            <tr><th scope="col">Service</th><th scope="col">What it covers</th><th scope="col">Price</th></tr>
+          </thead>
+          <tbody>
+            {
+              rows.map((r) => (
+                <tr>
+                  <td><a href={r.l}>{r.s}</a></td>
+                  <td>{r.w}</td>
+                  <td>{r.p}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap--narrow prose">
+      <h2>How much does hormone therapy cost in Florida?</h2>
+      <p>
+        It depends on three things: the lab work you need, how often you are seen and which
+        medication you are prescribed. Two people on hormone therapy can pay very different
+        amounts for good reasons, which is why a single headline price rarely tells you much.
+      </p>
+      <p>
+        Our own prices for each part are in the table above. [[CONFIRM: typical all-in monthly
+        cost range for a patient on TRT and for a patient on menopause hormone therapy]]
+      </p>
+
+      <h2>What makes TRT cost more or less?</h2>
+      <p>
+        The form of testosterone is the biggest factor. Generic injections cost the least.
+        Brand-name gels and pellets cost more, and pellets add a procedure fee each time they
+        are placed. Monitoring is the second factor: guidelines call for labs three to six
+        months after starting and at least yearly after that.
+      </p>
+      <p>
+        See <a href="/treatments/testosterone-therapy">testosterone therapy</a> for how the forms
+        compare.
+      </p>
+
+      <h2>Does insurance cover TRT or hormone therapy?</h2>
+      <p>
+        Coverage varies by plan. Insurers that cover testosterone typically require two low
+        morning blood tests, documented symptoms and prior approval. FDA-approved generic
+        estradiol and progesterone for menopause are commonly covered and inexpensive at a
+        pharmacy. Compounded hormones and pellets usually are not covered.
+      </p>
+      <p>
+        Weight loss medication is the least predictable. Many plans exclude it, and the rules
+        have been changing, so check your own plan. [[CONFIRM: insurance and payment policy]]
+      </p>
+
+      <h2>Can I use my HSA or FSA?</h2>
+      <p>
+        Usually, for the medical parts. The IRS treats doctor visits, lab fees and prescription
+        medication as qualified medical expenses. Treatments for general wellness may not
+        qualify. [[CONFIRM: whether HSA and FSA cards are accepted]]
+      </p>
+
+      <h2>What should I ask any clinic about price?</h2>
+      <p>
+        Ask the same six questions everywhere you look, including here. A clinic that answers
+        them plainly is usually a clinic that treats you plainly.
+      </p>
+      <ol>
+        <li>Is lab work included, or billed separately each time?</li>
+        <li>Is the medication included in the price, and which form is it?</li>
+        <li>How often will I need follow-up labs, and what do they cost?</li>
+        <li>Is there a contract, a minimum term or a cancellation fee?</li>
+        <li>Who reviews my labs, and what are their credentials?</li>
+        <li>What happens, and what do I pay, if my labs come back normal?</li>
+      </ol>
+
+      <h2>Is there a low-cost way to start?</h2>
+      <p>
+        Yes. Start with a blood panel. It is the least expensive step, it answers the question
+        of whether a hormone problem exists at all, and you keep the results whatever you
+        decide. See <a href="/lab-testing">lab testing</a>, or take the
+        <a href="/assessment">assessment</a> to see which panel fits. You can read about who
+        reviews your results on the <a href="/team">team page</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="wrap--narrow">
+      <div class="section-head">
+        <p class="eyebrow">Questions</p>
+        <h2>Paying for <em>care.</em></h2>
+      </div>
+      <Faq faqs={faqs} />
+      <p class="small muted" style="margin-top:1.5rem">
+        <Icon name="doc" class="inline-i" />
+        Source for HSA and FSA rules:
+        <a href="https://www.irs.gov/publications/p502" rel="noopener nofollow" target="_blank">IRS Publication 502, Medical and Dental Expenses</a>.
+      </p>
+    </div>
+  </section>
+</Simple>
+
+<style>
+  :global(.inline-i) {
+    display: inline;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: -0.15em;
+  }
+</style>

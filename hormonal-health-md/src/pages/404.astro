@@ -1,0 +1,70 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { clinic, nap } from '../config/clinic';
+import { entries, paths } from '../lib/content';
+const treatments = await entries('treatments');
+---
+
+<Base
+  title="Page Not Found | Hormonal Health MD"
+  description="That page has moved or no longer exists. Find treatments, symptoms, pricing and directions for Hormonal Health MD in Hallandale Beach."
+  path="/404"
+  noindex
+>
+  <section class="section nf">
+    <div class="wrap--narrow">
+      <p class="eyebrow">Error 404</p>
+      <h1>That page is not here. <em>You still are.</em></h1>
+      <p class="lede">
+        The site was rebuilt and some addresses changed. One of these will get you where you were
+        going.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/">Go to the homepage <Icon name="arrow" class="i-arrow" /></a>
+        <a class="btn btn--ghost" href={nap.telHref}><Icon name="phone" /> Call {clinic.phoneDisplay}</a>
+      </div>
+      <ul class="nf__links">
+        {treatments.map((t) => <li><a href={paths.treatments(t.id)}>{t.data.navLabel}</a></li>)}
+        <li><a href="/conditions">Symptoms</a></li>
+        <li><a href="/lab-testing">Lab testing</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/assessment">Assessment</a></li>
+        <li><a href="/contact">Contact and directions</a></li>
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf h1 {
+    margin: 1.25rem 0 1.5rem;
+    font-size: var(--step-4);
+  }
+  .nf .lede {
+    margin-bottom: 2rem;
+  }
+  .nf__links {
+    display: grid;
+    gap: 0.25rem 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    list-style: none;
+  }
+  @media (min-width: 36rem) {
+    .nf__links {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .nf__links a {
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--ink);
+    font-weight: 560;
+    text-decoration: none;
+  }
+  .nf__links a:hover {
+    color: var(--sun-deep);
+  }
+</style>

@@ -1,0 +1,67 @@
+---
+import Audience from '../layouts/Audience.astro';
+---
+
+<Audience
+  path="/women"
+  name="Women's health"
+  audience="women"
+  title="Menopause Care in Hallandale Beach, FL | Hormonal Health MD"
+  description="Hot flashes, no sleep, brain fog, cycles all over the place? Get perimenopause and menopause care from a licensed clinician. Hallandale Beach or online."
+  eyebrow="Menopause and perimenopause care in Hallandale Beach, FL"
+  headline="You are not imagining it. *You do not have to push through it.*"
+  lede="Perimenopause and menopause change sleep, mood, weight and focus, often years before anyone names it. We listen, check what needs checking and lay out every option, hormonal or not."
+  updated="2026-11-09"
+  panelTitle="Women's panel"
+  panelRows={[
+    { label: 'Estradiol', at: 18, status: 'Low' },
+    { label: 'FSH', at: 84, status: 'High' },
+    { label: 'Thyroid (TSH)', at: 50, status: 'In range' },
+    { label: 'Ferritin', at: 20, status: 'Low' },
+    { label: 'Vitamin D', at: 42, status: 'In range' },
+    { label: 'A1c', at: 56, status: 'In range' },
+  ]}
+  checkTitle="Your history first, <em>labs where they help.</em>"
+  checkIntro={[
+    'In your 40s and 50s, the diagnosis usually comes from your cycle and your symptoms. A single hormone level can look normal on the day and tell you nothing.',
+    'So we start with your story, then use blood work for what it is good at: ruling out the conditions that imitate menopause and checking you are safe to treat.',
+  ]}
+  checks={[
+    { name: 'Cycle and symptom history', why: 'How your periods have changed, what you are feeling and when. This is the most useful information you can bring.' },
+    { name: 'Thyroid', why: 'Thyroid problems cause sweats, palpitations, weight change and low mood, and they are common at this age.' },
+    { name: 'Iron and blood count', why: 'Heavy perimenopausal periods drain iron, and low iron causes exhaustion and brain fog of its own.' },
+    { name: 'Hormone levels', why: 'Useful under 45, after a hysterectomy or when the picture is unclear. Less useful as a routine test over 45.' },
+    { name: 'Heart and metabolic health', why: 'Blood pressure, cholesterol and blood sugar, because risk starts to rise after menopause.' },
+    { name: 'Screening and family history', why: 'Mammogram status, clot history and family history shape which treatments are right for you.' },
+  ]}
+  conditionIds={['perimenopause', 'menopause', 'always-tired']}
+  symptomTitle="Where are you <em>right now?</em>"
+  treatmentTitle="Treatments for women, <em>chosen with you.</em>"
+  faqs={[
+    {
+      q: 'Do I need to see a menopause specialist?',
+      a: 'You need a clinician who is trained in menopause care, stays current with the guidelines and takes the time to go through your options. Ask any clinic about that training. [[CONFIRM: menopause training or certification held by the treating clinician, such as Menopause Society Certified Practitioner]]',
+    },
+    {
+      q: 'Am I too young for perimenopause?',
+      a: 'Probably not. Most women notice changes in their mid-40s and some in their late 30s, and symptoms often start while periods are still fairly regular. Changes before 40 deserve a proper evaluation. Read about [perimenopause](/conditions/perimenopause).',
+    },
+    {
+      q: 'Is hormone therapy safe?',
+      a: 'For most healthy women under 60 or within 10 years of their last period, the benefits outweigh the risks, according to The Menopause Society. Your own history matters, and some women should not take it. We go through your individual risk before anything is prescribed. See [hormone therapy for women](/treatments/hormone-therapy-for-women).',
+    },
+    {
+      q: 'What if I do not want hormones?',
+      a: 'Then we do not use them. There are non-hormonal prescriptions for hot flashes, local treatments for vaginal symptoms and proven approaches for sleep and mood. You will hear all of the options and choose.',
+    },
+    {
+      q: 'Can visits be done by video?',
+      a: 'Often, after the first visit. Follow-ups and results reviews work well by [telehealth](/telehealth) for women anywhere in Florida. The clinic itself is in Hallandale Beach, close to [Aventura](/areas/aventura), [Hollywood](/areas/hollywood) and [Sunny Isles Beach](/areas/sunny-isles-beach).',
+    },
+  ]}
+  sources={[
+    { label: 'The Menopause Society. The 2022 Hormone Therapy Position Statement. Menopause. 2022.', url: 'https://doi.org/10.1097/GME.0000000000002028' },
+    { label: 'The Menopause Society. The 2023 Nonhormone Therapy Position Statement. Menopause. 2023.', url: 'https://doi.org/10.1097/GME.0000000000002200' },
+    { label: 'Harlow SD, et al. Executive summary of the Stages of Reproductive Aging Workshop + 10. Menopause. 2012.', url: 'https://doi.org/10.1097/gme.0b013e31824d8f40' },
+  ]}
+/>

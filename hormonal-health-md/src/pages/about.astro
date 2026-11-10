@@ -1,0 +1,114 @@
+---
+import Simple from '../layouts/Simple.astro';
+import Steps from '../components/Steps.astro';
+import { clinic, nap } from '../config/clinic';
+import { entries, paths } from '../lib/content';
+
+const path = '/about';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path },
+];
+const treatments = await entries('treatments');
+const areas = await entries('areas');
+---
+
+<Simple
+  path={path}
+  title="About Hormonal Health MD | Hallandale Beach, FL"
+  description="Hormonal Health MD is a hormone, weight loss and IV therapy clinic at 501 Golden Isles Dr in Hallandale Beach, FL. Who we are, what we treat and how care works."
+  eyebrow="About Hormonal Health MD"
+  headline="A hormone clinic that *starts with the evidence.*"
+  lede="Hormonal Health MD is a medical clinic in Hallandale Beach, Florida. We evaluate and treat hormone, weight and energy problems in men and women, using blood work and published guidelines."
+  updated="2026-11-09"
+  crumbs={crumbs}
+  fullClinic
+  pageType="AboutPage"
+>
+  <section class="section section--paper">
+    <div class="wrap--narrow">
+      <div class="section-head">
+        <p class="eyebrow">The facts</p>
+        <h2>The clinic, <em>plainly stated.</em></h2>
+      </div>
+      <dl class="facts">
+        <div><dt>Name</dt><dd>{clinic.name}</dd></div>
+        <div><dt>What it is</dt><dd>A medical clinic providing hormone therapy, medical weight loss, sexual health care, lab testing and IV therapy for adults.</dd></div>
+        <div><dt>Address</dt><dd>{nap.line}</dd></div>
+        <div><dt>Phone</dt><dd><a href={nap.telHref}>{clinic.phoneDisplay}</a></dd></div>
+        <div>
+          <dt>Hours</dt>
+          <dd>
+            {
+              clinic.hours
+                ? clinic.hours.map((h) => <span>{h.label}: {h.opens} to {h.closes}<br /></span>)
+                : '[[CONFIRM: opening hours for each day of the week]]'
+            }
+          </dd>
+        </div>
+        <div>
+          <dt>Services</dt>
+          <dd>
+            {
+              treatments.map((t, i) => (
+                <>
+                  <a href={paths.treatments(t.id)}>{t.data.navLabel}</a>{i < treatments.length - 1 ? ', ' : ''}
+                </>
+              ))
+            }, and <a href="/lab-testing">lab testing</a>.
+          </dd>
+        </div>
+        <div><dt>Ways to get care</dt><dd>In person at the clinic, by <a href="/telehealth">telehealth</a> for people located in Florida, and by mobile visit for IV therapy.</dd></div>
+        <div>
+          <dt>Area served</dt>
+          <dd>
+            Hallandale Beach{areas.map((a) => <>, <a href={paths.areas(a.id)}>{a.data.city}</a></>)} and nearby parts of
+            south Broward and northeast Miami-Dade. [[CONFIRM: mobile service area and fee]]
+          </dd>
+        </div>
+        <div><dt>Who provides care</dt><dd>[[CONFIRM: clinician name and credentials]] See the <a href="/team">team page</a>.</dd></div>
+        <div><dt>Owner</dt><dd>[[CONFIRM: owner or medical director of the clinic]]</dd></div>
+        <div><dt>Founded</dt><dd>[[CONFIRM: year the clinic opened]]</dd></div>
+        <div><dt>Languages</dt><dd>[[CONFIRM: languages spoken by clinical and front desk staff]]</dd></div>
+        <div><dt>Payment</dt><dd>[[CONFIRM: insurance and payment policy]] See <a href="/pricing">pricing</a>.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap--narrow prose">
+      <h2>What does Hormonal Health MD treat?</h2>
+      <p>
+        We treat adults whose symptoms may come from hormones or metabolism: low testosterone in
+        men, perimenopause and menopause in women, erectile dysfunction, weight that does not
+        respond to diet and exercise, and persistent fatigue. We also provide IV hydration and
+        vitamin therapy in the clinic and on mobile visits.
+      </p>
+
+      <h2>How is care different here?</h2>
+      <p>
+        Nothing is prescribed from a symptom list alone. Every plan begins with a conversation
+        and blood work, a licensed clinician explains the results, and treatment is offered only
+        when the diagnosis supports it. After that you are monitored on the schedule medical
+        guidelines set, with repeat labs.
+      </p>
+
+      <h2>What will you not do?</h2>
+      <ul>
+        <li>Prescribe testosterone without two confirmed low morning levels and symptoms.</li>
+        <li>Prescribe growth hormone for anti-aging, bodybuilding or athletic performance.</li>
+        <li>Promise a result, a number on the scale or a timeline.</li>
+        <li>Sell a drip, a supplement or a program you do not need.</li>
+      </ul>
+
+      <h2>Where is the clinic?</h2>
+      <p>
+        At {nap.line}. That is in the Golden Isles neighborhood, just south of Hallandale Beach
+        Boulevard between US-1 and the Intracoastal Waterway. Directions and parking are on the
+        <a href="/contact">contact page</a>.
+      </p>
+    </div>
+  </section>
+
+  <Steps />
+</Simple>

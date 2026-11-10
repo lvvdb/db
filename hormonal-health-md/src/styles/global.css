@@ -989,3 +989,104 @@ mark.confirm {
   text-transform: uppercase;
   color: var(--muted);
 }
+
+/* Fact and price tables on interior pages ----------------------------------- */
+
+.facts {
+  display: grid;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+.facts > div {
+  display: grid;
+  gap: 0.25rem 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 40rem) {
+  .facts > div {
+    grid-template-columns: 13rem 1fr;
+  }
+}
+.facts dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-top: 0.2rem;
+}
+.facts dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.ptable {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+.ptable th,
+.ptable td {
+  padding: 1rem 1.15rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+.ptable thead th {
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 0.76rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.ptable tbody tr:last-child td {
+  border-bottom: 0;
+}
+.ptable td:first-child {
+  color: var(--ink);
+  font-weight: 620;
+  white-space: nowrap;
+}
+.ptable td:last-child {
+  white-space: nowrap;
+}
+@media (max-width: 40rem) {
+  .ptable td:first-child,
+  .ptable td:last-child {
+    white-space: normal;
+  }
+}
+
+.two-col {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+@media (min-width: 62rem) {
+  .two-col {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.panel-card ul {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.25rem 0 0.5rem;
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+.panel-card .panel-card__price {
+  margin-top: auto;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 620;
+}

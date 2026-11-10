@@ -1,0 +1,81 @@
+---
+import Simple from '../../layouts/Simple.astro';
+import AreaMap from '../../components/art/AreaMap.astro';
+import Icon from '../../components/Icon.astro';
+import { clinic } from '../../config/clinic';
+import { entries, paths } from '../../lib/content';
+
+const path = '/areas';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Areas we serve', path },
+];
+const areas = await entries('areas');
+const mobile = await entries('mobileIv');
+---
+
+<Simple
+  path={path}
+  title="Areas We Serve in South Florida | Hormonal Health MD"
+  description="Hormonal Health MD is in Hallandale Beach and serves Aventura, Hollywood and Sunny Isles Beach in clinic, by telehealth across Florida and by mobile IV."
+  eyebrow="Areas we serve"
+  headline="One clinic, *four cities within a short drive.*"
+  lede="We are based in Hallandale Beach, on the Broward and Miami-Dade county line. Patients come in from the cities around us, see us by video from across Florida, or book a mobile IV visit."
+  updated="2026-11-09"
+  crumbs={crumbs}
+  hasAside
+>
+  <AreaMap slot="aside" id="areas-map" />
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Clinic care by city</p>
+        <h2>Where are you <em>coming from?</em></h2>
+      </div>
+      <div class="grid grid--4">
+        <a class="card" href="/contact">
+          <span class="icon-badge icon-badge--sun"><Icon name="clinic" /></span>
+          <h3>{clinic.city}</h3>
+          <p>The clinic itself, at {clinic.street}.</p>
+          <span class="card__more">Directions <Icon name="arrow" /></span>
+        </a>
+        {
+          areas.map((a) => (
+            <a class="card" href={paths.areas(a.id)}>
+              <span class="icon-badge"><Icon name="pin" /></span>
+              <h3>{a.data.city}</h3>
+              <p>{a.data.county}</p>
+              <span class="card__more">Routes and local detail <Icon name="arrow" /></span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Mobile IV by city</p>
+        <h2>Or have us <em>come to you.</em></h2>
+        <p>Mobile visits are for IV therapy. Coverage and fees for each city: [[CONFIRM: mobile service area and fee]]</p>
+      </div>
+      <div class="grid grid--4">
+        {
+          mobile.map((m) => (
+            <a class="card" href={paths.mobileIv(m.id)}>
+              <span class="icon-badge"><Icon name="home" /></span>
+              <h3>Mobile IV in {m.data.city}</h3>
+              <span class="card__more">See coverage <Icon name="arrow" /></span>
+            </a>
+          ))
+        }
+      </div>
+      <div class="btn-row" style="margin-top:2.5rem">
+        <a class="btn btn--ghost" href="/telehealth"><Icon name="video" /> Telehealth across Florida</a>
+        <a class="btn btn--ghost" href="/treatments">All treatments</a>
+      </div>
+    </div>
+  </section>
+</Simple>

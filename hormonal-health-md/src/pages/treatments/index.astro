@@ -1,0 +1,62 @@
+---
+import Simple from '../../layouts/Simple.astro';
+import Icon from '../../components/Icon.astro';
+import { entries, paths } from '../../lib/content';
+
+const path = '/treatments';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Treatments', path },
+];
+const treatments = await entries('treatments');
+---
+
+<Simple
+  path={path}
+  title="Treatments at Hormonal Health MD | Hallandale Beach, FL"
+  description="Every treatment at Hormonal Health MD in one place: testosterone therapy, hormone therapy for women, medical weight loss, IV therapy, sexual health and more."
+  eyebrow="Treatments at Hormonal Health MD"
+  headline="Every treatment starts *the same way: with your labs.*"
+  lede="Pick a treatment to see who it is for, what we test first, the options, the risks and what follow-up involves. If you are not sure where you fit, start with a symptom."
+  updated="2026-11-09"
+  crumbs={crumbs}
+>
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="grid grid--2">
+        {
+          treatments.map((t, i) => (
+            <a class="card tcard" href={paths.treatments(t.id)}>
+              <span class:list={['icon-badge', i % 2 ? 'icon-badge--sun' : '']}><Icon name={t.data.icon} /></span>
+              <div>
+                <h2>{t.data.navLabel}</h2>
+                <p>{t.data.lede}</p>
+                <span class="card__more">Read more <Icon name="arrow" /></span>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+      <div class="btn-row" style="margin-top:2.5rem">
+        <a class="btn btn--ghost" href="/conditions"><Icon name="spark" /> Start with a symptom</a>
+        <a class="btn btn--ghost" href="/lab-testing"><Icon name="flask" /> Lab testing</a>
+        <a class="btn btn--ghost" href="/pricing"><Icon name="tag" /> Pricing</a>
+        <a class="btn btn--ghost" href="/team"><Icon name="people" /> Team</a>
+      </div>
+    </div>
+  </section>
+</Simple>
+
+<style>
+  .tcard {
+    flex-direction: row;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+  .tcard h2 {
+    margin-bottom: 0.5rem;
+    font-size: var(--step-2);
+    font-variation-settings: 'opsz' 40;
+    line-height: 1.15;
+  }
+</style>

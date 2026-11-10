@@ -1,0 +1,97 @@
+---
+import Simple from '../layouts/Simple.astro';
+import AreaMap from '../components/art/AreaMap.astro';
+import Icon from '../components/Icon.astro';
+import { clinic, nap } from '../config/clinic';
+import { entries, paths } from '../lib/content';
+
+const path = '/contact';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Contact', path },
+];
+const areas = await entries('areas');
+---
+
+<Simple
+  path={path}
+  title="Contact & Directions | Hormonal Health MD, Hallandale Beach"
+  description="Call (305) 219-4351 or visit Hormonal Health MD at 501 Golden Isles Dr, Suite 204-C, Hallandale Beach, FL 33009. Directions, hours and how to book."
+  eyebrow="Contact and directions"
+  headline="Call, come in *or start online.*"
+  lede="The clinic is in the Golden Isles neighborhood of Hallandale Beach, just south of Hallandale Beach Boulevard. The quickest way to book is to call."
+  updated="2026-11-09"
+  crumbs={crumbs}
+  pageType="ContactPage"
+  hasAside
+  primary={{ label: 'Get directions', href: nap.mapsDirections }}
+>
+  <AreaMap slot="aside" active="hallandale-beach" id="contact-map" />
+
+  <section class="section section--paper">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">The clinic</p>
+        <h2 style="font-size:var(--step-3);margin:1rem 0 1.5rem">{clinic.name}</h2>
+        <dl class="facts">
+          <div><dt>Address</dt><dd><address>{clinic.street}, {clinic.suite}<br />{clinic.city}, {clinic.region} {clinic.postalCode}</address></dd></div>
+          <div><dt>Phone</dt><dd><a href={nap.telHref} data-event="call_click"><span data-phone>{clinic.phoneDisplay}</span></a></dd></div>
+          <div>
+            <dt>Hours</dt>
+            <dd>
+              {
+                clinic.hours
+                  ? clinic.hours.map((h) => <span>{h.label}: {h.opens} to {h.closes}<br /></span>)
+                  : '[[CONFIRM: opening hours for each day of the week]]'
+              }
+            </dd>
+          </div>
+          <div><dt>Parking</dt><dd>[[CONFIRM: parking and building access at 501 Golden Isles Dr, including visitor parking, elevator and suite directions]]</dd></div>
+          <div><dt>Booking</dt><dd>Call the clinic. [[CONFIRM: online booking link, if one is offered]]</dd></div>
+        </dl>
+        <div class="btn-row" style="margin-top:1.75rem">
+          <a class="btn btn--primary" href={nap.mapsDirections} target="_blank" rel="noopener"><Icon name="directions" /> Get directions</a>
+          <a class="btn btn--ghost" href={nap.mapsSearch} target="_blank" rel="noopener"><Icon name="pin" /> View on Google Maps</a>
+        </div>
+      </div>
+      <div class="prose">
+        <h2>How do I get there?</h2>
+        <p>
+          Golden Isles Drive runs south from East Hallandale Beach Boulevard, a few blocks east of
+          US-1 and Gulfstream Park. Whichever way you come, you finish with a turn off Hallandale
+          Beach Boulevard onto Golden Isles Drive.
+        </p>
+        <ul>
+          <li><strong>From I-95:</strong> take exit 18 and drive east on Hallandale Beach Boulevard, past US-1.</li>
+          <li><strong>From US-1:</strong> turn east onto Hallandale Beach Boulevard at Gulfstream Park.</li>
+          <li><strong>From the beach and A1A:</strong> head west on Hallandale Beach Boulevard over the Intracoastal bridge.</li>
+        </ul>
+        <p>
+          City-by-city directions:
+          {
+            areas.map((a, i) => (
+              <>
+                <a href={paths.areas(a.id)}>{a.data.city}</a>{i < areas.length - 1 ? ', ' : '.'}
+              </>
+            ))
+          }
+        </p>
+
+        <h2>What is the fastest way to start?</h2>
+        <p>
+          Call us, or take the <a href="/assessment">two-minute assessment</a> first so you know
+          what to ask for. If you would rather not travel, many visits can be done by
+          <a href="/telehealth">telehealth</a>, and IV therapy can come to you through our
+          <a href="/mobile-iv/hallandale-beach">mobile service</a>.
+        </p>
+
+        <h2>Can I email or send a message?</h2>
+        <p>
+          Please do not send health details by ordinary email, which is not secure.
+          [[CONFIRM: secure patient message or contact form, and the public email address if one should be listed]]
+        </p>
+        <p>If this is a medical emergency, call 911.</p>
+      </div>
+    </div>
+  </section>
+</Simple>

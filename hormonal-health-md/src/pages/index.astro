@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
 import Faq from '../components/Faq.astro';
 import CtaBand from '../components/CtaBand.astro';
+import Steps from '../components/Steps.astro';
 import Sunrise from '../components/art/Sunrise.astro';
 import LabPanel from '../components/art/LabPanel.astro';
 import AreaMap from '../components/art/AreaMap.astro';
@@ -24,13 +25,6 @@ const symptoms = [
   { icon: 'moon', label: 'Cycles changing', text: 'Periods, mood and sleep are suddenly unpredictable.', path: '/conditions/perimenopause' },
   { icon: 'heart', label: 'Erections are unreliable', text: 'It is common, treatable and worth a real workup.', path: '/conditions/erectile-dysfunction' },
   { icon: 'scale', label: 'Weight that will not move', text: 'You eat well and train, and the scale ignores you.', path: '/treatments/medical-weight-loss' },
-];
-
-const steps = [
-  { n: '01', title: 'Tell us what is going on', text: 'Take the two-minute assessment or call. Nothing you answer is stored or sent anywhere.' },
-  { n: '02', title: 'Get your labs drawn', text: 'We order the panel that fits your symptoms and history, so the plan starts from facts.' },
-  { n: '03', title: 'Review every number', text: 'A licensed clinician walks you through your results and builds the plan with you. Treatment is prescribed only when it is clinically right.' },
-  { n: '04', title: 'Follow up and adjust', text: 'Repeat labs and check-ins on a schedule. Your dose follows your results, never a template.' },
 ];
 
 const ways = [
@@ -197,26 +191,7 @@ const faqs = [
     </div>
   </section>
 
-  <section class="section section--ink">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">How care works</p>
-        <h2>Four steps, <em>no guesswork.</em></h2>
-        <p>Symptoms tell us where to look. Labs tell us what is true. You get both, explained in plain English.</p>
-      </div>
-      <ol class="steps">
-        {
-          steps.map((s) => (
-            <li>
-              <span class="steps__n">{s.n}</span>
-              <h3>{s.title}</h3>
-              <p>{s.text}</p>
-            </li>
-          ))
-        }
-      </ol>
-    </div>
-  </section>
+  <Steps />
 
   <section class="section">
     <div class="wrap">
@@ -515,48 +490,6 @@ const faqs = [
     background:
       radial-gradient(22rem 16rem at 100% 0%, rgb(242 112 61 / 0.3), transparent 70%),
       var(--sun-soft);
-  }
-
-  .steps {
-    display: grid;
-    gap: 1.5rem;
-    list-style: none;
-    counter-reset: none;
-  }
-  @media (min-width: 40rem) {
-    .steps {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 68rem) {
-    .steps {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  .steps li {
-    position: relative;
-    padding: 1.6rem 1.5rem 1.7rem;
-    border: 1px solid var(--line-light);
-    border-radius: var(--r-lg);
-    background: rgb(251 248 242 / 0.05);
-  }
-  .steps__n {
-    display: block;
-    margin-bottom: 2.25rem;
-    color: var(--sun-2);
-    font-family: var(--font-display);
-    font-size: var(--step-3);
-    font-style: italic;
-    line-height: 1;
-  }
-  .steps h3 {
-    margin-bottom: 0.6rem;
-    font-size: var(--step-1);
-  }
-  .steps p {
-    color: rgb(251 248 242 / 0.72);
-    font-size: 0.97rem;
-    line-height: 1.55;
   }
 
   .way h3 {
