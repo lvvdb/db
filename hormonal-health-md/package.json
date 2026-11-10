@@ -1,0 +1,25 @@
+{
+  "name": "hormonal-health-md",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static, SEO-first website for Hormonal Health MD (Hallandale Beach, FL).",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "build:drafts": "SHOW_DRAFTS=1 astro build --outDir dist-drafts",
+    "preview": "astro preview",
+    "qa": "node scripts/qa.mjs",
+    "check": "npm run build && npm run qa",
+    "check:launch": "npm run build && node scripts/qa.mjs --launch"
+  },
+  "dependencies": {
+    "@astrojs/markdown-satteri": "^0.4.7",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/instrument-sans": "^5.3.0",
+    "astro": "^7.4.8"
+  }
+}

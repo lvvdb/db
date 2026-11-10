@@ -1,0 +1,1095 @@
+{
+  "site": "https://hormonalhealthmd.com/",
+  "scrapedOn": "2026-11-09",
+  "method": "Firecrawl map (sitemap included, subdomains included), Firecrawl scrape of every URL, and an in-browser fetch of each URL's served HTML for title/meta/tel/script checks",
+  "urlCount": {
+    "htmlPages": 18,
+    "inSitemap": 17
+  },
+  "navigation": {
+    "primary": [
+      "Home /",
+      "Our Services /our-services",
+      "Benefits of Treatment /benefits-of-treatment",
+      "Self-Assessment https://forms.gle/kqD511xTL2KgfyiJ6",
+      "Contact Us /contact-us"
+    ],
+    "servicesDropdown": [
+      "Joint Pain Solutions /joint-pain-solutions",
+      "Testosterone Therapies /testosterone-therapies",
+      "Estrogen Treatments /estrogen-treatments",
+      "Erectile Dysfunction /erectile-dysfunction",
+      "Vitamin Mineral Regiments /vitamin-mineral-regiments",
+      "Nutritional Planning /nutritional-planning",
+      "Bioidentical Hormones /bioidentical-hormones",
+      "Weight Loss Therapies /weight-loss-therapies",
+      "Human Hormone Therapy /human-hormone-therapy",
+      "IV Therapy /iv-therapy"
+    ],
+    "account": [
+      "Sign In /m/account",
+      "My Account /m/account"
+    ],
+    "footer": [
+      "Copyright © 2025 HORMONALHEALTHMD - All Rights Reserved.",
+      "Powered by (GoDaddy)"
+    ]
+  },
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Testosterone Replacement Therapy Near me | Hormonal Health MD",
+      "metaDescription": "Hormonal Health MD has some best doctors for testosterone replacement therapy to optimize testosterone levels in your body. We work for your well-being.",
+      "h1": "Hormones and Anti-Aging Therapies",
+      "h2": [
+        "WHAT WE OFFER",
+        "Hormonal health md",
+        "Contact Us"
+      ],
+      "wordCount": 386,
+      "wordCountNote": "hero 30 + mission/services 217 + self-assessment 33 + TRT block 106; contact/office widget adds about 99 more",
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "(305) 219.4351 (Tel:, href tel:3052194351)",
+        "+1 800 607 4010 (JSON-LD LocalBusiness telephone, not visible)"
+      ],
+      "addressShown": [
+        "Hormonal Health MD  501 Golden Isles D. #204-C  Hallandale Beach, Fl 33009",
+        "501 Golden Isles Dr 204 c, Hallandale Beach, FL, USA",
+        "JSON-LD: 2312 Wilton Dr, Wilton Manors, FL 33305, United States"
+      ],
+      "hoursShown": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+      "emailLinks": [
+        "mailto:Ian@hormonalhealthmd.com"
+      ],
+      "summary": "Homepage: mission statement, symptom checklist, service links, self-assessment call to action, contact form, office address, hours and Google map.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "http://self.hormonalhealthmd.com/ (button: Self-Assessment; redirects to the same Google Form)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": true,
+      "structuredData": "JSON-LD LocalBusiness (only page that has it)"
+    },
+    {
+      "path": "/our-services",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Our Services",
+      "metaDescription": "At HormonalHealthMD, our team members look at your wellness goals so that you can achieve optimal solutions through methods such as testosterone therapy.",
+      "h1": "Our Services",
+      "h2": [
+        "Our Mission - Testosterone Therapy, Anti-Aging and Wellness"
+      ],
+      "wordCount": 188,
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)"
+      ],
+      "summary": "Service index page linking to the ten service pages, with a mission paragraph.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": false,
+      "notes": "The 'Book a Consultation' button labelled 'Contact us' links to /our-services itself, not /contact-us."
+    },
+    {
+      "path": "/benefits-of-treatment",
+      "status": 200,
+      "inSitemap": true,
+      "title": "HormonalHealthMD - Testosterone Therapy, Wellness, Treatment",
+      "metaDescription": "At HormonalHealthMD, we provide testosterone therapy that specializes in remedies so that you can optimize your health and reclaim your youth. ",
+      "h1": "We Provide Solutions That Matter",
+      "h2": [
+        "Photo Gallery",
+        "Why HormonalHealthMD? - Therapy Solutions",
+        "Start your journey today."
+      ],
+      "wordCount": 184,
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)"
+      ],
+      "summary": "Benefits page: intro paragraph, a photo gallery of before/after images, and two bulleted lists of claimed treatment benefits.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": false
+    },
+    {
+      "path": "/contact-us",
+      "status": 200,
+      "inSitemap": true,
+      "title": "HormonalHealthMD - Anti-Aging Therapies, Wellness, Hormones",
+      "metaDescription": "HormonalHealthMD, we look at your health and wellness goals so that you can achieve optimal solutions",
+      "h1": "CEO / Owner",
+      "h2": [],
+      "wordCount": 90,
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "Hormonal Health MD (305) 219.4351 (heading)",
+        "Office Phone: (305) 219.4351 (href tel:3052194351)",
+        "Please call Ian Arthur for an appointment  (305) 219.4351"
+      ],
+      "addressShown": "501 Golden Isles Dr. #204-C, Hallandale Beach, FL 33009, United States",
+      "hoursShown": "Hours of Operation | Mon 12:00 pm – 07:00 pm | Tue 12:00 pm – 07:00 pm | Wed 12:00 pm – 07:00 pm | Thu 12:00 pm – 07:00 pm | Fri 12:00 pm – 07:00 pm | Sat By Appointment | Sun Closed",
+      "emailLinks": [
+        "mailto:Ian@hormonalhealthmd.com"
+      ],
+      "summary": "Contact page: contact form, Hallandale Beach address, phone, hours and Google map.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": true
+    },
+    {
+      "path": "/joint-pain-solutions",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Joint Pain Solutions",
+      "metaDescription": "Improve the quality of life by getting Joint Pain Solutions from certified professionals at Hormonal Health MD. We care for your well-being!",
+      "h1": "Hormonal health md",
+      "subheading": "Effective Joint Pain Solutions at Hormonal Health MD",
+      "wordCount": 98,
+      "wordCountNote": "main content widget only; the shared contact/office widget adds about 89 words",
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "(800) 607-4010 (Tel:, href tel:8006074010)",
+        "954-361-0221 (Fax, href tel:9543610221)"
+      ],
+      "addressShown": "2312 Wilton Drive, Suite 10, Wilton Manors, Florida 33305, United States",
+      "hoursShown": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+      "emailLinks": [],
+      "mailLinkNote": "'You may mail us:' link points to https://hormonalhealthmd.com/ rather than a mailto",
+      "summary": "Short service page on joint pain relief, followed by the shared contact form and office block.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": true
+    },
+    {
+      "path": "/testosterone-therapies",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Testosterone Replacement Therapy Clinics | Hormonal Health MD",
+      "metaDescription": "Hormonal Health MD Clinic in Florida provides highly professional & FDA-approved Testosterone Replacement Therapy for low testosterone levels in males.",
+      "h1": "Hormonal health md",
+      "subheading": "Testosterone Replacement Therapies at Hormonal Health",
+      "wordCount": 101,
+      "wordCountNote": "main content widget only; the shared contact/office widget adds about 89 words",
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "(800) 607-4010 (Tel:, href tel:8006074010)",
+        "954-361-0221 (Fax, href tel:9543610221)"
+      ],
+      "addressShown": "2312 Wilton Drive, Suite 10, Wilton Manors, Florida 33305, United States",
+      "hoursShown": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+      "emailLinks": [],
+      "mailLinkNote": "'You may mail us:' link points to https://hormonalhealthmd.com/ rather than a mailto",
+      "summary": "Short service page on testosterone replacement therapy, followed by the shared contact form and office block.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": true
+    },
+    {
+      "path": "/estrogen-treatments",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Aromatization Of Testosterone Into Estrogen | Hormonal Health MD",
+      "metaDescription": "If testosterone levels are your problem, we have a solution. Our doctors will balance testosterone by converting it to Estrogen through Aromatization.",
+      "h1": "Hormonal health md",
+      "subheading": "Effective Estrogen Treatments at Hormonal Health",
+      "wordCount": 97,
+      "wordCountNote": "main content widget only; the shared contact/office widget adds about 89 words",
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "(800) 607-4010 (Tel:, href tel:8006074010)",
+        "954-361-0221 (Fax, href tel:9543610221)"
+      ],
+      "addressShown": "2312 Wilton Drive, Suite 10, Wilton Manors, Florida 33305, United States",
+      "hoursShown": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+      "emailLinks": [],
+      "mailLinkNote": "'You may mail us:' link points to https://hormonalhealthmd.com/ rather than a mailto",
+      "summary": "Short service page on estrogen deficiency and aromatization, followed by the shared contact form and office block.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": true
+    },
+    {
+      "path": "/erectile-dysfunction",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Erectile Dysfunction Treatment | Young With Erectile Dysfunction | Hormonal Health MD",
+      "metaDescription": "Hormonal Health MD Clinic has well-experienced doctors who treat Erectile Dysfunction (ED) in men with FDA-approved treatment procedures.",
+      "h1": "Hormonal health md",
+      "subheading": "Best Treatment for Erectile Dysfunction at Hormonal Health MD",
+      "wordCount": 115,
+      "wordCountNote": "main content widget only; the shared contact/office widget adds about 89 words",
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "(800) 607-4010 (Tel:, href tel:8006074010)",
+        "954-361-0221 (Fax, href tel:9543610221)"
+      ],
+      "addressShown": "2312 Wilton Drive, Suite 10, Wilton Manors, Florida 33305, United States",
+      "hoursShown": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+      "emailLinks": [],
+      "mailLinkNote": "'You may mail us:' link points to https://hormonalhealthmd.com/ rather than a mailto",
+      "summary": "Short service page on erectile dysfunction treatment, followed by the shared contact form and office block.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": true
+    },
+    {
+      "path": "/vitamin-mineral-regiments",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Vitamin & Mineral Regiments | Hormonal Health MD",
+      "metaDescription": "We provide professional counseling on maintaining the right proportions of Vitamin & Mineral Regiments for healthy living with hormone replacement therapies.",
+      "h1": "Hormonal health md",
+      "subheading": "Vitamin and Mineral Regiments at Hormonal Health MD",
+      "wordCount": 103,
+      "wordCountNote": "main content widget only; the shared contact/office widget adds about 89 words",
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "(800) 607-4010 (Tel:, href tel:8006074010)",
+        "954-361-0221 (Fax, href tel:9543610221)"
+      ],
+      "addressShown": "2312 Wilton Drive, Suite 10, Wilton Manors, Florida 33305, United States",
+      "hoursShown": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+      "emailLinks": [],
+      "mailLinkNote": "'You may mail us:' link points to https://hormonalhealthmd.com/ rather than a mailto",
+      "summary": "Short service page on vitamin and mineral regimens, followed by the shared contact form and office block.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": true
+    },
+    {
+      "path": "/nutritional-planning",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Meal Planning For One | Nutritional Planning | Hormonal Health MD",
+      "metaDescription": "Healthy eating maintains an excellent hormonal balance and protects overall health. Get professional nutrition meal planning for men’s and women’s health.",
+      "h1": "Hormonal health md",
+      "subheading": "Men's Health Meal Planning for Nutrition by Hormonal Health",
+      "wordCount": 88,
+      "wordCountNote": "main content widget only; the shared contact/office widget adds about 89 words",
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "(800) 607-4010 (Tel:, href tel:8006074010)",
+        "954-361-0221 (Fax, href tel:9543610221)"
+      ],
+      "addressShown": "2312 Wilton Drive, Suite 10, Wilton Manors, Florida 33305, United States",
+      "hoursShown": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+      "emailLinks": [],
+      "mailLinkNote": "'You may mail us:' link points to https://hormonalhealthmd.com/ rather than a mailto",
+      "summary": "Short service page on nutritional and meal planning, followed by the shared contact form and office block.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": true
+    },
+    {
+      "path": "/bioidentical-hormones",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Bioidentical Hormones",
+      "metaDescription": "Bioidentical Hormones Replacement Therapy is a proven way to balance testosterone and other hormones in men. Find the best bioidentical hormones near you.",
+      "h1": "Hormonal health md",
+      "subheading": "Bioidentical Testosterone Replacement Therapy for Men by Hormonal Health",
+      "wordCount": 94,
+      "wordCountNote": "main content widget only; the shared contact/office widget adds about 89 words",
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "(800) 607-4010 (Tel:, href tel:8006074010)",
+        "954-361-0221 (Fax, href tel:9543610221)"
+      ],
+      "addressShown": "2312 Wilton Drive, Suite 10, Wilton Manors, Florida 33305, United States",
+      "hoursShown": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+      "emailLinks": [],
+      "mailLinkNote": "'You may mail us:' link points to https://hormonalhealthmd.com/ rather than a mailto",
+      "summary": "Short service page on bioidentical hormone replacement for men, followed by the shared contact form and office block.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": true
+    },
+    {
+      "path": "/weight-loss-therapies",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Weight Loss Therapies | Weight Loss Testosterone Hormonal Health MD",
+      "metaDescription": "Our weight loss therapies do not include just another diet but also the best testosterone hormone replacement therapies to guarantee results.",
+      "h1": "Hormonal health md",
+      "subheading": "Weight Loss Therapies by Hormonal Health MD",
+      "wordCount": 88,
+      "wordCountNote": "main content widget only; the shared contact/office widget adds about 89 words",
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "(800) 607-4010 (Tel:, href tel:8006074010)",
+        "954-361-0221 (Fax, href tel:9543610221)"
+      ],
+      "addressShown": "2312 Wilton Drive, Suite 10, Wilton Manors, Florida 33305, United States",
+      "hoursShown": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+      "emailLinks": [
+        "mailto:Ian@hormonalhealthmd.com"
+      ],
+      "mailLinkNote": null,
+      "summary": "Short service page on weight-loss treatment using testosterone or medications such as Phentermine, followed by the shared contact form and office block.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": true
+    },
+    {
+      "path": "/human-hormone-therapy",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Human Growth Hormone Therapy | Hormonal Health MD",
+      "metaDescription": "Now you don’t have to worry about low growth hormone in your body as our human growth hormone therapy will overcome the deficiency of this hormone.",
+      "h1": "Hormonal health md",
+      "subheading": "Professional Human Growth Hormone Therapy",
+      "wordCount": 108,
+      "wordCountNote": "main content widget only; the shared contact/office widget adds about 89 words",
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "(800) 607-4010 (Tel:, href tel:8006074010)",
+        "954-361-0221 (Fax, href tel:9543610221)"
+      ],
+      "addressShown": "2312 Wilton Drive, Suite 10, Wilton Manors, Florida 33305, United States",
+      "hoursShown": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+      "emailLinks": [
+        "mailto:Ian@hormonalhealthmd.com"
+      ],
+      "mailLinkNote": null,
+      "summary": "Short service page on human growth hormone therapy, followed by the shared contact form and office block.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": true
+    },
+    {
+      "path": "/iv-therapy",
+      "status": 200,
+      "inSitemap": true,
+      "title": "IV Therapy",
+      "metaDescription": null,
+      "metaDescriptionNote": "no meta description tag on this page",
+      "h1": "IV Therapy",
+      "h2": [
+        "Menu / Price List",
+        "Contact Us"
+      ],
+      "wordCount": 284,
+      "wordCountNote": "intro 48 + menu 236; the small contact widget adds about 25",
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)",
+        "1(800)607-4010 (href tel:18006074010)"
+      ],
+      "addressShown": null,
+      "hoursShown": "Hours | Open today | 10:00 am – 07:00 pm",
+      "summary": "IV therapy page with a six-item drip menu (no prices printed) and a mobile-service pitch.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "hasContactForm": false
+    },
+    {
+      "path": "/m/login",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Login",
+      "metaDescription": null,
+      "h1": "Account sign in",
+      "wordCount": 23,
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)"
+      ],
+      "summary": "GoDaddy membership sign-in page.",
+      "bodyText": "Sign in to your account to access your profile, history, and any private pages you've been granted access to.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "indexability": "in sitemap; no meta robots, no X-Robots-Tag, no canonical"
+    },
+    {
+      "path": "/m/reset",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Reset your password",
+      "metaDescription": null,
+      "h1": "Reset password",
+      "wordCount": 7,
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)"
+      ],
+      "summary": "GoDaddy membership password-reset page.",
+      "bodyText": "Reset your password for .",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "indexability": "in sitemap; no meta robots, no X-Robots-Tag, no canonical"
+    },
+    {
+      "path": "/m/create",
+      "status": 200,
+      "inSitemap": true,
+      "title": "Set your password",
+      "metaDescription": null,
+      "h1": "This website uses cookies.",
+      "h1Note": "the only h1 in the served HTML is the cookie-banner heading; the rendered page shows an h2 'Set Password'",
+      "wordCount": 17,
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)"
+      ],
+      "summary": "GoDaddy membership set-password page.",
+      "bodyText": "You're signing in for the first time as , so you need to set a password.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)",
+        "https://hormonalhealthmd.com/m/account (nav: Sign In / My Account)"
+      ],
+      "indexability": "in sitemap; no meta robots, no X-Robots-Tag, no canonical"
+    },
+    {
+      "path": "/m/account",
+      "status": 200,
+      "redirectsTo": "/m/login?r=%2Fm%2Faccount",
+      "inSitemap": false,
+      "title": "Login",
+      "metaDescription": null,
+      "h1": "Account sign in",
+      "wordCount": 23,
+      "phones": [
+        "(305) 219.4351 (header banner, plain text)"
+      ],
+      "summary": "Member account URL linked from the nav on every page ('Sign In' / 'My Account'); redirects to the sign-in page.",
+      "outboundBookingLinks": [
+        "https://forms.gle/kqD511xTL2KgfyiJ6 (nav: Self-Assessment)"
+      ],
+      "indexability": "not in sitemap; the redirected URL /m/login?r=%2Fm%2Faccount appears in web search results"
+    }
+  ],
+  "nonHtmlUrls": [
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "content": "User-agent: *",
+      "note": "no Disallow rules and no Sitemap line"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "content": "sitemap index pointing to https://hormonalhealthmd.com/sitemap.website.xml"
+    },
+    {
+      "path": "/sitemap.website.xml",
+      "status": 200,
+      "content": "17 URLs, every lastmod 2025-06-27, changefreq weekly; priority 1 for / and 0.5 for the rest",
+      "urls": [
+        "/iv-therapy",
+        "/bioidentical-hormones",
+        "/our-services",
+        "/benefits-of-treatment",
+        "/estrogen-treatments",
+        "/contact-us",
+        "/nutritional-planning",
+        "/vitamin-mineral-regiments",
+        "/weight-loss-therapies",
+        "/joint-pain-solutions",
+        "/",
+        "/human-hormone-therapy",
+        "/testosterone-therapies",
+        "/erectile-dysfunction",
+        "/m/login",
+        "/m/reset",
+        "/m/create"
+      ]
+    }
+  ],
+  "offSiteUrls": [
+    {
+      "url": "http://self.hormonalhealthmd.com/",
+      "redirectsTo": "https://docs.google.com/forms/d/e/1FAIpQLSdftwDUxa0X15hGPO06SVlMaXrgqs-sySEL_m5NfqMBsrtsZA/viewform?usp=send_form",
+      "title": "HormonalHealthMD Self-Assessment",
+      "linkedFrom": [
+        "/ (Self-Assessment button)"
+      ],
+      "note": "subdomain that forwards to the Google Form; needs its own DNS/redirect decision in the migration"
+    },
+    {
+      "url": "https://forms.gle/kqD511xTL2KgfyiJ6",
+      "redirectsTo": "https://docs.google.com/forms/d/e/1FAIpQLSdftwDUxa0X15hGPO06SVlMaXrgqs-sySEL_m5NfqMBsrtsZA/viewform",
+      "title": "HormonalHealthMD Self-Assessment",
+      "linkedFrom": [
+        "nav on every page"
+      ],
+      "description": "The following assessment is your first step to a better and healthier life. This test will let us know if you have been experiencing any of the following symptoms and their severity. Please score your symptoms on the following scale: 0 (none), 1 (mild), 2 (moderate), or 3 (severe).",
+      "fields": [
+        "Email",
+        "Name",
+        "Email",
+        "Phone Number",
+        "Primary Address",
+        "Date of Birth",
+        "In-person or telemedicine visit? (In-person / Telemedicine)",
+        "57 symptom items each scored 0-3 from Low Libido to Thinning Pubic Hair",
+        "Question or concerns?"
+      ]
+    }
+  ],
+  "pathsCheckedAndNotFound404": [
+    "/blog",
+    "/privacy-policy",
+    "/terms-and-conditions",
+    "/about-us",
+    "/faq",
+    "/pricing",
+    "/shop",
+    "/home",
+    "/services",
+    "/testimonials",
+    "/self-assessment",
+    "/hgh-therapy",
+    "/nonexistent-xyz-123"
+  ],
+  "unscrapedUrls": [],
+  "facts": {
+    "hours": [
+      {
+        "quote": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+        "path": "/"
+      },
+      {
+        "quote": "Hours of Operation | Mon 10:00 am – 07:00 pm | Tue 10:00 am – 07:00 pm | Wed 10:00 am – 07:00 pm | Thu 10:00 am – 07:00 pm | Fri 10:00 am – 07:00 pm | Sat 10:00 am – 07:00 pm | Sun 10:00 am – 07:00 pm",
+        "path": "/joint-pain-solutions, /testosterone-therapies, /estrogen-treatments, /erectile-dysfunction, /vitamin-mineral-regiments, /nutritional-planning, /bioidentical-hormones, /weight-loss-therapies, /human-hormone-therapy"
+      },
+      {
+        "quote": "Hours of Operation | Mon 12:00 pm – 07:00 pm | Tue 12:00 pm – 07:00 pm | Wed 12:00 pm – 07:00 pm | Thu 12:00 pm – 07:00 pm | Fri 12:00 pm – 07:00 pm | Sat By Appointment | Sun Closed",
+        "path": "/contact-us"
+      },
+      {
+        "quote": "Please call Ian Arthur for an appointment  (305) 219.4351",
+        "path": "/contact-us"
+      },
+      {
+        "quote": "Hours | Open today | 10:00 am – 07:00 pm",
+        "path": "/iv-therapy",
+        "note": "collapsed hours widget; scraped on a Monday"
+      },
+      {
+        "quote": "We love our customers, so feel free to visit during normal business hours.",
+        "path": "/iv-therapy"
+      },
+      {
+        "quote": "openingHoursSpecification: Monday, Tuesday, Thursday, Friday, Saturday, Sunday opens 10:00 closes 19:00; Wednesday opens 10:30 closes 19:00",
+        "path": "/ (JSON-LD LocalBusiness, not visible on page)"
+      }
+    ],
+    "phones": [
+      {
+        "quote": "Testosterone Therapy, Anti-Aging, and Wellness! CALL US TODAY (305) 219.4351",
+        "path": "every page (header banner, plain text, not a tel: link): /, /our-services, /benefits-of-treatment, /contact-us, /joint-pain-solutions, /testosterone-therapies, /estrogen-treatments, /erectile-dysfunction, /vitamin-mineral-regiments, /nutritional-planning, /bioidentical-hormones, /weight-loss-therapies, /human-hormone-therapy, /iv-therapy, /m/login, /m/reset, /m/create, /m/account"
+      },
+      {
+        "quote": "Tel: (305) 219.4351",
+        "href": "tel:3052194351",
+        "path": "/"
+      },
+      {
+        "quote": "Hormonal Health MD (305) 219.4351",
+        "path": "/contact-us"
+      },
+      {
+        "quote": "Office Phone: (305) 219.4351",
+        "href": "tel:3052194351",
+        "path": "/contact-us"
+      },
+      {
+        "quote": "Please call Ian Arthur for an appointment  (305) 219.4351",
+        "path": "/contact-us"
+      },
+      {
+        "quote": "Tel: (800) 607-4010",
+        "href": "tel:8006074010",
+        "path": "/joint-pain-solutions, /testosterone-therapies, /estrogen-treatments, /erectile-dysfunction, /vitamin-mineral-regiments, /nutritional-planning, /bioidentical-hormones, /weight-loss-therapies, /human-hormone-therapy"
+      },
+      {
+        "quote": "Fax 954-361-0221",
+        "href": "tel:9543610221",
+        "path": "/joint-pain-solutions, /testosterone-therapies, /estrogen-treatments, /erectile-dysfunction, /vitamin-mineral-regiments, /nutritional-planning, /bioidentical-hormones, /weight-loss-therapies, /human-hormone-therapy"
+      },
+      {
+        "quote": "1(800)607-4010",
+        "href": "tel:18006074010",
+        "path": "/iv-therapy"
+      },
+      {
+        "quote": "\"telephone\":\"+1 800 607 4010\"",
+        "path": "/ (JSON-LD LocalBusiness, not visible on page)"
+      },
+      {
+        "note": "The hyphenated form (305) 219-4351 never appears on the site; the 305 number is always printed with a period: (305) 219.4351. The 800 number never appears on /, /contact-us, /our-services or /benefits-of-treatment except inside the homepage JSON-LD."
+      }
+    ],
+    "addresses": [
+      {
+        "quote": "You may mail us: Hormonal Health MD  501 Golden Isles D. #204-C  Hallandale Beach, Fl 33009",
+        "path": "/",
+        "note": "printed as 'D.' and 'Fl'"
+      },
+      {
+        "quote": "501 Golden Isles Dr 204 c, Hallandale Beach, FL, USA",
+        "path": "/"
+      },
+      {
+        "quote": "501 Golden Isles Dr. #204-C, Hallandale Beach, FL 33009, United States",
+        "path": "/contact-us"
+      },
+      {
+        "quote": "2312 Wilton Drive, Suite 10, Wilton Manors, Florida 33305, United States",
+        "path": "/joint-pain-solutions, /testosterone-therapies, /estrogen-treatments, /erectile-dysfunction, /vitamin-mineral-regiments, /nutritional-planning, /bioidentical-hormones, /weight-loss-therapies, /human-hormone-therapy"
+      },
+      {
+        "quote": "\"streetAddress\":\"2312 Wilton Dr\",\"addressLocality\":\"Wilton Manors\",\"addressRegion\":\"FL\",\"postalCode\":\"33305\",\"addressCountry\":\"United States\"; geo latitude 26.1571 longitude -80.136437",
+        "path": "/ (JSON-LD LocalBusiness, not visible on page)"
+      },
+      {
+        "note": "Google map embeds on / and /contact-us are centred on 25.98491,-80.129626 (Hallandale Beach). /iv-therapy, /our-services and /benefits-of-treatment print no address."
+      }
+    ],
+    "people": [
+      {
+        "quote": "Please call Ian Arthur for an appointment  (305) 219.4351",
+        "path": "/contact-us"
+      },
+      {
+        "quote": "CEO / Owner",
+        "path": "/contact-us",
+        "note": "this is the page H1; no name is attached to it in the markup"
+      },
+      {
+        "quote": "Ian@hormonalhealthmd.com",
+        "path": "/contact-us (visible text and mailto); mailto only on /, /weight-loss-therapies, /human-hormone-therapy"
+      },
+      {
+        "quote": "Signed in as: filler@godaddy.com",
+        "path": "nav markup on every page",
+        "note": "GoDaddy template placeholder, not a real person"
+      },
+      {
+        "note": "No clinician is named anywhere and no credentials (MD, DO, NP, PA, RN, license numbers) are printed. Staff are only described generically: 'best doctors' (/ meta description), 'testosterone replacement therapy doctors and staff' (/), 'experienced practitioners' (/, /iv-therapy), 'skilled professionals' (/iv-therapy), 'expert nutritionists' (/nutritional-planning), 'certified professionals' (/joint-pain-solutions meta description), 'well-experienced doctors' (/erectile-dysfunction meta description)."
+      }
+    ],
+    "prices": [
+      {
+        "note": "none found. No price, fee, membership or 'from $' figure appears on any page."
+      },
+      {
+        "quote": "Menu / Price List",
+        "path": "/iv-therapy",
+        "note": "heading only; the menu underneath lists six drips with no prices"
+      },
+      {
+        "quote": "We offer unmatched quality and affordable rates for our services with individual care according to specific needs.",
+        "path": "/testosterone-therapies"
+      }
+    ],
+    "services": [
+      {
+        "category": "service menu",
+        "path": "/our-services",
+        "quote": "Human Growth Hormone Therapy | IV Therapy | Testosterone Therapies | Weight Loss Medication Therapies | Estrogen Treatments | Bioidentical Hormones | Nutritional Planning | Vitamin & Mineral Regiments | Treatments for Erectile Dysfunction | Joint Pain Solutions"
+      },
+      {
+        "category": "service menu",
+        "path": "/",
+        "quote": "Our offerings range from Human Growth Hormone Therapy, Testosterone Replacement Therapies, IV Infusions and more."
+      },
+      {
+        "category": "service menu",
+        "path": "/",
+        "quote": "Take our quick self-assessment to see if you may be a candidate for TRT, HGH & Weight Loss Management."
+      },
+      {
+        "category": "IV drip",
+        "path": "/iv-therapy",
+        "name": "Brainstorm",
+        "quote": "Improve overall brain and mental capacity with this cocktail of Alpha Lipoic Acid, Taurine, Folic Acid and Hydroxocobalamin which will increase memory recall, helps in learning new information and improves overall cognitive function."
+      },
+      {
+        "category": "IV drip",
+        "path": "/iv-therapy",
+        "name": "Myers Cocktail",
+        "quote": "Replenish your body with Ascorbic Acid, Vita Complex and our powerful Mineral Blend that combats hangover-related symptoms like dehydration, headache, and nausea."
+      },
+      {
+        "category": "IV drip",
+        "path": "/iv-therapy",
+        "name": "Immunity",
+        "quote": "The Immune Booster IV uses a powerful combination of immune boosting ingredients including Ascorbic Acid, Vita Complex and Zinc to support your immune system and help prevent illness."
+      },
+      {
+        "category": "IV drip",
+        "path": "/iv-therapy",
+        "name": "GET UP & GO",
+        "quote": "Designed to help kickstart your metabolism and feel more energized. Premium-quality compounds such as our Vita Complex and our specially formulated Amino Blend which helps burn fat, boost metabolism and provide the nutrients needed for optimal wellness."
+      },
+      {
+        "category": "IV drip",
+        "path": "/iv-therapy",
+        "name": "Alleviate",
+        "quote": "Help relieve stress, migraines, headaches, feeling run down and symptoms of PMS. Alleviate includes premium-quality compounds such as Calcium Chloride, Magnesium Chloride, Vita Complex, Hydroxocobalamin which reduces bloating, irritability, abdominal discomfort & lower back pain."
+      },
+      {
+        "category": "IV drip",
+        "path": "/iv-therapy",
+        "name": "Recovery & Performance",
+        "quote": "This infusion of Ascorbic Acids, Vita Complex, Amino Acid Blend and our Mineral Blend is perfect after a long day on the golf course, tennis courts, or intense workout. This hydrating, nutrient-rich IV balances sodium levels and replenishes electrolytes. Relieve soreness from muscles broken down by exercise with our rebuilding and repairing nutrients."
+      },
+      {
+        "category": "IV drip",
+        "path": "/iv-therapy",
+        "quote": "Specialty Cocktails that are mixed by our experienced practitioners or customize it to formulate a combination that achieves your health and wellness goals."
+      },
+      {
+        "category": "named medication",
+        "path": "/weight-loss-therapies",
+        "quote": "We use therapeutic approaches of testosterone or medications such as Phentermine to yield weight loss along with healthy exercise and dieting. Weight loss diets include eating smaller portions and having a protein shake after exercising."
+      },
+      {
+        "category": "named medication",
+        "note": "Phentermine is the only drug named on the site. none found for: semaglutide, tirzepatide, Ozempic, Wegovy, Mounjaro, Zepbound, GLP-1, hCG, sermorelin, any peptide, any testosterone form (cypionate, enanthate, pellets, cream, gel), any named ED drug."
+      },
+      {
+        "category": "growth hormone",
+        "path": "/human-hormone-therapy",
+        "quote": "Human Growth Hormone is a naturally occurring hormone vital for many aspects of men’s health, both physical and sexual. As you age, the level of HGH decrease and diminishes the quality of life."
+      },
+      {
+        "category": "testosterone",
+        "path": "/",
+        "quote": "Hormonal Health MD is your anti-aging and wellness center specializing in testosterone replacement therapy."
+      },
+      {
+        "category": "bioidentical",
+        "path": "/bioidentical-hormones",
+        "quote": "Hormonal Health offers effective bioidentical testosterone and hormone replacement for men to promote their mental well-being."
+      },
+      {
+        "category": "estrogen",
+        "path": "/estrogen-treatments",
+        "quote": "Hormonal Health offers professional Estrogen treatments to manage deficiency or aromatization of testosterone into estrogen for very critical cases."
+      },
+      {
+        "category": "erectile dysfunction",
+        "path": "/erectile-dysfunction",
+        "quote": "Hormonal Health MD offers erectile dysfunction treatment to promote sexual health. We also have psychogenic erectile dysfunction treatment for the ones suffering mental trauma or depressions."
+      },
+      {
+        "category": "joint or pain",
+        "path": "/joint-pain-solutions",
+        "quote": "We use the best treatments to decrease inflammation, relieve pain and improve your mobility. Our professionals combine medicine and physical activities to give joint pain relief.",
+        "note": "no named joint therapy (no PRP, injections, etc.)"
+      },
+      {
+        "category": "joint or pain",
+        "path": "/joint-pain-solutions",
+        "quote": "Seniors find our methods particularly appealing because they address many natural aging factors associated with decreased connective tissue strength."
+      },
+      {
+        "category": "nutrition",
+        "path": "/nutritional-planning",
+        "quote": "Our expert nutritionists provide you with meal planning for one person per appointment to strategize your work, meal, and exercise."
+      },
+      {
+        "category": "nutrition",
+        "path": "/nutritional-planning",
+        "quote": "Hormonal Health offers nutritional planning for all age types and other services to promote physical and mental well-being."
+      },
+      {
+        "category": "supplements",
+        "path": "/vitamin-mineral-regiments",
+        "quote": "Hormonal Health MD is your center that offers vitamin and mineral regiments to overcome these shortcomings. Our professionals help you use your diet schedule to keep your levels high and make your life better."
+      },
+      {
+        "category": "lab testing",
+        "note": "none found as a named offering. Closest wording follows."
+      },
+      {
+        "category": "lab testing",
+        "path": "/",
+        "quote": "Through evaluating a person’s chemistries, a proper assessment can take place so that regiments can be implemented to achieve these goals."
+      },
+      {
+        "category": "lab testing",
+        "path": "/our-services",
+        "quote": "By taking into account a patients goals and by analyzing their pathologies, a plan is then uniquely crafted by using modern therapies, medication and nutrition planning to suit the individual, in order to achieve real results."
+      },
+      {
+        "category": "symptom list",
+        "path": "/",
+        "quote": "Are you over 30 years old and experiencing these symptoms? Low Drive | Chronic Fatigue | Hair Loss | Muscle Weakness | Anxiety | Depression | Stubborn Body Fat | Reduced Stamina | Erectile Disfunction | Lack of Motivation | Increased Body Fat Retention"
+      }
+    ],
+    "telehealthMobile": [
+      {
+        "quote": "In-Person or Telemedicine Preferred?*",
+        "path": "contact form field on /, /contact-us and the nine service pages with the shared contact widget"
+      },
+      {
+        "quote": "In-person or telemedicine visit? * | In-person | Telemedicine",
+        "path": "Google Form self-assessment (https://forms.gle/kqD511xTL2KgfyiJ6)"
+      },
+      {
+        "quote": "Cant make it to our office?  Call us to schedule our concierge mobile service where we come to you!",
+        "path": "/"
+      },
+      {
+        "quote": "Hungover from a long night out on the town.? Call us so we can get you hydrated. Can't get to our office?  No problem, we will come to you.",
+        "path": "/iv-therapy"
+      },
+      {
+        "quote": "We do custom appointments and send one of our skilled professionals to your location on your time!",
+        "path": "/iv-therapy"
+      },
+      {
+        "quote": "We have the best doctors and experts for testosterone therapy in Florida",
+        "path": "/testosterone-therapies",
+        "note": "only geographic claim in body copy"
+      },
+      {
+        "quote": "Hormonal Health MD Clinic in Florida",
+        "path": "/testosterone-therapies (meta description)"
+      },
+      {
+        "quote": "So, if you have any query regarding testosterone replacement therapy near me, then Hormonal Health MD is the answer.",
+        "path": "/"
+      },
+      {
+        "quote": "If you search for the query “bioidentical hormones near me,” then Hormonal Health is your answer.",
+        "path": "/bioidentical-hormones"
+      },
+      {
+        "note": "Cities named: only Hallandale Beach (/ and /contact-us) and Wilton Manors (nine service pages and homepage JSON-LD), both inside address blocks. No service-area list, no radius, no county names."
+      },
+      {
+        "note": "Languages spoken: none found. Insurance accepted or not: none found."
+      }
+    ],
+    "riskyClaims": [
+      {
+        "quote": "We have the best doctors and experts for testosterone therapy in Florida that will give you guaranteed results with no side effects.",
+        "path": "/testosterone-therapies"
+      },
+      {
+        "quote": "We utilize the latest advances in our therapies, and all our practices are 100% ethical and legal.",
+        "path": "/testosterone-therapies"
+      },
+      {
+        "quote": "Hormonal Health MD Clinic in Florida provides highly professional & FDA-approved Testosterone Replacement Therapy for low testosterone levels in males.",
+        "path": "/testosterone-therapies (meta description)"
+      },
+      {
+        "quote": "Our weight loss therapies do not include just another diet but also the best testosterone hormone replacement therapies to guarantee results.",
+        "path": "/weight-loss-therapies (meta description)"
+      },
+      {
+        "quote": "Hormonal Health MD is your professional center for the best weight loss management medications.",
+        "path": "/weight-loss-therapies"
+      },
+      {
+        "quote": "Whichever the scenario, our experts give you a service that guarantees results for your physical and mental well-being.",
+        "path": "/estrogen-treatments"
+      },
+      {
+        "quote": "If testosterone levels are your problem, we have a solution. Our doctors will balance testosterone by converting it to Estrogen through Aromatization.",
+        "path": "/estrogen-treatments (meta description)"
+      },
+      {
+        "quote": "We have a guaranteed service that will ensure a healthy lifestyle for you.",
+        "path": "/vitamin-mineral-regiments"
+      },
+      {
+        "quote": "Hormonal Health MD Clinic has well-experienced doctors who treat Erectile Dysfunction (ED) in men with FDA-approved treatment procedures.",
+        "path": "/erectile-dysfunction (meta description)"
+      },
+      {
+        "quote": "Our experts at Hormonal Health MD understand your condition and have the best methods to overcome erectile dysfunction and return to your healthy lifestyle.",
+        "path": "/erectile-dysfunction"
+      },
+      {
+        "quote": "Hormonal Health MD is a center that helps you get back to your youthful stance by using human growth hormone therapy for treating the deficiency. HGH therapy enables professionals like us, to restore the levels of hormones in your body to provide energy, vitality, and virility.",
+        "path": "/human-hormone-therapy",
+        "note": "growth hormone positioned as anti-aging"
+      },
+      {
+        "quote": "Now you don’t have to worry about low growth hormone in your body as our human growth hormone therapy will overcome the deficiency of this hormone.",
+        "path": "/human-hormone-therapy (meta description)"
+      },
+      {
+        "quote": "Hormones and Anti-Aging Therapies",
+        "path": "/ (H1) and twitter:description on every page"
+      },
+      {
+        "quote": "we provide different therapies that specialize and provide proven remedies, so that you can live life again and enable you to optimize your health and reclaim your youth.",
+        "path": "/benefits-of-treatment"
+      },
+      {
+        "quote": "Benefits of Our Treatments: · Increase Lean Muscle · Increased Cellular Repair & Regeneration. · Increases Muscle Mass & Strength · Boosts Red Blood Cell Production · Increased Collagen Production · Lose Body Fat · Improves Mood · Alleviates Depression, Irritability & Fatigue · Relieves Hangovers · Boosts Insulin Sensitivity, · Minimize the Risk of Diabetes · Improves Bone Mineral Density · Boosts Overall Bone Strength · Accelerates Wound Healing",
+        "path": "/benefits-of-treatment",
+        "note": "muscle-building and disease-risk claims"
+      },
+      {
+        "quote": "Benefits of Our Treatments: · Anti- Aging · Improve Memory · Enhances Hemoglobin Levels · Relieves Joint Pain · Helps Manage Diabetes · Increases Height · Increases Sexual Performance · Lowers Cholesterol Levels · Boosts Immunity · Promotes Hair Growth · Reduces Cellulite · Reduces Wrinkles · Corrects Both Iron Deficiency Anemia · Helps Organ Restoration· Improves Vision · Lowers Blood Pressure",
+        "path": "/benefits-of-treatment",
+        "note": "anti-aging, height and disease-treatment claims"
+      },
+      {
+        "quote": "Photo Gallery (image files: Male before and after 4-0001.jpg, Male before and after 3.jpg, Male before and after 5.jpg, female before and after 1-0001.jpg, Female before and after 2.jpg; alt text 'Therapy', 'Therapies', 'Wellness')",
+        "path": "/benefits-of-treatment",
+        "note": "before/after imagery with no captions, disclaimers or attribution; 'Male before and after 4-0001.jpg' is also the page hero image"
+      },
+      {
+        "quote": "Our therapy helps the growth of natural hormone in your body that promotes: Libido | Muscle strength and endurance | Sexual health | Cardiac health and reducing many other risks",
+        "path": "/"
+      },
+      {
+        "quote": "Our testosterone replacement therapy doctors and staff ensure a treatment in a professional way and give you the best results.",
+        "path": "/"
+      },
+      {
+        "quote": "From migraines, hangovers, improving memory, muscle soreness, burning fat or boosting your metabolism; our vitamin therapies care for all your needs.",
+        "path": "/"
+      },
+      {
+        "quote": "to support your immune system and help prevent illness.",
+        "path": "/iv-therapy (Immunity drip)"
+      },
+      {
+        "quote": "Hormonal Health MD has some best doctors for testosterone replacement therapy",
+        "path": "/ (meta description)"
+      },
+      {
+        "note": "'No visit needed' or similar wording: none found. No testimonials or patient quotes on the site."
+      }
+    ],
+    "social": [
+      {
+        "note": "none found. No social profile links, no review widget, no star rating and no review count appear on any page. The only external links are the Google Form, self.hormonalhealthmd.com, Google reCAPTCHA policy links, Google Maps and the GoDaddy 'Powered by' link."
+      }
+    ],
+    "tags": [
+      {
+        "tag": "platform",
+        "quote": "generator: Starfield Technologies; Go Daddy Website Builder 8.0.0000",
+        "path": "every page"
+      },
+      {
+        "tag": "GoDaddy traffic analytics (TCCL)",
+        "quote": "https://img1.wsimg.com/traffic-assets/js/tccl-tti.min.js",
+        "path": "every page"
+      },
+      {
+        "tag": "GoDaddy signals",
+        "quote": "https://img1.wsimg.com/signals/js/clients/scc-c2/scc-c2.min.js",
+        "path": "every page"
+      },
+      {
+        "tag": "chat / messaging widget (Reamaze, GoDaddy Conversations)",
+        "quote": "https://cdn.reamaze.com/assets/reamaze-godaddy-loader.js",
+        "path": "observed in the rendered DOM of /; a widget-messaging block is present on every page"
+      },
+      {
+        "tag": "Google reCAPTCHA",
+        "quote": "This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.",
+        "path": "pages with the contact form"
+      },
+      {
+        "tag": "Google Maps embed",
+        "quote": "maps.googleapis.com ... client=gme-godaddycom&channel=gc-widget-contact",
+        "path": "/ and /contact-us"
+      },
+      {
+        "tag": "cookie banner",
+        "quote": "This website uses cookies. We use cookies to analyze website traffic and optimize your website experience. By accepting our use of cookies, your data will be aggregated with all other user data.",
+        "path": "every page"
+      },
+      {
+        "tag": "Google Search Console verification",
+        "quote": "google-site-verification: I9qOURru3fwoZ7suruNmANacYKnzbJfoZVlMySj5T8U",
+        "path": "/"
+      },
+      {
+        "tag": "cookie",
+        "quote": "dps_site_id",
+        "path": "/"
+      },
+      {
+        "tag": "not present",
+        "note": "No GA4 (G-), Universal Analytics (UA-), Google Tag Manager (GTM-), Google Ads (AW-), Meta pixel (fbq), Hotjar, Clarity, FullStory or other session-replay tag was found in the served HTML of any of the 18 URLs."
+      },
+      {
+        "tag": "indexing controls",
+        "note": "No rel=canonical, no meta robots and no X-Robots-Tag header on any page. robots.txt is 'User-agent: *' with no rules. /m/login, /m/reset and /m/create are listed in the sitemap and are indexable."
+      },
+      {
+        "tag": "social meta",
+        "note": "Identical on every page: og:title 'HormonalHealthMD', og:site_name 'HormonalHealthMD', og:description 'Our offerings range from Human Growth Hormone Therapy, Testosterone Replacement Therapies, IV Infusions and more.', twitter:description 'Hormones and Anti-Aging Therapies', og:image People on Beach.png."
+      },
+      {
+        "tag": "footer",
+        "quote": "Copyright © 2025 HORMONALHEALTHMD - All Rights Reserved.",
+        "path": "every page"
+      }
+    ],
+    "membersAndNoindex": [
+      {
+        "path": "/m/login",
+        "note": "in sitemap, indexable, title 'Login'"
+      },
+      {
+        "path": "/m/reset",
+        "note": "in sitemap, indexable, title 'Reset your password'"
+      },
+      {
+        "path": "/m/create",
+        "note": "in sitemap, indexable, title 'Set your password'"
+      },
+      {
+        "path": "/m/account",
+        "note": "not in sitemap; linked from the nav on every page; redirects to /m/login?r=%2Fm%2Faccount, which shows up in web search results"
+      },
+      {
+        "note": "The nav markup on every page contains the placeholder text 'Signed in as: filler@godaddy.com'."
+      }
+    ],
+    "siteQuirks": [
+      "Nine service pages share the H1 'Hormonal health md'; the real page topic is in an H4.",
+      "/contact-us has the H1 'CEO / Owner'.",
+      "/iv-therapy has no meta description.",
+      "/our-services 'Contact us' button links to /our-services itself.",
+      "On six service pages the 'You may mail us:' link points to the homepage instead of a mailto.",
+      "Unknown paths return a real 404 with the title '404 Not Found'."
+    ]
+  },
+  "listings": [],
+  "couldNotGet": []
+}

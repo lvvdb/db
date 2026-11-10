@@ -1,0 +1,855 @@
+{
+  "meta": {
+    "capturedOn": "2026-11-09",
+    "searchTool": "mcp__Firecrawl__firecrawl_search, sources [web], limit 10, domainTools false, location set per query",
+    "scrapeTool": "mcp__Firecrawl__firecrawl_scrape, formats [markdown], onlyMainContent true",
+    "notes": [
+      "All 8 searches and all 8 scrapes succeeded on the first call. WebSearch fallback was not used.",
+      "Organic web results only. No map pack, no ads, no search volumes, no backlink data.",
+      "Long page-excerpt descriptions are shortened and marked [excerpt truncated]; short snippets are verbatim.",
+      "domain strips leading www. and m.",
+      "hormonalhealthmd.com does not appear in the top 10 of any of the 8 searches."
+    ]
+  },
+  "searches": [
+    {
+      "query": "TRT clinic Hallandale Beach",
+      "location": "Hallandale Beach, Florida, United States",
+      "tool": "mcp__Firecrawl__firecrawl_search (sources: web, limit 10)",
+      "results": [
+        {
+          "position": 1,
+          "url": "https://advancedtrtclinic.com/locations/hallandale-beach-fl/",
+          "domain": "advancedtrtclinic.com",
+          "title": "TRT Clinic in Hallandale Beach, FL | Testosterone ...",
+          "description": "Advanced TRT Clinic in Hallandale Beach, FL provides expert hormone therapy and TRT treatments. 800 N Federal Hwy 3th floor 365, Hallandale Beach, FL 33009 866 ..."
+        },
+        {
+          "position": 2,
+          "url": "https://ucomedicalclinic.com/mens-health/",
+          "domain": "ucomedicalclinic.com",
+          "title": "Men's Health And Testosterone Therapy In Hallandale Beach",
+          "description": "Men's Health and Testosterone Therapy in Hallandale Beach, FL. UCO Medical Clinic, 2100 E Hallandale Beach Blvd, Suite 404, Hallandale Beach, FL 33009. Men's health services including testosterone replacement therapy (TRT), Low-T evaluation and treatment, erectile dysfunction, sexual health, hormone optimization ... [excerpt truncated]"
+        },
+        {
+          "position": 3,
+          "url": "https://www.bodyrejuvenationmd.com/testosterone-replacement-therapy-for-men/",
+          "domain": "bodyrejuvenationmd.com",
+          "title": "Hallandale Testosterone Replacement Therapy for Men",
+          "description": ""
+        },
+        {
+          "position": 4,
+          "url": "https://atlanticmensclinic.com/blog/why-men-in-hollywood-florida-trust-atlantic-mens-clinic-for-testosterone-replacement-therapy/",
+          "domain": "atlanticmensclinic.com",
+          "title": "TRT in Hollywood, FL",
+          "description": "Atlantic Men's Clinic offers careful testing, individualized testosterone replacement therapy, and follow-ups that respect your time and goals."
+        },
+        {
+          "position": 5,
+          "url": "https://peaceandheartwellness.com/hallandale-beach/mens-testosterone-therapy/testosterone-therapy-men",
+          "domain": "peaceandheartwellness.com",
+          "title": "Testosterone Therapy Men | Hallandale Beach, FL",
+          "description": "Hallandale Beach, FL. Book Consultation (888) 307-2199. T to improve mood, energy, and overall men's mental health. We offer flexible TRT delivery including ..."
+        },
+        {
+          "position": 6,
+          "url": "https://gamedaymenshealth.com/delray-beach",
+          "domain": "gamedaymenshealth.com",
+          "title": "TRT & Men's Health Clinic in Delray Beach, FL",
+          "description": "Visit our Delray Beach TRT clinic at 15340 Jog Road, Suite 208, Delray Beach, FL 33446. Same-day labs and results. No insurance needed."
+        },
+        {
+          "position": 7,
+          "url": "https://www.mapquest.com/us/florida/testosterone-149-365071403",
+          "domain": "mapquest.com",
+          "title": "Testosterone 149 - Hallandale Beach",
+          "description": "Testosterone 149 is a clinic located in Hallandale Beach, FL, specializing in testosterone replacement therapy (TRT) and hormone evaluations."
+        },
+        {
+          "position": 8,
+          "url": "https://www.vitalityhrt.com/location/testosterone-clinic-of-palm-beach-gardens-fl/",
+          "domain": "vitalityhrt.com",
+          "title": "Palm Beach Gardens, FL",
+          "description": "Renew Vitality's testosterone clinic in Palm Beach Gardens, FL offers treatment for low testosterone with TRT for increased energy, sex drive and strength."
+        },
+        {
+          "position": 9,
+          "url": "https://www.yelp.com/search?find_desc=Testosterone+Replacement+Therapy&find_loc=Hallandale+Beach%2C+FL+33009",
+          "domain": "yelp.com",
+          "title": "Best Testosterone Replacement Therapy near Hallandale ...",
+          "description": "Best Testosterone Replacement Therapy near Hallandale Beach, FL 33009. Sponsored Results. GitelCare Longevity Center - Testosterone Replacement Therapy ..."
+        },
+        {
+          "position": 10,
+          "url": "https://vitalmedspa1.com/hormone-replacement/",
+          "domain": "vitalmedspa1.com",
+          "title": "Hormone Replacement Therapy in Hallandale Beach",
+          "description": "Explore medically supervised hormone replacement therapy in Hallandale Beach, including personalized evaluations, lab testing, TRT, and ongoing monitoring."
+        }
+      ]
+    },
+    {
+      "query": "hormone replacement therapy Hallandale Beach",
+      "location": "Hallandale Beach, Florida, United States",
+      "tool": "mcp__Firecrawl__firecrawl_search (sources: web, limit 10)",
+      "results": [
+        {
+          "position": 1,
+          "url": "https://ucomedicalclinic.com/bioidentical-hormone-replacement-therapy/",
+          "domain": "ucomedicalclinic.com",
+          "title": "Bioidentical Hormone Replacement Therapy (BHRT) In Hallandale Beach",
+          "description": "UCO Medical Clinic provides clinician-guided BHRT evaluations for women experiencing symptoms associated with menopause, perimenopause or other hormone changes."
+        },
+        {
+          "position": 2,
+          "url": "https://biote.com/biote-providers/florida/hallandale-beach",
+          "domain": "biote.com",
+          "title": "Biote® Certified Providers in Hallandale-beach, Florida",
+          "description": "Biote developed a method that offers bioidentical hormone replacement therapy in the form of subcutaneous pellets. ... Biote Provider. 800 E Hallandale Beach Blvd ..."
+        },
+        {
+          "position": 3,
+          "url": "https://peaceandheartwellness.com/hallandale-beach/womens-hormone-therapy",
+          "domain": "peaceandheartwellness.com",
+          "title": "Women's Hormone Replacement Therapy in Hallandale Beach, FL",
+          "description": "Our integrated approach begins with comprehensive hormone panels and clinical evaluation, then creates a personalized HRT protocol using bioidentical hormones ..."
+        },
+        {
+          "position": 4,
+          "url": "https://vitalmedspa1.com/hormone-replacement/",
+          "domain": "vitalmedspa1.com",
+          "title": "Hormone Replacement Therapy in Hallandale Beach",
+          "description": "Testosterone Replacement Therapy in Hallandale Beach. Explore testosterone replacement therapy in Hallandale Beach at VITAL MedSpa. Hormone Replacement Therapy Clinic in Hallandale Beach, FL ... [excerpt truncated]"
+        },
+        {
+          "position": 5,
+          "url": "https://integratedhealthall.com/hormone-replacement-therapy-hallandale-beach-fl/",
+          "domain": "integratedhealthall.com",
+          "title": "Hormone Replacement Therapy in Hallandale Beach FL",
+          "description": "Physician directed hormone replacement therapy In Hallandale Beach FL Ensures Safe and Effective Hormone Replacement for both men and women."
+        },
+        {
+          "position": 6,
+          "url": "https://aesthetemed.com/serv-pellet-hormone-therapy/",
+          "domain": "aesthetemed.com",
+          "title": "Pellet Hormone Therapy in Hallandale Beach, FL",
+          "description": "Pellet hormone therapy for women and men at Aesthetemed in Hallandale Beach, guided by labs. Women from $484 AM Club / $691; men $760 / $1086."
+        },
+        {
+          "position": 7,
+          "url": "https://www.bodyrejuvenationmd.com/",
+          "domain": "bodyrejuvenationmd.com",
+          "title": "Hallandale Anti-aging and Wellness Center - BodyRejuvenation",
+          "description": "[excerpt was homepage Instagram-feed text; truncated]"
+        },
+        {
+          "position": 8,
+          "url": "https://peaceandheartwellness.com/hallandale-beach/womens-hormone-therapy/bioidentical-hrt-women",
+          "domain": "peaceandheartwellness.com",
+          "title": "bioidentical HRT women - Hallandale Beach - Peace & Heart Wellness",
+          "description": "Request a Women's Hormone Therapy visit by calling (888) 307-2199 or using the booking form. Bring current medications, prior labs, and a list ..."
+        },
+        {
+          "position": 9,
+          "url": "https://ucomedicalclinic.com/womens-health/",
+          "domain": "ucomedicalclinic.com",
+          "title": "Women's Health Clinic Hallandale Beach",
+          "description": "UCO Medical Clinic offers Bioidentical Hormone Replacement Therapy (BHRT) as ... UCO Medical Clinic · 2100 E Hallandale Beach Blvd, Suite 404, Hallandale Beach ..."
+        },
+        {
+          "position": 10,
+          "url": "https://www.floridamedicalclinic.com/blog/hormone-replacement-therapy/",
+          "domain": "floridamedicalclinic.com",
+          "title": "Hormone Replacement Therapy for Menopause: Safety & Benefits",
+          "description": "Struggling with hot flashes, brain fog, or bone loss? Explore FDA-approved hormone replacement therapy (HRT) and learn if you're a candidate ..."
+        }
+      ]
+    },
+    {
+      "query": "bioidentical hormones for women Aventura",
+      "location": "Aventura, Florida, United States",
+      "tool": "mcp__Firecrawl__firecrawl_search (sources: web, limit 10)",
+      "results": [
+        {
+          "position": 1,
+          "url": "https://www.optimalhealthmiami.com/service/bioidentical-hormone-replacement-therapy",
+          "domain": "optimalhealthmiami.com",
+          "title": "Bioidentical Hormone Replacement Therapy",
+          "description": "Bioidentical Hormone Replacement Therapy services offered in Aventura, FL. Am I a candidate for bioidentical hormone replacement therapy? For women, he offers BHRT as a way to combat the symptoms of menopause ... [excerpt truncated]"
+        },
+        {
+          "position": 2,
+          "url": "https://www.aventuraobgyn.com/service/pellet-hormone-replacement",
+          "domain": "aventuraobgyn.com",
+          "title": "Pellet Hormone Replacement for Aventura, FL",
+          "description": "Bioidentical hormone replacement therapy is a natural perimenopause and menopause treatment option. Bioidentical hormones are an exact structural"
+        },
+        {
+          "position": 3,
+          "url": "https://biote.com/biote-providers/florida/aventura",
+          "domain": "biote.com",
+          "title": "Biote® Certified Providers in Aventura, Florida",
+          "description": "Biote Provider. 21097 NE 27TH CT SUITE 580, AVENTURA, FL 33180. 305-692-8998 · VIEW PROVIDER PAGE. Biote Provider. 21110 Biscayne Blvd Suite 312, Aventura, ..."
+        },
+        {
+          "position": 4,
+          "url": "https://4everyoungantiaging.com/aventura/whole-body-wellness/bio-identical-hormone-therapy/",
+          "domain": "4everyoungantiaging.com",
+          "title": "Bio-Identical Hormone Therapy in Aventura, FL",
+          "description": "Balance your hormones naturally with bio-identical hormone therapy at 4Ever Young Aventura. Experience increased energy and improved mood. Contact us today."
+        },
+        {
+          "position": 5,
+          "url": "https://thebiostation.com/hormone-therapy-for-women-in-aventura-fl/",
+          "domain": "thebiostation.com",
+          "title": "Hormone Therapy for Women in Aventura, FL",
+          "description": "For more information, call: (561) 468-5801 Williams Island Spa 5300 Island Blvd, Aventura, FL 33160 Email us at: feelgreat@thebiostation.com … bioidentical ..."
+        },
+        {
+          "position": 6,
+          "url": "https://www.optimalhealthmiami.com/content/womens-health-specialist",
+          "domain": "optimalhealthmiami.com",
+          "title": "Women's Health Specialist | Hormone Replacement ...",
+          "description": "Trusted Hormone Replacement Therapy providing a variety of services to Aventura, FL. Bioidentical Hormone Replacement. Contact 305-466-9000 … bioidentical ..."
+        },
+        {
+          "position": 7,
+          "url": "https://www.drresnik.com/biote-hormone-replacement-therapy-cosmetic-dermatologist-miami-florida.php",
+          "domain": "drresnik.com",
+          "title": "BioTE Hormone Replacement Therapy",
+          "description": "... Aventura, Florida ... BioTE is a form of bioidentical hormone optimization therapy that uses plant based, bioidentical hormone pellets to treat men and women ..."
+        },
+        {
+          "position": 8,
+          "url": "https://precisionobgynfl.com/hormone-replacement-therapy-hrt/",
+          "domain": "precisionobgynfl.com",
+          "title": "Hormone Replacement Therapy (HRT) Miami and Aventura",
+          "description": "We Offer Bioidentical hormone therapy, hormones. Estrogen therapy, available as a patch, pill, cream, or vaginal ring"
+        },
+        {
+          "position": 9,
+          "url": "https://peaceandheartwellness.com/aventura/womens-hormone-therapy/walk-in-hrt-women",
+          "domain": "peaceandheartwellness.com",
+          "title": "Walk In Hrt Women | Aventura, FL - Peace & Heart Wellness",
+          "description": "Our integrated approach begins with comprehensive hormone panels and clinical evaluation, then creates a personalized HRT protocol using bioidentical hormones ..."
+        },
+        {
+          "position": 10,
+          "url": "https://idealmedical.com/services/hormone",
+          "domain": "idealmedical.com",
+          "title": "Bioidentical Hormone Therapy in Aventura | Ideal Medical",
+          "description": "Ideal Medical and Wellness is a hormone optimization and longevity practice in Aventura, serving patients across South Florida from Bal Harbour to Golden Beach."
+        }
+      ]
+    },
+    {
+      "query": "medical weight loss semaglutide Hallandale Beach",
+      "location": "Hallandale Beach, Florida, United States",
+      "tool": "mcp__Firecrawl__firecrawl_search (sources: web, limit 10)",
+      "results": [
+        {
+          "position": 1,
+          "url": "https://ucomedicalclinic.com/personalized-weight-management-programs-at-hallandale-clinic/",
+          "domain": "ucomedicalclinic.com",
+          "title": "Personalized Weight Management In Hallandale Beach",
+          "description": "Semaglutide and tirzepatide are cutting-edge prescription medications that can be powerful allies in weight loss, particularly for individuals ..."
+        },
+        {
+          "position": 2,
+          "url": "https://floridaweightlossmd.com/medical-weight-loss/hallandale-beach-fl/",
+          "domain": "floridaweightlossmd.com",
+          "title": "Medical Weight Loss in Hallandale Beach, FL",
+          "description": "Medical Weight Loss in Hallandale Beach, FL | Trusted Weight Loss Clinic. Florida Surgery And Weight Loss Center provides physician-supervised medical weight loss for patients in Hallandale Beach, FL, with telehealth and nearby in-office care in Hollywood. ... $79 medical weight loss consultation ... [excerpt truncated]"
+        },
+        {
+          "position": 3,
+          "url": "https://www.toxwell.com/medical-weight-loss-in-hallandale-fl?srsltid=AYCX9vI8crykw_UjM5Ce9vNVzBhYdhnwr-jrkTRzNd4c0jB4Fl3afdHD",
+          "domain": "toxwell.com",
+          "title": "About medical weight loss | Toxwell Med Spa | Hallandale, ...",
+          "description": "Medical Weight Loss Solutions: Vitamin B12 Injections, Appetite Suppressants, Lipo-C injections, and Cutting-Edge Wegovy® (Semaglutide) Injections."
+        },
+        {
+          "position": 4,
+          "url": "https://www.lhacare.org/service/weight-loss",
+          "domain": "lhacare.org",
+          "title": "Weight Loss for Hallandale Beach, FL | LHA Care Corporation",
+          "description": "Medically-supervised weight loss uses nutritional counseling, exercise guidance, and prescription medication to help you shed excess pounds and keep them off."
+        },
+        {
+          "position": 5,
+          "url": "https://klinic.com/medical-weight-loss/florida/hallandale-beach",
+          "domain": "klinic.com",
+          "title": "Best Medical Weight Loss Doctors & Clinics in Hallandale ...",
+          "description": "At Klinic, we offer comprehensive medical weight loss programs in Hallandale Beach that combine FDA-approved weight loss medications with convenient telehealth ..."
+        },
+        {
+          "position": 6,
+          "url": "https://aesthetemed.com/services/weight-loss-treatment-with-semaglutide-and-tirzepatide-in-hallandale-beach-fl/",
+          "domain": "aesthetemed.com",
+          "title": "Semaglutide & Tirzepatide Treatment in Hallandale Beach",
+          "description": "Patients receive weekly injections of Semaglutide or Tirzepatide to manage blood sugar levels and support weight loss. The injection course improves insulin ..."
+        },
+        {
+          "position": 7,
+          "url": "https://www.bodyrejuvenationmd.com/weight-loss-program/",
+          "domain": "bodyrejuvenationmd.com",
+          "title": "Hallandale Medical Weight Loss Program - BodyRejuvenation",
+          "description": "Semaglutide Weight Loss Program. This program involves getting weekly injections of Semaglutide. Address 664 W Hallandale Beach Blvd, Hallandale, FL, 33009 ..."
+        },
+        {
+          "position": 8,
+          "url": "https://hallandalerx.com/",
+          "domain": "hallandalerx.com",
+          "title": "Hallandale Pharmacy: Home",
+          "description": "Weight Management IV Therapy & Supplements. Hours Monday - Friday: 9:30 AM - 6:30 PM Address 2666 SW 36th St"
+        },
+        {
+          "position": 9,
+          "url": "https://transformityhealth.com/glp1-clinic-hallandale-beach/",
+          "domain": "transformityhealth.com",
+          "title": "GLP-1 Clinic Hallandale Beach | Ozempic Support Plan",
+          "description": "A physician-led GLP-1 clinic in Hallandale Beach helps patients review medication fit, manage side effects, and plan for maintenance after Ozempic, Wegovy, ..."
+        },
+        {
+          "position": 10,
+          "url": "https://southbeachmedical.org/medical-weight-loss-1",
+          "domain": "southbeachmedical.org",
+          "title": "MEDICAL WEIGHT LOSS",
+          "description": "Explore our physician supervised medical weight loss programs, featuring GLP-1 agonists and tailored weight management therapy."
+        }
+      ]
+    },
+    {
+      "query": "mobile IV Hallandale Beach",
+      "location": "Hallandale Beach, Florida, United States",
+      "tool": "mcp__Firecrawl__firecrawl_search (sources: web, limit 10)",
+      "results": [
+        {
+          "position": 1,
+          "url": "https://www.theivdoc.com/mobile-iv-therapy-hallandale-beach-fl",
+          "domain": "theivdoc.com",
+          "title": "Mobile IV Therapy In Hallandale Beach, FL",
+          "description": "Mobile IV Therapy Hallandale Beach, FL. Fast IV Drip Service Wherever You Are! Same Day Service - Book Now! ... [excerpt truncated]"
+        },
+        {
+          "position": 2,
+          "url": "https://trufamed.com/iv-therapy-aventura-fl/",
+          "domain": "trufamed.com",
+          "title": "IV Therapy Aventura | Drips from $200",
+          "description": "Mobile IV brings the full physician-supervised menu to your home, condo, hotel suite, or office across Aventura. Mobile IV is the most common request in ..."
+        },
+        {
+          "position": 3,
+          "url": "https://wellnessivinfusiontherapy.com/mobile-iv-therapy-in-hallandale-beach-fl/?srsltid=AYCX9vL5G2GMSXy1DJhhmC_OTyd2BHHT4GwEn9MWjpZtf5b4wQywEyt6",
+          "domain": "wellnessivinfusiontherapy.com",
+          "title": "Mobile IV Therapy in Hallandale Beach, FL",
+          "description": "Mobile IV therapy in Hallandale Beach delivered to your home, hotel, office, condo, or yacht. Call (786) 490-6074. Call or text (786) 490-6074 to check current ..."
+        },
+        {
+          "position": 4,
+          "url": "https://www.facebook.com/skilledvisit/videos/same-pool-more-drip-%EF%B8%8F-part-2the-best-part-nobody-had-to-leave-we-brought-the-iv-/1681617540045912/",
+          "domain": "facebook.com",
+          "title": "Skilled Visits Mobile IV Therapy Poolside in Hallandale ...",
+          "description": "A registered nurse provides a mobile IV hydration treatment to a client in a residential setting. The video demonstrates the professional ..."
+        },
+        {
+          "position": 5,
+          "url": "https://elementalivtherapy.com/pages/iv-therapy-hallandale-beach?srsltid=AYCX9vJ5TYKKLdsjpfE5gGyy6rEhUSVwX7lJQIKLyO0qjPRuFOsKc3uZ",
+          "domain": "elementalivtherapy.com",
+          "title": "Mobile IV Therapy in Hallandale Beach, FL",
+          "description": "RN-administered IV hydration, NAD+ & vitamin shots delivered to Hallandale Beach homes, condos & hotels — Gulfstream Park to the beachfront. Book today."
+        },
+        {
+          "position": 6,
+          "url": "https://m.yelp.com/search?find_desc=IV+Hydration&find_loc=Hallandale+Beach%2C+FL",
+          "domain": "yelp.com",
+          "title": "Best IV Hydration near Hallandale Beach, FL",
+          "description": "Best IV Hydration near Hallandale Beach, FL · GitelCare Longevity Center · Royal Drips · WaltCare Clinic · Zen Flow Hydration · Bogat Aesthetics & Wellness · VIP ..."
+        },
+        {
+          "position": 7,
+          "url": "https://www.dripwellnessiv.com/fl/aventura/mobile-iv-therapy",
+          "domain": "dripwellnessiv.com",
+          "title": "Mobile IV Therapy Aventura | Drip Wellness IV",
+          "description": "Call (305) 209-1325 or book your mobile IV. Call (305) 209-1325 or schedule online now. serve nearby areas. Hallandale Beach, Appointments available 8am–8pm ..."
+        },
+        {
+          "position": 8,
+          "url": "https://www.instagram.com/mobileivofthepalmbeaches/",
+          "domain": "instagram.com",
+          "title": "Mobile Iv of the Palm Beaches (@ ... - Instagram",
+          "description": "Mobile IV 561-589-8989. Providing mobile concierge IV therapy services to treasure coast and palm beaches. Mobileivofthepalmbeaches@gmail.com."
+        },
+        {
+          "position": 9,
+          "url": "https://ivxhealth.com/locations/florida/miami/hallandale-beach/",
+          "domain": "ivxhealth.com",
+          "title": "Hallandale Beach Infusion Center",
+          "description": "Hallandale Beach Infusion Center. 1448 E Hallandale Beach Blvd. Hallandale Beach, FL 33009. Phone: (305) 910-0404. Fax: (786) 744-5687. Hours. Monday – Friday ..."
+        },
+        {
+          "position": 10,
+          "url": "https://primemobileiv.clinic/",
+          "domain": "primemobileiv.clinic",
+          "title": "Prime Mobile IV",
+          "description": "Prime Mobile IV specializes in: · Mobile IV hydration therapy · Vitamin C and glutathione IV drips · NAD+ anti-aging therapy · Hangover and recovery IVs · IV therapy ..."
+        }
+      ]
+    },
+    {
+      "query": "IV therapy Aventura",
+      "location": "Aventura, Florida, United States",
+      "tool": "mcp__Firecrawl__firecrawl_search (sources: web, limit 10)",
+      "results": [
+        {
+          "position": 1,
+          "url": "https://www.theivdoc.com/mobile-iv-therapy-aventura-fl",
+          "domain": "theivdoc.com",
+          "title": "Mobile IV Therapy In Aventura, FL | Same Day Service",
+          "description": "Get fast & effective mobile IV therapy in Aventura, FL. Our mobile IV drips provide hydration, vitamins, and more from the comfort of home."
+        },
+        {
+          "position": 2,
+          "url": "https://www.aventuraobgyn.com/service/iv-therapy",
+          "domain": "aventuraobgyn.com",
+          "title": "IV Therapy for Aventura, FL",
+          "description": "Gynecology & Aesthetics providing IV Therapy services to Aventura, FL. To book an appointment at Aventura OB-GYN Specialists, call us at 305-800-0888."
+        },
+        {
+          "position": 3,
+          "url": "https://trufamed.com/iv-therapy-aventura-fl/",
+          "domain": "trufamed.com",
+          "title": "IV Therapy Aventura | Drips from $200",
+          "description": "IV Therapy in Aventura. Eighteen medical-grade formulas ... In-clinic $250 ... Book in-clinic / Book mobile IV ... [excerpt truncated]"
+        },
+        {
+          "position": 4,
+          "url": "https://www.miami-chiropractors.com/benefits-of-iv-therapy-offer/",
+          "domain": "miami-chiropractors.com",
+          "title": "Benefits of IV Therapy Offer",
+          "description": "Targets Anxiety and Depression. IV therapy is excellent for improving brain function and cognitive development. You can improve your memory, experience less ..."
+        },
+        {
+          "position": 5,
+          "url": "https://www.liquivida.com/aventura",
+          "domain": "liquivida.com",
+          "title": "Wellness Center Aventura FL | Liquivida Health & Aesthetics",
+          "description": "Offering IV therapy, hormone therapy, weight loss, and aesthetics to help you thrive. Book a Session (786) 539-2552 18999 Biscayne Blvd., Ste: 105. Aventura, ..."
+        },
+        {
+          "position": 6,
+          "url": "https://mobileivnurses.com/areas-we-serve/florida/iv-therapy-in-aventura-fl/",
+          "domain": "mobileivnurses.com",
+          "title": "Aventura IV Drips at Your Door",
+          "description": "Our IV fluid therapy in Aventura offers the ideal solution to combating dehydration symptoms like lightheadedness, lower urine output and excessive thirst."
+        },
+        {
+          "position": 7,
+          "url": "https://www.dripwellnessiv.com/fl/aventura/mobile-iv-therapy",
+          "domain": "dripwellnessiv.com",
+          "title": "Mobile IV Therapy Aventura | Drip Wellness IV",
+          "description": "Professional mobile IV therapy in Aventura, FL. Same-day service with licensed providers and real-time NP approval/oversight. Book today."
+        },
+        {
+          "position": 8,
+          "url": "https://www.yelp.com/search?cflt=ivhydration&find_loc=Aventura%2C+FL",
+          "domain": "yelp.com",
+          "title": "THE BEST 10 IV HYDRATION IN AVENTURA, FL",
+          "description": "Top 10 Best IV Hydration in Aventura, Florida - With Real Reviews - Near You · JMC Aesthetics & Wellness · Royal Drips · Zen Flow Hydration · Ocelot Medical Center."
+        },
+        {
+          "position": 9,
+          "url": "https://www.resetiv.com/locations/aventura--fl",
+          "domain": "resetiv.com",
+          "title": "IV Therapy in Aventura, FL: Mobile IV Drips Delivered ...",
+          "description": "Reset IV delivers mobile IV therapy to Aventura, FL with licensed medical professionals available 7 days a week 8 AM to 10 PM. Book today at resetiv.com or ..."
+        },
+        {
+          "position": 10,
+          "url": "https://thebiostation.com/iv-nutrient-therapy-in-williams-island-spa-aventura-fl/",
+          "domain": "thebiostation.com",
+          "title": "IV nutrient therapy in williams island spa - aventura, fl",
+          "description": "Our most common IV infusion is ideal for soothing the symptoms of fatigue, inflammation, asthma, detoxification, immune disorders, hypertension, and ..."
+        }
+      ]
+    },
+    {
+      "query": "men's health ED clinic Fort Lauderdale",
+      "location": "Fort Lauderdale, Florida, United States",
+      "tool": "mcp__Firecrawl__firecrawl_search (sources: web, limit 10)",
+      "results": [
+        {
+          "position": 1,
+          "url": "https://www.floridamenshealth.com/",
+          "domain": "floridamenshealth.com",
+          "title": "Florida Men's Health | Testosterone Therapy & ED Treatment ...",
+          "description": "Performance. On Demand. Personalized Care. Life-Changing Results. We Help Men Overcome Erectile Dysfunction (ED) ... Our primary clinic is at 906 NE 26th Ave, Fort Lauderdale, FL 33304. [excerpt truncated]"
+        },
+        {
+          "position": 2,
+          "url": "https://atlanticmensclinic.com/",
+          "domain": "atlanticmensclinic.com",
+          "title": "Atlantic Men's Clinic: Home",
+          "description": "treats erectile dysfunction (ED), low T, weight loss /FORT LAUDERDALE 7901 Southwest 6th Court, Suite 110 Plantation, Florida 33324"
+        },
+        {
+          "position": 3,
+          "url": "https://rpbmedical.com/men-health",
+          "domain": "rpbmedical.com",
+          "title": "Men's Wellness Clinic in Fort Lauderdale, FL and Royal ...",
+          "description": "We offer advanced treatments for men's health conditions, including low testosterone, premature ejaculation, erectile dysfunction, and much more."
+        },
+        {
+          "position": 4,
+          "url": "https://floridamensclinic.com/",
+          "domain": "floridamensclinic.com",
+          "title": "Florida Men's Clinic",
+          "description": "in Fort Lauderdale offers specialized men's health services including ED treatment and testosterone therapy. Phone: 1-754-315-1001 info@floridamensclinic. ..."
+        },
+        {
+          "position": 5,
+          "url": "https://www.ghinstitute.com/functional-medicine/sexual-health/erectile-dysfunction/",
+          "domain": "ghinstitute.com",
+          "title": "Erectile Dysfunction Clinic Fort Lauderdale | ED Treatment ...",
+          "description": "Erectile Dysfunction Clinic in Fort Lauderdale, FL. To schedule your consultation with Dr. Ferdinand Cabrera, call (954) 561-3175 or visit us today!"
+        },
+        {
+          "position": 6,
+          "url": "https://m.yelp.com/biz/florida-mens-health-center-fort-lauderdale-2",
+          "domain": "yelp.com",
+          "title": "FLORIDA MEN'S HEALTH CENTER",
+          "description": "906 NE 26th Ave Fort Lauderdale, FL 33304 Directions (954) 584-7009 … opens at 9:00 AM on Monday, We specialize in all men's health issues, including Erectile ..."
+        },
+        {
+          "position": 7,
+          "url": "https://www.facebook.com/Preferredmensmedicalcenter/",
+          "domain": "facebook.com",
+          "title": "Preferred Men's Medical Center | Fort Lauderdale FL",
+          "description": "Men's Health Clinic Offering Highly Effective Treatments for ED, PE & More Medical Center. Whether your ED is related to age, stress, diabetes, or other health ..."
+        },
+        {
+          "position": 8,
+          "url": "https://health.usnews.com/doctors/male-erectile-dysfunction/florida/ft-lauderdale",
+          "domain": "health.usnews.com",
+          "title": "Best Doctors for Erectile Dysfunction in Ft. Lauderdale, FL",
+          "description": "There are 469 doctors in Ft. Lauderdale, FL that treat Erectile dysfunction. Find the best for you: Ari Silverstein, MD, David Taub, MD, Kirin Syed, DO, ..."
+        },
+        {
+          "position": 9,
+          "url": "https://atlanticmensclinic.com/blog/men-in-plantation-florida-trust-atlantic-mens-clinic-with-erectile-dysfunction-support/",
+          "domain": "atlanticmensclinic.com",
+          "title": "Erectile Dysfunction Help in Plantation, Florida",
+          "description": "Atlantic Men's Clinic is here for the men of Plantation, Florida, and for men across South Florida, providing compassionate evaluation, tailored treatment, and ..."
+        },
+        {
+          "position": 10,
+          "url": "https://www.browardurologycenter.com/common-conditions/erectile-dysfunction/",
+          "domain": "browardurologycenter.com",
+          "title": "Erectile Dysfunction",
+          "description": "The evaluation of a man who presents to our office includes an open, honest and absolutely confidential discussion about the current sexual function and overall ..."
+        }
+      ]
+    },
+    {
+      "query": "anti-aging peptides clinic Hallandale Beach",
+      "location": "Hallandale Beach, Florida, United States",
+      "tool": "mcp__Firecrawl__firecrawl_search (sources: web, limit 10)",
+      "results": [
+        {
+          "position": 1,
+          "url": "https://www.bodyrejuvenationmd.com/",
+          "domain": "bodyrejuvenationmd.com",
+          "title": "Hallandale Anti-aging and Wellness Center - BodyRejuvenation",
+          "description": "Address 664 W Hallandale Beach Blvd, Hallandale, FL, 33009 Virtual Tour Hours Mon-Fri 8am-4pm Saturday – By Appointment Only Sunday. Phone 954-532-8580 ..."
+        },
+        {
+          "position": 2,
+          "url": "https://www.rejuvenationfl.com/peptide-therapy-boynton-beach/",
+          "domain": "rejuvenationfl.com",
+          "title": "Feel 10 Years Younger with Peptide Therapy Boynton Beach",
+          "description": "At Rejuvenation Med Spa in Boynton Beach, we use clinically proven peptide therapies to help you optimize your health, slow the aging process, and feel your ..."
+        },
+        {
+          "position": 3,
+          "url": "https://www.renewyoupalmbeach.com/peptides-antiaging",
+          "domain": "renewyoupalmbeach.com",
+          "title": "Advanced Peptides & Injections: Support energy, recovery ...",
+          "description": "At Renew You Palm Beach, we offer cutting-edge peptide therapy, injectable vitamins, and IV wellness treatments to support energy, recovery, skin health, ..."
+        },
+        {
+          "position": 4,
+          "url": "https://www.glp1clinics.org/glp1-clinics/florida/hallandale-beach",
+          "domain": "glp1clinics.org",
+          "title": "6 Clinic Listings in Hallandale Beach, FL - GLP1 Clinics",
+          "description": "Clinic Listings in Hallandale Beach ; Transformity - Weight Loss and Anti-Aging · 5.0(181 on Google) ; EIR Lymphatic Massage GLP-1s and Peptides · 5.0(46 on Google)."
+        },
+        {
+          "position": 5,
+          "url": "https://aesthetemed.com/serv-lab-testing/",
+          "domain": "aesthetemed.com",
+          "title": "Lab Testing & Blood Panels in Hallandale Beach, FL",
+          "description": "Hormone, weight loss, extended health and peptide blood panels at Aesthetemed in Hallandale Beach from $64, with a lab review consultation by an MD or NP."
+        },
+        {
+          "position": 6,
+          "url": "https://ucomedicalclinic.com/medical-weight-loss-peptide-injections/",
+          "domain": "ucomedicalclinic.com",
+          "title": "Medical Weight Loss & Peptide Therapy Evaluations In ...",
+          "description": "Peptide Therapy Evaluations in Hallandale Beach, FL with peptide injection options, (786) 288-3661 Patient (786) 288-3661. Phone (786) 288-3661"
+        },
+        {
+          "position": 7,
+          "url": "https://www.onelifehealthandperformance.com/health-services-palm-beach/peptide-therapy/",
+          "domain": "onelifehealthandperformance.com",
+          "title": "Peptide Therapy | Palm Beach, FL",
+          "description": "Peptides can help to mitigate the effects of aging by promoting cell regeneration, enhancing skin health, and improving muscle tone and strength. People ..."
+        },
+        {
+          "position": 8,
+          "url": "https://www.yelp.com/search?find_desc=Anti-aging+Treatments&find_loc=Hallandale+Beach%2C+FL+33009",
+          "domain": "yelp.com",
+          "title": "Anti-Aging Treatments - Hallandale Beach, FL 33009",
+          "description": "Best Anti-aging Treatments near Hallandale Beach, FL 33009 · 1. Sveti Beauty · 2. Bogat Aesthetics & Wellness · 3. Med Aesthetics Miami in Aventura · 4. Vip Beauty ..."
+        },
+        {
+          "position": 9,
+          "url": "https://lighthousemedicalcenter.com/peptides/",
+          "domain": "lighthousemedicalcenter.com",
+          "title": "Peptide Injections in Pompano Beach, Florida",
+          "description": "Explore peptide therapy at Lighthouse Medical Center with personalized protocols designed to support wellness, recovery and performance."
+        },
+        {
+          "position": 10,
+          "url": "https://livingyoungcenter.com/wellness-health/peptide-therapy/",
+          "domain": "livingyoungcenter.com",
+          "title": "Peptide Therapy: A Path to Better Health",
+          "description": "At Living Young Center, we are Florida's leading experts in Botox, dermal fillers, skin rejuvenation, weight loss, and advanced anti-aging treatments, serving ..."
+        }
+      ]
+    }
+  ],
+  "competitorQuestions": [
+    {
+      "query": "TRT clinic Hallandale Beach",
+      "url": "https://advancedtrtclinic.com/locations/hallandale-beach-fl/",
+      "title": "TRT Clinic in Hallandale Beach, FL | Testosterone Replacement Therapy",
+      "h2s": [
+        "Exploring Testosterone Replacement Therapy in Hallandale Beach, FL",
+        "Other Advanced TRT Clinic locations near Hallandale Beach:"
+      ],
+      "faqQuestions": [],
+      "note": "No FAQ section and no question-form headings on the page. H3s are statements (Understanding the Role of Testosterone; How Testosterone Replacement Therapy is Administered; Determining the Need for TRT; Benefits of Testosterone Replacement Therapy; Potential Risks and Side Effects; Community Resources and Support; Making an Informed Decision)."
+    },
+    {
+      "query": "hormone replacement therapy Hallandale Beach",
+      "url": "https://ucomedicalclinic.com/bioidentical-hormone-replacement-therapy/",
+      "title": "Bioidentical Hormone Replacement Therapy (BHRT) In Hallandale Beach | UCO Medical",
+      "h2s": [
+        "Request your BHRT Consultation",
+        "When to Consider a Hormone Evaluation",
+        "Why Choose UCO Medical Clinic for BHRT?",
+        "Patient Experiences",
+        "Yuri Skarlat, PA-C",
+        "Potential Benefits of Personalized Hormone Therapy",
+        "Transparent BHRT Pricing",
+        "Hormone Delivery Methods",
+        "Ongoing BHRT Care",
+        "BHRT in Hallandale Beach, FL",
+        "BHRT — Frequently Asked Questions",
+        "Start With a Personalized BHRT Consultation",
+        "Learn More About Hormone Health",
+        "12 Best Foods for Hormone Balance to Eat More Often",
+        "Hormone Replacement Therapy: What to Know",
+        "What to Know Before Starting BHRT Therapy"
+      ],
+      "faqQuestions": [
+        "What is bioidentical hormone replacement therapy?",
+        "How do I know whether I may be a candidate?",
+        "What happens during the initial consultation?",
+        "Are laboratory tests required?",
+        "Which delivery methods are available?",
+        "How long may it take to notice changes?",
+        "How often are follow-up appointments needed?",
+        "What are the potential risks or side effects?",
+        "How much does BHRT cost?",
+        "Does insurance cover BHRT?",
+        "How do I schedule a consultation?"
+      ],
+      "note": "Last three H2s are blog-post cards at the foot of the page."
+    },
+    {
+      "query": "bioidentical hormones for women Aventura",
+      "url": "https://www.optimalhealthmiami.com/service/bioidentical-hormone-replacement-therapy",
+      "title": "Bioidentical Hormone Replacement Therapy for Aventura, FL | Optimal Health Miami | Hormone Replacement Therapy",
+      "h2s": [
+        "Bioidentical Hormone Replacement Therapy services offered in Aventura, FL"
+      ],
+      "faqQuestions": [
+        "What is bioidentical hormone replacement therapy?",
+        "Am I a candidate for bioidentical hormone replacement therapy?",
+        "How is bioidentical hormone replacement therapy (BHRT) for women given?",
+        "What are bioidentical hormone replacement therapy results?"
+      ],
+      "note": "Questions are H3 headings in the body (no separate FAQ block). Scrape was served from Firecrawl cache dated 2026-11-09."
+    },
+    {
+      "query": "medical weight loss semaglutide Hallandale Beach",
+      "url": "https://ucomedicalclinic.com/personalized-weight-management-programs-at-hallandale-clinic/",
+      "title": "Personalized Weight Management In Hallandale Beach",
+      "h2s": [
+        "Medical Weight Loss in Hallandale — Physician‑Led, Personalized Plans for Lasting Results",
+        "What Is Medical Weight Loss and How Does It Differ from Traditional Diets?",
+        "Key Benefits of Choosing Medical Weight Loss",
+        "Which Comprehensive Weight Loss Programs Does UCO Medical Clinic Offer in Hallandale?",
+        "Why Choose UCO Medical Clinic for Affordable and Trusted Weight Loss Care in Hallandale?",
+        "Who Is Eligible for Medical Weight Management Services at UCO Medical Clinic?",
+        "What Can Patients Expect During Their Medical Weight Loss Journey at UCO Medical Clinic?",
+        "What Are Common Questions About Medical Weight Loss in Hallandale?"
+      ],
+      "faqQuestions": [
+        "How Do Semaglutide and Tirzepatide Work for Weight Loss?",
+        "Is Medical Weight Loss Safe and Effective?",
+        "What Is Medical Weight Loss and How Does It Differ from Traditional Diets?",
+        "How Does Physician Supervision Enhance Weight Loss Safety and Effectiveness?",
+        "What Are the Benefits of Evidence-Based Medical Weight Management?",
+        "Which Comprehensive Weight Loss Programs Does UCO Medical Clinic Offer in Hallandale?",
+        "How Do Semaglutide and Tirzepatide Medications Support Weight Loss?",
+        "What Personalized Nutrition and Lifestyle Plans Are Available?",
+        "Why Choose UCO Medical Clinic for Affordable and Trusted Weight Loss Care in Hallandale?",
+        "How Does UCO Medical Clinic Support Underinsured Patients?",
+        "What Makes Our Medical Team Experienced and Community-Focused?",
+        "Who Is Eligible for Medical Weight Management Services at UCO Medical Clinic?",
+        "What Are the BMI and Health Criteria for Enrollment?",
+        "How Do Chronic Conditions Influence Weight Loss Treatment Options?",
+        "What Can Patients Expect During Their Medical Weight Loss Journey at UCO Medical Clinic?",
+        "What Happens in the Initial Consultation and Assessment?",
+        "How Is Progress Monitored and Plans Adjusted Over Time?"
+      ],
+      "note": "This is a blog-format article (article:section Blog). Only the first two questions sit under the 'Common Questions' H2; the rest are question-form H2/H3 headings in the body."
+    },
+    {
+      "query": "mobile IV Hallandale Beach",
+      "url": "https://www.theivdoc.com/mobile-iv-therapy-hallandale-beach-fl",
+      "title": "Mobile IV Therapy In Hallandale Beach, FL | Same Day Service | The IV Doc",
+      "h2s": [
+        "Mobile IV Therapy Hallandale Beach, FL",
+        "Telehealth Consultation, Covid-19, Strep, and Flu Testing",
+        "We Bring the Lab to You. Get your labs drawn in the comfort and privacy of your home or office.",
+        "At-home Non-surgical Aesthetic Medical Consultation:",
+        "Your on-call board certified surgeon, available at home or in our office 24/7/365:",
+        "Why Choose Mobile IV Drip Services In Hallandale Beach, FL?",
+        "Who Can Benefit From IV Drip Therapy In Hallandale Beach, FL?",
+        "How Does Mobile IV Drip Therapy Work In Hallandale Beach, FL?",
+        "Mobile IV Drip vs. In-Clinic IV Therapy: What’s the Difference?",
+        "IV Drip Services Near You – Fast and Reliable - Hallandale Beach, FL",
+        "Find Trusted IV Drip Services Near You In Hallandale Beach, FL With The IV Doc"
+      ],
+      "faqQuestions": [
+        "Why Choose Mobile IV Drip Services In Hallandale Beach, FL?",
+        "Who Can Benefit From IV Drip Therapy In Hallandale Beach, FL?",
+        "How Does Mobile IV Drip Therapy Work In Hallandale Beach, FL?",
+        "Mobile IV Drip vs. In-Clinic IV Therapy: What’s the Difference?"
+      ],
+      "note": "No FAQ section. The four questions are question-form H2 headings. The page is mostly a product grid of drips with prices."
+    },
+    {
+      "query": "IV therapy Aventura",
+      "url": "https://www.theivdoc.com/mobile-iv-therapy-aventura-fl",
+      "title": "Mobile IV Therapy In Aventura, FL | Same Day Service | The IV Doc",
+      "h2s": [
+        "Mobile IV Therapy Aventura, FL",
+        "Telehealth Consultation, Covid-19, Strep, and Flu Testing",
+        "We Bring the Lab to You. Get your labs drawn in the comfort and privacy of your home or office.",
+        "At-home Non-surgical Aesthetic Medical Consultation:",
+        "Your on-call board certified surgeon, available at home or in our office 24/7/365:",
+        "Why Choose Mobile IV Drip Services In Aventura, FL?",
+        "Who Can Benefit From IV Drip Therapy In Aventura, FL?",
+        "How Does Mobile IV Drip Therapy Work In Aventura, FL?",
+        "Mobile IV Drip vs. In-Clinic IV Therapy: What’s the Difference?",
+        "IV Drip Services Near You – Fast and Reliable - Aventura, FL",
+        "Find Trusted IV Drip Services Near You In Aventura, FL With The IV Doc"
+      ],
+      "faqQuestions": [
+        "Why Choose Mobile IV Drip Services In Aventura, FL?",
+        "Who Can Benefit From IV Drip Therapy In Aventura, FL?",
+        "How Does Mobile IV Drip Therapy Work In Aventura, FL?",
+        "Mobile IV Drip vs. In-Clinic IV Therapy: What’s the Difference?"
+      ],
+      "note": "Same template as the Hallandale Beach page with the city name swapped. No FAQ section."
+    },
+    {
+      "query": "men's health ED clinic Fort Lauderdale",
+      "url": "https://www.floridamenshealth.com/",
+      "title": "Florida Men's Health | Testosterone Therapy & ED Treatment in Fort Lauderdale",
+      "h2s": [
+        "Stop accepting low energy, low confidence, and low drive as “normal aging.”",
+        "Start with a private conversation - not a diagnosis.",
+        "Personalized Care. Life-Changing Results.",
+        "The trusted destination for men who want to restore sexual performance, energy, confidence - and control over how they age.",
+        "\"What will actually work for me?\"",
+        "Not sure which treatment is right for you?",
+        "We earn your confidence before we ever recommend a treatment.",
+        "Real medical care. Built around the individual.",
+        "A Simple, Personalized Path Back to Feeling Your Best",
+        "Men don't choose a procedure. They choose a provider they trust.",
+        "Trusted by men across South Florida.",
+        "Join thousands of men who took back their confidence",
+        "Additional options for performance, recovery, and wellness.",
+        "Peptides & BoCox: the treatments trending now in men's health.",
+        "Care rooted in Fort Lauderdale.",
+        "Answers before you pick up the phone.",
+        "The first step is a private conversation."
+      ],
+      "faqQuestions": [
+        "What conditions does Florida Men's Health Center treat?",
+        "Is my consultation confidential?",
+        "Do I need lab work before starting treatment?",
+        "Are treatment plans personalized?",
+        "How soon can I begin treatment?",
+        "Do you offer virtual appointments?",
+        "Where is the Fort Lauderdale clinic located?",
+        "How do I request a free consultation?"
+      ],
+      "note": "Homepage. Scrape was served from Firecrawl cache dated 2026-11-08."
+    },
+    {
+      "query": "anti-aging peptides clinic Hallandale Beach",
+      "url": "https://www.bodyrejuvenationmd.com/",
+      "title": "Hallandale Anti-aging and Wellness Center - BodyRejuvenation",
+      "h2s": [
+        "Rejuvenation isn’t just aesthetic",
+        "it’s biological",
+        "Our Specializations",
+        "Longevity & Regenerative Medicine",
+        "Anti-Aging & Aesthetics",
+        "Chronic Knee Pain & Inflammation",
+        "Health Optimization",
+        "Individualized Wellness for your Mind, Body, & Soul",
+        "Men’s & Women’s Wellness Solutions",
+        "Men’s Wellness",
+        "Women’s Wellness",
+        "RESULTS",
+        "Three steps toward health optimization",
+        "At Home services available",
+        "Bioidentical Hormone Replacement Therapy",
+        "Intravenous (IV) Therapy",
+        "Platelet-rich Plasma (PRP) Therapy",
+        "Weight Loss Program",
+        "Comprehensive Weight Loss Solutions",
+        "Microneedling Therapy",
+        "Morpheus8 Skin Tightening",
+        "EvolveX Remodeling",
+        "Skin Care",
+        "Our Great Team",
+        "Our Latest Wellness Articles",
+        "Financing Options",
+        "Join our happy patients."
+      ],
+      "faqQuestions": [
+        "What are the signs that you need hormone replacement therapy?"
+      ],
+      "note": "Homepage with no FAQ section. The one question is a bolded line in the BHRT block. An embedded Instagram feed contains other questions; those are social captions, not page FAQs, and were left out."
+    }
+  ]
+}
