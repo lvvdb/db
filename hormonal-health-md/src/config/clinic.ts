@@ -57,6 +57,16 @@ export const clinic = {
     | { name: string; credentials: string; profilePath: string; jobTitle: string }
     | null,
 
+  // The people who provide care. While this list is empty the team page shows
+  // [[CONFIRM]] markers and stays out of search engines.
+  team: [] as {
+    name: string;
+    credentials: string;
+    role: string;
+    license: string;
+    bio: string;
+  }[],
+
   // Languages staff actually speak with patients. Drives /es and hreflang.
   languages: ['en'] as string[],
 

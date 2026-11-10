@@ -1,0 +1,60 @@
+---
+// The single, obvious next step from a symptom page or article to its treatment page.
+import Icon from './Icon.astro';
+interface Props {
+  kicker?: string;
+  title: string;
+  text: string;
+  href: string;
+  cta: string;
+  icon?: string;
+}
+const { kicker = 'Next step', title, text, href, cta, icon = 'arrow' } = Astro.props;
+---
+
+<aside class="handoff">
+  <span class="icon-badge icon-badge--sun"><Icon name={icon} /></span>
+  <div>
+    <p class="handoff__kicker">{kicker}</p>
+    <h2>{title}</h2>
+    <p>{text}</p>
+    <a class="btn btn--primary" href={href}>{cta} <Icon name="arrow" class="i-arrow" /></a>
+  </div>
+</aside>
+
+<style>
+  .handoff {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    padding: clamp(1.5rem, 3.5vw, 2.25rem);
+    border-radius: var(--r-lg);
+    background:
+      radial-gradient(20rem 12rem at 100% 0%, rgb(247 154 92 / 0.4), transparent 70%), var(--sea-soft);
+    border: 1px solid var(--line);
+  }
+  @media (min-width: 40rem) {
+    .handoff {
+      grid-template-columns: auto 1fr;
+    }
+  }
+  .handoff .icon-badge {
+    background: var(--paper);
+  }
+  .handoff__kicker {
+    margin: 0 0 0.4rem;
+    color: var(--sea-deep);
+    font-size: 0.74rem;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .handoff h2 {
+    font-size: var(--step-2);
+    font-variation-settings: 'opsz' 40;
+  }
+  .handoff p {
+    margin: 0.6rem 0 1.25rem;
+    max-width: 34rem;
+  }
+</style>

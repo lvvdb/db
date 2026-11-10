@@ -1,0 +1,88 @@
+---
+import { render } from 'astro:content';
+import ContentPage from '../../layouts/ContentPage.astro';
+import AreaMap from '../../components/art/AreaMap.astro';
+import Icon from '../../components/Icon.astro';
+import { entries, paths } from '../../lib/content';
+import { serviceNode } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const all = await entries('areas');
+  return all.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const path = paths.areas(entry.id);
+const { Content, headings } = await render(entry);
+const treatments = await entries('treatments');
+const mobile = (await entries('mobileIv')).find((m) => m.id === entry.id);
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Areas we serve', path: '/areas' },
+  { name: d.city, path },
+];
+---
+
+<ContentPage
+  path={path}
+  title={d.title}
+  description={d.description}
+  eyebrow={d.eyebrow}
+  headline={d.headline}
+  lede={d.lede}
+  updated={d.updated}
+  status={d.status}
+  holdReason={d.holdReason}
+  crumbs={crumbs}
+  headings={headings}
+  faqs={d.faqs}
+  faqTitle={`Questions from ${d.city}`}
+  medical={false}
+  schema={[
+    serviceNode({
+      path,
+      name: `Hormone therapy and wellness care for ${d.city}, FL`,
+      description: d.description,
+      areas: [d.city],
+    }),
+  ]}
+>
+  <AreaMap slot="aside" active={d.mapKey} id={`map-${entry.id}`} />
+
+  <Content />
+
+  <div slot="after-prose" class="hoods">
+    <h2>{d.city} neighborhoods</h2>
+    <div class="chip-row">
+      {d.neighborhoods.map((n) => <span class="chip"><Icon name="pin" /> {n}</span>)}
+    </div>
+  </div>
+
+  <section slot="after" class="section section--sand">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Treatments</p>
+        <h2>Everything we offer <em>{d.city} patients.</em></h2>
+      </div>
+      <div class="grid grid--4">
+        {
+          treatments.map((t) => (
+            <a class="card" href={paths.treatments(t.id)}>
+              <span class="icon-badge"><Icon name={t.data.icon} /></span>
+              <h3>{t.data.navLabel}</h3>
+              <span class="card__more">Learn more <Icon name="arrow" /></span>
+            </a>
+          ))
+        }
+      </div>
+      <div class="btn-row" style="margin-top:2rem">
+        {mobile && <a class="btn btn--ghost" href={paths.mobileIv(mobile.id)}><Icon name="home" /> Mobile IV in {d.city}</a>}
+        <a class="btn btn--ghost" href="/telehealth"><Icon name="video" /> Telehealth</a>
+        <a class="btn btn--ghost" href="/lab-testing"><Icon name="flask" /> Lab testing</a>
+        <a class="btn btn--ghost" href="/pricing"><Icon name="tag" /> Pricing</a>
+      </div>
+    </div>
+  </section>
+</ContentPage>

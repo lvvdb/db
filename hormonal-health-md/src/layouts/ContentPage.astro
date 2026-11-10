@@ -159,49 +159,6 @@ const notice =
 </Base>
 
 <style>
-  .phero {
-    position: relative;
-    padding-block: clamp(1.5rem, 3vw, 2.25rem) clamp(3rem, 6vw, 5rem);
-    isolation: isolate;
-    overflow: hidden;
-  }
-  .phero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background:
-      radial-gradient(46rem 26rem at 96% 0%, rgb(247 154 92 / 0.24), transparent 62%),
-      radial-gradient(34rem 22rem at 0% 100%, rgb(205 228 218 / 0.7), transparent 60%);
-  }
-  .phero__grid {
-    display: grid;
-    gap: clamp(2.5rem, 5vw, 4.5rem);
-    align-items: center;
-    margin-top: clamp(2rem, 4vw, 3.25rem);
-  }
-  @media (min-width: 62rem) {
-    .phero__grid {
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-    }
-    .phero__grid--solo {
-      grid-template-columns: minmax(0, 52rem);
-    }
-  }
-  .phero h1 {
-    display: grid;
-    gap: 1.3rem;
-    font-size: var(--step-4);
-    line-height: 1.04;
-  }
-  .phero__headline {
-    display: block;
-  }
-  .phero .lede {
-    max-width: 38rem;
-    margin: 1.5rem 0 1.9rem;
-  }
-
   .pbody {
     display: grid;
     gap: 3rem;

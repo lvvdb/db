@@ -76,12 +76,12 @@ const crumbs = [
         <p class="eyebrow">Keep going</p>
         <h2>Related care and <em>how to reach us.</em></h2>
       </div>
-      <div class="next__grid">
+      <div class="rel">
         {
           conditions.length > 0 && (
             <div class="card">
               <h3>Start with the symptom</h3>
-              <ul class="next__list">
+              <ul class="rel__list">
                 {conditions.map((c) => (
                   <li>
                     <a href={paths.conditions(c.id)}>
@@ -95,7 +95,7 @@ const crumbs = [
         }
         <div class="card">
           <h3>Coming from nearby</h3>
-          <ul class="next__list">
+          <ul class="rel__list">
             <li><a href="/contact">Hallandale Beach clinic <Icon name="arrow" /></a></li>
             {
               areas.map((a) => (
@@ -110,7 +110,7 @@ const crumbs = [
         </div>
         <div class="card">
           <h3>Before you book</h3>
-          <ul class="next__list">
+          <ul class="rel__list">
             <li><a href="/pricing">Pricing and what is included <Icon name="arrow" /></a></li>
             <li><a href="/team">Meet the team <Icon name="arrow" /></a></li>
             <li><a href="/lab-testing">Lab testing <Icon name="arrow" /></a></li>
@@ -169,41 +169,4 @@ const crumbs = [
     line-height: 1.4;
   }
 
-  .next__grid {
-    display: grid;
-    gap: clamp(1rem, 2.2vw, 1.5rem);
-  }
-  @media (min-width: 52rem) {
-    .next__grid {
-      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    }
-  }
-  .next__list {
-    display: grid;
-    list-style: none;
-  }
-  .next__list a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.7rem 0;
-    border-top: 1px solid var(--line);
-    color: var(--ink);
-    font-weight: 560;
-    text-decoration: none;
-  }
-  .next__list a:hover {
-    color: var(--sun-deep);
-  }
-  .next__list :global(svg) {
-    flex: none;
-    width: 1rem;
-    height: 1rem;
-    color: var(--sun-deep);
-    transition: transform 0.25s var(--ease);
-  }
-  .next__list a:hover :global(svg) {
-    transform: translateX(4px);
-  }
 </style>

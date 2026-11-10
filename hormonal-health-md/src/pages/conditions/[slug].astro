@@ -1,0 +1,167 @@
+---
+import { render } from 'astro:content';
+import ContentPage from '../../layouts/ContentPage.astro';
+import Handoff from '../../components/Handoff.astro';
+import Icon from '../../components/Icon.astro';
+import { entries, paths } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const all = await entries('conditions');
+  return all.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const path = paths.conditions(entry.id);
+const { Content, headings } = await render(entry);
+
+const treatment = (await entries('treatments')).find((t) => t.id === d.treatment);
+const areas = await entries('areas');
+const labels: Record<string, string> = {
+  '/men': "Men's health",
+  '/women': "Women's health",
+  '/lab-testing': 'Lab testing',
+};
+const all = [...(await entries('conditions')), ...(await entries('treatments'))];
+const also = d.alsoSee.map((p) => {
+  const hit = all.find((e) => p.endsWith('/' + e.id));
+  return { path: p, label: labels[p] ?? hit?.data.navLabel ?? p };
+});
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Symptoms', path: '/conditions' },
+  { name: d.navLabel, path },
+];
+---
+
+<ContentPage
+  path={path}
+  title={d.title}
+  description={d.description}
+  eyebrow={d.eyebrow}
+  headline={d.headline}
+  lede={d.lede}
+  updated={d.updated}
+  status={d.status}
+  holdReason={d.holdReason}
+  crumbs={crumbs}
+  headings={headings}
+  faqs={d.faqs}
+  faqTitle={`${d.navLabel}: questions people ask`}
+  sources={d.sources}
+>
+  <div slot="aside" class="check">
+    <p class="check__title">Does this sound like you?</p>
+    <ul>
+      {
+        d.checklist.map((c) => (
+          <li>
+            <Icon name="check" /> {c}
+          </li>
+        ))
+      }
+    </ul>
+    <p class="check__note">
+      Two or more is a good reason to get tested. The <a href="/assessment">assessment</a> takes
+      two minutes and nothing you answer is stored.
+    </p>
+  </div>
+
+  <Content />
+
+  {
+    treatment && (
+      <Handoff
+        slot="after-prose"
+        kicker="The treatment page"
+        title={treatment.data.navLabel}
+        text={treatment.data.lede}
+        href={paths.treatments(treatment.id)}
+        cta={`Read about ${treatment.data.navLabel.toLowerCase()}`}
+        icon={treatment.data.icon}
+      />
+    )
+  }
+
+  <section slot="after" class="section section--sand">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Keep going</p>
+        <h2>Related symptoms and <em>where to find us.</em></h2>
+      </div>
+      <div class="rel">
+        <div class="card">
+          <h3>Related reading</h3>
+          <ul class="rel__list">
+            {also.map((a) => <li><a href={a.path}>{a.label} <Icon name="arrow" /></a></li>)}
+            <li><a href="/lab-testing">Lab testing <Icon name="arrow" /></a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Getting here</h3>
+          <ul class="rel__list">
+            <li><a href="/contact">Hallandale Beach clinic <Icon name="arrow" /></a></li>
+            {areas.map((a) => <li><a href={paths.areas(a.id)}>From {a.data.city} <Icon name="arrow" /></a></li>)}
+            <li><a href="/telehealth">Telehealth in Florida <Icon name="arrow" /></a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Before you book</h3>
+          <ul class="rel__list">
+            <li><a href="/pricing">Pricing <Icon name="arrow" /></a></li>
+            <li><a href="/team">Meet the team <Icon name="arrow" /></a></li>
+            <li><a href="/assessment">Two-minute assessment <Icon name="arrow" /></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</ContentPage>
+
+<style>
+  .check {
+    padding: clamp(1.4rem, 3vw, 1.9rem);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    background: rgb(255 255 255 / 0.92);
+    box-shadow: var(--shadow-md);
+  }
+  .check__title {
+    margin: 0 0 1rem;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+  }
+  .check ul {
+    display: grid;
+    list-style: none;
+  }
+  .check li {
+    display: flex;
+    gap: 0.7rem;
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+    font-weight: 560;
+    line-height: 1.4;
+  }
+  .check li :global(svg) {
+    flex: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.1rem;
+    padding: 2px;
+    border-radius: 6px;
+    background: var(--sun-soft);
+    color: var(--sun-deep);
+    stroke-width: 2.4;
+  }
+  .check__note {
+    margin: 1rem 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+</style>

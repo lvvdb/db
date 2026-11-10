@@ -1,0 +1,100 @@
+---
+import { render } from 'astro:content';
+import ContentPage from '../../layouts/ContentPage.astro';
+import AreaMap from '../../components/art/AreaMap.astro';
+import Handoff from '../../components/Handoff.astro';
+import Icon from '../../components/Icon.astro';
+import { entries, paths } from '../../lib/content';
+import { serviceNode } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const all = await entries('mobileIv');
+  return all.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const path = paths.mobileIv(entry.id);
+const { Content, headings } = await render(entry);
+const others = (await entries('mobileIv')).filter((m) => m.id !== entry.id);
+const area = (await entries('areas')).find((a) => a.id === entry.id);
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'IV therapy', path: '/treatments/iv-therapy' },
+  { name: `Mobile IV in ${d.city}`, path },
+];
+---
+
+<ContentPage
+  path={path}
+  title={d.title}
+  description={d.description}
+  eyebrow={d.eyebrow}
+  headline={d.headline}
+  lede={d.lede}
+  updated={d.updated}
+  status={d.status}
+  holdReason={d.holdReason}
+  crumbs={crumbs}
+  headings={headings}
+  faqs={d.faqs}
+  faqTitle={`Mobile IV in ${d.city}: questions people ask`}
+  schema={[
+    serviceNode({
+      path,
+      name: `Mobile IV therapy in ${d.city}, FL`,
+      description: d.description,
+      areas: [d.city],
+    }),
+  ]}
+>
+  <AreaMap slot="aside" active={d.mapKey} id={`miv-${entry.id}`} />
+
+  <Content />
+
+  <div slot="after-prose">
+    <div class="hoods">
+      <h2>Areas of {d.city}</h2>
+      <div class="chip-row">
+        {d.neighborhoods.map((n) => <span class="chip"><Icon name="pin" /> {n}</span>)}
+      </div>
+    </div>
+    <Handoff
+      kicker="The drips"
+      title="IV therapy: the menu, the evidence, the safety checks"
+      text="What is in each drip, who should not have one, and an honest read on what IV therapy can and cannot do."
+      href="/treatments/iv-therapy"
+      cta="Read about IV therapy"
+      icon="drop"
+    />
+  </div>
+
+  <section slot="after" class="section section--sand">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Also available</p>
+        <h2>Mobile IV in <em>nearby cities.</em></h2>
+      </div>
+      <div class="grid grid--3">
+        {
+          others.map((m) => (
+            <a class="card" href={paths.mobileIv(m.id)}>
+              <span class="icon-badge icon-badge--sun"><Icon name="home" /></span>
+              <h3>Mobile IV in {m.data.city}</h3>
+              <span class="card__more">See coverage <Icon name="arrow" /></span>
+            </a>
+          ))
+        }
+      </div>
+      <div class="btn-row" style="margin-top:2rem">
+        <a class="btn btn--ghost" href={area ? paths.areas(area.id) : '/contact'}>
+          <Icon name="clinic" /> {area ? `Clinic care for ${d.city}` : 'Visit the clinic'}
+        </a>
+        <a class="btn btn--ghost" href="/pricing"><Icon name="tag" /> Pricing</a>
+        <a class="btn btn--ghost" href="/team"><Icon name="people" /> Team</a>
+        <a class="btn btn--ghost" href="/lab-testing"><Icon name="flask" /> Lab testing</a>
+      </div>
+    </div>
+  </section>
+</ContentPage>

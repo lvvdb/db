@@ -1,0 +1,43 @@
+---
+// Hero for interior pages that are not driven by a markdown file.
+import Breadcrumbs from './Breadcrumbs.astro';
+import Icon from './Icon.astro';
+import { clinic, nap } from '../config/clinic';
+
+interface Props {
+  crumbs: { name: string; path: string }[];
+  eyebrow: string;
+  headline: string;
+  lede: string;
+  hasAside?: boolean;
+  primary?: { label: string; href: string };
+}
+const { crumbs, eyebrow, headline, lede, hasAside = false, primary } = Astro.props;
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const emph = (s: string) => esc(s).replace(/\*([^*]+)\*/g, '<em>$1</em>');
+const cta = primary ?? { label: 'Start the assessment', href: '/assessment' };
+---
+
+<section class="phero">
+  <div class="wrap">
+    <Breadcrumbs crumbs={crumbs} />
+    <div class:list={['phero__grid', { 'phero__grid--solo': !hasAside }]}>
+      <div class="phero__copy">
+        <h1>
+          <span class="eyebrow">{eyebrow}</span>
+          <span class="phero__headline" set:html={emph(headline)} />
+        </h1>
+        <p class="lede">{lede}</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href={cta.href} data-event={cta.href === '/assessment' ? 'assessment_start' : undefined}>
+            {cta.label} <Icon name="arrow" class="i-arrow" />
+          </a>
+          <a class="btn btn--ghost" href={nap.telHref} data-event="call_click">
+            <Icon name="phone" /> Call <span data-phone>{clinic.phoneDisplay}</span>
+          </a>
+        </div>
+      </div>
+      {hasAside && <div class="phero__aside"><slot name="aside" /></div>}
+    </div>
+  </div>
+</section>
