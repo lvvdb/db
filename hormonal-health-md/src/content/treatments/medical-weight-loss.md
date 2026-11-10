@@ -1,6 +1,6 @@
 ---
 title: "Medical Weight Loss in Hallandale Beach | Hormonal Health MD"
-description: "Weight not moving despite diet and exercise? Get labs, a licensed clinician and a medical weight loss plan built for you. Hallandale Beach clinic or online."
+description: "Weight not moving despite diet and exercise? Get labs, a licensed clinician and a weight loss plan built for you. Hallandale Beach clinic or online."
 eyebrow: "Medical weight loss in Hallandale Beach, FL"
 headline: "Lose weight with a plan *built on your labs,* not another diet."
 lede: "Medical weight loss looks for what is working against you, then combines nutrition, activity and prescription medication where it is appropriate. A clinician adjusts the plan as your numbers change."

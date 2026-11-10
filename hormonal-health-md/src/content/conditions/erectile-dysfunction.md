@@ -1,6 +1,6 @@
 ---
 title: "Erectile Dysfunction Causes & Testing, Hallandale Beach"
-description: "Erections less reliable than they used to be? Learn the common causes of ED, what the pattern tells you and which tests to get. Private care in Hallandale Beach."
+description: "Erections less reliable than before? Learn the common causes of ED, what the pattern tells you and which tests to get. Private care in Hallandale Beach."
 eyebrow: "Erectile dysfunction causes and testing in Hallandale Beach, FL"
 headline: "ED is a symptom. *Find out what is behind it.*"
 lede: "Erection problems are common and usually physical. The pattern tells you a lot about the cause, and a few simple tests tell you the rest."

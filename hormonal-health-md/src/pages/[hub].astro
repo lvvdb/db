@@ -1,0 +1,58 @@
+---
+// The /learn hub. It is only built once at least one article is visible, so an
+// empty hub never ships. While every article is a draft, production has no /learn.
+import Simple from '../layouts/Simple.astro';
+import Icon from '../components/Icon.astro';
+import { entries, paths } from '../lib/content';
+
+export async function getStaticPaths() {
+  const articles = await entries('learn');
+  return articles.length ? [{ params: { hub: 'learn' } }] : [];
+}
+
+const articles = await entries('learn');
+const allDraft = articles.every((a) => a.data.status !== 'live');
+const path = '/learn';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Answers', path },
+];
+---
+
+<Simple
+  path={path}
+  title="Hormone Health Answers | Hormonal Health MD"
+  description="Plain answers to the questions people ask before choosing a hormone clinic: cost, safety, testing, telehealth and what treatment actually involves."
+  eyebrow="Answers"
+  headline="The questions people ask *before they pick a clinic.*"
+  lede="Short, sourced answers on cost, testing, safety and what treatment involves. Each one is reviewed by a clinician before it is published."
+  updated="2026-11-09"
+  crumbs={crumbs}
+  noindex={allDraft}
+  notice={allDraft ? 'Draft hub. Every article below is unpublished and awaiting clinician review.' : undefined}
+>
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="grid grid--3">
+        {
+          articles.map((a) => (
+            <a class="card" href={paths.learn(a.id)}>
+              <p class="eyebrow eyebrow--plain">{a.data.eyebrow.replace(/^Answers:\s*/i, '')}{a.data.status !== 'live' && ' · draft'}</p>
+              <h2 class="q">{a.data.question}</h2>
+              <p>{a.data.lede}</p>
+              <span class="card__more">{a.data.readMinutes} minute read <Icon name="arrow" /></span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Simple>
+
+<style>
+  .q {
+    font-size: var(--step-2);
+    font-variation-settings: 'opsz' 40;
+    line-height: 1.15;
+  }
+</style>

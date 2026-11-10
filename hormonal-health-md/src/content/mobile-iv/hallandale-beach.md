@@ -1,6 +1,6 @@
 ---
 title: "Mobile IV in Hallandale Beach, FL | Hormonal Health MD"
-description: "Mobile IV therapy from a clinic that is actually in Hallandale Beach. Health screening first, then hydration and vitamin drips at your home, condo or hotel."
+description: "Mobile IV therapy from a clinic actually in Hallandale Beach. Health screening first, then hydration and vitamin drips at your home, condo or hotel."
 eyebrow: "Mobile IV therapy in Hallandale Beach, FL"
 headline: "IV therapy at your door, *from the clinic down the street.*"
 lede: "Our mobile team leaves from Golden Isles Drive, inside Hallandale Beach, so we are coming from a few blocks away and not from another county. Same screening and same drips as in the clinic."

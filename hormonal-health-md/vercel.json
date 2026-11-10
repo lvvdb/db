@@ -1,0 +1,87 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/our-services",
+      "destination": "/treatments",
+      "statusCode": 301
+    },
+    {
+      "source": "/benefits-of-treatment",
+      "destination": "/treatments",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "statusCode": 301
+    },
+    {
+      "source": "/testosterone-therapies",
+      "destination": "/treatments/testosterone-therapy",
+      "statusCode": 301
+    },
+    {
+      "source": "/estrogen-treatments",
+      "destination": "/treatments/testosterone-therapy",
+      "statusCode": 301
+    },
+    {
+      "source": "/bioidentical-hormones",
+      "destination": "/treatments/hormone-therapy-for-women",
+      "statusCode": 301
+    },
+    {
+      "source": "/erectile-dysfunction",
+      "destination": "/treatments/sexual-health",
+      "statusCode": 301
+    },
+    {
+      "source": "/weight-loss-therapies",
+      "destination": "/treatments/medical-weight-loss",
+      "statusCode": 301
+    },
+    {
+      "source": "/human-hormone-therapy",
+      "destination": "/treatments/growth-hormone-therapy",
+      "statusCode": 301
+    },
+    {
+      "source": "/iv-therapy",
+      "destination": "/treatments/iv-therapy",
+      "statusCode": 301
+    },
+    {
+      "source": "/vitamin-mineral-regiments",
+      "destination": "/treatments/nutrition-and-supplements",
+      "statusCode": 301
+    },
+    {
+      "source": "/nutritional-planning",
+      "destination": "/treatments/nutrition-and-supplements",
+      "statusCode": 301
+    },
+    {
+      "source": "/joint-pain-solutions",
+      "destination": "/treatments/joint-pain",
+      "statusCode": 301
+    },
+    {
+      "source": "/review",
+      "destination": "/contact",
+      "statusCode": 302
+    }
+  ],
+  "headers": [
+    {
+      "source": "/m/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ]
+}

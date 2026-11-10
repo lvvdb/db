@@ -1,5 +1,5 @@
 ---
-title: "Hormone Therapy & TRT near Hollywood, FL | Hormonal Health MD"
+title: "Hormone Therapy & TRT near Hollywood, FL"
 description: "Hormone therapy, TRT and medical weight loss just south of Hollywood on US-1. Blood work first, a licensed clinician, and video follow-ups from home."
 eyebrow: "Hormone therapy and TRT near Hollywood, FL"
 headline: "Hormone care for Hollywood, *one city south on US-1.*"

@@ -1,6 +1,6 @@
 ---
 title: "Growth Hormone Deficiency Evaluation in Florida"
-description: "Adult growth hormone deficiency is rare and needs proper testing to diagnose. Learn how evaluation works, who qualifies for treatment and what the law allows."
+description: "Adult growth hormone deficiency is rare and needs proper testing. See how evaluation works, who qualifies for treatment and what the law allows."
 eyebrow: "Growth hormone deficiency evaluation in Hallandale Beach, FL"
 headline: "Find out if growth hormone is really the issue, *with proper testing.*"
 lede: "True growth hormone deficiency in adults is uncommon and cannot be diagnosed from symptoms or a single blood test. We explain how evaluation works and what treatment is legally and medically appropriate."
@@ -21,10 +21,10 @@ glance:
   - label: "How it is confirmed"
     value: "A stimulation test, not a single blood level"
   - label: "What we do not do"
-    value: "Growth hormone for anti-aging or performance"
+    value: "Prescribe growth hormone to healthy adults"
 faqs:
-  - q: "Can I get HGH for anti-aging or bodybuilding?"
-    a: "No. Federal law prohibits distributing human growth hormone for any use that is not an approved medical indication, and anti-aging, athletic performance and bodybuilding are not approved uses. Medical societies also advise against it because the risks outweigh the small changes seen in studies of healthy adults."
+  - q: "Do you prescribe growth hormone to healthy adults?"
+    a: "No. Federal law prohibits distributing human growth hormone for any use that is not an approved medical indication, and slowing aging, athletic performance and physique are not approved uses. Medical societies also advise against it because the risks outweigh the small changes seen in studies of healthy adults."
   - q: "Does a low IGF-1 mean I have growth hormone deficiency?"
     a: "Not by itself. IGF-1 is a useful screening test, but it can be low for other reasons, including poor nutrition, liver disease, uncontrolled diabetes and oral estrogen. It can also be normal in people who are deficient. Most adults need a stimulation test to confirm the diagnosis."
   - q: "What else causes the same symptoms?"
@@ -68,7 +68,7 @@ Growth hormone is approved for adults with a confirmed deficiency and for a smal
 
 Unlike most medications, human growth hormone cannot legally be prescribed off-label. [Federal law](https://www.law.cornell.edu/uscode/text/21/333) makes it an offense to distribute it for any use the FDA has not authorized. Anti-aging, weight loss, athletic performance and bodybuilding are not authorized uses.
 
-## Do you prescribe growth hormone for anti-aging or performance?
+## Do you prescribe growth hormone to healthy adults?
 
 No. We do not prescribe growth hormone to healthy adults for aging, energy, physique or performance. It is against federal law, and the evidence does not support it. A [systematic review](https://doi.org/10.7326/0003-4819-146-2-200701160-00005) of trials in healthy older adults found small changes in body composition and frequent side effects, including swelling, joint pain and carpal tunnel syndrome.
 

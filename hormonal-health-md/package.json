@@ -9,9 +9,11 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/gen-redirects.mjs",
     "build": "astro build",
-    "build:drafts": "SHOW_DRAFTS=1 astro build --outDir dist-drafts",
-    "preview": "astro preview",
+    "build:drafts": "node scripts/gen-redirects.mjs && SHOW_DRAFTS=1 astro build --outDir dist-drafts",
+    "preview": "node scripts/serve.mjs dist 4321",
+    "preview:drafts": "node scripts/serve.mjs dist-drafts 4322",
     "qa": "node scripts/qa.mjs",
     "check": "npm run build && npm run qa",
     "check:launch": "npm run build && node scripts/qa.mjs --launch"
