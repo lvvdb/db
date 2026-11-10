@@ -18,6 +18,8 @@ Start with [`docs/seo-report.md`](docs/seo-report.md). It explains what was buil
 | `npm run preview` | Serve `dist/` at http://localhost:4321 with redirects and clean URLs. |
 | `npm run build:drafts` | Build into `dist-drafts/` including unpublished articles and the Spanish draft. |
 | `npm run preview:drafts` | Serve `dist-drafts/` at http://localhost:4322. |
+| `npm run build:staging` | Build the review version into `dist-staging/`: all pages and drafts, every page noindex, crawlers blocked, preview banner. |
+| `npm run preview:staging` | Serve `dist-staging/` at http://localhost:4323. |
 | `npm run check:sources` | Load every cited source with [webclaw](https://github.com/0xMassi/webclaw) and report any that are missing. |
 
 ## How unconfirmed facts work
@@ -135,6 +137,20 @@ The output in `dist/` is static and works on any host. Clean URLs with no traili
 | Netlify, Cloudflare Pages | `dist/_redirects` and `dist/_headers` are picked up automatically. |
 | Vercel | `vercel.json` at the project root carries the same rules. Build command `npm run build`, output `dist`. |
 | Anything else | Recreate the rules in `src/data/redirects.json` as 301s, serve `/page.html` at `/page`, redirect trailing slashes, and serve `404.html` with a 404 status. |
+
+### A review deployment on Vercel
+
+Use this to share the site before the clinic's facts are in. It cannot be indexed.
+
+In the Vercel dashboard, import the repository and set the Root Directory to `hormonal-health-md`. Vercel detects Astro on its own. Add two environment variables, `SITE_STAGING=1` and `SHOW_DRAFTS=1`, then deploy. Every page then carries a noindex tag, `robots.txt` blocks all crawlers and a banner marks it as a preview.
+
+To go live later, remove both variables, attach the real domain and redeploy. `npm run check:launch` must pass first.
+
+From a terminal with the Vercel CLI the equivalent is:
+
+```bash
+npm run build:staging && npx vercel deploy dist-staging --prod
+```
 
 After the first deploy, test each old path on the live domain, submit the sitemap in Search Console and run a treatment page through Google's Rich Results Test.
 
