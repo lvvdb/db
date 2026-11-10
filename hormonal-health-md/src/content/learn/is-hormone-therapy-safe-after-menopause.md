@@ -26,6 +26,8 @@ sources:
     url: "https://doi.org/10.1001/jama.2013.278040"
   - label: "U.S. Preventive Services Task Force. Hormone Therapy for the Primary Prevention of Chronic Conditions in Postmenopausal Persons. JAMA. 2022."
     url: "https://doi.org/10.1001/jama.2022.18625"
+  - label: "U.S. Food and Drug Administration. HHS Advances Women's Health, Removes Misleading FDA Warnings on Hormone Replacement Therapy. November 10, 2025."
+    url: "https://www.fda.gov/news-events/press-announcements/hhs-advances-womens-health-removes-misleading-fda-warnings-hormone-replacement-therapy"
   - label: "Sriprasert I, Hodis HN, et al. Elimination of the Black Box Warning on Menopausal Hormone Therapy. Obstet Gynecol. 2026."
     url: "https://pubmed.ncbi.nlm.nih.gov/41687116/"
 ---
@@ -83,7 +85,7 @@ There are effective non-hormonal treatments for hot flashes, and vaginal treatme
 
 ## What happened to the warning label?
 
-It changed. In November 2025 the FDA announced it would remove the statements about cardiovascular disease, breast cancer and probable dementia from the boxed warning on menopausal hormone therapy, and revised labels followed in 2026. The warning about endometrial cancer with estrogen alone in women who have a uterus remains.
+It changed. On November 10, 2025 the [FDA announced](https://www.fda.gov/news-events/press-announcements/hhs-advances-womens-health-removes-misleading-fda-warnings-hormone-replacement-therapy) it would remove the references to cardiovascular disease, breast cancer and probable dementia from the boxed warning on menopausal hormone therapy, and revised labels followed in 2026. The warning about endometrial cancer with estrogen alone in women who have a uterus remains.
 
 The change reflects the same re-reading of the evidence described above. It does not mean hormone therapy is risk-free or right for everyone. Your own history still decides.
 

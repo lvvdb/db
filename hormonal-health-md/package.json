@@ -16,7 +16,8 @@
     "preview:drafts": "node scripts/serve.mjs dist-drafts 4322",
     "qa": "node scripts/qa.mjs",
     "check": "npm run build && npm run qa",
-    "check:launch": "npm run build && node scripts/qa.mjs --launch"
+    "check:launch": "npm run build && node scripts/qa.mjs --launch",
+    "check:sources": "node scripts/check-sources.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "^0.4.7",

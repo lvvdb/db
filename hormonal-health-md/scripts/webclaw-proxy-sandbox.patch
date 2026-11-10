@@ -1,0 +1,51 @@
+diff --git a/crates/webclaw-fetch/src/tls.rs b/crates/webclaw-fetch/src/tls.rs
+index 6686c18..086d27e 100644
+--- a/crates/webclaw-fetch/src/tls.rs
++++ b/crates/webclaw-fetch/src/tls.rs
+@@ -565,6 +565,18 @@ pub fn build_client(
+         .pool_max_idle_per_host(32)
+         .tcp_keepalive(Duration::from_secs(60));
+ 
++    // Local patch for sandboxes whose egress proxy re-terminates TLS: when
++    // SSL_CERT_FILE is set, trust that bundle instead of only the built-in
++    // public roots. Certificate verification stays enabled.
++    if std::env::var_os("SSL_CERT_FILE").is_some() {
++        if let Ok(store) = wreq::tls::trust::CertStore::builder()
++            .set_default_paths()
++            .build()
++        {
++            builder = builder.tls_cert_store(store);
++        }
++    }
++
+     if let Some(proxy_url) = proxy {
+         if proxy_url.to_ascii_lowercase().starts_with("socks") {
+             return Err(FetchError::Build(format!(
+diff --git a/crates/webclaw-fetch/src/url_security.rs b/crates/webclaw-fetch/src/url_security.rs
+index f766eb8..01e8e67 100644
+--- a/crates/webclaw-fetch/src/url_security.rs
++++ b/crates/webclaw-fetch/src/url_security.rs
+@@ -63,9 +63,20 @@ async fn validate_url_host_is_public(url: &Url) -> Result<(), FetchError> {
+             let port = url
+                 .port_or_known_default()
+                 .ok_or_else(|| FetchError::InvalidUrl("URL must include a known port".into()))?;
+-            let addrs = lookup_host((host, port))
+-                .await
+-                .map_err(|e| FetchError::InvalidUrl(format!("failed to resolve host: {e}")))?;
++            let addrs = match lookup_host((host, port)).await {
++                Ok(addrs) => addrs,
++                Err(e) => {
++                    // Local patch: in a sandbox with proxy-only egress there is no
++                    // local DNS. When a proxy is configured it resolves the name and
++                    // enforces its own host allowlist, so defer to it.
++                    if std::env::var_os("WEBCLAW_PROXY").is_some() {
++                        return Ok(());
++                    }
++                    return Err(FetchError::InvalidUrl(format!(
++                        "failed to resolve host: {e}"
++                    )));
++                }
++            };
+ 
+             let mut resolved = false;
+             for addr in addrs {

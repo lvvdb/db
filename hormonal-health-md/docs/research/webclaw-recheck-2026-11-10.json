@@ -1,0 +1,431 @@
+{
+  "checked": "2026-11-10",
+  "tool": "webclaw 0.7.2 built from source, one plain request per URL, no retries with other browser profiles",
+  "summary": {
+    "total": 62,
+    "loaded": 60,
+    "refused_automated_access": 2
+  },
+  "retiredLinks": [
+    {
+      "url": "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-cautions-about-using-testosterone-products-low-testosterone-due",
+      "result": "HTTP 404 confirmed by webclaw",
+      "replacedWith": "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/testosterone-information"
+    },
+    {
+      "url": "https://www.fda.gov/medical-devices/safety-communications/update-fda-warns-biotin-may-interfere-lab-tests-fda-safety-communication",
+      "result": "HTTP 404 confirmed by webclaw",
+      "replacedWith": "https://ods.od.nih.gov/factsheets/Biotin-HealthProfessional/"
+    }
+  ],
+  "sources": [
+    {
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0456/Sections/0456.47.html",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "F.S. 456.47 Use of telehealth to provide services. (Online Sunshine, Statutes & Constitution: View Statutes)"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.2013.278040",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Menopausal Hormone Therapy and Health Outcomes During the Intervention and Extended Poststopping Phases of the Women’s Health Initiative Randomized Trials | first author: Manson | JAMA | 2013 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.2022.18625",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Hormone Therapy for the Primary Prevention of Chronic Conditions in Postmenopausal Persons | first author: US Preventive Services Task Force | JAMA | 2022 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.2022.8970",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Vitamin, Mineral, and Multivitamin Supplementation to Prevent Cardiovascular Disease and Cancer | first author: US Preventive Services Task Force | JAMA | 2022 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1001/jama.288.3.321",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Risks and Benefits of Estrogen Plus Progestin in Healthy Postmenopausal Women: Principal Results From the Women's Health Initiative Randomized Controlled Trial | first author: Writing Group for the Women's Health Initiative Investigators | JAMA: The Journal of the American Medical Association | 2002 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1001/jamainternmed.2014.8063",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Duration of Menopausal Vasomotor Symptoms Over the Menopause Transition | first author: Avis | JAMA Internal Medicine | 2015 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1002/art.41142",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "2019 American College of Rheumatology/Arthritis Foundation Guideline for the Management of Osteoarthritis of the Hand, Hip, and Knee | first author: Kolasinski | Arthritis & Rheumatology | 2020 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.juro.2018.05.004",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Erectile Dysfunction: AUA Guideline | first author: Burnett | Journal of Urology | 2018 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.mayocp.2012.06.015",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "The Princeton III Consensus Recommendations for the Management of Erectile Dysfunction and Cardiovascular Disease | first author: Nehra | Mayo Clinic Proceedings | 2012 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1056/NEJMoa1506119",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Effects of Testosterone Treatment in Older Men | first author: Snyder | New England Journal of Medicine | 2016 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1056/NEJMoa2032183",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Once-Weekly Semaglutide in Adults with Overweight or Obesity | first author: Wilding | New England Journal of Medicine | 2021 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1056/NEJMoa2206038",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Tirzepatide Once Weekly for the Treatment of Obesity | first author: Jastreboff | New England Journal of Medicine | 2022 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1056/NEJMoa2215025",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Cardiovascular Safety of Testosterone-Replacement Therapy | first author: Lincoff | New England Journal of Medicine | 2023 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1056/NEJMoa2307563",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes | first author: Lincoff | New England Journal of Medicine | 2023 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1089/acm.2008.0410",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Intravenous Micronutrient Therapy (Myers' Cocktail) for Fibromyalgia: A Placebo-Controlled Pilot Study | first author: Ali | The Journal of Alternative and Complementary Medicine | 2009 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1089/thy.2014.0028",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Guidelines for the Treatment of Hypothyroidism: Prepared by the American Thyroid Association Task Force on Thyroid Hormone Replacement | first author: Jonklaas | Thyroid® | 2014 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1097/GME.0000000000002028",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "The 2022 hormone therapy position statement of The North American Menopause Society | first author: None | Menopause | 2022 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1097/GME.0000000000002200",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "The 2023 nonhormone therapy position statement of The North American Menopause Society | first author: (no author listed; society statement) | Menopause | 2023 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1097/gme.0b013e31824d8f40",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Executive summary of the Stages of Reproductive Aging Workshop + 10 | first author: Harlow | Menopause | 2012 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1111/dom.14725",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Weight regain and cardiometabolic effects after withdrawal of semaglutide: The STEP 1 trial extension | first author: Wilding | Diabetes, Obesity and Metabolism | 2022 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1210/clinem/dgae290",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline | first author: Demay | The Journal of Clinical Endocrinology & Metabolism | 2024 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1210/jc.2007-1972",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Hypothalamic-Pituitary-Testicular Axis Disruptions in Older Men Are Differentially Linked to Age and Modifiable Risk Factors: The European Male Aging Study | first author: Wu | The Journal of Clinical Endocrinology & Metabolism | 2008 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1210/jc.2011-0179",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Evaluation and Treatment of Adult Growth Hormone Deficiency: An Endocrine Society Clinical Practice Guideline | first author: Molitch | The Journal of Clinical Endocrinology & Metabolism | 2011 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1210/jc.2014-3415",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Pharmacological Management of Obesity: An Endocrine Society Clinical Practice Guideline | first author: Apovian | The Journal of Clinical Endocrinology & Metabolism | 2015 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1210/jc.2015-2236",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Treatment of Symptoms of the Menopause: An Endocrine Society Clinical Practice Guideline | first author: Stuenkel | The Journal of Clinical Endocrinology & Metabolism | 2015 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1210/jc.2016-1271",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Compounded Bioidentical Hormones in Endocrinology Practice: An Endocrine Society Scientific Statement | first author: Santoro | The Journal of Clinical Endocrinology & Metabolism | 2016 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1210/jc.2016-2935",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Harmonized Reference Ranges for Circulating Testosterone Levels in Men of Four Cohort Studies in the United States and Europe | first author: Travison | The Journal of Clinical Endocrinology & Metabolism | 2017 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1210/jc.2018-00229",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Testosterone Therapy in Men With Hypogonadism: An Endocrine Society* Clinical Practice Guideline | first author: Bhasin | The Journal of Clinical Endocrinology & Metabolism | 2018 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1210/jc.2019-01603",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Global Consensus Position Statement on the Use of Testosterone Therapy for Women | first author: Davis | The Journal of Clinical Endocrinology & Metabolism | 2019 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1210/jcem.87.2.8201",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Age Trends in the Level of Serum Testosterone and Other Hormones in Middle-Aged Men: Longitudinal Results from the Massachusetts Male Aging Study | first author: Feldman | The Journal of Clinical Endocrinology & Metabolism | 2002 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.1530/EJE-11-0221",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Onset of effects of testosterone treatment and time span until maximum effects are achieved | first author: Saad | European Journal of Endocrinology | 2011 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.17226/25791",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "The Clinical Utility of Compounded Bioidentical Hormone Therapy | first author: National Academies of Sciences, Engineering, and Medicine (committee authors) | (book, National Academies Press) | 2020 | edited-book"
+    },
+    {
+      "url": "https://doi.org/10.4158/GL-2019-0405",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "American Association of Clinical Endocrinologists and American College of Endocrinology Guidelines for Management of Growth Hormone Deficiency in Adults and Patients Transitioning from Pediatric to Adult Care | first author: Yuen | Endocrine Practice | 2019 | journal-article"
+    },
+    {
+      "url": "https://doi.org/10.7326/0003-4819-146-2-200701160-00005",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Systematic Review: The Safety and Efficacy of Growth Hormone in the Healthy Elderly | first author: Liu | Annals of Internal Medicine | 2007 | journal-article"
+    },
+    {
+      "url": "https://medlineplus.gov/dehydration.html",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Dehydration: MedlinePlus"
+    },
+    {
+      "url": "https://medlineplus.gov/fatigue.html",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Fatigue: MedlinePlus"
+    },
+    {
+      "url": "https://medlineplus.gov/lab-tests/testosterone-levels-test/",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Testosterone Levels Test: MedlinePlus Medical Test"
+    },
+    {
+      "url": "https://mqa-internet.doh.state.fl.us/MQASearchServices/HealthCareProviders",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "FL DOH MQA Search Portal | License Verification"
+    },
+    {
+      "url": "https://ods.od.nih.gov/factsheets/Biotin-HealthProfessional/",
+      "status": "loaded",
+      "checkedWith": "webclaw",
+      "title": "Biotin - Health Professional Fact Sheet"
+    },
+    {
+      "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Iron - Health Professional Fact Sheet"
+    },
+    {
+      "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Magnesium - Health Professional Fact Sheet"
+    },
+    {
+      "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Vitamin B12 - Health Professional Fact Sheet"
+    },
+    {
+      "url": "https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Vitamin C - Health Professional Fact Sheet"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41687116/",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Elimination of the Black Box Warning on Menopausal Hormone Therapy - PubMed"
+    },
+    {
+      "url": "https://www.acog.org/womens-health/faqs/perimenopausal-bleeding-and-bleeding-after-menopause",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Perimenopausal Bleeding and Bleeding After Menopause | ACOG"
+    },
+    {
+      "url": "https://www.auanet.org/guidelines-and-quality/guidelines/testosterone-deficiency-guideline",
+      "status": "loaded",
+      "checkedWith": "webclaw",
+      "title": "Testosterone Deficiency Guideline - American Urological Association"
+    },
+    {
+      "url": "https://www.congress.gov/bill/110th-congress/house-bill/6353",
+      "status": "refused automated access",
+      "checkedWith": "webclaw; exact URL and title confirmed by web search",
+      "title": null
+    },
+    {
+      "url": "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fdas-concerns-unapproved-glp-1-drugs-used-weight-loss",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "FDA’s Concerns with Unapproved GLP-1 Drugs Used for Weight Loss | FDA"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/testosterone-information",
+      "status": "loaded",
+      "checkedWith": "webclaw",
+      "title": "Testosterone Information"
+    },
+    {
+      "url": "https://www.fda.gov/medical-devices/home-use-tests/menopause",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Menopause | FDA (Home Use Tests)"
+    },
+    {
+      "url": "https://www.fda.gov/news-events/press-announcements/hhs-advances-womens-health-removes-misleading-fda-warnings-hormone-replacement-therapy",
+      "status": "loaded",
+      "checkedWith": "webclaw",
+      "title": "HHS Advances Women’s Health, Removes Misleading FDA Warnings on Hormone Replacement Therapy"
+    },
+    {
+      "url": "https://www.federalregister.gov/d/2025-24123",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Fourth Temporary Extension of COVID-19 Telemedicine Flexibilities for Prescription of Controlled Medications (Federal Register)"
+    },
+    {
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2018/09/ftc-brings-first-ever-action-targeting-iv-cocktail-therapy-marketer",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "FTC Brings First-ever Action Targeting “iV Cocktail” Therapy Marketer | Federal Trade Commission"
+    },
+    {
+      "url": "https://www.irs.gov/publications/p502",
+      "status": "loaded",
+      "checkedWith": "first check (Firecrawl or Crossref)",
+      "title": "Publication 502 (2025), Medical and Dental Expenses | Internal Revenue Service"
+    },
+    {
+      "url": "https://www.law.cornell.edu/uscode/text/21/333",
+      "status": "loaded",
+      "checkedWith": "webclaw",
+      "title": "21 U.S. Code § 333 - Penalties"
+    },
+    {
+      "url": "https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia",
+      "status": "loaded",
+      "checkedWith": "webclaw",
+      "title": "Iron-Deficiency Anemia"
+    },
+    {
+      "url": "https://www.nhlbi.nih.gov/health/sleep-apnea",
+      "status": "loaded",
+      "checkedWith": "webclaw",
+      "title": "What Is Sleep Apnea?"
+    },
+    {
+      "url": "https://www.nia.nih.gov/health/menopause/what-menopause",
+      "status": "loaded",
+      "checkedWith": "webclaw",
+      "title": "What Is Menopause?"
+    },
+    {
+      "url": "https://www.niams.nih.gov/health-topics/osteoarthritis",
+      "status": "refused automated access",
+      "checkedWith": "webclaw; exact URL and title confirmed by web search",
+      "title": null
+    },
+    {
+      "url": "https://www.nice.org.uk/guidance/ng23",
+      "status": "loaded",
+      "checkedWith": "webclaw",
+      "title": "Overview | Menopause: identification and management  | Guidance | NICE"
+    },
+    {
+      "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/erectile-dysfunction",
+      "status": "loaded",
+      "checkedWith": "webclaw",
+      "title": "Erectile Dysfunction (ED) - NIDDK"
+    },
+    {
+      "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/erectile-dysfunction/symptoms-causes",
+      "status": "loaded",
+      "checkedWith": "webclaw",
+      "title": "Symptoms & Causes of Erectile Dysfunction - NIDDK"
+    }
+  ],
+  "listings": [
+    {
+      "url": "https://reviews.birdeye.com/hormonal-health-md-176923556646980",
+      "status": "loaded",
+      "title": "Hormonal Health MD - 9 Reviews - Healthcare in Hallandale Beach, FL - Birdeye",
+      "facts": {
+        "claimed": false,
+        "address": "501 Golden Isles Dr Ste 204 C, Hallandale Beach, FL, 33009, United States",
+        "phone": "none shown",
+        "rating": "5.0",
+        "reviewCount": 9,
+        "reviewsWrittenOnBirdeye": 0,
+        "hours": "Mon Closed; Tue to Sat 12:00 p.m. to 7:00 p.m.; Sun Closed"
+      }
+    },
+    {
+      "url": "https://trtmap.com/clinic/hormonal-health-md-f6dd27/",
+      "status": "HTTP 404",
+      "note": "The listing seen in search results on 9 Nov no longer loads."
+    },
+    {
+      "url": "https://www.yelp.com/biz/hormonal-health-md-hallandale-beach-2",
+      "status": "not fetched",
+      "note": "robots.txt disallows automated access to this path. Check by hand."
+    },
+    {
+      "url": "https://www.yelp.com/biz/hormonal-health-md-no-title",
+      "status": "not fetched",
+      "note": "robots.txt disallows automated access to this path. Check by hand."
+    },
+    {
+      "url": "https://www.mapquest.com/us/florida/hormonal-health-md-778798268",
+      "status": "not fetched",
+      "note": "robots.txt disallows automated access to this path. Check by hand."
+    }
+  ]
+}

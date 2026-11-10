@@ -45,10 +45,10 @@ These are the inconsistencies a search engine sees today. Fix them before buildi
 | --- | --- | --- | --- |
 | 1 | A second address, 2312 Wilton Drive, Suite 10, Wilton Manors, FL 33305, with phone (800) 607-4010 and fax 954-361-0221 | Nine service pages on the current site | Gone on the new site. Find every listing that still carries it. |
 | 2 | The homepage markup names Wilton Manors as the business address, with Wilton Manors map coordinates and the 800 number | Current homepage structured data | Replaced on the new site with the Hallandale Beach address. This is the single most damaging item and it is fixed at launch. |
-| 3 | Two schedules: 10am to 7pm seven days, and noon to 7pm Monday to Friday with Saturday by appointment and Sunday closed | Current homepage versus current contact page | Confirm the real hours, then set them identically everywhere. |
+| 3 | Four different schedules: 10am to 7pm seven days (homepage), noon to 7pm Monday to Friday with Saturday by appointment and Sunday closed (contact page), a third in the hidden markup, and closed Monday and Sunday with noon to 7pm Tuesday to Saturday (Birdeye) | Current site and listings | Confirm the real hours, then set them identically everywhere. |
 | 4 | Two Yelp listings for the same clinic | yelp.com/biz/hormonal-health-md-hallandale-beach-2 and yelp.com/biz/hormonal-health-md-no-title | Claim the main one and report the other as a duplicate. |
-| 5 | A directory files the clinic under Miami | trtmap.com listing | Request a correction to Hallandale Beach. |
-| 6 | A review aggregator shows 9 reviews | reviews.birdeye.com listing | Check the name, address and phone. Do not pay to manage it unless you use the product. |
+| 5 | A directory filed the clinic under Miami in search results on 9 November. The listing page returned "not found" on 10 November | trtmap.com | Search the directory for the clinic. If a listing exists, ask for the city to be corrected to Hallandale Beach. |
+| 6 | An unclaimed profile showing 5.0 from 9 reviews, the address written as "Ste 204 C", no phone number and its own set of hours | reviews.birdeye.com listing | Claim it for free or use "Suggest edits" to fix the address, phone and hours. Do not pay to manage it unless you use the product. The 9 reviews are pulled from elsewhere, so they are a hint at the Google count, not a confirmation. |
 | 7 | A public Facebook post under another business name advertises the clinic's phone number | Facebook | Confirm the relationship. If it is not yours, ask for it to be removed. |
 | 8 | Member login, password reset and account pages are indexed | /m/login, /m/reset, /m/create on the current site | Retired at launch. See step 5. |
 
@@ -254,18 +254,18 @@ One exact name, address and phone on every listing. Work down the table. For eac
 | --- | --- | --- |
 | Bing Places | bingplaces.com | Can import from Google once that profile is verified. |
 | Apple Business Connect | businessconnect.apple.com | Feeds Apple Maps and Siri. |
-| Yelp | biz.yelp.com | **Highest priority after Google.** Yelp was on page one in 5 of our 8 test searches. Claim the main listing and report the duplicate. |
+| Yelp | biz.yelp.com | **Highest priority after Google.** Yelp was on page one in 5 of our 8 test searches. Claim the main listing and report the duplicate. Yelp does not allow automated checks, so read both listings by hand and record what each shows. |
 | Facebook | facebook.com/pages/create | Category, address, phone, hours and website in the About section. |
 | Instagram | Business profile settings | Address and phone in contact options, website in bio. |
-| MapQuest | The listing at mapquest.com for the clinic | Use the claim or suggest an edit link on the listing. |
+| MapQuest | The listing at mapquest.com for the clinic | Use the claim or suggest an edit link on the listing. Check it by hand, since it does not allow automated checks. |
 | Nextdoor | business.nextdoor.com | Strong for condo communities in the service area. |
 | Better Business Bureau | bbb.org/get-listed | A free listing is enough. |
 | NPI Registry | nppes.cms.hhs.gov | Check the practice address and phone on the organization record and on each clinician's record. Many health directories copy from here. |
 | Healthgrades | update.healthgrades.com | Clinician profiles. Needs each clinician's name and NPI. |
 | Vitals | vitals.com, claim profile | Clinician profiles. |
 | WebMD Care | doctor.webmd.com, claim profile | Clinician profiles. |
-| trtmap.com | The clinic's listing | Ask for the city to be corrected from Miami to Hallandale Beach. |
-| Birdeye | The clinic's listing | Check name, address and phone only. |
+| trtmap.com | Search the directory for the clinic | If listed, ask for the city to be corrected from Miami to Hallandale Beach. |
+| Birdeye | The clinic's listing | Unclaimed today. Fix the address format, add the phone and correct the hours. |
 
 ### 3.1 Find and fix the old data
 

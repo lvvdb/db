@@ -18,6 +18,7 @@ Start with [`docs/seo-report.md`](docs/seo-report.md). It explains what was buil
 | `npm run preview` | Serve `dist/` at http://localhost:4321 with redirects and clean URLs. |
 | `npm run build:drafts` | Build into `dist-drafts/` including unpublished articles and the Spanish draft. |
 | `npm run preview:drafts` | Serve `dist-drafts/` at http://localhost:4322. |
+| `npm run check:sources` | Load every cited source with [webclaw](https://github.com/0xMassi/webclaw) and report any that are missing. |
 
 ## How unconfirmed facts work
 
@@ -55,6 +56,7 @@ scripts/
   gen-redirects.mjs       Writes host redirect files from redirects.json
   sitemap-integration.mjs Builds sitemap.xml from the pages that were actually emitted
   make-brand-assets.mjs   Renders the share image, logo and touch icon
+  check-sources.mjs       Loads every cited source with webclaw and flags dead links
 docs/
   seo-report.md           The hand-back report
   local-seo-playbook.md   Off-site checklist for the clinic, with paste-ready text
@@ -99,6 +101,20 @@ Add `'es'` to `languages` in `src/config/clinic.ts` and set `spanishReviewed: tr
 - No two city pages share more than about a third of their copy
 - Every redirect lands on a live page in one hop
 - No brand-name weight loss drug in a title or heading, no growth hormone positioned for anti-aging or performance in a heading, no banned phrases, no dashes used as punctuation, no ad pixel or session replay script
+
+## Checking the cited sources
+
+Every clinical claim links to a primary source, and sources move. `npm run check:sources` loads each cited URL once with the webclaw CLI and writes the result to `docs/research/source-links-latest.json`. It fails if a page is missing. A page that refuses automated requests is listed as "refused" for a person to open in a browser, and is never retried in disguise.
+
+Install webclaw first:
+
+```bash
+cargo install --git https://github.com/0xMassi/webclaw.git --locked webclaw-cli
+```
+
+DOI links are skipped by default because publishers usually refuse bots. Add `-- --doi` to include them, or `-- --only fda.gov` to check one site.
+
+Inside a cloud sandbox that sends all traffic through an inspecting proxy with no local DNS, stock webclaw cannot connect. `scripts/webclaw-proxy-sandbox.patch` is a two-part local patch against webclaw 0.7.2 that makes it trust the bundle named by `SSL_CERT_FILE` and leave name resolution to the proxy when `WEBCLAW_PROXY` is set. Apply it to a clone with `git apply`, build with `cargo build --release -p webclaw-cli`, and run with `WEBCLAW_PROXY="$HTTPS_PROXY"`. On a normal machine you do not need it.
 
 ## Deploying
 
