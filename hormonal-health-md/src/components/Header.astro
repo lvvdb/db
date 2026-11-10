@@ -1,0 +1,548 @@
+---
+import Icon from './Icon.astro';
+import Logo from './Logo.astro';
+import { clinic, nap, sevenDays } from '../config/clinic';
+import { entries, paths } from '../lib/content';
+
+interface Props {
+  path: string;
+}
+const { path } = Astro.props;
+
+const treatments = await entries('treatments');
+const conditions = await entries('conditions');
+const areas = await entries('areas');
+const articles = (await entries('learn')).length;
+
+const isActive = (prefix: string) => path === prefix || path.startsWith(prefix + '/');
+const locations = [
+  { label: 'Hallandale Beach clinic', path: '/contact', icon: 'clinic' },
+  ...areas.map((a) => ({ label: `From ${a.data.city}`, path: paths.areas(a.id), icon: 'pin' })),
+  { label: 'Telehealth across Florida', path: '/telehealth', icon: 'video' },
+  { label: 'Mobile IV at your door', path: '/mobile-iv/hallandale-beach', icon: 'home' },
+];
+const about = [
+  { label: 'About the clinic', path: '/about' },
+  { label: 'Our team', path: '/team' },
+  { label: 'Lab testing', path: '/lab-testing' },
+  ...(articles ? [{ label: 'Answers', path: '/learn' }] : []),
+  { label: 'Contact', path: '/contact' },
+];
+---
+
+<div class="utility">
+  <div class="wrap utility__in">
+    <p>
+      <span>In clinic, online or at your door</span>
+      {sevenDays && <span class="utility__dot">{sevenDays}</span>}
+    </p>
+    <a href={nap.mapsDirections} rel="noopener" target="_blank">
+      <Icon name="pin" />
+      {clinic.street}, {clinic.city}
+    </a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="site-header__logo" href="/" aria-label={`${clinic.name} home`}>
+      <Logo />
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li><a href="/men" aria-current={isActive('/men') ? 'page' : undefined}>Men</a></li>
+        <li><a href="/women" aria-current={isActive('/women') ? 'page' : undefined}>Women</a></li>
+        <li class="nav__has">
+          <a href="/treatments" aria-current={isActive('/treatments') ? 'true' : undefined}>
+            Treatments <Icon name="chevron" />
+          </a>
+          <div class="nav__panel nav__panel--mega">
+            <div>
+              <p class="nav__label">Treatments</p>
+              <ul class="nav__grid">
+                {
+                  treatments.map((t) => (
+                    <li>
+                      <a class="nav__item" href={paths.treatments(t.id)}>
+                        <span class="icon-badge"><Icon name={t.data.icon} /></span>
+                        <span>
+                          <strong>{t.data.navLabel}</strong>
+                          <small>{t.data.cardBlurb}</small>
+                        </span>
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+            <div class="nav__aside">
+              <p class="nav__label">Start with a symptom</p>
+              <ul>
+                {
+                  conditions.map((c) => (
+                    <li>
+                      <a href={paths.conditions(c.id)}>{c.data.navLabel}</a>
+                    </li>
+                  ))
+                }
+              </ul>
+              <a class="link-arrow" href="/lab-testing">Lab testing <Icon name="arrow" class="i-arrow" /></a>
+            </div>
+          </div>
+        </li>
+        <li><a href="/pricing" aria-current={isActive('/pricing') ? 'page' : undefined}>Pricing</a></li>
+        <li class="nav__has">
+          <a href="/areas" aria-current={isActive('/areas') ? 'true' : undefined}>
+            Locations <Icon name="chevron" />
+          </a>
+          <div class="nav__panel">
+            <ul class="nav__stack">
+              {
+                locations.map((l) => (
+                  <li>
+                    <a href={l.path}>
+                      <Icon name={l.icon} /> {l.label}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </li>
+        <li class="nav__has">
+          <a href="/about" aria-current={isActive('/about') ? 'true' : undefined}>
+            About <Icon name="chevron" />
+          </a>
+          <div class="nav__panel">
+            <ul class="nav__stack">
+              {about.map((l) => <li><a href={l.path}>{l.label}</a></li>)}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="site-header__cta">
+      <a class="site-header__phone" href={nap.telHref} data-event="call_click">
+        <Icon name="phone" />
+        <span data-phone>{clinic.phoneDisplay}</span>
+      </a>
+      <a class="btn btn--sun btn--sm" href="/assessment" data-event="assessment_start">
+        Start assessment
+      </a>
+    </div>
+
+    <details class="mnav">
+      <summary aria-label="Menu">
+        <Icon name="menu" class="mnav__open" />
+        <Icon name="close" class="mnav__close" />
+      </summary>
+      <nav class="mnav__panel" aria-label="Mobile">
+        <div class="mnav__cta">
+          <a class="btn btn--sun" href="/assessment" data-event="assessment_start">Start assessment</a>
+          <a class="btn btn--ghost" href={nap.telHref} data-event="call_click">
+            <Icon name="phone" /> Call {clinic.phoneDisplay}
+          </a>
+        </div>
+        <ul class="mnav__top">
+          <li><a href="/men">For men</a></li>
+          <li><a href="/women">For women</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/lab-testing">Lab testing</a></li>
+        </ul>
+        <p class="nav__label">Treatments</p>
+        <ul>
+          {treatments.map((t) => <li><a href={paths.treatments(t.id)}>{t.data.navLabel}</a></li>)}
+        </ul>
+        <p class="nav__label">Start with a symptom</p>
+        <ul>
+          {conditions.map((c) => <li><a href={paths.conditions(c.id)}>{c.data.navLabel}</a></li>)}
+        </ul>
+        <p class="nav__label">Locations</p>
+        <ul>
+          {locations.map((l) => <li><a href={l.path}>{l.label}</a></li>)}
+        </ul>
+        <p class="nav__label">Clinic</p>
+        <ul>
+          {about.map((l) => <li><a href={l.path}>{l.label}</a></li>)}
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<style>
+  .utility {
+    background: var(--ink);
+    color: rgb(251 248 242 / 0.82);
+    font-size: 0.82rem;
+    line-height: 1.3;
+  }
+  .utility__in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 2.35rem;
+  }
+  .utility p {
+    display: flex;
+    gap: 0.9rem;
+    margin: 0;
+    font-weight: 560;
+    letter-spacing: 0.01em;
+  }
+  .utility__dot::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin-right: 0.9rem;
+    border-radius: 50%;
+    background: var(--sun-2);
+    vertical-align: middle;
+  }
+  .utility a {
+    display: none;
+    align-items: center;
+    gap: 0.4rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  .utility a:hover {
+    color: var(--sun-2);
+  }
+  .utility a :global(svg) {
+    width: 0.95rem;
+    height: 0.95rem;
+  }
+  @media (min-width: 40rem) {
+    .utility a {
+      display: inline-flex;
+    }
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgb(251 248 242 / 0.86);
+    -webkit-backdrop-filter: saturate(1.4) blur(14px);
+    backdrop-filter: saturate(1.4) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .site-header__in {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    min-height: 4.5rem;
+  }
+  .site-header__logo {
+    display: inline-flex;
+    margin-right: auto;
+    text-decoration: none;
+  }
+  .site-header__cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .site-header__phone {
+    display: none;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--ink);
+    font-weight: 620;
+    font-size: 0.96rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .site-header__phone :global(svg) {
+    width: 1.05rem;
+    height: 1.05rem;
+    color: var(--sun-deep);
+  }
+  .site-header__cta .btn {
+    display: none;
+  }
+  @media (min-width: 30rem) {
+    .site-header__cta .btn {
+      display: inline-flex;
+    }
+  }
+  @media (min-width: 80rem) {
+    .site-header__phone {
+      display: inline-flex;
+    }
+  }
+
+  /* Desktop navigation */
+  .nav {
+    display: none;
+  }
+  @media (min-width: 68rem) {
+    .nav {
+      display: block;
+      margin-right: auto;
+    }
+    .site-header__logo {
+      margin-right: clamp(1rem, 2.5vw, 2.5rem);
+    }
+    .mnav {
+      display: none;
+    }
+  }
+  .nav__list {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    list-style: none;
+  }
+  .nav__list > li > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.55rem 0.8rem;
+    border-radius: var(--r-pill);
+    color: var(--ink);
+    font-size: 0.97rem;
+    font-weight: 560;
+    text-decoration: none;
+    transition: background-color 0.2s var(--ease);
+  }
+  .nav__list > li > a:hover,
+  .nav__has:hover > a,
+  .nav__has:focus-within > a {
+    background: rgb(15 46 41 / 0.07);
+  }
+  .nav__list > li > a[aria-current] {
+    background: var(--sea-soft);
+  }
+  .nav__list > li > a :global(svg) {
+    width: 0.9rem;
+    height: 0.9rem;
+    opacity: 0.6;
+    transition: transform 0.25s var(--ease);
+  }
+  .nav__has {
+    position: relative;
+  }
+  .nav__has:hover > a :global(svg),
+  .nav__has:focus-within > a :global(svg) {
+    transform: rotate(180deg);
+  }
+  .nav__panel {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 60;
+    min-width: 17rem;
+    margin-top: 0.6rem;
+    padding: 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    background: var(--paper);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 6px);
+    transition:
+      opacity 0.2s var(--ease),
+      transform 0.2s var(--ease),
+      visibility 0.2s;
+  }
+  /* Invisible bridge so the pointer can travel from the link to the panel. */
+  .nav__panel::before {
+    content: '';
+    position: absolute;
+    inset: -0.7rem 0 auto;
+    height: 0.7rem;
+  }
+  .nav__has:hover > .nav__panel,
+  .nav__has:focus-within > .nav__panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+  .nav__panel--mega {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    gap: 0.5rem;
+    width: min(54rem, calc(100vw - 3rem));
+    padding: 1.25rem;
+    left: 0;
+    transform: translate(-28%, 6px);
+  }
+  .nav__has:hover > .nav__panel--mega,
+  .nav__has:focus-within > .nav__panel--mega {
+    transform: translate(-28%, 0);
+  }
+  .nav__label {
+    margin: 0 0 0.6rem;
+    padding-inline: 0.6rem;
+    color: var(--muted);
+    font-size: 0.74rem;
+    font-weight: 650;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+  .nav__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.15rem;
+    list-style: none;
+  }
+  .nav__item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem;
+    border-radius: 14px;
+    color: var(--ink);
+    text-decoration: none;
+    transition: background-color 0.2s var(--ease);
+  }
+  .nav__item:hover {
+    background: var(--sand);
+    color: var(--ink);
+  }
+  .nav__item .icon-badge {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 12px;
+  }
+  .nav__item strong {
+    display: block;
+    font-size: 0.97rem;
+    font-weight: 620;
+    line-height: 1.25;
+  }
+  .nav__item small {
+    display: block;
+    margin-top: 0.1rem;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.3;
+  }
+  .nav__aside {
+    padding: 1rem 0.6rem 0.75rem 1rem;
+    border-radius: 14px;
+    background: var(--sand);
+  }
+  .nav__aside ul {
+    display: grid;
+    gap: 0.1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+  }
+  .nav__aside ul a {
+    display: block;
+    padding: 0.4rem 0.6rem;
+    border-radius: 10px;
+    color: var(--ink);
+    font-size: 0.95rem;
+    font-weight: 560;
+    text-decoration: none;
+  }
+  .nav__aside ul a:hover {
+    background: var(--paper);
+  }
+  .nav__aside .link-arrow {
+    margin-left: 0.6rem;
+    font-size: 0.93rem;
+  }
+  .nav__stack {
+    display: grid;
+    gap: 0.1rem;
+    list-style: none;
+  }
+  .nav__stack a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 12px;
+    color: var(--ink);
+    font-size: 0.96rem;
+    font-weight: 560;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .nav__stack a:hover {
+    background: var(--sand);
+  }
+  .nav__stack a :global(svg) {
+    width: 1.05rem;
+    height: 1.05rem;
+    color: var(--sea-deep);
+  }
+
+  /* Mobile navigation: a <details> element, no JavaScript. */
+  .mnav summary {
+    display: grid;
+    place-items: center;
+    width: 2.9rem;
+    height: 2.9rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    color: var(--ink);
+    cursor: pointer;
+    list-style: none;
+  }
+  .mnav summary::-webkit-details-marker {
+    display: none;
+  }
+  .mnav summary :global(svg) {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  .mnav :global(.mnav__close),
+  .mnav[open] :global(.mnav__open) {
+    display: none;
+  }
+  .mnav[open] :global(.mnav__close) {
+    display: block;
+  }
+  .mnav__panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    max-height: calc(100dvh - 7rem);
+    overflow-y: auto;
+    padding: 1.25rem var(--gutter) 2.5rem;
+    border-bottom: 1px solid var(--line);
+    background: var(--cream);
+    box-shadow: var(--shadow-lg);
+  }
+  .mnav__cta {
+    display: grid;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+  .mnav__panel ul {
+    display: grid;
+    margin-bottom: 1.4rem;
+    list-style: none;
+  }
+  .mnav__panel ul a {
+    display: block;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    font-size: 1.05rem;
+    font-weight: 560;
+    text-decoration: none;
+  }
+  .mnav__top a {
+    font-family: var(--font-display);
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.015em;
+  }
+  .mnav__panel .nav__label {
+    padding: 0;
+    margin-bottom: 0.2rem;
+  }
+</style>

@@ -1,0 +1,84 @@
+---
+// Wordmark: a rising sun over a single wave, then the name. Stand-in until the
+// clinic supplies its own logo files.
+interface Props {
+  tone?: 'ink' | 'light';
+}
+const { tone = 'ink' } = Astro.props;
+---
+
+<span class:list={['logo', `logo--${tone}`]}>
+  <svg class="logo__mark" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+    <circle cx="20" cy="20" r="19" class="logo__ring"></circle>
+    <path d="M9.500 22a10.500 10.500 0 0 1 21 0Z" class="logo__sun"></path>
+    <path
+      d="M7 26.500c3.250-2.400 6.500-2.400 9.750 0s6.500 2.400 9.750 0 4.300-2.200 6.500-1.300"
+      class="logo__wave"></path>
+    <path d="M11.500 31c2.800-1.700 5.700-1.700 8.500 0s5.700 1.700 8.500 0" class="logo__wave logo__wave--2"
+    ></path>
+  </svg>
+  <span class="logo__text">
+    <span class="logo__name">Hormonal Health</span>
+    <span class="logo__md">MD</span>
+  </span>
+</span>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .logo__mark {
+    width: 2.35rem;
+    height: 2.35rem;
+    flex: none;
+  }
+  .logo__ring {
+    fill: var(--ink);
+  }
+  .logo__sun {
+    fill: var(--sun);
+  }
+  .logo__wave {
+    fill: none;
+    stroke: var(--cream);
+    stroke-width: 1.7;
+    stroke-linecap: round;
+  }
+  .logo__wave--2 {
+    opacity: 0.55;
+  }
+  .logo__text {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    white-space: nowrap;
+  }
+  .logo__name {
+    font-family: var(--font-display);
+    font-size: 1.32rem;
+    font-variation-settings: 'opsz' 30;
+    letter-spacing: -0.02em;
+  }
+  .logo__md {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--sun-deep);
+  }
+  .logo--light {
+    color: var(--cream);
+  }
+  .logo--light .logo__ring {
+    fill: var(--cream);
+  }
+  .logo--light .logo__wave {
+    stroke: var(--ink);
+  }
+  .logo--light .logo__md {
+    color: var(--sun-2);
+  }
+</style>

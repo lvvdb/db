@@ -1,0 +1,181 @@
+---
+import '@fontsource-variable/fraunces/opsz.css';
+import '@fontsource-variable/fraunces/opsz-italic.css';
+import '@fontsource-variable/instrument-sans/wght.css';
+import '../styles/global.css';
+import frauncesUrl from '@fontsource-variable/fraunces/files/fraunces-latin-opsz-normal.woff2?url';
+import sansUrl from '@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2?url';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { clinic } from '../config/clinic';
+import { entries, paths, SHOW_DRAFTS } from '../lib/content';
+import { abs, breadcrumbNode, clinicNode, graph, pageNode, websiteNode } from '../lib/schema';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Canonical path, no trailing slash. "/" for the homepage. */
+  path: string;
+  noindex?: boolean;
+  /** ISO date the page copy last changed. */
+  updated?: string;
+  lang?: string;
+  crumbs?: { name: string; path: string }[];
+  /** Extra JSON-LD nodes for this page (Service, FAQPage ...). */
+  schema?: (Record<string, unknown> | null)[];
+  /** Clinical page: MedicalWebPage, plus reviewedBy once a reviewer is confirmed. */
+  medical?: boolean;
+  pageType?: string;
+  /** Full service list in the clinic node (home and about only). */
+  fullClinic?: boolean;
+  alternates?: { lang: string; path: string }[];
+  ogType?: 'website' | 'article';
+  /** Shown in a bar across the top when a page is a draft or on hold. */
+  notice?: string;
+}
+
+const {
+  title,
+  description,
+  path,
+  noindex = false,
+  updated,
+  lang = 'en',
+  crumbs,
+  schema = [],
+  medical = false,
+  pageType,
+  fullClinic = false,
+  alternates = [],
+  ogType = 'website',
+  notice,
+} = Astro.props;
+
+const canonical = abs(path);
+const services = fullClinic
+  ? (await entries('treatments'))
+      .filter((t) => t.data.status === 'live')
+      .map((t) => ({ name: t.data.serviceName, path: paths.treatments(t.id) }))
+  : [];
+
+const jsonLd = graph([
+  clinicNode(services),
+  websiteNode(),
+  pageNode({
+    path,
+    title,
+    description,
+    updated,
+    medical,
+    type: pageType,
+    lang: lang === 'es' ? 'es-US' : 'en-US',
+    hasBreadcrumb: Boolean(crumbs?.length),
+  }),
+  crumbs?.length ? breadcrumbNode(path, crumbs) : null,
+  ...schema,
+]);
+const ogLocale = lang === 'es' ? 'es_US' : 'en_US';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'} />
+    {path === '/' && clinic.googleSiteVerification && (
+      <meta name="google-site-verification" content={clinic.googleSiteVerification} />
+    )}
+    {alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={abs(a.path)} />)}
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={clinic.name} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={abs('/og.png')} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    {updated && <meta property="og:updated_time" content={updated} />}
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="theme-color" content="#0f2e29" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href={frauncesUrl} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={sansUrl} as="font" type="font/woff2" crossorigin />
+
+    <script type="application/ld+json" set:html={jsonLd} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    {notice && <div class="notice" role="status">{notice}</div>}
+    <Header path={path} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+
+    {clinic.callTrackingNumber && (
+      <script
+        is:inline
+        define:vars={{ real: clinic.phoneE164, swap: clinic.callTrackingNumber }}
+      >
+        // The real number stays in the HTML and markup. Only the visible link is swapped.
+        document.querySelectorAll('a[href="tel:' + real + '"]').forEach(function (a) {
+          a.href = 'tel:' + swap.e164;
+          var t = a.querySelector('[data-phone]') || a;
+          if (t.childElementCount === 0) t.textContent = swap.display;
+        });
+      </script>
+    )}
+    {clinic.analyticsEndpoint && (
+      <script is:inline define:vars={{ endpoint: clinic.analyticsEndpoint }}>
+        // Event name and page path only. Nothing about health ever leaves the page.
+        window.hhmdTrack = function (name) {
+          try {
+            navigator.sendBeacon(endpoint, JSON.stringify({ event: name, path: location.pathname }));
+          } catch (e) {}
+        };
+        document.addEventListener('click', function (e) {
+          var el = e.target.closest && e.target.closest('[data-event]');
+          if (el) window.hhmdTrack(el.getAttribute('data-event'));
+        });
+      </script>
+    )}
+  </body>
+</html>
+
+<style>
+  .skip {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 100;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    background: var(--ink);
+    color: var(--cream);
+    font-weight: 600;
+    text-decoration: none;
+    transition: top 0.2s;
+  }
+  .skip:focus {
+    top: 1rem;
+    color: var(--cream);
+  }
+  .notice {
+    padding: 0.6rem var(--gutter);
+    background: #fff4c7;
+    border-bottom: 1px dashed #b98300;
+    color: #5c4100;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+  }
+</style>

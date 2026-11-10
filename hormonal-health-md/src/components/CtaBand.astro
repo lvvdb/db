@@ -1,0 +1,79 @@
+---
+import Icon from './Icon.astro';
+import { clinic, nap } from '../config/clinic';
+
+interface Props {
+  title?: string;
+  text?: string;
+}
+const {
+  title = 'Start with <em>your numbers.</em>',
+  text = 'Answer a few questions or call the clinic. We will tell you which labs make sense and what the first visit looks like.',
+} = Astro.props;
+---
+
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-band__card">
+      <svg class="cta-band__art" viewBox="0 0 600 300" aria-hidden="true" preserveAspectRatio="xMaxYMax slice">
+        <circle cx="470" cy="300" r="150" fill="#f79a5c" opacity=".9"></circle>
+        <circle cx="470" cy="300" r="225" fill="none" stroke="#f79a5c" opacity=".35"></circle>
+        <circle cx="470" cy="300" r="300" fill="none" stroke="#f79a5c" opacity=".2"></circle>
+      </svg>
+      <div class="cta-band__copy">
+        <h2 set:html={title} />
+        <p>{text}</p>
+        <div class="btn-row">
+          <a class="btn btn--sun" href="/assessment" data-event="assessment_start">
+            Start the assessment <Icon name="arrow" class="i-arrow" />
+          </a>
+          <a class="btn btn--outline-light" href={nap.telHref} data-event="call_click">
+            <Icon name="phone" /> <span data-phone>{clinic.phoneDisplay}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-band {
+    padding-block: clamp(2.5rem, 6vw, 5rem);
+  }
+  .cta-band__card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2rem, 6vw, 4.5rem);
+    border-radius: var(--r-xl);
+    background: var(--ink);
+    color: rgb(251 248 242 / 0.8);
+    isolation: isolate;
+  }
+  .cta-band__art {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+  .cta-band__copy {
+    max-width: 34rem;
+  }
+  .cta-band h2 {
+    color: var(--cream);
+    font-size: var(--step-4);
+  }
+  .cta-band h2 :global(em) {
+    color: var(--sun-2);
+  }
+  .cta-band p {
+    margin: 1.1rem 0 1.75rem;
+    font-size: var(--step-1);
+    line-height: 1.5;
+  }
+  @media (max-width: 40rem) {
+    .cta-band__art {
+      opacity: 0.35;
+    }
+  }
+</style>

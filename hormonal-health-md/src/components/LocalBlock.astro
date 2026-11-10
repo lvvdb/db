@@ -1,0 +1,240 @@
+---
+// The same block closes every page: name, address and phone exactly as registered,
+// hours, a map link, the three ways to get care, and the cities served.
+import Icon from './Icon.astro';
+import { clinic, nap } from '../config/clinic';
+import { entries, paths } from '../lib/content';
+
+const areas = await entries('areas');
+const ways = [
+  clinic.routes.clinic && {
+    icon: 'clinic',
+    label: 'In clinic',
+    text: 'Golden Isles Dr, Hallandale Beach',
+    path: '/contact',
+  },
+  clinic.routes.telehealth && {
+    icon: 'video',
+    label: 'Online',
+    text: 'Telehealth visits for Florida residents',
+    path: '/telehealth',
+  },
+  clinic.routes.mobile && {
+    icon: 'home',
+    label: 'At your door',
+    text: 'Mobile IV service to homes and condos',
+    path: '/mobile-iv/hallandale-beach',
+  },
+].filter(Boolean) as { icon: string; label: string; text: string; path: string }[];
+---
+
+<section class="local" aria-labelledby="local-title">
+  <div class="local__grid">
+    <div class="local__nap">
+      <p class="eyebrow">Visit, call or log on</p>
+      <h2 id="local-title">{clinic.name}</h2>
+      <address>
+        {clinic.street}, {clinic.suite}<br />
+        {clinic.city}, {clinic.region}
+        {clinic.postalCode}
+      </address>
+      <a class="local__phone" href={nap.telHref} data-event="call_click">
+        <Icon name="phone" />
+        <span data-phone>{clinic.phoneDisplay}</span>
+      </a>
+      <div class="btn-row">
+        <a class="btn btn--light btn--sm" href={nap.mapsDirections} target="_blank" rel="noopener">
+          <Icon name="directions" /> Get directions
+        </a>
+        <a class="btn btn--outline-light btn--sm" href={nap.mapsSearch} target="_blank" rel="noopener">
+          <Icon name="pin" /> View on Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div class="local__hours">
+      <h3>Hours</h3>
+      {
+        clinic.hours ? (
+          <dl>
+            {clinic.hours.map((h) => (
+              <div>
+                <dt>{h.label}</dt>
+                <dd>
+                  {h.opens} to {h.closes}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        ) : (
+          <p>
+            [[CONFIRM: opening hours for each day of the week]]
+            <span class="local__note">Call to check today's hours before you drive over.</span>
+          </p>
+        )
+      }
+    </div>
+
+    <div class="local__ways">
+      <h3>Three ways to get care</h3>
+      <ul>
+        {
+          ways.map((w) => (
+            <li>
+              <a href={w.path}>
+                <span class="icon-badge icon-badge--ink">
+                  <Icon name={w.icon} />
+                </span>
+                <span>
+                  <strong>{w.label}</strong>
+                  <small>{w.text}</small>
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <p class="local__serving">
+    <span>Serving</span>
+    <a href="/contact">{clinic.city}</a>{
+      areas.map((a, i) => (
+        <>
+          {i === areas.length - 1 ? ' and ' : ', '}
+          <a href={paths.areas(a.id)}>{a.data.city}</a>
+        </>
+      ))
+    }, with <a href="/telehealth">telehealth across Florida</a>.
+  </p>
+</section>
+
+<style>
+  .local {
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--line-light);
+  }
+  .local__grid {
+    display: grid;
+    gap: 2.5rem;
+  }
+  @media (min-width: 56rem) {
+    .local__grid {
+      grid-template-columns: 1.25fr 0.9fr 1.1fr;
+      gap: clamp(2rem, 5vw, 4.5rem);
+    }
+  }
+  .local h2 {
+    margin: 0.9rem 0 1rem;
+    color: var(--cream);
+    font-size: var(--step-3);
+  }
+  .local h3 {
+    margin-bottom: 1rem;
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 650;
+    font-variation-settings: normal;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+  .local address {
+    font-size: 1.08rem;
+    line-height: 1.55;
+    color: rgb(251 248 242 / 0.86);
+  }
+  .local__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 1rem 0 1.4rem;
+    color: var(--cream) !important;
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+  .local__phone :global(svg) {
+    width: 1.3rem;
+    height: 1.3rem;
+    color: var(--sun-2);
+  }
+  .local__phone:hover {
+    color: var(--sun-2) !important;
+  }
+  .local dl {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+  }
+  .local dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--line-light);
+  }
+  .local dd {
+    margin: 0;
+    color: var(--cream);
+  }
+  .local__note {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.92rem;
+    opacity: 0.75;
+  }
+  .local__ways ul {
+    display: grid;
+    gap: 0.5rem;
+    list-style: none;
+  }
+  .local__ways a {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--line-light);
+    border-radius: var(--r-md);
+    color: var(--cream) !important;
+    text-decoration: none;
+    transition:
+      background-color 0.25s var(--ease),
+      border-color 0.25s var(--ease);
+  }
+  .local__ways a:hover {
+    background: rgb(251 248 242 / 0.07);
+    border-color: rgb(251 248 242 / 0.35);
+  }
+  .local__ways strong {
+    display: block;
+    font-weight: 620;
+    line-height: 1.25;
+  }
+  .local__ways small {
+    display: block;
+    color: rgb(251 248 242 / 0.68);
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+  .local__ways .icon-badge {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+  .local__serving {
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    color: rgb(251 248 242 / 0.8);
+  }
+  .local__serving span {
+    margin-right: 0.5rem;
+    color: var(--sun-2);
+    font-size: 0.78rem;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+</style>

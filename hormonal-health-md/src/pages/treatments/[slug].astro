@@ -1,0 +1,209 @@
+---
+import { render } from 'astro:content';
+import ContentPage from '../../layouts/ContentPage.astro';
+import Icon from '../../components/Icon.astro';
+import { entries, paths } from '../../lib/content';
+import { serviceNode } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const all = await entries('treatments');
+  return all.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const path = paths.treatments(entry.id);
+const { Content, headings } = await render(entry);
+
+const conditions = (await entries('conditions')).filter((c) => d.conditions.includes(c.id));
+const areas = await entries('areas');
+const routeLabel = { clinic: 'In clinic', telehealth: 'Online', mobile: 'At your door' } as const;
+const routeIcon = { clinic: 'clinic', telehealth: 'video', mobile: 'home' } as const;
+const routePath = { clinic: '/contact', telehealth: '/telehealth', mobile: '/mobile-iv/hallandale-beach' } as const;
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Treatments', path: '/treatments' },
+  { name: d.navLabel, path },
+];
+---
+
+<ContentPage
+  path={path}
+  title={d.title}
+  description={d.description}
+  eyebrow={d.eyebrow}
+  headline={d.headline}
+  lede={d.lede}
+  updated={d.updated}
+  status={d.status}
+  holdReason={d.holdReason}
+  crumbs={crumbs}
+  headings={headings}
+  faqs={d.faqs}
+  faqTitle={`${d.navLabel}: questions people ask`}
+  sources={d.sources}
+  schema={[serviceNode({ path, name: d.serviceName, description: d.description })]}
+>
+  <div slot="aside" class="glance">
+    <p class="glance__title"><Icon name={d.icon} /> At a glance</p>
+    <dl>
+      {
+        d.glance.map((g) => (
+          <div>
+            <dt>{g.label}</dt>
+            <dd>{g.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+    <div class="chip-row">
+      {
+        d.routes.map((r) => (
+          <a class="chip" href={routePath[r]}>
+            <Icon name={routeIcon[r]} /> {routeLabel[r]}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <Content />
+
+  <section slot="after" class="section section--sand next">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Keep going</p>
+        <h2>Related care and <em>how to reach us.</em></h2>
+      </div>
+      <div class="next__grid">
+        {
+          conditions.length > 0 && (
+            <div class="card">
+              <h3>Start with the symptom</h3>
+              <ul class="next__list">
+                {conditions.map((c) => (
+                  <li>
+                    <a href={paths.conditions(c.id)}>
+                      {c.data.navLabel} <Icon name="arrow" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+        <div class="card">
+          <h3>Coming from nearby</h3>
+          <ul class="next__list">
+            <li><a href="/contact">Hallandale Beach clinic <Icon name="arrow" /></a></li>
+            {
+              areas.map((a) => (
+                <li>
+                  <a href={paths.areas(a.id)}>
+                    From {a.data.city} <Icon name="arrow" />
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Before you book</h3>
+          <ul class="next__list">
+            <li><a href="/pricing">Pricing and what is included <Icon name="arrow" /></a></li>
+            <li><a href="/team">Meet the team <Icon name="arrow" /></a></li>
+            <li><a href="/lab-testing">Lab testing <Icon name="arrow" /></a></li>
+            <li><a href="/assessment">Two-minute assessment <Icon name="arrow" /></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</ContentPage>
+
+<style>
+  .glance {
+    padding: clamp(1.4rem, 3vw, 1.9rem);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    background: rgb(255 255 255 / 0.92);
+    box-shadow: var(--shadow-md);
+  }
+  .glance__title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 1.1rem;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+  }
+  .glance__title :global(svg) {
+    width: 2.3rem;
+    height: 2.3rem;
+    padding: 0.5rem;
+    border-radius: 12px;
+    background: var(--sun-soft);
+    color: var(--sun-deep);
+  }
+  .glance dl {
+    display: grid;
+    margin: 0 0 1.25rem;
+  }
+  .glance dl div {
+    padding: 0.8rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .glance dt {
+    color: var(--muted);
+    font-size: 0.74rem;
+    font-weight: 650;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .glance dd {
+    margin: 0.2rem 0 0;
+    color: var(--ink);
+    font-weight: 560;
+    line-height: 1.4;
+  }
+
+  .next__grid {
+    display: grid;
+    gap: clamp(1rem, 2.2vw, 1.5rem);
+  }
+  @media (min-width: 52rem) {
+    .next__grid {
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    }
+  }
+  .next__list {
+    display: grid;
+    list-style: none;
+  }
+  .next__list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+    font-weight: 560;
+    text-decoration: none;
+  }
+  .next__list a:hover {
+    color: var(--sun-deep);
+  }
+  .next__list :global(svg) {
+    flex: none;
+    width: 1rem;
+    height: 1rem;
+    color: var(--sun-deep);
+    transition: transform 0.25s var(--ease);
+  }
+  .next__list a:hover :global(svg) {
+    transform: translateX(4px);
+  }
+</style>

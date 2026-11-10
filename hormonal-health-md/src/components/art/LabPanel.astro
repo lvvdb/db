@@ -1,0 +1,140 @@
+---
+// An illustrative lab panel. It is clearly labelled as an example and shows where
+// markers sit against a range, never a real person's numbers.
+interface Row {
+  label: string;
+  at: number; // 0 to 100 position along the range bar
+  status: 'Low' | 'In range' | 'High' | 'Borderline';
+}
+interface Props {
+  title?: string;
+  rows?: Row[];
+  note?: string;
+}
+const {
+  title = 'Your panel',
+  note = 'Illustrative example. Your plan starts from your own results.',
+  rows = [
+    { label: 'Total testosterone', at: 16, status: 'Low' },
+    { label: 'Free testosterone', at: 24, status: 'Borderline' },
+    { label: 'Estradiol', at: 52, status: 'In range' },
+    { label: 'Thyroid (TSH)', at: 46, status: 'In range' },
+    { label: 'Vitamin D', at: 14, status: 'Low' },
+    { label: 'A1c', at: 60, status: 'In range' },
+  ],
+} = Astro.props;
+---
+
+<figure class="panel">
+  <figcaption class="panel__head">
+    <span class="panel__title">{title}</span>
+    <span class="panel__tag">Example</span>
+  </figcaption>
+  <ul class="panel__rows">
+    {
+      rows.map((r) => (
+        <li>
+          <span class="panel__label">{r.label}</span>
+          <span class="panel__bar" aria-hidden="true">
+            <i style={`left:${r.at}%`} class={r.status === 'In range' ? 'ok' : 'flag'} />
+          </span>
+          <span class:list={['panel__status', r.status === 'In range' ? 'ok' : 'flag']}>{r.status}</span>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="panel__note">{note}</p>
+</figure>
+
+<style>
+  .panel {
+    margin: 0;
+    padding: 1.15rem 1.25rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    background: var(--paper);
+    box-shadow: var(--shadow-lg);
+    font-size: 0.86rem;
+    line-height: 1.3;
+  }
+  .panel__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
+  }
+  .panel__title {
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+  }
+  .panel__tag {
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--r-pill);
+    background: var(--sand);
+    color: var(--muted);
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .panel__rows {
+    display: grid;
+    gap: 0.6rem;
+    list-style: none;
+  }
+  .panel__rows li {
+    display: grid;
+    grid-template-columns: minmax(0, 8.2rem) minmax(3rem, 1fr) 4.6rem;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .panel__label {
+    color: var(--ink);
+    font-weight: 560;
+  }
+  .panel__bar {
+    position: relative;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--sun-soft) 0 28%,
+      var(--sea) 28% 72%,
+      var(--sun-soft) 72% 100%
+    );
+  }
+  .panel__bar i {
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: var(--sea-deep);
+    box-shadow: 0 1px 3px rgb(15 46 41 / 0.35);
+  }
+  .panel__bar i.flag {
+    background: var(--sun);
+  }
+  .panel__status {
+    font-size: 0.76rem;
+    font-weight: 650;
+    text-align: right;
+  }
+  .panel__status.ok {
+    color: var(--sea-deep);
+  }
+  .panel__status.flag {
+    color: var(--sun-deep);
+  }
+  .panel__note {
+    margin: 0.9rem 0 0;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.76rem;
+  }
+</style>

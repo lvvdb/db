@@ -1,0 +1,331 @@
+---
+// Shared shell for every long-form page: treatments, conditions, city pages,
+// mobile IV pages and articles. One H1 (service and city, then the outcome),
+// one H2 per patient question, FAQ, trust block, closing call to action.
+import Base from './Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Faq from '../components/Faq.astro';
+import Icon from '../components/Icon.astro';
+import TrustBlock from '../components/TrustBlock.astro';
+import { clinic, nap } from '../config/clinic';
+import { faqNode } from '../lib/schema';
+
+interface Props {
+  path: string;
+  title: string;
+  description: string;
+  eyebrow: string;
+  headline: string;
+  lede: string;
+  updated: string;
+  status: 'live' | 'hold' | 'draft';
+  holdReason?: string;
+  crumbs: { name: string; path: string }[];
+  headings: { depth: number; slug: string; text: string }[];
+  faqs?: { q: string; a: string }[];
+  faqTitle?: string;
+  sources?: { label: string; url: string }[];
+  schema?: (Record<string, unknown> | null)[];
+  medical?: boolean;
+  ogType?: 'website' | 'article';
+}
+
+const {
+  path,
+  title,
+  description,
+  eyebrow,
+  headline,
+  lede,
+  updated,
+  status,
+  holdReason,
+  crumbs,
+  headings,
+  faqs = [],
+  faqTitle = 'Questions people ask',
+  sources = [],
+  schema = [],
+  medical = true,
+  ogType = 'website',
+} = Astro.props;
+
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const emph = (s: string) => esc(s).replace(/\*([^*]+)\*/g, '<em>$1</em>');
+const toc = headings.filter((h) => h.depth === 2);
+
+const notice =
+  status === 'draft'
+    ? 'Draft. Not published. A clinician must review and sign off before this page goes live.'
+    : status === 'hold'
+      ? `On hold: hidden from search engines until confirmed. ${holdReason ?? ''}`
+      : undefined;
+---
+
+<Base
+  title={title}
+  description={description}
+  path={path}
+  updated={updated}
+  noindex={status !== 'live'}
+  crumbs={crumbs}
+  medical={medical}
+  ogType={ogType}
+  notice={notice}
+  schema={[...schema, faqNode(path, faqs)]}
+>
+  <section class="phero">
+    <div class="wrap">
+      <Breadcrumbs crumbs={crumbs} />
+      <div class:list={['phero__grid', { 'phero__grid--solo': !Astro.slots.has('aside') }]}>
+        <div class="phero__copy">
+          <h1>
+            <span class="eyebrow">{eyebrow}</span>
+            <span class="phero__headline" set:html={emph(headline)} />
+          </h1>
+          <p class="lede">{lede}</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="/assessment" data-event="assessment_start">
+              Start the assessment <Icon name="arrow" class="i-arrow" />
+            </a>
+            <a class="btn btn--ghost" href={nap.telHref} data-event="call_click">
+              <Icon name="phone" /> Call <span data-phone>{clinic.phoneDisplay}</span>
+            </a>
+          </div>
+        </div>
+        {Astro.slots.has('aside') && <div class="phero__aside"><slot name="aside" /></div>}
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap pbody">
+    <article class="pbody__main">
+      <div class="prose">
+        <slot />
+      </div>
+
+      <slot name="after-prose" />
+
+      {
+        faqs.length > 0 && (
+          <section class="pfaq" aria-labelledby="faq-title">
+            <h2 id="faq-title">{faqTitle}</h2>
+            <Faq faqs={faqs} />
+          </section>
+        )
+      }
+
+      {medical && <TrustBlock updated={updated} sources={sources} />}
+    </article>
+
+    <aside class="pbody__rail" aria-label="On this page">
+      <div class="rail">
+        <div class="rail__card rail__card--cta">
+          <p class="rail__kicker">Talk to the clinic</p>
+          <a class="rail__phone" href={nap.telHref} data-event="call_click">
+            <Icon name="phone" /> <span data-phone>{clinic.phoneDisplay}</span>
+          </a>
+          <a class="btn btn--sun" href="/assessment" data-event="assessment_start">
+            Start the assessment
+          </a>
+          <ul>
+            <li><Icon name="clinic" /> {clinic.street}, {clinic.city}</li>
+            <li><Icon name="video" /> Telehealth across Florida</li>
+            <li><Icon name="home" /> Mobile IV at your door</li>
+          </ul>
+        </div>
+        {
+          toc.length > 2 && (
+            <nav class="rail__card rail__toc" aria-label="Table of contents">
+              <p class="rail__kicker">On this page</p>
+              <ol>
+                {toc.map((h) => (
+                  <li>
+                    <a href={`#${h.slug}`}>{h.text}</a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )
+        }
+      </div>
+    </aside>
+  </div>
+
+  <slot name="after" />
+
+  <CtaBand />
+</Base>
+
+<style>
+  .phero {
+    position: relative;
+    padding-block: clamp(1.5rem, 3vw, 2.25rem) clamp(3rem, 6vw, 5rem);
+    isolation: isolate;
+    overflow: hidden;
+  }
+  .phero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(46rem 26rem at 96% 0%, rgb(247 154 92 / 0.24), transparent 62%),
+      radial-gradient(34rem 22rem at 0% 100%, rgb(205 228 218 / 0.7), transparent 60%);
+  }
+  .phero__grid {
+    display: grid;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    align-items: center;
+    margin-top: clamp(2rem, 4vw, 3.25rem);
+  }
+  @media (min-width: 62rem) {
+    .phero__grid {
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    }
+    .phero__grid--solo {
+      grid-template-columns: minmax(0, 52rem);
+    }
+  }
+  .phero h1 {
+    display: grid;
+    gap: 1.3rem;
+    font-size: var(--step-4);
+    line-height: 1.04;
+  }
+  .phero__headline {
+    display: block;
+  }
+  .phero .lede {
+    max-width: 38rem;
+    margin: 1.5rem 0 1.9rem;
+  }
+
+  .pbody {
+    display: grid;
+    gap: 3rem;
+    padding-block: clamp(2.5rem, 6vw, 5rem);
+  }
+  @media (min-width: 62rem) {
+    .pbody {
+      grid-template-columns: minmax(0, 1fr) 19.5rem;
+      gap: clamp(3rem, 6vw, 5.5rem);
+      align-items: start;
+    }
+  }
+  .pbody__main {
+    min-width: 0;
+    max-width: 46rem;
+  }
+  .pbody__rail {
+    display: none;
+  }
+  @media (min-width: 62rem) {
+    .pbody__rail {
+      display: block;
+      position: sticky;
+      top: 6rem;
+      max-height: calc(100dvh - 7rem);
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+  }
+  .rail {
+    display: grid;
+    gap: 1rem;
+  }
+  .rail__card {
+    padding: 1.35rem;
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    background: var(--paper);
+  }
+  .rail__card--cta {
+    display: grid;
+    gap: 0.9rem;
+    background: var(--ink);
+    border-color: var(--ink);
+    color: rgb(251 248 242 / 0.8);
+  }
+  .rail__kicker {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.74rem;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .rail__card--cta .rail__kicker {
+    color: var(--sun-2);
+  }
+  .rail__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--cream);
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .rail__phone:hover {
+    color: var(--sun-2);
+  }
+  .rail__phone :global(svg) {
+    width: 1.15rem;
+    height: 1.15rem;
+    color: var(--sun-2);
+  }
+  .rail__card--cta ul {
+    display: grid;
+    gap: 0.5rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--line-light);
+    list-style: none;
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+  .rail__card--cta li {
+    display: flex;
+    gap: 0.55rem;
+  }
+  .rail__card--cta li :global(svg) {
+    flex: none;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.1rem;
+    color: var(--sea);
+  }
+  .rail__toc ol {
+    display: grid;
+    gap: 0.15rem;
+    margin-top: 0.8rem;
+    list-style: none;
+  }
+  .rail__toc a {
+    display: block;
+    padding: 0.4rem 0 0.4rem 0.85rem;
+    border-left: 2px solid var(--line);
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    line-height: 1.35;
+    text-decoration: none;
+    transition:
+      border-color 0.2s var(--ease),
+      color 0.2s var(--ease);
+  }
+  .rail__toc a:hover {
+    border-color: var(--sun);
+    color: var(--ink);
+  }
+
+  .pfaq {
+    margin-top: clamp(3rem, 6vw, 4.5rem);
+  }
+  .pfaq h2 {
+    margin-bottom: 1.5rem;
+    font-size: var(--step-3);
+  }
+</style>

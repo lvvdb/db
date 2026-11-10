@@ -1,0 +1,27 @@
+---
+// Questions written the way people type them. Native <details>, no JavaScript.
+interface Props {
+  faqs: { q: string; a: string }[];
+  open?: number;
+}
+const { faqs, open = 0 } = Astro.props;
+
+// Answers may carry simple [text](/path) links.
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const html = (s: string) =>
+  esc(s)
+    .split(/\n\n+/)
+    .map((p) => `<p>${p.replace(/\[([^\]]+)\]\((\/[^)\s]*)\)/g, '<a href="$2">$1</a>')}</p>`)
+    .join('');
+---
+
+<div class="faq">
+  {
+    faqs.map((f, i) => (
+      <details open={i === open}>
+        <summary>{f.q}</summary>
+        <div class="faq__a" set:html={html(f.a)} />
+      </details>
+    ))
+  }
+</div>

@@ -13,6 +13,9 @@ function markTokens(html: string): string {
   const head = html.slice(0, bodyAt);
   const body = html
     .slice(bodyAt)
+    // Markdown tables get a scroll container so they never break a phone layout.
+    .replace(/<table>/g, '<div class="table-scroll"><table>')
+    .replace(/<\/table>/g, '</table></div>')
     .split(SPLIT)
     .map((part, i) =>
       i % 2 === 1

@@ -1,0 +1,106 @@
+---
+// Who stands behind the page. Until a named, licensed clinician has reviewed it, the
+// block says so with a visible marker and no reviewedBy markup is emitted.
+import Icon from './Icon.astro';
+import { clinic } from '../config/clinic';
+import { formatDate } from '../lib/content';
+
+interface Props {
+  updated: string;
+  sources?: { label: string; url: string }[];
+}
+const { updated, sources = [] } = Astro.props;
+const r = clinic.reviewer;
+---
+
+<aside class="trust" aria-label="Medical review and sources">
+  <div class="trust__review">
+    <span class="icon-badge"><Icon name="shield" /></span>
+    <div>
+      <p class="trust__line">
+        Medically reviewed by{' '}
+        {r ? <a href={r.profilePath}>{r.name}, {r.credentials}</a> : '[[CONFIRM: clinician name and credentials]]'}
+      </p>
+      <p class="trust__meta">
+        {r ? <>Last reviewed <time datetime={updated}>{formatDate(updated)}</time></> : <>Last reviewed [[CONFIRM: date of clinical review]] <span aria-hidden="true">·</span> Copy updated <time datetime={updated}>{formatDate(updated)}</time></>}
+      </p>
+    </div>
+  </div>
+  {
+    sources.length > 0 && (
+      <div class="trust__sources">
+        <h2>Sources</h2>
+        <ol>
+          {sources.map((s) => (
+            <li>
+              <a href={s.url} rel="noopener nofollow" target="_blank">{s.label}</a>
+            </li>
+          ))}
+        </ol>
+      </div>
+    )
+  }
+  <p class="trust__disclaimer">
+    This page is general education, not medical advice. Whether a treatment is right for you
+    depends on your history, an exam and your lab results.
+  </p>
+</aside>
+
+<style>
+  .trust {
+    display: grid;
+    gap: 1.4rem;
+    margin-top: 3.5rem;
+    padding: clamp(1.4rem, 3vw, 2rem);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    background: var(--sand);
+    font-size: 0.95rem;
+  }
+  .trust__review {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .trust__review .icon-badge {
+    background: var(--paper);
+  }
+  .trust__line {
+    margin: 0;
+    color: var(--ink);
+    font-weight: 620;
+    font-size: 1.03rem;
+  }
+  .trust__meta {
+    margin: 0.15rem 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .trust__sources h2 {
+    margin-bottom: 0.7rem;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 650;
+    font-variation-settings: normal;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .trust__sources ol {
+    display: grid;
+    gap: 0.45rem;
+    padding-left: 1.3rem;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+  .trust__sources a {
+    color: var(--ink-soft);
+  }
+  .trust__disclaimer {
+    margin: 0;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+</style>

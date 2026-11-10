@@ -1,0 +1,675 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Faq from '../components/Faq.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Sunrise from '../components/art/Sunrise.astro';
+import LabPanel from '../components/art/LabPanel.astro';
+import AreaMap from '../components/art/AreaMap.astro';
+import { clinic, nap, sevenDays } from '../config/clinic';
+import { entries, paths } from '../lib/content';
+import { faqNode } from '../lib/schema';
+
+const treatments = await entries('treatments');
+const areas = await entries('areas');
+
+const title = 'Hormone Clinic in Hallandale Beach, FL | Hormonal Health MD';
+const description =
+  'Tired, foggy or not yourself? Get labs, a licensed clinician and a plan built around you. In clinic in Hallandale Beach, online or at your door.';
+
+const symptoms = [
+  { icon: 'battery', label: 'Tired all the time', text: 'Sleep does not fix it and coffee stopped working.', path: '/conditions/always-tired' },
+  { icon: 'pulse', label: 'Low drive, low mood', text: 'Less energy, less interest, harder to keep muscle.', path: '/conditions/low-testosterone' },
+  { icon: 'flame', label: 'Hot flashes, broken sleep', text: 'Night sweats, brain fog and a short fuse.', path: '/conditions/menopause' },
+  { icon: 'moon', label: 'Cycles changing', text: 'Periods, mood and sleep are suddenly unpredictable.', path: '/conditions/perimenopause' },
+  { icon: 'heart', label: 'Erections are unreliable', text: 'It is common, treatable and worth a real workup.', path: '/conditions/erectile-dysfunction' },
+  { icon: 'scale', label: 'Weight that will not move', text: 'You eat well and train, and the scale ignores you.', path: '/treatments/medical-weight-loss' },
+];
+
+const steps = [
+  { n: '01', title: 'Tell us what is going on', text: 'Take the two-minute assessment or call. Nothing you answer is stored or sent anywhere.' },
+  { n: '02', title: 'Get your labs drawn', text: 'We order the panel that fits your symptoms and history, so the plan starts from facts.' },
+  { n: '03', title: 'Review every number', text: 'A licensed clinician walks you through your results and builds the plan with you. Treatment is prescribed only when it is clinically right.' },
+  { n: '04', title: 'Follow up and adjust', text: 'Repeat labs and check-ins on a schedule. Your dose follows your results, never a template.' },
+];
+
+const ways = [
+  { icon: 'clinic', title: 'In clinic', text: `See us at ${clinic.street} in the Golden Isles neighborhood, minutes from US-1 and Hallandale Beach Blvd.`, link: '/contact', cta: 'Plan your visit' },
+  { icon: 'video', title: 'Online', text: 'Consults and follow-ups by secure video for people anywhere in Florida who would rather skip the drive.', link: '/telehealth', cta: 'How telehealth works' },
+  { icon: 'home', title: 'At your door', text: 'Our mobile team brings IV therapy to homes, condos and hotels in the cities around the clinic.', link: '/mobile-iv/hallandale-beach', cta: 'See mobile IV' },
+];
+
+const faqs = [
+  {
+    q: 'What does Hormonal Health MD treat?',
+    a: 'We evaluate and treat low testosterone, menopause and perimenopause symptoms, weight that will not respond to diet and exercise, erectile dysfunction and ongoing fatigue. We also offer IV therapy in the clinic and through our mobile service. Every plan starts with a conversation and lab work.',
+  },
+  {
+    q: 'Do I need blood work before starting hormone therapy?',
+    a: 'Yes. Symptoms tell us where to look and labs tell us what is actually happening. Medical guidelines for testosterone therapy call for confirmed low levels on blood tests before treatment, and we follow that. See [lab testing](/lab-testing) for what we check and why.',
+  },
+  {
+    q: 'How much does it cost?',
+    a: 'Cost depends on the labs you need and the treatment you and your clinician choose. [[CONFIRM: consult fee, lab panel prices and typical monthly program cost]]\n\nOur [pricing page](/pricing) explains what you pay for and when, before you commit to anything.',
+  },
+  {
+    q: 'Do you take insurance?',
+    a: '[[CONFIRM: insurance accepted, self-pay policy, and whether HSA or FSA cards are accepted]]',
+  },
+  {
+    q: 'Can I do my visits online?',
+    a: 'Many consults and follow-up visits can happen by video if you are in Florida. Some treatments need an in-person visit or an exam first, and federal rules for prescribing controlled medications such as testosterone change often. Our [telehealth page](/telehealth) explains what can and cannot be done online today.',
+  },
+  {
+    q: 'Do you come to homes and condos?',
+    a: 'Yes for IV therapy. Our mobile team visits homes, condo buildings and hotels near the clinic. [[CONFIRM: mobile service area and fee]] Start with [mobile IV in Hallandale Beach](/mobile-iv/hallandale-beach).',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  path="/"
+  updated="2026-11-09"
+  fullClinic
+  schema={[faqNode('/', faqs)]}
+>
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div class="hero__copy">
+        <h1>
+          <span class="eyebrow">Hormone clinic in Hallandale Beach, FL</span>
+          <span class="hero__headline">Feel like yourself again, <em>starting with your labs.</em></span>
+        </h1>
+        <p class="lede">
+          Hormone therapy, medical weight loss and IV care for men and women, planned around
+          your bloodwork by a licensed clinician. See us in Hallandale Beach, online anywhere
+          in Florida, or at your door.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="/assessment" data-event="assessment_start">
+            Start the 2-minute assessment <Icon name="arrow" class="i-arrow" />
+          </a>
+          <a class="btn btn--ghost" href={nap.telHref} data-event="call_click">
+            <Icon name="phone" /> Call <span data-phone>{clinic.phoneDisplay}</span>
+          </a>
+        </div>
+        <ul class="hero__ticks">
+          <li><Icon name="check" /> Labs before any prescription</li>
+          <li><Icon name="check" /> A plan built from your results</li>
+          {sevenDays && <li><Icon name="check" /> {sevenDays}</li>}
+          <li><Icon name="check" /> Men and women</li>
+        </ul>
+      </div>
+
+      <div class="hero__art">
+        <div class="hero__arch"><Sunrise id="hero" /></div>
+        <div class="hero__panel"><LabPanel /></div>
+        <ul class="hero__ways" aria-label="Ways to get care">
+          <li><Icon name="clinic" /> In clinic</li>
+          <li><Icon name="video" /> Online</li>
+          <li><Icon name="home" /> At your door</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof" aria-label="Why patients choose us">
+    <div class="wrap proof__in">
+      <div>
+        <span class="icon-badge"><Icon name="flask" /></span>
+        <p><strong>Bloodwork first</strong>Every plan starts with a panel, not a guess.</p>
+      </div>
+      <div>
+        <span class="icon-badge"><Icon name="stethoscope" /></span>
+        <p><strong>Licensed clinician</strong>A real person reviews your numbers with you.</p>
+      </div>
+      <div>
+        <span class="icon-badge"><Icon name="pin" /></span>
+        <p><strong>Actually in Hallandale Beach</strong>A local clinic, not a call center.</p>
+      </div>
+      <div>
+        <span class="icon-badge icon-badge--gold"><Icon name="star" /></span>
+        <p><strong>Google reviews</strong>[[CONFIRM: current Google rating and count]]</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Start with a symptom</p>
+        <h2>What is bringing you in?</h2>
+        <p>
+          You do not need to know which hormone is off. Pick what sounds like you and we will
+          show you what it could be and what to test.
+        </p>
+      </div>
+      <div class="grid grid--3">
+        {
+          symptoms.map((s, i) => (
+            <a class="card symptom" href={s.path}>
+              <span class:list={['icon-badge', i % 2 ? 'icon-badge--sun' : '']}>
+                <Icon name={s.icon} />
+              </span>
+              <h3>{s.label}</h3>
+              <p>{s.text}</p>
+              <span class="card__more">See what it could be <Icon name="arrow" /></span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Treatments</p>
+        <h2>Care that follows <em>your results.</em></h2>
+        <p>Every treatment below begins the same way: a conversation, a blood panel and a clinician who explains what the numbers mean.</p>
+      </div>
+      <div class="grid grid--4">
+        {
+          treatments.map((t) => (
+            <a class="card" href={paths.treatments(t.id)}>
+              <span class="icon-badge"><Icon name={t.data.icon} /></span>
+              <h3>{t.data.navLabel}</h3>
+              <p>{t.data.cardBlurb}</p>
+              <span class="card__more">Learn more <Icon name="arrow" /></span>
+            </a>
+          ))
+        }
+      </div>
+      <div class="split">
+        <a class="split__card split__card--men" href="/men">
+          <p class="eyebrow eyebrow--plain">For men</p>
+          <h3>Energy, drive and strength, checked properly.</h3>
+          <span class="link-arrow">Men's health <Icon name="arrow" /></span>
+        </a>
+        <a class="split__card split__card--women" href="/women">
+          <p class="eyebrow eyebrow--plain">For women</p>
+          <h3>Perimenopause and menopause, taken seriously.</h3>
+          <span class="link-arrow">Women's health <Icon name="arrow" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How care works</p>
+        <h2>Four steps, <em>no guesswork.</em></h2>
+        <p>Symptoms tell us where to look. Labs tell us what is true. You get both, explained in plain English.</p>
+      </div>
+      <ol class="steps">
+        {
+          steps.map((s) => (
+            <li>
+              <span class="steps__n">{s.n}</span>
+              <h3>{s.title}</h3>
+              <p>{s.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Three ways to get care</p>
+        <h2>In clinic, online <em>or at your door.</em></h2>
+        <p>One team, three ways to reach it. Pick whatever fits your week.</p>
+      </div>
+      <div class="grid grid--3">
+        {
+          ways.map((w) => (
+            <div class="card way">
+              <span class="icon-badge icon-badge--sun"><Icon name={w.icon} /></span>
+              <h3>{w.title}</h3>
+              <p>{w.text}</p>
+              <a class="card__more card__link" href={w.link}>{w.cta} <Icon name="arrow" /></a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="wrap labs">
+      <div class="labs__copy">
+        <p class="eyebrow">Lab testing</p>
+        <h2>Not ready for treatment? <em>Start with a blood test.</em></h2>
+        <p class="lede">
+          A hormone panel is the cheapest, fastest way to stop guessing. You get your results
+          explained by a clinician, and they are yours to keep whether or not you start
+          treatment with us.
+        </p>
+        <ul class="ticks">
+          <li><Icon name="check" /> Panels for men, women, thyroid and metabolic health</li>
+          <li><Icon name="check" /> Results reviewed with you, in plain English</li>
+          <li><Icon name="check" /> No obligation to start treatment</li>
+        </ul>
+        <a class="btn btn--primary" href="/lab-testing">See lab testing <Icon name="arrow" class="i-arrow" /></a>
+      </div>
+      <div class="labs__art">
+        <LabPanel
+          title="Hormone panel"
+          rows={[
+            { label: 'Estradiol', at: 18, status: 'Low' },
+            { label: 'FSH', at: 84, status: 'High' },
+            { label: 'Total testosterone', at: 38, status: 'In range' },
+            { label: 'Thyroid (TSH)', at: 50, status: 'In range' },
+            { label: 'Ferritin', at: 22, status: 'Borderline' },
+            { label: 'Vitamin D', at: 44, status: 'In range' },
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap area">
+      <div class="area__map"><AreaMap id="home-map" /></div>
+      <div class="area__copy">
+        <p class="eyebrow">Where we are</p>
+        <h2>A real clinic in <em>Golden Isles.</em></h2>
+        <p class="lede">
+          We are at {clinic.street}, {clinic.suite}, just south of Hallandale Beach Blvd between
+          US-1 and the Intracoastal. Patients drive in from across south Broward and northeast
+          Miami-Dade.
+        </p>
+        <ul class="area__list">
+          <li><a href="/contact"><strong>Hallandale Beach</strong><span>The clinic</span><Icon name="arrow" /></a></li>
+          {
+            areas.map((a) => (
+              <li>
+                <a href={paths.areas(a.id)}>
+                  <strong>{a.data.city}</strong>
+                  <span>{a.data.county}</span>
+                  <Icon name="arrow" />
+                </a>
+              </li>
+            ))
+          }
+          <li><a href="/telehealth"><strong>Anywhere in Florida</strong><span>Telehealth</span><Icon name="arrow" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="wrap faqs">
+      <div class="section-head">
+        <p class="eyebrow">Questions</p>
+        <h2>Before you <em>call.</em></h2>
+        <p>Straight answers to what people ask us first.</p>
+        <a class="link-arrow" href="/pricing">See pricing <Icon name="arrow" /></a>
+      </div>
+      <Faq faqs={faqs} />
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .hero {
+    position: relative;
+    padding-block: clamp(2.5rem, 6vw, 5.5rem) clamp(4rem, 8vw, 7rem);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(50rem 32rem at 92% 8%, rgb(247 154 92 / 0.28), transparent 62%),
+      radial-gradient(38rem 26rem at 2% 96%, rgb(205 228 218 / 0.75), transparent 60%);
+  }
+  .hero__in {
+    display: grid;
+    gap: clamp(3rem, 6vw, 5rem);
+    align-items: center;
+  }
+  @media (min-width: 62rem) {
+    .hero__in {
+      grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+    }
+  }
+  .hero h1 {
+    display: grid;
+    gap: 1.4rem;
+  }
+  .hero__headline {
+    display: block;
+  }
+  .hero .lede {
+    max-width: 35rem;
+    margin: 1.6rem 0 2rem;
+  }
+  .hero__ticks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.4rem;
+    margin-top: 2rem;
+    list-style: none;
+    color: var(--ink);
+    font-size: 0.94rem;
+    font-weight: 560;
+  }
+  .hero__ticks li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+  .hero__ticks :global(svg) {
+    width: 1.05rem;
+    height: 1.05rem;
+    padding: 2px;
+    border-radius: 50%;
+    background: var(--sea);
+    color: var(--ink);
+    stroke-width: 2.4;
+  }
+
+  .hero__art {
+    position: relative;
+    width: min(100%, 27rem);
+    margin-inline: auto;
+    padding-bottom: 3.5rem;
+  }
+  .hero__arch {
+    width: 86%;
+    margin-left: auto;
+  }
+  .hero__panel {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: min(21.5rem, 82%);
+  }
+  .hero__ways {
+    position: absolute;
+    top: 13%;
+    left: -2%;
+    display: grid;
+    gap: 0.45rem;
+    list-style: none;
+  }
+  .hero__ways li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: max-content;
+    padding: 0.5rem 0.9rem 0.5rem 0.6rem;
+    border: 1px solid var(--line);
+    border-radius: var(--r-pill);
+    background: rgb(255 255 255 / 0.94);
+    box-shadow: var(--shadow-sm);
+    color: var(--ink);
+    font-size: 0.86rem;
+    font-weight: 620;
+  }
+  .hero__ways li:nth-child(2) {
+    margin-left: 1.25rem;
+  }
+  .hero__ways li:nth-child(3) {
+    margin-left: 0.4rem;
+  }
+  .hero__ways :global(svg) {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 4px;
+    border-radius: 50%;
+    background: var(--sun-soft);
+    color: var(--sun-deep);
+  }
+
+  .proof {
+    border-block: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .proof__in {
+    display: grid;
+    gap: 1.25rem 2rem;
+    padding-block: 1.75rem;
+  }
+  @media (min-width: 40rem) {
+    .proof__in {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 68rem) {
+    .proof__in {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .proof__in > div {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+  .proof p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+  .proof strong {
+    display: block;
+    color: var(--ink);
+    font-size: 1rem;
+    font-weight: 640;
+  }
+
+  .split {
+    display: grid;
+    gap: clamp(1rem, 2.2vw, 1.5rem);
+    margin-top: clamp(1rem, 2.2vw, 1.5rem);
+  }
+  @media (min-width: 48rem) {
+    .split {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .split__card {
+    display: grid;
+    gap: 1rem;
+    align-content: end;
+    min-height: 15rem;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    border-radius: var(--r-lg);
+    color: var(--ink);
+    text-decoration: none;
+    transition:
+      transform 0.35s var(--ease),
+      box-shadow 0.35s var(--ease);
+  }
+  .split__card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    color: var(--ink);
+  }
+  .split__card h3 {
+    max-width: 20rem;
+    font-size: var(--step-3);
+    font-variation-settings: 'opsz' 72;
+    line-height: 1.08;
+  }
+  .split__card .link-arrow {
+    justify-self: start;
+  }
+  .split__card--men {
+    background:
+      radial-gradient(22rem 16rem at 100% 0%, rgb(29 106 93 / 0.28), transparent 70%), var(--sea);
+  }
+  .split__card--women {
+    background:
+      radial-gradient(22rem 16rem at 100% 0%, rgb(242 112 61 / 0.3), transparent 70%),
+      var(--sun-soft);
+  }
+
+  .steps {
+    display: grid;
+    gap: 1.5rem;
+    list-style: none;
+    counter-reset: none;
+  }
+  @media (min-width: 40rem) {
+    .steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 68rem) {
+    .steps {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .steps li {
+    position: relative;
+    padding: 1.6rem 1.5rem 1.7rem;
+    border: 1px solid var(--line-light);
+    border-radius: var(--r-lg);
+    background: rgb(251 248 242 / 0.05);
+  }
+  .steps__n {
+    display: block;
+    margin-bottom: 2.25rem;
+    color: var(--sun-2);
+    font-family: var(--font-display);
+    font-size: var(--step-3);
+    font-style: italic;
+    line-height: 1;
+  }
+  .steps h3 {
+    margin-bottom: 0.6rem;
+    font-size: var(--step-1);
+  }
+  .steps p {
+    color: rgb(251 248 242 / 0.72);
+    font-size: 0.97rem;
+    line-height: 1.55;
+  }
+
+  .way h3 {
+    font-size: var(--step-2) !important;
+  }
+
+  .labs,
+  .area {
+    display: grid;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+  }
+  @media (min-width: 62rem) {
+    .labs {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+    .area {
+      grid-template-columns: 0.95fr 1.05fr;
+    }
+  }
+  .labs__copy > * + *,
+  .area__copy > * + * {
+    margin-top: 1.25rem;
+  }
+  .labs__art {
+    position: relative;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    border-radius: var(--r-xl);
+    background:
+      radial-gradient(18rem 14rem at 100% 0%, rgb(247 154 92 / 0.55), transparent 70%),
+      radial-gradient(18rem 14rem at 0% 100%, rgb(29 106 93 / 0.35), transparent 70%), var(--sea);
+  }
+  .ticks {
+    display: grid;
+    gap: 0.6rem;
+    margin-block: 1.5rem 1.9rem !important;
+    list-style: none;
+    color: var(--ink);
+    font-weight: 560;
+  }
+  .ticks li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .ticks :global(svg) {
+    flex: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: 0.2rem;
+    padding: 2px;
+    border-radius: 50%;
+    background: var(--paper);
+    color: var(--sea-deep);
+    stroke-width: 2.4;
+  }
+
+  .area__list {
+    display: grid;
+    margin-top: 1.75rem !important;
+    border-top: 1px solid var(--line);
+    list-style: none;
+  }
+  .area__list a {
+    display: grid;
+    grid-template-columns: 1fr auto 1.25rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.95rem 0.25rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    text-decoration: none;
+    transition:
+      padding 0.25s var(--ease),
+      background-color 0.25s var(--ease);
+  }
+  .area__list a:hover {
+    padding-inline: 0.9rem 0.25rem;
+    background: var(--sand);
+  }
+  .area__list strong {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .area__list span {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .area__list :global(svg) {
+    width: 1.1rem;
+    height: 1.1rem;
+    color: var(--sun-deep);
+  }
+
+  .faqs {
+    display: grid;
+    gap: 2rem;
+  }
+  @media (min-width: 62rem) {
+    .faqs {
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .faqs .section-head {
+      position: sticky;
+      top: 7rem;
+      margin-bottom: 0;
+    }
+  }
+  .faqs .link-arrow {
+    justify-self: start;
+  }
+</style>

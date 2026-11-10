@@ -1,0 +1,249 @@
+---
+// A schematic of the service area: the clinic, the four cities, the roads people
+// actually take. Drawn by hand as SVG so there is no map embed, no third-party
+// script and no layout shift. Not to scale, and it says so.
+interface Props {
+  /** hallandale-beach | aventura | hollywood | sunny-isles-beach */
+  active?: string;
+  id?: string;
+}
+const { active, id = 'map' } = Astro.props;
+
+const zones: Record<string, { x: number; y: number; w: number; h: number }> = {
+  hollywood: { x: 24, y: 22, w: 372, h: 142 },
+  'hallandale-beach': { x: 24, y: 176, w: 372, h: 132 },
+  aventura: { x: 296, y: 320, w: 100, h: 150 },
+  'sunny-isles-beach': { x: 404, y: 384, w: 44, h: 116 },
+};
+const zone = active ? zones[active] : undefined;
+const is = (k: string) => (active === k ? 'on' : undefined);
+---
+
+<figure class="amap">
+  <svg viewBox="0 0 560 520" role="img" aria-labelledby={`${id}-t ${id}-d`}>
+    <title id={`${id}-t`}>Service area map</title>
+    <desc id={`${id}-d`}>
+      Schematic map showing the clinic on Golden Isles Drive in Hallandale Beach, between US-1
+      and the Intracoastal Waterway, with Hollywood to the north, Aventura to the south and
+      Sunny Isles Beach to the southeast along the ocean.
+    </desc>
+
+    <!-- land and water -->
+    <rect width="560" height="520" class="land"></rect>
+    <path d="M448 0h112v520H448c-6-80 6-160 0-260S454 90 448 0Z" class="sea"></path>
+    <g class="swell">
+      <path d="M476 60q14-7 28 0t28 0"></path>
+      <path d="M484 190q14-7 28 0t28 0"></path>
+      <path d="M472 300q14-7 28 0t28 0"></path>
+    </g>
+    <!-- Intracoastal Waterway, widening at Dumfoundling Bay -->
+    <path
+      d="M396 0c6 60-4 110 2 170s-4 100 0 150c-18 22-22 52-8 78 10 20 12 60 6 122h12c6-62 4-102-4-122 12-24 12-54-2-78 4-50-6-90 0-150s-8-110-2-170Z"
+      class="sea"></path>
+
+    {zone && <rect x={zone.x} y={zone.y} width={zone.w} height={zone.h} rx="18" class="zone" />}
+
+    <!-- roads -->
+    <g class="road">
+      <path d="M96 0c4 170-4 350 0 520"></path>
+      <path d="M286 0c3 170-3 350 0 520"></path>
+      <path d="M426 0c4 130-4 260 0 520"></path>
+      <path d="M24 78h404"></path>
+      <path d="M24 242h404"></path>
+      <path d="M24 388h404"></path>
+      <path d="M286 486h142"></path>
+    </g>
+    <path d="M24 314h424" class="county"></path>
+
+    <!-- road names -->
+    <g class="rlabel">
+      <text x="104" y="506">I-95</text>
+      <text x="294" y="506">US-1</text>
+      <text x="418" y="16" text-anchor="end">A1A</text>
+      <text x="32" y="70">Hollywood Blvd</text>
+      <text x="32" y="234">Hallandale Beach Blvd</text>
+      <text x="32" y="380">Ives Dairy Rd / Lehman Cswy</text>
+      <text x="32" y="308">Broward County</text>
+      <text x="32" y="328">Miami-Dade County</text>
+    </g>
+
+    <!-- cities -->
+    <g class="city">
+      <text x="190" y="128" text-anchor="middle" class={is('hollywood')}>HOLLYWOOD</text>
+      <text x="170" y="210" text-anchor="middle" class={is('hallandale-beach')}>HALLANDALE BEACH</text>
+      <text x="344" y="438" text-anchor="middle" class={is('aventura')}>AVENTURA</text>
+      <text x="458" y="432" class={is('sunny-isles-beach')}>SUNNY ISLES</text>
+      <text x="458" y="448" class={is('sunny-isles-beach')}>BEACH</text>
+    </g>
+    <g class="minor">
+      <text x="458" y="352">Golden Beach</text>
+      <text x="458" y="112">Hollywood Beach</text>
+    </g>
+
+    <!-- landmarks -->
+    <g class="mark">
+      <circle cx="304" cy="262" r="3.500"></circle>
+      <text x="278" y="270" text-anchor="end">Gulfstream Park</text>
+      <circle cx="306" cy="404" r="3.500"></circle>
+      <text x="278" y="410" text-anchor="end">Aventura Mall</text>
+    </g>
+
+    <!-- the clinic -->
+    <g class="pin">
+      <circle cx="346" cy="266" r="16" class="pin__pulse"></circle>
+      <circle cx="346" cy="266" r="7.500" class="pin__dot"></circle>
+      <path d="M346 258.500v-28" class="pin__stem"></path>
+      <rect x="262" y="196" width="168" height="34" rx="17" class="pin__tag"></rect>
+      <text x="346" y="217.500" text-anchor="middle" class="pin__name">Hormonal Health MD</text>
+    </g>
+
+    <!-- compass -->
+    <g class="compass" transform="translate(516 482)">
+      <circle r="15"></circle>
+      <path d="M0 9V-9M-4-4l4-5 4 5"></path>
+      <text y="-20" text-anchor="middle">N</text>
+    </g>
+  </svg>
+  <figcaption>Schematic map, not to scale.</figcaption>
+</figure>
+
+<style>
+  .amap {
+    margin: 0;
+  }
+  .amap svg {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    background: var(--sand);
+    box-shadow: var(--shadow-md);
+  }
+  .amap figcaption {
+    margin-top: 0.7rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: right;
+  }
+  .land {
+    fill: #f6f0e4;
+  }
+  .sea {
+    fill: #d3e8e1;
+  }
+  .swell path {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.500;
+    stroke-linecap: round;
+    opacity: 0.8;
+  }
+  .zone {
+    fill: rgb(242 112 61 / 0.13);
+    stroke: rgb(242 112 61 / 0.55);
+    stroke-width: 1.500;
+    stroke-dasharray: 5 5;
+  }
+  .road path {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 5;
+    stroke-linecap: round;
+    paint-order: stroke;
+    filter: drop-shadow(0 0 0.600px rgb(15 46 41 / 0.35));
+  }
+  .county {
+    fill: none;
+    stroke: var(--muted);
+    stroke-width: 1;
+    stroke-dasharray: 2 6;
+    opacity: 0.7;
+  }
+  .rlabel text {
+    fill: var(--muted);
+    font-family: var(--font-body);
+    font-size: 9.500px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .city text {
+    fill: var(--ink);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    opacity: 0.62;
+  }
+  .city text.on {
+    fill: var(--sun-deep);
+    opacity: 1;
+  }
+  .minor text {
+    fill: var(--muted);
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .mark circle {
+    fill: var(--sea-deep);
+    stroke: #fff;
+    stroke-width: 1.500;
+  }
+  .mark text {
+    fill: var(--sea-deep);
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 650;
+  }
+  .pin__pulse {
+    fill: rgb(242 112 61 / 0.25);
+    transform-origin: 346px 266px;
+    animation: ping 2.800s ease-out infinite;
+  }
+  .pin__dot {
+    fill: var(--sun);
+    stroke: #fff;
+    stroke-width: 2.500;
+  }
+  .pin__stem {
+    stroke: var(--ink);
+    stroke-width: 1.500;
+  }
+  .pin__tag {
+    fill: var(--ink);
+  }
+  .pin__name {
+    fill: var(--cream);
+    font-family: var(--font-body);
+    font-size: 12.500px;
+    font-weight: 650;
+  }
+  .compass circle {
+    fill: #fff;
+    stroke: var(--line-strong);
+  }
+  .compass path {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 1.500;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .compass text {
+    fill: var(--muted);
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+  }
+  @keyframes ping {
+    0% {
+      transform: scale(0.6);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.9);
+      opacity: 0;
+    }
+  }
+</style>

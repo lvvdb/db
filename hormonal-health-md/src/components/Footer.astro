@@ -1,0 +1,146 @@
+---
+import LocalBlock from './LocalBlock.astro';
+import Logo from './Logo.astro';
+import { clinic } from '../config/clinic';
+import { entries, paths } from '../lib/content';
+
+const treatments = await entries('treatments');
+const conditions = await entries('conditions');
+const areas = await entries('areas');
+const mobile = await entries('mobileIv');
+const articles = (await entries('learn')).length;
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer section--ink">
+  <div class="wrap">
+    <LocalBlock />
+
+    <div class="site-footer__cols">
+      <div class="site-footer__brand">
+        <a href="/" aria-label={`${clinic.name} home`}><Logo tone="light" /></a>
+        <p>
+          Hormone, weight and wellness care built on your bloodwork, from a clinic in
+          {clinic.city}.
+        </p>
+      </div>
+      <nav aria-label="Treatments">
+        <h3>Treatments</h3>
+        <ul>
+          {treatments.map((t) => <li><a href={paths.treatments(t.id)}>{t.data.navLabel}</a></li>)}
+          <li><a href="/lab-testing">Lab testing</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Conditions">
+        <h3>Symptoms</h3>
+        <ul>
+          {conditions.map((c) => <li><a href={paths.conditions(c.id)}>{c.data.navLabel}</a></li>)}
+        </ul>
+        <h3 class="site-footer__h3-gap">For you</h3>
+        <ul>
+          <li><a href="/men">Men's health</a></li>
+          <li><a href="/women">Women's health</a></li>
+          <li><a href="/assessment">Symptom assessment</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Areas served">
+        <h3>Areas served</h3>
+        <ul>
+          {areas.map((a) => <li><a href={paths.areas(a.id)}>{a.data.city}</a></li>)}
+          <li><a href="/telehealth">Telehealth in Florida</a></li>
+        </ul>
+        <h3 class="site-footer__h3-gap">Mobile IV</h3>
+        <ul>
+          {mobile.map((m) => <li><a href={paths.mobileIv(m.id)}>{m.data.city}</a></li>)}
+        </ul>
+      </nav>
+      <nav aria-label="Clinic">
+        <h3>Clinic</h3>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          {articles > 0 && <li><a href="/learn">Answers</a></li>}
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="site-footer__legal">
+      <p>
+        The information on this site is educational and is not medical advice. Treatment is
+        prescribed only after an evaluation by a licensed clinician, and results vary from
+        person to person. If you think you are having a medical emergency, call 911.
+      </p>
+      <p>&copy; {year} {clinic.name}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    font-size: 0.96rem;
+  }
+  .site-footer__cols {
+    display: grid;
+    gap: 2.25rem 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+  }
+  .site-footer__brand {
+    grid-column: 1 / -1;
+    max-width: 22rem;
+  }
+  .site-footer__brand p {
+    margin-top: 1.1rem;
+    color: rgb(251 248 242 / 0.68);
+    line-height: 1.55;
+  }
+  @media (min-width: 62rem) {
+    .site-footer__cols {
+      grid-template-columns: 1.5fr repeat(4, minmax(0, 1fr));
+    }
+    .site-footer__brand {
+      grid-column: auto;
+    }
+  }
+  .site-footer h3 {
+    margin-bottom: 0.9rem;
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 650;
+    font-variation-settings: normal;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+  .site-footer__h3-gap {
+    margin-top: 1.75rem;
+  }
+  .site-footer ul {
+    display: grid;
+    gap: 0.5rem;
+    list-style: none;
+  }
+  .site-footer__cols ul a {
+    color: rgb(251 248 242 / 0.86) !important;
+    text-decoration: none;
+  }
+  .site-footer__cols ul a:hover {
+    color: var(--sun-2) !important;
+  }
+  .site-footer__legal {
+    display: grid;
+    gap: 0.75rem;
+    padding-block: 1.75rem 2.25rem;
+    border-top: 1px solid var(--line-light);
+    color: rgb(251 248 242 / 0.6);
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+  .site-footer__legal p {
+    margin: 0;
+    max-width: 62rem;
+  }
+</style>
