@@ -22,8 +22,11 @@ function markTokens(html: string): string {
         ? part
         : part.replace(
             TOKEN,
-            (_m, ask) =>
-              `<mark class="confirm" data-confirm="${String(ask).replace(/"/g, '&quot;')}">Confirm: ${ask}</mark>`,
+            (_m, raw) => {
+              // One line, straight apostrophes, so the same fact always reads the same.
+              const ask = String(raw).replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'");
+              return `<mark class="confirm" data-confirm="${ask.replace(/"/g, '&quot;')}">Confirm: ${ask}</mark>`;
+            },
           ),
     )
     .join('');

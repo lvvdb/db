@@ -1,46 +1,257 @@
 {
-  "/": { "primary": "hormone clinic Hallandale Beach", "also": ["hormone therapy Hallandale Beach", "anti-aging clinic Hallandale Beach"] },
-  "/men": { "primary": "men's health clinic Hallandale Beach", "also": ["low T clinic", "men's hormone clinic"] },
-  "/women": { "primary": "menopause care Hallandale Beach", "also": ["menopause specialist Hallandale Beach", "perimenopause treatment", "hormone doctor for women"] },
-  "/treatments/testosterone-therapy": { "primary": "TRT clinic Hallandale Beach", "also": ["testosterone replacement therapy", "low T treatment"] },
-  "/treatments/hormone-therapy-for-women": { "primary": "bioidentical hormone therapy Hallandale Beach", "also": ["HRT for women", "estrogen therapy"] },
-  "/treatments/medical-weight-loss": { "primary": "medical weight loss Hallandale Beach", "also": ["weight loss clinic"] },
-  "/treatments/iv-therapy": { "primary": "IV therapy Hallandale Beach", "also": ["IV drip Hallandale Beach", "vitamin IV therapy"] },
-  "/treatments/sexual-health": { "primary": "ED treatment Hallandale Beach", "also": ["erectile dysfunction clinic", "low libido treatment"] },
-  "/treatments/growth-hormone-therapy": { "primary": "growth hormone deficiency evaluation Florida", "also": ["adult growth hormone deficiency testing"] },
-  "/treatments/nutrition-and-supplements": { "primary": "nutrition and vitamin therapy Hallandale Beach", "also": ["nutrition planning Hallandale Beach", "vitamin deficiency testing"] },
-  "/pricing": { "primary": "hormone therapy cost Florida", "also": ["TRT cost", "does insurance cover TRT"] },
-  "/lab-testing": { "primary": "hormone blood test Hallandale Beach", "also": ["testosterone test Hallandale Beach", "thyroid blood test"] },
-  "/telehealth": { "primary": "telehealth hormone therapy Florida", "also": ["online TRT Florida"] },
-  "/areas/aventura": { "primary": "hormone therapy Aventura", "also": ["TRT clinic Aventura", "hormone clinic near Aventura Mall"] },
-  "/areas/hollywood": { "primary": "hormone therapy Hollywood FL", "also": ["TRT clinic Hollywood FL"] },
-  "/areas/sunny-isles-beach": { "primary": "hormone therapy Sunny Isles Beach", "also": ["TRT clinic Sunny Isles Beach"] },
-  "/mobile-iv/hallandale-beach": { "primary": "mobile IV Hallandale Beach", "also": ["mobile IV therapy Hallandale Beach"] },
-  "/mobile-iv/aventura": { "primary": "mobile IV Aventura", "also": ["mobile IV therapy Aventura"] },
-  "/mobile-iv/hollywood": { "primary": "mobile IV Hollywood FL", "also": ["mobile IV Hollywood Beach"] },
-  "/mobile-iv/sunny-isles-beach": { "primary": "mobile IV Sunny Isles Beach", "also": ["IV therapy Sunny Isles Beach"] },
-  "/conditions/low-testosterone": { "primary": "low testosterone symptoms", "also": ["signs of low testosterone", "low T test Hallandale Beach"] },
-  "/conditions/menopause": { "primary": "menopause symptoms", "also": ["menopause treatment Hallandale Beach", "hot flashes treatment"] },
-  "/conditions/perimenopause": { "primary": "perimenopause symptoms", "also": ["perimenopause test", "am I in perimenopause"] },
-  "/conditions/erectile-dysfunction": { "primary": "erectile dysfunction causes", "also": ["ED testing Hallandale Beach"] },
-  "/conditions/always-tired": { "primary": "why am I always tired", "also": ["fatigue blood test Hallandale Beach"] },
-  "/about": { "primary": "Hormonal Health MD", "also": ["Hormonal Health MD Hallandale Beach"] },
-  "/contact": { "primary": "Hormonal Health MD address and directions", "also": ["Hormonal Health MD phone number"] },
-  "/assessment": { "primary": "hormone symptom assessment", "also": ["low T quiz", "menopause symptom quiz"] },
-  "/treatments": { "primary": "Hormonal Health MD treatments", "also": [] },
-  "/conditions": { "primary": "symptoms of hormone imbalance", "also": [] },
-  "/areas": { "primary": "Hormonal Health MD service area", "also": [] },
-  "/learn/trt-cost-florida": { "primary": "how much does TRT cost in Florida", "also": [] },
-  "/learn/testosterone-injections-vs-pellets-vs-cream": { "primary": "testosterone injections vs pellets vs cream", "also": [] },
-  "/learn/normal-testosterone-levels-by-age": { "primary": "normal testosterone levels by age", "also": [] },
-  "/learn/how-long-does-trt-take-to-work": { "primary": "how long does TRT take to work", "also": [] },
-  "/learn/trt-telemedicine-florida": { "primary": "can you get TRT through telemedicine in Florida", "also": [] },
-  "/learn/does-insurance-cover-hormone-therapy": { "primary": "does insurance cover hormone therapy", "also": [] },
-  "/learn/blood-tests-before-hormone-therapy": { "primary": "blood tests before starting hormone therapy", "also": [] },
-  "/learn/perimenopause-testing": { "primary": "what to test in perimenopause", "also": [] },
-  "/learn/is-hormone-therapy-safe-after-menopause": { "primary": "is hormone therapy safe after menopause", "also": [] },
-  "/learn/bioidentical-vs-traditional-hormones": { "primary": "bioidentical vs traditional hormones", "also": [] },
-  "/learn/how-glp1-weight-loss-medications-work": { "primary": "how do GLP-1 weight loss medications work", "also": [] },
-  "/learn/what-to-expect-mobile-iv-visit": { "primary": "what happens during a mobile IV visit", "also": [] },
-  "/learn": { "primary": "hormone health answers", "also": [] }
+  "/": {
+    "primary": "hormone clinic Hallandale Beach",
+    "also": [
+      "hormone therapy Hallandale Beach",
+      "anti-aging clinic Hallandale Beach"
+    ]
+  },
+  "/men": {
+    "primary": "men's health clinic Hallandale Beach",
+    "also": [
+      "low T clinic",
+      "men's hormone clinic"
+    ]
+  },
+  "/women": {
+    "primary": "menopause care Hallandale Beach",
+    "also": [
+      "menopause specialist Hallandale Beach",
+      "perimenopause treatment",
+      "hormone doctor for women"
+    ]
+  },
+  "/treatments/testosterone-therapy": {
+    "primary": "TRT clinic Hallandale Beach",
+    "also": [
+      "testosterone replacement therapy",
+      "low T treatment"
+    ]
+  },
+  "/treatments/hormone-therapy-for-women": {
+    "primary": "bioidentical hormone therapy Hallandale Beach",
+    "also": [
+      "HRT for women",
+      "estrogen therapy"
+    ]
+  },
+  "/treatments/medical-weight-loss": {
+    "primary": "medical weight loss Hallandale Beach",
+    "also": [
+      "weight loss clinic"
+    ]
+  },
+  "/treatments/iv-therapy": {
+    "primary": "IV therapy Hallandale Beach",
+    "also": [
+      "IV drip Hallandale Beach",
+      "vitamin IV therapy"
+    ]
+  },
+  "/treatments/sexual-health": {
+    "primary": "ED treatment Hallandale Beach",
+    "also": [
+      "erectile dysfunction clinic",
+      "low libido treatment"
+    ]
+  },
+  "/treatments/growth-hormone-therapy": {
+    "primary": "growth hormone deficiency evaluation Florida",
+    "also": [
+      "adult growth hormone deficiency testing"
+    ]
+  },
+  "/treatments/nutrition-and-supplements": {
+    "primary": "nutrition and vitamin therapy Hallandale Beach",
+    "also": [
+      "nutrition planning Hallandale Beach",
+      "vitamin deficiency testing"
+    ]
+  },
+  "/pricing": {
+    "primary": "hormone therapy cost Florida",
+    "also": [
+      "TRT cost",
+      "does insurance cover TRT"
+    ]
+  },
+  "/lab-testing": {
+    "primary": "hormone blood test Hallandale Beach",
+    "also": [
+      "testosterone test Hallandale Beach",
+      "thyroid blood test"
+    ]
+  },
+  "/telehealth": {
+    "primary": "telehealth hormone therapy Florida",
+    "also": [
+      "online TRT Florida"
+    ]
+  },
+  "/areas/aventura": {
+    "primary": "hormone therapy Aventura",
+    "also": [
+      "TRT clinic Aventura",
+      "hormone clinic near Aventura Mall"
+    ]
+  },
+  "/areas/hollywood": {
+    "primary": "hormone therapy Hollywood FL",
+    "also": [
+      "TRT clinic Hollywood FL"
+    ]
+  },
+  "/areas/sunny-isles-beach": {
+    "primary": "hormone therapy Sunny Isles Beach",
+    "also": [
+      "TRT clinic Sunny Isles Beach"
+    ]
+  },
+  "/mobile-iv/hallandale-beach": {
+    "primary": "mobile IV Hallandale Beach",
+    "also": [
+      "mobile IV therapy Hallandale Beach"
+    ]
+  },
+  "/mobile-iv/aventura": {
+    "primary": "mobile IV Aventura",
+    "also": [
+      "mobile IV therapy Aventura"
+    ]
+  },
+  "/mobile-iv/hollywood": {
+    "primary": "mobile IV Hollywood FL",
+    "also": [
+      "mobile IV Hollywood Beach"
+    ]
+  },
+  "/mobile-iv/sunny-isles-beach": {
+    "primary": "mobile IV Sunny Isles Beach",
+    "also": [
+      "IV therapy Sunny Isles Beach"
+    ]
+  },
+  "/conditions/low-testosterone": {
+    "primary": "low testosterone symptoms",
+    "also": [
+      "signs of low testosterone",
+      "low T test Hallandale Beach"
+    ]
+  },
+  "/conditions/menopause": {
+    "primary": "menopause symptoms",
+    "also": [
+      "menopause treatment Hallandale Beach",
+      "hot flashes treatment"
+    ]
+  },
+  "/conditions/perimenopause": {
+    "primary": "perimenopause symptoms",
+    "also": [
+      "perimenopause test",
+      "am I in perimenopause"
+    ]
+  },
+  "/conditions/erectile-dysfunction": {
+    "primary": "erectile dysfunction causes",
+    "also": [
+      "ED testing Hallandale Beach"
+    ]
+  },
+  "/conditions/always-tired": {
+    "primary": "why am I always tired",
+    "also": [
+      "fatigue blood test Hallandale Beach"
+    ]
+  },
+  "/about": {
+    "primary": "Hormonal Health MD",
+    "also": [
+      "Hormonal Health MD Hallandale Beach"
+    ]
+  },
+  "/contact": {
+    "primary": "Hormonal Health MD address and directions",
+    "also": [
+      "Hormonal Health MD phone number"
+    ]
+  },
+  "/assessment": {
+    "primary": "hormone symptom assessment",
+    "also": [
+      "low T quiz",
+      "menopause symptom quiz"
+    ]
+  },
+  "/treatments": {
+    "primary": "Hormonal Health MD treatments",
+    "also": []
+  },
+  "/conditions": {
+    "primary": "symptoms of hormone imbalance",
+    "also": []
+  },
+  "/areas": {
+    "primary": "Hormonal Health MD service area",
+    "also": []
+  },
+  "/learn/trt-cost-florida": {
+    "primary": "how much does TRT cost in Florida",
+    "also": []
+  },
+  "/learn/testosterone-injections-vs-pellets-vs-cream": {
+    "primary": "testosterone injections vs pellets vs cream",
+    "also": []
+  },
+  "/learn/normal-testosterone-levels-by-age": {
+    "primary": "normal testosterone levels by age",
+    "also": []
+  },
+  "/learn/how-long-does-trt-take-to-work": {
+    "primary": "how long does TRT take to work",
+    "also": []
+  },
+  "/learn/trt-telemedicine-florida": {
+    "primary": "can you get TRT through telemedicine in Florida",
+    "also": []
+  },
+  "/learn/does-insurance-cover-hormone-therapy": {
+    "primary": "does insurance cover hormone therapy",
+    "also": []
+  },
+  "/learn/blood-tests-before-hormone-therapy": {
+    "primary": "blood tests before starting hormone therapy",
+    "also": []
+  },
+  "/learn/perimenopause-testing": {
+    "primary": "what to test in perimenopause",
+    "also": []
+  },
+  "/learn/is-hormone-therapy-safe-after-menopause": {
+    "primary": "is hormone therapy safe after menopause",
+    "also": []
+  },
+  "/learn/bioidentical-vs-traditional-hormones": {
+    "primary": "bioidentical vs traditional hormones",
+    "also": []
+  },
+  "/learn/how-glp1-weight-loss-medications-work": {
+    "primary": "how do GLP-1 weight loss medications work",
+    "also": []
+  },
+  "/learn/what-to-expect-mobile-iv-visit": {
+    "primary": "what happens during a mobile IV visit",
+    "also": []
+  },
+  "/learn": {
+    "primary": "hormone health answers",
+    "also": []
+  },
+  "/es": {
+    "primary": "clínica de hormonas Hallandale Beach",
+    "also": [
+      "terapia de reemplazo de testosterona Hallandale Beach",
+      "terapia hormonal para la menopausia"
+    ]
+  }
 }

@@ -13,6 +13,14 @@ import { faqNode } from '../lib/schema';
 
 const treatments = await entries('treatments');
 const areas = await entries('areas');
+const esLive = clinic.languages.includes('es') && clinic.spanishReviewed;
+const alternates = esLive
+  ? [
+      { lang: 'en', path: '/' },
+      { lang: 'es', path: '/es' },
+      { lang: 'x-default', path: '/' },
+    ]
+  : [];
 
 const title = 'Hormone Clinic in Hallandale Beach, FL | Hormonal Health MD';
 const description =
@@ -71,6 +79,7 @@ const faqs = [
   path="/"
   updated="2026-11-09"
   fullClinic
+  alternates={alternates}
   schema={[faqNode('/', faqs)]}
 >
   <section class="hero">

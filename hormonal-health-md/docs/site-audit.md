@@ -318,8 +318,7 @@ Share of four-word phrases in the smaller page that also appear in the other pag
 - drip menu and prices
 - mobile service area and fee
 - follow-up visit fee
-- typical all-in monthly
-        cost range for a patient on TRT and for a patient on menopause hormone therapy
+- typical all-in monthly cost range for a patient on TRT and for a patient on menopause hormone therapy
 - insurance and payment policy
 - whether HSA and FSA cards are accepted
 - membership or pay-per-visit model, minimum term and cancellation policy
@@ -341,8 +340,7 @@ Share of four-word phrases in the smaller page that also appear in the other pag
 - telehealth prescribing policy
 - telemedicine available statewide
 - telehealth platform and how patients receive the visit link
-- telehealth platform is
-          HIPAA compliant and covered by a business associate agreement
+- telehealth platform is HIPAA compliant and covered by a business associate agreement
 - partner lab locations for telehealth patients outside South Florida
 - follow-up visit fee
 - clinician name and credentials
@@ -369,9 +367,8 @@ Share of four-word phrases in the smaller page that also appear in the other pag
 - panels and prices
 - hormone therapy forms offered for women
 - whether testosterone is prescribed for women at this clinic, and in what form
-- women’s hormone therapy program price and what it includes
-- insurance and payment policy
 - women's hormone therapy program price and what it includes
+- insurance and payment policy
 - clinician name and credentials
 - date of clinical review
 - opening hours for each day of the week
@@ -445,7 +442,7 @@ Share of four-word phrases in the smaller page that also appear in the other pag
 
 ## Every distinct fact to confirm
 
-67 distinct facts. Answer each once in `src/config/clinic.ts` or in the page copy and it clears everywhere it appears.
+66 distinct facts. Answer each once in `src/config/clinic.ts` or in the page copy and it clears everywhere it appears.
 
 | Fact needed | Pages |
 | --- | --- |
@@ -491,8 +488,7 @@ Share of four-word phrases in the smaller page that also appear in the other pag
 | languages spoken by the mobile IV team | 1 |
 | mobile IV hours, including evenings and weekends | 1 |
 | consultation fee | 1 |
-| typical all-in monthly
-        cost range for a patient on TRT and for a patient on menopause hormone therapy | 1 |
+| typical all-in monthly cost range for a patient on TRT and for a patient on menopause hormone therapy | 1 |
 | whether HSA and FSA cards are accepted | 1 |
 | membership or pay-per-visit model, minimum term and cancellation policy | 1 |
 | role, Florida licence number, board certifications and a short biography | 1 |
@@ -501,14 +497,12 @@ Share of four-word phrases in the smaller page that also appear in the other pag
 | who performs IV infusions and mobile visits, and who supervises them | 1 |
 | telemedicine available statewide | 1 |
 | telehealth platform and how patients receive the visit link | 1 |
-| telehealth platform is
-          HIPAA compliant and covered by a business associate agreement | 1 |
+| telehealth platform is HIPAA compliant and covered by a business associate agreement | 1 |
 | partner lab locations for telehealth patients outside South Florida | 1 |
 | growth hormone evaluation and treatment offered at this clinic, and the endocrinology referral pathway | 1 |
 | legal review of peptide therapy before any peptide is named on this site | 1 |
 | hormone therapy forms offered for women | 1 |
 | whether testosterone is prescribed for women at this clinic, and in what form | 1 |
-| women’s hormone therapy program price and what it includes | 1 |
 | typical same-day availability and booking lead time for clinic and mobile IV visits | 1 |
 | joint pain therapies offered at this clinic, who performs them, and which conditions are referred to orthopedics or rheumatology | 1 |
 | medications offered, including whether each is an FDA-approved product or compounded | 1 |

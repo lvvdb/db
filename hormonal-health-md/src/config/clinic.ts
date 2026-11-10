@@ -70,6 +70,11 @@ export const clinic = {
   // Languages staff actually speak with patients. Drives /es and hreflang.
   languages: ['en'] as string[],
 
+  // /es is built for the public only when Spanish is in `languages` above AND a fluent
+  // clinician or professional translator has reviewed the page. Until both are true it
+  // exists only in the drafts build, marked noindex.
+  spanishReviewed: false,
+
   // Search Console ownership token from the current homepage. Carried over so the
   // existing property stays verified through the migration.
   googleSiteVerification: 'I9qOURru3fwoZ7suruNmANacYKnzbJfoZVlMySj5T8U',

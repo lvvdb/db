@@ -1,0 +1,146 @@
+---
+// Spanish landing page. A draft translation: it is only built for the public once
+// Spanish is listed in clinic.languages AND clinic.spanishReviewed is true, meaning a
+// fluent clinician or professional translator has checked every line. Until then it
+// exists in the drafts build only, noindex, with a banner saying so.
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { clinic, nap } from '../../config/clinic';
+import { entries, paths, SHOW_DRAFTS } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const { clinic } = await import('../../config/clinic');
+  const { SHOW_DRAFTS } = await import('../../lib/content');
+  const live = clinic.languages.includes('es') && clinic.spanishReviewed;
+  return live || SHOW_DRAFTS ? [{ params: { slug: undefined } }] : [];
+}
+
+const live = clinic.languages.includes('es') && clinic.spanishReviewed;
+const treatments = await entries('treatments');
+const nombres: Record<string, string> = {
+  'testosterone-therapy': 'Terapia de testosterona',
+  'hormone-therapy-for-women': 'Terapia hormonal para la mujer',
+  'medical-weight-loss': 'Pérdida de peso con supervisión médica',
+  'iv-therapy': 'Terapia intravenosa',
+  'sexual-health': 'Salud sexual',
+  'growth-hormone-therapy': 'Evaluación de hormona de crecimiento',
+  'nutrition-and-supplements': 'Nutrición y suplementos',
+  'joint-pain': 'Dolor articular',
+};
+---
+
+<Base
+  title="Clínica de Hormonas en Hallandale Beach | Hormonal Health MD"
+  description="Terapia hormonal, pérdida de peso y terapia intravenosa basadas en sus análisis de sangre. Clínica en Hallandale Beach, consultas por video o a domicilio."
+  path="/es"
+  lang="es"
+  updated="2026-11-09"
+  noindex={!live}
+  notice={live ? undefined : 'Borrador. Draft translation: must be reviewed by a fluent Spanish-speaking clinician or professional translator, and Spanish-speaking staff confirmed, before it is published.'}
+  alternates={live ? [{ lang: 'en', path: '/' }, { lang: 'es', path: '/es' }, { lang: 'x-default', path: '/' }] : []}
+>
+  <section class="section es">
+    <div class="wrap--narrow">
+      <h1>
+        <span class="eyebrow">Clínica de hormonas en Hallandale Beach, FL</span>
+        <span>Vuelva a sentirse como usted, <em>empezando por sus análisis.</em></span>
+      </h1>
+      <p class="lede">
+        Terapia hormonal, pérdida de peso con supervisión médica y terapia intravenosa para
+        hombres y mujeres, planificadas a partir de sus análisis de sangre por un profesional
+        de la salud con licencia. Puede visitarnos en Hallandale Beach, atenderse por video
+        desde cualquier lugar de Florida o recibir terapia intravenosa a domicilio.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href={nap.telHref} data-event="call_click">
+          <Icon name="phone" /> Llame al <span data-phone>{clinic.phoneDisplay}</span>
+        </a>
+        <a class="btn btn--ghost" href={nap.mapsDirections} target="_blank" rel="noopener">
+          <Icon name="directions" /> Cómo llegar
+        </a>
+      </div>
+
+      <h2>Cómo trabajamos</h2>
+      <ol class="es__steps">
+        <li><strong>Cuéntenos qué le pasa.</strong> Una conversación sobre sus síntomas, su historial y sus medicamentos.</li>
+        <li><strong>Análisis de sangre.</strong> Pedimos el panel que corresponde a sus síntomas antes de recetar cualquier cosa.</li>
+        <li><strong>Revisión de resultados.</strong> Un profesional con licencia le explica cada valor y arma el plan con usted.</li>
+        <li><strong>Seguimiento.</strong> Repetimos los análisis y ajustamos la dosis según sus resultados.</li>
+      </ol>
+
+      <h2>Tratamientos</h2>
+      <p>Las páginas de cada tratamiento están en inglés por ahora.</p>
+      <ul class="es__list">
+        {
+          treatments.map((t) => (
+            <li>
+              <a href={paths.treatments(t.id)} hreflang="en">
+                {nombres[t.id] ?? t.data.navLabel} <Icon name="arrow" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <h2>¿Hablan español?</h2>
+      <p>[[CONFIRM: languages spoken by clinical and front desk staff]]</p>
+
+      <h2>Dónde estamos</h2>
+      <address>
+        {clinic.name}<br />
+        {clinic.street}, {clinic.suite}<br />
+        {clinic.city}, {clinic.region} {clinic.postalCode}
+      </address>
+      <p class="small muted">
+        Esta información es educativa y no sustituye una consulta médica. En caso de emergencia,
+        llame al 911.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .es h1 {
+    display: grid;
+    gap: 1.3rem;
+    font-size: var(--step-4);
+  }
+  .es .lede {
+    margin: 1.5rem 0 2rem;
+  }
+  .es h2 {
+    margin: 3rem 0 1rem;
+    font-size: var(--step-3);
+  }
+  .es__steps {
+    display: grid;
+    gap: 0.75rem;
+    padding-left: 1.3rem;
+  }
+  .es__list {
+    display: grid;
+    list-style: none;
+    border-top: 1px solid var(--line);
+  }
+  .es__list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    font-weight: 560;
+    text-decoration: none;
+  }
+  .es__list :global(svg) {
+    width: 1rem;
+    height: 1rem;
+    color: var(--sun-deep);
+  }
+  .es address {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+</style>
