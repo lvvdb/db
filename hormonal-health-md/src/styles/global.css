@@ -11,6 +11,16 @@
   descent-override: 25%;
   line-gap-override: 0%;
 }
+/* Fraunces at display sizes is much narrower than Georgia. This fallback is scaled to
+   match, so a fixed-line headline does not spill while the web font loads. */
+@font-face {
+  font-family: 'Fraunces Display Fallback';
+  src: local('Georgia');
+  size-adjust: 86%;
+  ascent-override: 109%;
+  descent-override: 29%;
+  line-gap-override: 0%;
+}
 @font-face {
   font-family: 'Instrument Sans Fallback';
   src: local('Arial');

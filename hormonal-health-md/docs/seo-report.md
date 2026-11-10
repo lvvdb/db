@@ -16,8 +16,8 @@ The site is built, statically rendered and passes every automated check. It is *
 | Redirects | 14 of 14 land on a live page in one hop |
 | Highest copy overlap between two city pages | 18.8% (limit was about a third) |
 | Facts awaiting the clinic | 66 distinct, 228 markers across 34 pages |
-| Mobile lab performance | LCP 1.2 to 1.6s, CLS 0 to 0.08, no JavaScript files, about 300KB per page |
-| Accessibility and layout | 0 automated accessibility violations and 0 horizontal overflow across all 48 pages at phone, tablet and desktop widths |
+| Mobile lab performance | LCP 1.2 to 1.5s, CLS 0 to 0.03, no JavaScript files, about 300KB per page |
+| Accessibility and layout | 0 automated accessibility violations, and 0 horizontal overflow across all 48 pages at 320, 360, 390, 768 and 1440px |
 | Cited sources | 60 of 62 loaded and matched, 2 refuse automated requests |
 
 Three things to know before reading further:
@@ -289,6 +289,8 @@ A quality pass over the finished site, done on 10 November.
 | Area | What I found | What I did |
 | --- | --- | --- |
 | Phone layout | A long button label pushed 8 pages wider than the screen at 390px | Buttons now wrap on narrow screens. All 48 pages are clean at 390, 768 and 1440px. |
+| Very small screens | At 320px, the width WCAG's reflow rule tests, the logo and menu button made every page 28px too wide | The logo tightens below 376px. All 48 pages are clean at 320 and 360px. |
+| Layout shift | The homepage scored 0.078 on a throttled phone, just under the 0.1 limit, because the headline re-wrapped when the web font arrived | The headline is now three fixed lines with a width-matched fallback font. The homepage measures 0.001. |
 | Accessibility | Scrollable tables could not be reached by keyboard, the top bar sat outside a landmark, one table had an empty header cell | Fixed. An automated audit (axe-core, WCAG 2.1 A and AA plus best practice) now reports 0 violations on every page at phone and desktop widths. That is an automated result, not a manual screen reader test. |
 | Direct answers | About 40 sections opened with a one-line lead-in to a list instead of answering the question | Each was rewritten as a direct answer. The median first paragraph under a question heading is now about 42 words, and `npm run check` warns when one falls under 22. |
 | Claims about patients | Several city pages said where patients come from or who books, which I cannot know | Rewritten as plain geography, or replaced with a `[[CONFIRM]]` marker where it was really a coverage claim. |

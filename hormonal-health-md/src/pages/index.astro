@@ -88,7 +88,12 @@ const faqs = [
       <div class="hero__copy">
         <h1>
           <span class="eyebrow">Hormone clinic in Hallandale Beach, FL</span>
-          <span class="hero__headline">Feel like yourself again, <em>starting with your labs.</em></span>
+          <!-- Three fixed lines, so the headline cannot re-wrap when the web font arrives. -->
+          <span class="hero__headline">
+            <span class="hero__line">Feel like yourself</span>
+            <span class="hero__line">again, <em>starting</em></span>
+            <span class="hero__line"><em>with your labs.</em></span>
+          </span>
         </h1>
         <p class="lede">
           Hormone therapy, medical weight loss and IV care for men and women, planned around
@@ -339,6 +344,11 @@ const faqs = [
   }
   .hero__headline {
     display: block;
+    font-family: 'Fraunces Variable', 'Fraunces Display Fallback', Georgia, serif;
+  }
+  .hero__line {
+    display: block;
+    white-space: nowrap;
   }
   .hero .lede {
     max-width: 35rem;
@@ -387,7 +397,7 @@ const faqs = [
   }
   .hero__ways {
     position: absolute;
-    top: 13%;
+    top: 8%;
     left: -2%;
     display: grid;
     gap: 0.45rem;

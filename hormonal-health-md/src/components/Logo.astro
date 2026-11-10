@@ -69,6 +69,22 @@ const { tone = 'ink' } = Astro.props;
     letter-spacing: 0.16em;
     color: var(--sun-deep);
   }
+  /* Small phones, and the 320px reflow width WCAG asks for. */
+  @media (max-width: 23.5rem) {
+    .logo {
+      gap: 0.5rem;
+    }
+    .logo__mark {
+      width: 2rem;
+      height: 2rem;
+    }
+    .logo__name {
+      font-size: 1.08rem;
+    }
+    .logo__md {
+      font-size: 0.64rem;
+    }
+  }
   .logo--light {
     color: var(--cream);
   }
