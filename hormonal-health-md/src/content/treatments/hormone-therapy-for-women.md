@@ -9,6 +9,8 @@ order: 2
 navLabel: "Hormone therapy for women"
 cardBlurb: "Menopause and perimenopause care, done carefully."
 icon: "flame"
+photo: coupleHome
+photoPosition: "50% 30%"
 serviceName: "Hormone therapy for women"
 routes: ["clinic", "telehealth"]
 audience: ["women"]

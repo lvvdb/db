@@ -9,6 +9,8 @@ order: 5
 navLabel: "Sexual health"
 cardBlurb: "ED and low libido, evaluated properly."
 icon: "heart"
+photo: couplePark
+photoPosition: "50% 40%"
 serviceName: "Erectile dysfunction and sexual health treatment"
 routes: ["clinic", "telehealth"]
 audience: ["men", "women"]

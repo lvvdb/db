@@ -84,7 +84,6 @@ Each old path below returns a 301 to a page that returns 200, in a single hop. T
 | Old path | New path | Result |
 | --- | --- | --- |
 | /our-services | /treatments | pass |
-| /benefits-of-treatment | /treatments | pass |
 | /contact-us | /contact | pass |
 | /testosterone-therapies | /treatments/testosterone-therapy | pass |
 | /estrogen-treatments | /treatments/testosterone-therapy | pass |
@@ -104,7 +103,7 @@ Also tested: trailing-slash and `.html` variants collapse to the clean URL in on
 Two judgment calls to check against the Search Console export:
 
 - **/estrogen-treatments goes to the TRT page, not the women's page.** Its title tag is "Aromatization Of Testosterone Into Estrogen" and its copy is about men, so any traffic it has is from men on testosterone. The TRT page now has a section answering that question.
-- **/benefits-of-treatment goes to the treatment index.** Nothing on the new site matches a page of benefit claims, by design.
+- **/benefits-of-treatment keeps its URL.** It started as a redirect to the treatment index. In the third pass it came back as a page of benefits per treatment, each tied to a trial or guideline, so the old URL's links and rankings carry over with no redirect at all.
 
 Outside the redirect file: `self.hormonalhealthmd.com` is a subdomain that forwards to the Google Form. It needs a DNS decision at launch.
 
@@ -296,6 +295,20 @@ A quality pass over the finished site, done on 10 November.
 | Claims about patients | Several city pages said where patients come from or who books, which I cannot know | Rewritten as plain geography, or replaced with a `[[CONFIRM]]` marker where it was really a coverage claim. |
 | Title and description slots | Titles were fixed strings, so confirming a differentiator would have meant editing every page | A confirmed differentiator now flows into titles and descriptions automatically when it fits. A page can also carry its own slot, such as a price, with `titleSlot` in its frontmatter. |
 | Source links | 10 unconfirmed, 2 dead FDA pages | Re-checked with webclaw. See "What I could not verify". `npm run check:sources` repeats it. |
+
+## Third pass: the old site's content and photos
+
+Done on 11 November, after a request to carry over everything on hormonalhealthmd.com, photos included. Every page of the old site was fetched again with webclaw and compared line by line with the new one.
+
+| Area | What I did |
+| --- | --- |
+| Photos | 12 of the old site's 27 images are now on the new site: the beach sunset in the homepage arch, photos on every treatment card and treatment page, the men's and women's pages, About and the benefits page. Astro serves each one as AVIF and WebP at the right size for the screen, never larger than the original. Alt text, the page each one came from and its licence status live in `src/data/photos.json`. |
+| Photo licences | Only one photo has a licence I can see (an Unsplash file name). Five carry iStock's free preview size in their file names. `npm run check:launch` fails until the clinic confirms it holds a licence for every photo, then flips `rightsConfirmed` to true. |
+| Before and after photos | Three amateur before and after photos show in the review build only, with a `[[CONFIRM]]` asking for a signed photo release, the treatment and the timeframe. They stay out of the public build until `resultsConsent` is true. Six studio shots that look like stock models are left out completely, because presenting them as results would be deceptive. |
+| /benefits-of-treatment | Rebuilt at its old URL. It keeps the old page's symptom checklist and covers each treatment: what the evidence shows, how long it takes, what to watch for and its sources. The old list of 30 benefits is not repeated. Claims such as height, vision, organ restoration and wrinkles have no support, and growth hormone appears only for diagnosed deficiency. |
+| Owner and email | The contact page now names Ian Arthur, CEO and owner, for appointments and lists Ian@hormonalhealthmd.com, both from the old contact page. The email is also in the clinic's structured data. |
+| Mission | The old mission statement ("get people healthy and restore balance") and the individualized plan copy from /our-services are on the About page, tightened. |
+| Left out on purpose | The 800 number, the fax number and the Wilton Manors address. They appear only on some old pages and in the old markup, and they conflict with the Hallandale Beach details. Phentermine and the IV drip menu were already on the new site. |
 
 ## How to run it
 

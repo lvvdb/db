@@ -4,7 +4,7 @@ import Icon from '../components/Icon.astro';
 import Faq from '../components/Faq.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Steps from '../components/Steps.astro';
-import Sunrise from '../components/art/Sunrise.astro';
+import Photo from '../components/Photo.astro';
 import LabPanel from '../components/art/LabPanel.astro';
 import AreaMap from '../components/art/AreaMap.astro';
 import { clinic, nap, sevenDays } from '../config/clinic';
@@ -117,7 +117,9 @@ const faqs = [
       </div>
 
       <div class="hero__art">
-        <div class="hero__arch"><Sunrise id="hero" /></div>
+        <div class="hero__arch">
+          <Photo name="beach" sizes="(min-width: 62rem) 24rem, 80vw" position="8% 50%" eager />
+        </div>
         <div class="hero__panel"><LabPanel /></div>
         <ul class="hero__ways" aria-label="Ways to get care">
           <li><Icon name="clinic" /> In clinic</li>
@@ -186,8 +188,15 @@ const faqs = [
       <div class="grid grid--4">
         {
           treatments.map((t) => (
-            <a class="card" href={paths.treatments(t.id)}>
-              <span class="icon-badge"><Icon name={t.data.icon} /></span>
+            <a class:list={['card', { 'card--photo': t.data.photo }]} href={paths.treatments(t.id)}>
+              {t.data.photo ? (
+                <div class="card__img">
+                  <Photo name={t.data.photo} sizes="(min-width: 75rem) 17rem, (min-width: 40rem) 45vw, 92vw" position={t.data.photoPosition} />
+                  <span class="icon-badge"><Icon name={t.data.icon} /></span>
+                </div>
+              ) : (
+                <span class="icon-badge"><Icon name={t.data.icon} /></span>
+              )}
               <h3>{t.data.navLabel}</h3>
               <p>{t.data.cardBlurb}</p>
               <span class="card__more">Learn more <Icon name="arrow" /></span>
@@ -197,11 +206,13 @@ const faqs = [
       </div>
       <div class="split">
         <a class="split__card split__card--men" href="/men">
+          <Photo name="mountain" class="split__img" sizes="(min-width: 62rem) 18rem, 45vw" position="55% 40%" />
           <p class="eyebrow eyebrow--plain">For men</p>
           <h3>Energy, drive and strength, checked properly.</h3>
           <span class="link-arrow">Men's health <Icon name="arrow" /></span>
         </a>
         <a class="split__card split__card--women" href="/women">
+          <Photo name="coupleHome" class="split__img" sizes="(min-width: 62rem) 18rem, 45vw" position="62% 30%" />
           <p class="eyebrow eyebrow--plain">For women</p>
           <h3>Perimenopause and menopause, taken seriously.</h3>
           <span class="link-arrow">Women's health <Icon name="arrow" /></span>
@@ -388,12 +399,22 @@ const faqs = [
   .hero__arch {
     width: 86%;
     margin-left: auto;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 50% 50% var(--r-lg) var(--r-lg) / 40% 40% var(--r-lg) var(--r-lg);
+    background: var(--sun-soft);
+    box-shadow: var(--shadow-md);
   }
   .hero__panel {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: min(21.5rem, 82%);
+    width: min(19rem, 76%);
+  }
+  @media (min-width: 62rem) {
+    .hero__panel {
+      left: -12%;
+    }
   }
   .hero__ways {
     position: absolute;
@@ -480,6 +501,9 @@ const faqs = [
     }
   }
   .split__card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     display: grid;
     gap: 1rem;
     align-content: end;
@@ -628,5 +652,41 @@ const faqs = [
   }
   .faqs .link-arrow {
     justify-self: start;
+  }
+
+  .split__card > :not(:global(.split__img)) {
+    position: relative;
+    z-index: 1;
+  }
+  .split__card :global(.split__img) {
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 0;
+    height: 11rem;
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
+    mask-image: linear-gradient(to bottom, #000 55%, transparent);
+    transition: transform 0.6s var(--ease);
+  }
+  .split__card {
+    padding-top: 10rem;
+  }
+  @media (min-width: 30rem) {
+    .split__card {
+      padding-top: clamp(1.5rem, 3vw, 2.25rem);
+      min-height: 17rem;
+    }
+    .split__card > :not(:global(.split__img)) {
+      max-width: 56%;
+    }
+    .split__card :global(.split__img) {
+      inset: 0 0 0 auto;
+      width: 50%;
+      height: 100%;
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 42%);
+      mask-image: linear-gradient(to right, transparent, #000 42%);
+    }
+  }
+  .split__card:hover :global(.split__img) {
+    transform: scale(1.04);
   }
 </style>

@@ -35,6 +35,9 @@ const treatments = defineCollection({
     navLabel: z.string(),
     cardBlurb: z.string(),
     icon: z.string(),
+    // A key from src/data/photos.json, shown on cards and in the page hero.
+    photo: z.string().optional(),
+    photoPosition: z.string().optional(),
     serviceName: z.string(),
     glance,
     routes: z.array(z.enum(['clinic', 'telehealth', 'mobile'])).default(['clinic']),

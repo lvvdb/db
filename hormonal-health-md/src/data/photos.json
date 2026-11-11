@@ -1,0 +1,110 @@
+{
+  "note": "Every photo on the site. All of them were copied from the clinic's current site (hormonalhealthmd.com) on 11 November 2026. Set rightsConfirmed to true once the clinic confirms it holds a licence for each one marked \"confirm\". The launch gate fails until then. Results photos only render publicly once resultsConsent is true.",
+  "rightsConfirmed": false,
+  "resultsConsent": false,
+  "photos": {
+    "beach": {
+      "file": "beach-sunset-couple.jpg",
+      "alt": "A couple holding hands, walking along the shoreline at sunset",
+      "from": "/ (hero)",
+      "rights": "confirm"
+    },
+    "coupleHome": {
+      "file": "couple-at-home.jpg",
+      "alt": "A smiling woman hugging her partner from behind at home",
+      "from": "/our-services",
+      "rights": "confirm"
+    },
+    "couplePark": {
+      "file": "couple-in-park.jpg",
+      "alt": "A man and a woman walking together through a park in late afternoon light",
+      "from": "/ (homepage section)",
+      "rights": "confirm"
+    },
+    "mountain": {
+      "file": "man-on-mountain-overlook.jpg",
+      "alt": "A man standing on a mountain overlook with his arms open wide",
+      "from": "/human-hormone-therapy",
+      "rights": "confirm"
+    },
+    "ivBag": {
+      "file": "iv-bag-clinician.jpg",
+      "alt": "A clinician in gloves holding up an IV bag",
+      "from": "/our-services",
+      "rights": "confirm"
+    },
+    "stones": {
+      "file": "balanced-stones.jpg",
+      "alt": "Small stacks of balanced stones on a rock by the sea",
+      "from": "/benefits-of-treatment",
+      "rights": "free",
+      "licence": "Unsplash licence (photo by Patrick Fore, per the file name)"
+    },
+    "poolside": {
+      "file": "woman-stretching-poolside.jpg",
+      "alt": "A woman stretching her arms behind her head beside a pool",
+      "from": "/weight-loss-therapies",
+      "rights": "confirm"
+    },
+    "oats": {
+      "file": "oatmeal-breakfast.jpg",
+      "alt": "A bowl of oatmeal with fresh fruit and seeds",
+      "from": "/nutritional-planning",
+      "rights": "confirm",
+      "note": "File name matches iStock's free preview size. Confirm the clinic bought the licence."
+    },
+    "patch": {
+      "file": "skin-patch-on-arm.jpg",
+      "alt": "A man pressing a medication patch onto his upper arm",
+      "from": "/estrogen-treatments",
+      "rights": "confirm",
+      "note": "File name matches iStock's free preview size. Confirm the clinic bought the licence."
+    },
+    "back": {
+      "file": "lower-back-treatment.jpg",
+      "alt": "A clinician's hands pressing on a patient's lower back",
+      "from": "/bioidentical-hormones",
+      "rights": "confirm",
+      "note": "File name matches iStock's free preview size. Confirm the clinic bought the licence."
+    },
+    "supplements": {
+      "file": "supplements-in-hand.jpg",
+      "alt": "Vitamin capsules and softgels in an open hand",
+      "from": "/vitamin-mineral-regiments",
+      "rights": "confirm",
+      "note": "File name matches iStock's free preview size. Confirm the clinic bought the licence."
+    },
+    "knee": {
+      "file": "knee-pain.jpg",
+      "alt": "A person holding a sore knee with both hands",
+      "from": "/joint-pain-solutions",
+      "rights": "confirm",
+      "note": "File name matches iStock's free preview size. Confirm the clinic bought the licence."
+    }
+  },
+  "results": [
+    {
+      "file": "results-man-1.jpg",
+      "alt": "Before and after photos of a man's torso, side by side",
+      "from": "/benefits-of-treatment"
+    },
+    {
+      "file": "results-woman-1.jpg",
+      "alt": "Three photos of a woman's waist and hips taken over time",
+      "from": "/benefits-of-treatment"
+    },
+    {
+      "file": "results-woman-2.jpg",
+      "alt": "Before and after photos of a woman, side by side",
+      "from": "/benefits-of-treatment"
+    }
+  ],
+  "notUsed": [
+    { "file": "Male before and after 3.jpg, Male before and after 4-0001.jpg, Male before and after 5.jpg, Female before and after 2.jpg, female before and after 1-0001.jpg, blob-0019.png", "why": "Studio shots that look like stock models. Showing them as treatment results would be a deceptive claim." },
+    { "file": "Male 11.jpg, guy and girl pic-0001.JPG", "why": "Physique shots that read as bodybuilding results, which the brief rules out." },
+    { "file": "istockphoto-1263891885-170667a.jpg", "why": "Peaches used as an innuendo on the old erectile dysfunction page." },
+    { "file": "Brain.jpg", "why": "421 pixels wide, too small to use." },
+    { "file": "Therapies.jpg", "why": "A massage photo on the old testosterone page. It does not match any treatment the new site describes." },
+    { "file": "Hormonal-Health-MD-0001.png", "why": "Old logo on a black box. The new site uses its own logo." }
+  ]
+}

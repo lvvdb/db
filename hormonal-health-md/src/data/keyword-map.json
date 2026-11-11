@@ -253,5 +253,13 @@
       "terapia de reemplazo de testosterona Hallandale Beach",
       "terapia hormonal para la menopausia"
     ]
+  },
+  "/benefits-of-treatment": {
+    "primary": "benefits of hormone replacement therapy",
+    "also": [
+      "hormone therapy benefits",
+      "testosterone therapy benefits",
+      "benefits of treatment"
+    ]
   }
 }

@@ -1,0 +1,36 @@
+---
+// Responsive photo. Astro writes AVIF and WebP at every useful width, never wider
+// than the original, so a small source is never upscaled.
+import { Picture } from 'astro:assets';
+import { photo } from '../lib/photos';
+
+interface Props {
+  name?: string;
+  src?: ImageMetadata;
+  alt?: string;
+  sizes: string;
+  class?: string;
+  position?: string;
+  eager?: boolean;
+}
+const { name, sizes, class: cls, position, eager = false } = Astro.props;
+const p = name ? photo(name) : { src: Astro.props.src!, alt: Astro.props.alt ?? '' };
+const max = p.src.width;
+const widths = [360, 540, 720, 960, 1280, 1600, 1920].filter((w) => w < max);
+widths.push(Math.min(max, 2000));
+---
+
+<Picture
+  src={p.src}
+  alt={p.alt}
+  widths={widths}
+  sizes={sizes}
+  formats={['avif', 'webp']}
+  fallbackFormat="jpg"
+  quality={72}
+  class:list={['photo', cls]}
+  style={position ? `object-position:${position}` : undefined}
+  loading={eager ? 'eager' : 'lazy'}
+  decoding={eager ? 'sync' : 'async'}
+  fetchpriority={eager ? 'high' : undefined}
+/>

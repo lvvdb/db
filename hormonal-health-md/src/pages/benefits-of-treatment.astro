@@ -1,0 +1,655 @@
+---
+// Benefits of treatment. Keeps the URL of the old site's most-linked marketing page,
+// but every benefit here is one a published trial or guideline supports, with the
+// source next to it. Before-and-after photos only build publicly once the clinic
+// confirms consent (see src/data/photos.json).
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Photo from '../components/Photo.astro';
+import Icon from '../components/Icon.astro';
+import Faq from '../components/Faq.astro';
+import TrustBlock from '../components/TrustBlock.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { faqNode } from '../lib/schema';
+import { results, resultsConsent, showResults } from '../lib/photos';
+
+const path = '/benefits-of-treatment';
+const updated = '2026-11-11';
+const title = 'Benefits of Hormone Replacement Therapy | Hormonal Health MD';
+const description =
+  'What testosterone, menopause hormone therapy, weight loss medication, ED and IV treatment really do, by the published evidence. In Hallandale Beach, FL.';
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Benefits of treatment', path },
+];
+
+const S = {
+  saad: { label: 'Saad 2011', url: 'https://doi.org/10.1530/EJE-11-0221' },
+  bhasin: { label: 'Endocrine Society 2018', url: 'https://doi.org/10.1210/jc.2018-00229' },
+  traverse: { label: 'TRAVERSE 2023', url: 'https://doi.org/10.1056/NEJMoa2215025' },
+  nams: { label: 'Menopause Society 2022', url: 'https://doi.org/10.1097/GME.0000000000002028' },
+  stuenkel: { label: 'Endocrine Society 2015', url: 'https://doi.org/10.1210/jc.2015-2236' },
+  step1: { label: 'STEP 1', url: 'https://doi.org/10.1056/NEJMoa2032183' },
+  surmount: { label: 'SURMOUNT-1', url: 'https://doi.org/10.1056/NEJMoa2206038' },
+  stepExt: { label: 'STEP 1 extension', url: 'https://doi.org/10.1111/dom.14725' },
+  aua: { label: 'AUA 2018', url: 'https://doi.org/10.1016/j.juro.2018.05.004' },
+  princeton: { label: 'Princeton III', url: 'https://doi.org/10.1016/j.mayocp.2012.06.015' },
+  odsC: { label: 'NIH vitamin C', url: 'https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/' },
+  odsB12: { label: 'NIH vitamin B12', url: 'https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/' },
+  ftc: { label: 'FTC 2018', url: 'https://www.ftc.gov/news-events/news/press-releases/2018/09/ftc-brings-first-ever-action-targeting-iv-cocktail-therapy-marketer' },
+  acr: { label: 'ACR 2019', url: 'https://doi.org/10.1002/art.41142' },
+  uspstf: { label: 'USPSTF 2022', url: 'https://doi.org/10.1001/jama.2022.8970' },
+  odsIron: { label: 'NIH iron', url: 'https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/' },
+  odsBiotin: { label: 'NIH biotin', url: 'https://ods.od.nih.gov/factsheets/Biotin-HealthProfessional/' },
+  molitch: { label: 'Endocrine Society 2011', url: 'https://doi.org/10.1210/jc.2011-0179' },
+  liu: { label: 'Liu 2007', url: 'https://doi.org/10.7326/0003-4819-146-2-200701160-00005' },
+  usc: { label: '21 U.S.C. 333(e)', url: 'https://www.law.cornell.edu/uscode/text/21/333' },
+};
+
+const signs = [
+  'Low sex drive',
+  'Tired all the time',
+  'Weaker muscles, less stamina',
+  'Anxiety or low mood',
+  'Body fat that will not shift',
+  'Unreliable erections',
+  'Hot flashes or night sweats',
+  'Broken sleep',
+  'Low motivation',
+  'Brain fog',
+];
+
+const sections = [
+  {
+    id: 'testosterone-therapy',
+    photo: 'patch',
+    position: '50% 40%',
+    who: 'Men with confirmed low testosterone',
+    h2: 'What are the benefits of testosterone therapy?',
+    answer:
+      'For men whose testosterone is confirmed low on two morning blood tests and who have symptoms, treatment can bring back sex drive, lift mood, shift body composition and strengthen bone. It does nothing useful for men whose levels are already normal.',
+    showsLabel: 'What the evidence shows',
+    shows: [
+      'Interest in sex usually returns first, often within three to six weeks.',
+      'Mood tends to lift over the first two to three months.',
+      'Body fat falls and muscle and strength build from about three to four months, and keep improving for up to a year.',
+      'Bone density improves, and mild anemia caused by low testosterone can correct.',
+    ],
+    limits:
+      'In the large TRAVERSE trial, treated men had no more heart attacks or strokes than men on placebo, though atrial fibrillation and blood clots in the lungs were slightly more common. That is why your blood count, PSA and symptoms are checked on a schedule.',
+    link: { href: '/treatments/testosterone-therapy', label: 'Testosterone therapy' },
+    cite: [S.saad, S.bhasin, S.traverse],
+  },
+  {
+    id: 'hormone-therapy-for-women',
+    photo: 'coupleHome',
+    position: '55% 30%',
+    who: 'Perimenopause and menopause',
+    h2: 'What are the benefits of hormone therapy for women?',
+    answer:
+      'Hormone therapy is the most effective treatment there is for hot flashes and night sweats. It also treats vaginal dryness, pain with sex and urinary symptoms caused by low estrogen, and it prevents bone loss.',
+    showsLabel: 'What the evidence shows',
+    shows: [
+      'Fewer and milder hot flashes and night sweats.',
+      'Vaginal dryness, pain with sex and urinary symptoms improve.',
+      'Bone loss slows, which lowers the risk of fractures.',
+      'Sleep, mood and concentration often improve as night sweats settle.',
+    ],
+    limits:
+      'For most healthy women under 60, or within 10 years of their last period, the benefits outweigh the risks. It is not a treatment for tiredness or weight on its own, and it is not used to prevent heart disease or dementia.',
+    link: { href: '/treatments/hormone-therapy-for-women', label: 'Hormone therapy for women' },
+    cite: [S.nams, S.stuenkel],
+  },
+  {
+    id: 'medical-weight-loss',
+    photo: 'poolside',
+    position: '50% 35%',
+    who: 'Weight that diet and exercise have not moved',
+    h2: 'What can medical weight loss medication do?',
+    answer:
+      'In the main trials, adults taking a weekly GLP-1 medication alongside lifestyle changes lost about 15 to 21 percent of their body weight over 68 to 72 weeks. People making the same changes without medication lost about 2 to 3 percent.',
+    showsLabel: 'What the evidence shows',
+    shows: [
+      'Appetite drops, so you feel full sooner and think about food less.',
+      'Most of the loss comes over six to twelve months, then it levels off.',
+      'Waist size, blood pressure and blood sugar improved alongside weight in the trials.',
+      'Doses start low and rise slowly to keep side effects such as nausea manageable.',
+    ],
+    limits:
+      'Most people regain weight after stopping. In one major trial, people had regained about two thirds of what they lost a year after the drug was withdrawn, so the plan for after matters as much as the plan for now.',
+    link: { href: '/treatments/medical-weight-loss', label: 'Medical weight loss' },
+    cite: [S.step1, S.surmount, S.stepExt],
+  },
+  {
+    id: 'sexual-health',
+    photo: 'couplePark',
+    position: '50% 40%',
+    who: 'Erectile dysfunction and low libido',
+    h2: 'What does treatment for erectile dysfunction do?',
+    answer:
+      'Erectile dysfunction is common and treatable. Tablets that increase blood flow work for most men, and guidelines let you choose among proven options with your clinician instead of failing one before trying the next.',
+    showsLabel: 'What the evidence shows',
+    shows: [
+      'Oral medication works for most men.',
+      'If testosterone is confirmed low, treating it restores desire and can make tablets work better.',
+      'Exercise, weight loss, less alcohol and no smoking improve blood vessel health and help every other treatment work.',
+      'A proper workup can catch diabetes, heart or blood pressure problems, which ED is often the first sign of.',
+    ],
+    limits:
+      'Shockwave therapy and PRP injections are widely advertised for ED, but the AUA guideline calls shockwave investigational and PRP experimental. If your testosterone is normal, more of it will not improve erections.',
+    link: { href: '/treatments/sexual-health', label: 'Sexual health' },
+    cite: [S.aua, S.princeton],
+  },
+  {
+    id: 'iv-therapy',
+    photo: 'ivBag',
+    position: '50% 30%',
+    who: 'In clinic or at your door',
+    h2: 'What can IV therapy do?',
+    answer:
+      'IV fluids reliably correct dehydration, and IV vitamins reliably correct a deficiency when you cannot absorb enough by mouth. For healthy people looking for more energy or immunity the research is thin, and we tell you that before you book.',
+    showsLabel: 'What it does well',
+    shows: [
+      'Rehydrates you directly when heat, illness or a long night out has left you drained.',
+      'Replaces a vitamin you cannot absorb well from food or tablets.',
+      'Every drip on our menu lists exactly what is in it.',
+      'Our mobile team can bring it to your home, condo or hotel.',
+    ],
+    limits:
+      'Vitamin C and B12 are absorbed well from food and tablets in most people. If you feel run down most of the time, a blood test will tell you more than a drip.',
+    link: { href: '/treatments/iv-therapy', label: 'IV therapy and the drip menu' },
+    cite: [S.odsC, S.odsB12, S.ftc],
+  },
+  {
+    id: 'joint-pain',
+    photo: 'back',
+    position: '50% 50%',
+    who: 'Aching, stiff joints',
+    h2: 'What can joint pain care do?',
+    answer:
+      'For osteoarthritis of the knee, hip and hand, the strongest evidence supports exercise, weight loss for people carrying extra weight, and self-management programs. Anti-inflammatory gels, tablets when they are safe for you, and steroid injections for flares also help.',
+    showsLabel: 'What the evidence shows',
+    shows: [
+      'Regular, structured exercise reduces pain and improves how well you move.',
+      'Losing weight reduces pain and improves function in knee and hip arthritis.',
+      'Anti-inflammatory gels ease knee pain with less risk than tablets.',
+      'A steroid injection can calm a flare.',
+    ],
+    limits:
+      'The same guideline recommends against PRP injections, stem cell injections and glucosamine for knee and hip osteoarthritis. We would rather you spend your money on what works.',
+    link: { href: '/treatments/joint-pain', label: 'Joint pain' },
+    cite: [S.acr],
+  },
+  {
+    id: 'nutrition-and-supplements',
+    photo: 'supplements',
+    position: '50% 50%',
+    who: 'Vitamins, minerals and meal planning',
+    h2: 'What can nutrition and supplements do?',
+    answer:
+      'Supplements help when a blood test shows you are low. Correcting a real vitamin B12, iron or vitamin D deficiency treats the tiredness, weakness or anemia it causes. For people who are not low, extra vitamins add little.',
+    showsLabel: 'What the evidence shows',
+    shows: [
+      'B12 injections treat pernicious anemia and poor absorption after gut surgery. High-dose tablets work for most other people who are low.',
+      'Iron replacement corrects iron deficiency anemia, and the cause of the loss gets investigated.',
+      'A meal plan built around your week supports weight loss, training and hormone treatment.',
+      'Dropping supplements you do not need saves money, and stops biotin from skewing some lab results.',
+    ],
+    limits:
+      'The U.S. Preventive Services Task Force found too little evidence that multivitamins prevent heart disease or cancer, and it recommends against beta carotene or vitamin E for that purpose.',
+    link: { href: '/treatments/nutrition-and-supplements', label: 'Nutrition and supplements' },
+    cite: [S.uspstf, S.odsB12, S.odsIron, S.odsBiotin],
+  },
+  {
+    id: 'growth-hormone',
+    photo: 'stones',
+    position: '50% 60%',
+    who: 'Diagnosed adult deficiency only',
+    h2: 'Who benefits from growth hormone treatment?',
+    answer:
+      'Only adults with a deficiency proven by stimulation testing, or with clear pituitary disease. In those adults, treatment can improve body composition, bone density, exercise capacity and quality of life. Healthy adults do not benefit, and prescribing it to them is illegal.',
+    showsLabel: 'How it works here',
+    shows: [
+      'Diagnosis needs proof that the pituitary cannot release growth hormone when stimulated.',
+      'Testing runs under medical supervision, usually with an endocrinologist.',
+      'If it is not growth hormone, we look for likelier causes: low testosterone, thyroid, sleep, weight and mood.',
+    ],
+    limits:
+      'Federal law makes it an offense to distribute growth hormone for any use the FDA has not authorized. In trials of healthy older adults it caused frequent side effects, such as swelling and joint pain, for small changes in body composition.',
+    link: { href: '/treatments/growth-hormone-therapy', label: 'Growth hormone evaluation' },
+    cite: [S.molitch, S.liu, S.usc],
+  },
+];
+
+const faqs = [
+  {
+    q: 'How soon will I feel a difference?',
+    a: 'It depends on the treatment. On testosterone therapy, interest in sex often returns within three to six weeks, mood lifts over two to three months and body changes start at three to four months. Weight loss medication works gradually, with most of the loss over six to twelve months. IV fluids rehydrate you during the visit. If nothing has changed by your first follow-up, we look again at the cause.',
+  },
+  {
+    q: 'Do the benefits last after I stop?',
+    a: 'Most treatments work while you are on them. Symptoms of low testosterone or menopause can come back when treatment stops, and most people regain weight after stopping weight loss medication. Before you start, we talk through what long-term looks like for you, including a taper or a maintenance plan.',
+  },
+  {
+    q: 'How do I know if I would benefit?',
+    a: 'Start with the [two-minute assessment](/assessment), then a blood panel. Symptoms tell us where to look and labs tell us what is actually happening, so treatment is offered only when your results support it. See [lab testing](/lab-testing) for what we check.',
+  },
+  {
+    q: 'Is hormone therapy safe?',
+    a: 'For the right person, with monitoring, the benefits usually outweigh the risks. Each treatment page lists who should not take it and how you will be monitored: [testosterone therapy](/treatments/testosterone-therapy), [hormone therapy for women](/treatments/hormone-therapy-for-women) and [medical weight loss](/treatments/medical-weight-loss).',
+  },
+];
+
+const sources = [
+  { label: 'Saad F, et al. Onset of effects of testosterone treatment and time span until maximum effects are achieved. Eur J Endocrinol. 2011.', url: S.saad.url },
+  { label: 'Bhasin S, et al. Testosterone Therapy in Men With Hypogonadism: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2018.', url: S.bhasin.url },
+  { label: 'Lincoff AM, et al. Cardiovascular Safety of Testosterone-Replacement Therapy (TRAVERSE). N Engl J Med. 2023.', url: S.traverse.url },
+  { label: 'The Menopause Society. The 2022 Hormone Therapy Position Statement. Menopause. 2022.', url: S.nams.url },
+  { label: 'Stuenkel CA, et al. Treatment of Symptoms of the Menopause: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2015.', url: S.stuenkel.url },
+  { label: 'Wilding JPH, et al. Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP 1). N Engl J Med. 2021.', url: S.step1.url },
+  { label: 'Jastreboff AM, et al. Tirzepatide Once Weekly for the Treatment of Obesity (SURMOUNT-1). N Engl J Med. 2022.', url: S.surmount.url },
+  { label: 'Wilding JPH, et al. Weight regain and cardiometabolic effects after withdrawal of semaglutide: the STEP 1 trial extension. Diabetes Obes Metab. 2022.', url: S.stepExt.url },
+  { label: 'Burnett AL, et al. Erectile Dysfunction: AUA Guideline. J Urol. 2018.', url: S.aua.url },
+  { label: 'Nehra A, et al. The Princeton III Consensus Recommendations for the Management of Erectile Dysfunction and Cardiovascular Disease. Mayo Clin Proc. 2012.', url: S.princeton.url },
+  { label: 'National Institutes of Health, Office of Dietary Supplements. Vitamin C: Fact Sheet for Health Professionals.', url: S.odsC.url },
+  { label: 'National Institutes of Health, Office of Dietary Supplements. Vitamin B12: Fact Sheet for Health Professionals.', url: S.odsB12.url },
+  { label: 'Federal Trade Commission. FTC Brings First-Ever Action Targeting IV Cocktail Therapy Marketer. 2018.', url: S.ftc.url },
+  { label: 'Kolasinski SL, et al. 2019 American College of Rheumatology/Arthritis Foundation Guideline for the Management of Osteoarthritis of the Hand, Hip, and Knee. Arthritis Rheumatol. 2020.', url: S.acr.url },
+  { label: 'U.S. Preventive Services Task Force. Vitamin, Mineral, and Multivitamin Supplementation to Prevent Cardiovascular Disease and Cancer. JAMA. 2022.', url: S.uspstf.url },
+  { label: 'National Institutes of Health, Office of Dietary Supplements. Iron: Fact Sheet for Health Professionals.', url: S.odsIron.url },
+  { label: 'National Institutes of Health, Office of Dietary Supplements. Biotin: Fact Sheet for Health Professionals.', url: S.odsBiotin.url },
+  { label: 'Molitch ME, et al. Evaluation and Treatment of Adult Growth Hormone Deficiency: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2011.', url: S.molitch.url },
+  { label: 'Liu H, et al. Systematic Review: The Safety and Efficacy of Growth Hormone in the Healthy Elderly. Ann Intern Med. 2007.', url: S.liu.url },
+  { label: '21 U.S. Code 333(e). Prohibited distribution of human growth hormone.', url: S.usc.url },
+];
+
+const jump = [
+  { id: 'signs', label: 'Signs' },
+  ...sections.map((s) => ({ id: s.id, label: s.link.label.replace(' and the drip menu', '') })),
+  ...(showResults ? [{ id: 'results', label: 'Results' }] : []),
+  { id: 'limits', label: 'What it will not do' },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  path={path}
+  updated={updated}
+  crumbs={crumbs}
+  medical
+  schema={[faqNode(path, faqs)]}
+>
+  <PageHero
+    crumbs={crumbs}
+    eyebrow="Benefits of treatment"
+    headline="What treatment can do, *by the published evidence.*"
+    lede="Hormone changes become more common after 30, in men and in women. Here is what each treatment we offer has been shown to do, how long it takes and what it will not do, so you can decide with real numbers."
+    hasAside
+  >
+    <div slot="aside" class="bhero">
+      <Photo name="mountain" sizes="(min-width: 62rem) 30rem, 92vw" position="55% 40%" eager />
+    </div>
+  </PageHero>
+
+  <nav class="jump" aria-label="On this page">
+    <div class="wrap jump__in">
+      {jump.map((j) => <a href={`#${j.id}`}>{j.label}</a>)}
+    </div>
+  </nav>
+
+  <article class="pbody__main bpage">
+    <section class="section section--paper" aria-labelledby="signs">
+      <div class="wrap signs">
+        <div class="signs__copy">
+          <p class="eyebrow">Start here</p>
+          <h2 id="signs">Over 30 and noticing these?</h2>
+          <p>
+            These are the signs people bring to us most often. Each one has more than one
+            possible cause, from hormones to thyroid, sleep, iron or stress, which is why a blood
+            panel comes before any treatment.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="/assessment" data-event="assessment_start">
+              Take the 2-minute assessment <Icon name="arrow" class="i-arrow" />
+            </a>
+            <a class="btn btn--ghost" href="/lab-testing"><Icon name="flask" /> See lab testing</a>
+          </div>
+        </div>
+        <ul class="signs__list">
+          {
+            signs.map((s) => (
+              <li>
+                <Icon name="check" /> {s}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    {
+      sections.map((s, i) => (
+        <section class:list={['section', 'bsec', { 'section--sand': i % 2 === 0 }]} aria-labelledby={s.id}>
+          <div class:list={['wrap', 'bsec__in', { 'bsec__in--flip': i % 2 === 1 }]}>
+            <div class="bsec__img">
+              <Photo name={s.photo} sizes="(min-width: 62rem) 34rem, 92vw" position={s.position} />
+            </div>
+            <div class="bsec__copy">
+              <p class="eyebrow">{s.who}</p>
+              <h2 id={s.id}>{s.h2}</h2>
+              <p class="bsec__answer">{s.answer}</p>
+              <p class="bsec__label">{s.showsLabel}</p>
+              <ul class="bsec__list">
+                {s.shows.map((x) => (
+                  <li>
+                    <Icon name="check" />
+                    <span>{x}</span>
+                  </li>
+                ))}
+              </ul>
+              <div class="bsec__limits">
+                <p class="bsec__label">Worth knowing</p>
+                <p>{s.limits}</p>
+              </div>
+              <div class="bsec__foot">
+                <a class="link-arrow" href={s.link.href}>
+                  {s.link.label} <Icon name="arrow" />
+                </a>
+                <p class="bsec__cite">
+                  Sources:{' '}
+                  {s.cite.map((c, k) => (
+                    <><a href={c.url} target="_blank" rel="noopener">{c.label}</a>{k < s.cite.length - 1 ? ', ' : ''}</>
+                  ))}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))
+    }
+
+    {
+      showResults && (
+        <section class="section section--paper" aria-labelledby="results">
+          <div class="wrap--narrow results">
+            <p class="eyebrow">Patient results</p>
+            <h2 id="results">What have patients seen?</h2>
+            <p>
+              These photos come from the clinic's previous website. Results vary from person to
+              person, depend on the diagnosis and the plan, and are not a promise of what you will
+              see.
+              {!resultsConsent && ' [[CONFIRM: each person shown is a patient of the clinic who signed a photo release, plus their treatment and how long it took]]'}
+            </p>
+            <div class="results__grid">
+              {results.map((r) => (
+                <figure>
+                  <div class="results__img">
+                    <Photo src={r.src} alt={r.alt} sizes="(min-width: 48rem) 22rem, 92vw" />
+                  </div>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+    }
+
+    <section class="section section--sand" aria-labelledby="limits">
+      <div class="wrap--narrow prose">
+        <h2 id="limits">What will treatment not do?</h2>
+        <p>
+          Some clinics promise to reverse aging, melt fat or make you feel 25 again. No honest
+          clinic can. Here is where we draw the line, so you know exactly what you are signing up
+          for.
+        </p>
+        <ul>
+          <li>Reverse or slow aging.</li>
+          <li>Work when the real cause of your symptoms is something else, which is why we test first.</li>
+          <li>Replace sleep, food, movement and stress management. Treatment works best on top of them.</li>
+          <li>Come with a promised result, a number on the scale or a timeline.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--paper">
+      <div class="wrap--narrow">
+        <section class="pfaq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Benefits of treatment: questions people ask</h2>
+          <Faq faqs={faqs} />
+        </section>
+        <TrustBlock updated={updated} sources={sources} />
+      </div>
+    </section>
+  </article>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .bhero {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: var(--r-lg);
+    background: var(--sand);
+    box-shadow: var(--shadow-md);
+  }
+
+  .jump {
+    border-block: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .jump__in {
+    display: flex;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding-block: 0.7rem;
+    scrollbar-width: none;
+  }
+  .jump__in::-webkit-scrollbar {
+    display: none;
+  }
+  .jump a {
+    flex: none;
+    padding: 0.4rem 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: var(--r-pill);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 0.9rem;
+    font-weight: 560;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .jump a:hover {
+    border-color: var(--line-strong);
+    color: var(--sun-deep);
+  }
+
+  .bpage {
+    max-width: none;
+  }
+  .bpage h2[id] {
+    scroll-margin-top: 6.5rem;
+  }
+
+  .signs {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+  @media (min-width: 62rem) {
+    .signs {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+  .signs__copy {
+    display: grid;
+    gap: 1.1rem;
+    max-width: 36rem;
+  }
+  .signs__copy h2 {
+    font-size: var(--step-4);
+    line-height: 1.05;
+  }
+  .bsec__copy h2 {
+    font-size: var(--step-3);
+    line-height: 1.1;
+  }
+  .bsec__list {
+    display: grid;
+    gap: 0.65rem;
+    list-style: none;
+  }
+  .bsec__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .bsec__list :global(svg) {
+    flex: none;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-top: 0.12rem;
+    padding: 3px;
+    border-radius: 50%;
+    background: var(--sea);
+    color: var(--sea-deep);
+    stroke-width: 2.4;
+  }
+  .signs__list {
+    display: grid;
+    gap: 0.6rem;
+    list-style: none;
+  }
+  @media (min-width: 30rem) {
+    .signs__list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .signs__list li {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    background: var(--paper);
+    box-shadow: var(--shadow-sm);
+    color: var(--ink);
+    font-weight: 560;
+  }
+  .signs__list :global(svg) {
+    flex: none;
+    width: 1.35rem;
+    height: 1.35rem;
+    padding: 3px;
+    border-radius: 50%;
+    background: var(--sun-soft);
+    color: var(--sun-deep);
+    stroke-width: 2.4;
+  }
+
+  .bsec__in {
+    display: grid;
+    gap: clamp(1.75rem, 4vw, 3.5rem);
+    align-items: center;
+  }
+  @media (min-width: 62rem) {
+    .bsec__in {
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    }
+    .bsec__in--flip .bsec__img {
+      order: 2;
+    }
+  }
+  .bsec__img {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: var(--r-lg);
+    background: var(--sand-2);
+    box-shadow: var(--shadow-md);
+  }
+  .bsec__copy {
+    display: grid;
+    gap: 1rem;
+    min-width: 0;
+    max-width: 38rem;
+  }
+  .bsec__answer {
+    color: var(--ink);
+    font-size: var(--step-1);
+    line-height: 1.5;
+  }
+  .bsec__label {
+    margin-top: 0.4rem;
+    color: var(--sea-deep);
+    font-size: 0.78rem;
+    font-weight: 680;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .bsec__limits {
+    display: grid;
+    gap: 0.4rem;
+    padding: 1.1rem 1.25rem;
+    border-left: 3px solid var(--sun);
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    background: rgb(255 255 255 / 0.7);
+  }
+  .bsec__limits p:last-child {
+    color: var(--muted);
+  }
+  .bsec__foot {
+    display: grid;
+    gap: 0.6rem;
+    margin-top: 0.4rem;
+  }
+  .bsec__foot .link-arrow {
+    justify-self: start;
+  }
+  .bsec__cite {
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .bsec__cite a {
+    color: inherit;
+  }
+
+  .results {
+    display: grid;
+    gap: 1rem;
+  }
+  .results__grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 0.75rem;
+  }
+  @media (min-width: 48rem) {
+    .results__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .results figure {
+    margin: 0;
+  }
+  .results__img {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--r-md);
+    background: #111;
+  }
+  .results__img :global(.photo) {
+    object-fit: contain;
+  }
+
+  .pfaq {
+    margin-bottom: 2.5rem;
+  }
+  .pfaq h2 {
+    margin-bottom: 1.25rem;
+    font-size: var(--step-3);
+  }
+</style>

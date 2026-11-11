@@ -9,6 +9,8 @@ order: 3
 navLabel: "Medical weight loss"
 cardBlurb: "Labs, a clinician and medication where appropriate."
 icon: "scale"
+photo: poolside
+photoPosition: "50% 35%"
 serviceName: "Medical weight loss"
 routes: ["clinic", "telehealth"]
 audience: ["men", "women"]

@@ -1,6 +1,7 @@
 ---
 import Simple from '../../layouts/Simple.astro';
 import Icon from '../../components/Icon.astro';
+import Photo from '../../components/Photo.astro';
 import { entries, paths } from '../../lib/content';
 
 const path = '/treatments';
@@ -26,8 +27,14 @@ const treatments = await entries('treatments');
       <div class="grid grid--2">
         {
           treatments.map((t, i) => (
-            <a class="card tcard" href={paths.treatments(t.id)}>
-              <span class:list={['icon-badge', i % 2 ? 'icon-badge--sun' : '']}><Icon name={t.data.icon} /></span>
+            <a class:list={['card tcard', { 'tcard--photo': t.data.photo }]} href={paths.treatments(t.id)}>
+              {t.data.photo ? (
+                <div class="tcard__img">
+                  <Photo name={t.data.photo} sizes="(min-width: 62rem) 12rem, 40vw" position={t.data.photoPosition} />
+                </div>
+              ) : (
+                <span class:list={['icon-badge', i % 2 ? 'icon-badge--sun' : '']}><Icon name={t.data.icon} /></span>
+              )}
               <div>
                 <h2>{t.data.navLabel}</h2>
                 <p>{t.data.lede}</p>
@@ -39,6 +46,7 @@ const treatments = await entries('treatments');
       </div>
       <div class="btn-row" style="margin-top:2.5rem">
         <a class="btn btn--ghost" href="/conditions"><Icon name="spark" /> Start with a symptom</a>
+        <a class="btn btn--ghost" href="/benefits-of-treatment"><Icon name="check" /> Benefits of treatment</a>
         <a class="btn btn--ghost" href="/lab-testing"><Icon name="flask" /> Lab testing</a>
         <a class="btn btn--ghost" href="/pricing"><Icon name="tag" /> Pricing</a>
         <a class="btn btn--ghost" href="/team"><Icon name="people" /> Team</a>
@@ -58,5 +66,29 @@ const treatments = await entries('treatments');
     font-size: var(--step-2);
     font-variation-settings: 'opsz' 40;
     line-height: 1.15;
+  }
+  .tcard__img {
+    flex: 0 0 clamp(6.5rem, 22%, 11rem);
+    align-self: stretch;
+    min-height: 7rem;
+    overflow: hidden;
+    border-radius: var(--r-md, 14px);
+    background: var(--sand);
+  }
+  .tcard__img :global(.photo) {
+    transition: transform 0.6s var(--ease);
+  }
+  .tcard:hover .tcard__img :global(.photo) {
+    transform: scale(1.05);
+  }
+  @media (max-width: 30rem) {
+    .tcard--photo {
+      flex-direction: column;
+    }
+    .tcard__img {
+      flex-basis: auto;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
   }
 </style>

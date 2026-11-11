@@ -26,6 +26,7 @@ export function clinicNode(services: { name: string; path: string }[] = []): Jso
     name: clinic.name,
     url: abs('/'),
     telephone: clinic.phoneE164,
+    ...(clinic.email ? { email: clinic.email } : {}),
     image: abs('/og.png'),
     logo: abs('/logo.png'),
     address: {

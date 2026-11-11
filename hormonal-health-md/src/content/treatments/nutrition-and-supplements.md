@@ -9,6 +9,8 @@ order: 7
 navLabel: "Nutrition and supplements"
 cardBlurb: "Eating and supplement plans guided by labs."
 icon: "leaf"
+photo: oats
+photoPosition: "50% 50%"
 serviceName: "Nutrition planning and vitamin therapy"
 routes: ["clinic", "telehealth"]
 audience: ["men", "women"]

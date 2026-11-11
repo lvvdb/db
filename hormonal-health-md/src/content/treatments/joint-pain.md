@@ -11,6 +11,8 @@ order: 8
 navLabel: "Joint pain"
 cardBlurb: "Evaluation for aching, stiff joints."
 icon: "joint"
+photo: knee
+photoPosition: "50% 50%"
 serviceName: "Joint pain evaluation"
 routes: ["clinic"]
 audience: ["men", "women"]

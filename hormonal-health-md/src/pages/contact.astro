@@ -47,7 +47,14 @@ const areas = await entries('areas');
             </dd>
           </div>
           <div><dt>Parking</dt><dd>[[CONFIRM: parking and building access at 501 Golden Isles Dr, including visitor parking, elevator and suite directions]]</dd></div>
-          <div><dt>Booking</dt><dd>Call the clinic. [[CONFIRM: online booking link, if one is offered]]</dd></div>
+          <div>
+            <dt>Booking</dt>
+            <dd>
+              {clinic.owner ? <>Call {clinic.owner.name}, {clinic.owner.title}, on <a href={nap.telHref} data-event="call_click"><span data-phone>{clinic.phoneDisplay}</span></a>.</> : 'Call the clinic.'}
+              {' '}[[CONFIRM: online booking link, if one is offered]]
+            </dd>
+          </div>
+          {clinic.email && <div><dt>Email</dt><dd><a href={`mailto:${clinic.email}`}>{clinic.email}</a></dd></div>}
         </dl>
         <div class="btn-row" style="margin-top:1.75rem">
           <a class="btn btn--primary" href={nap.mapsDirections} target="_blank" rel="noopener"><Icon name="directions" /> Get directions</a>
@@ -87,8 +94,9 @@ const areas = await entries('areas');
 
         <h2>Can I email or send a message?</h2>
         <p>
+          {clinic.email ? <>For general questions about services or booking, email <a href={`mailto:${clinic.email}`}>{clinic.email}</a>. </> : null}
           Please do not send health details by ordinary email, which is not secure.
-          [[CONFIRM: secure patient message or contact form, and the public email address if one should be listed]]
+          [[CONFIRM: secure patient message or contact form, if one is offered]]
         </p>
         <p>If this is a medical emergency, call 911.</p>
       </div>

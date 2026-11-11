@@ -2,7 +2,6 @@
   "note": "Old GoDaddy site paths (inventory of 9 Nov 2026) mapped to the new site. Rebuild from the Search Console export before launch.",
   "redirects": [
     { "from": "/our-services", "to": "/treatments", "why": "Service index to service index." },
-    { "from": "/benefits-of-treatment", "to": "/treatments", "why": "Benefit lists and before/after gallery are retired. Closest live page is the treatment index." },
     { "from": "/contact-us", "to": "/contact", "why": "Contact page to contact page." },
     { "from": "/testosterone-therapies", "to": "/treatments/testosterone-therapy", "why": "Same service." },
     { "from": "/estrogen-treatments", "to": "/treatments/testosterone-therapy", "why": "Old page is about estrogen and aromatization in men on testosterone. The TRT page now answers that. Re-check against Search Console queries." },

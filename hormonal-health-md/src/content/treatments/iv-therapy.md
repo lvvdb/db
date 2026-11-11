@@ -9,6 +9,8 @@ order: 4
 navLabel: "IV therapy"
 cardBlurb: "Hydration and vitamin drips, in clinic or mobile."
 icon: "drop"
+photo: ivBag
+photoPosition: "50% 30%"
 serviceName: "IV hydration and vitamin therapy"
 routes: ["clinic", "mobile"]
 audience: ["men", "women"]

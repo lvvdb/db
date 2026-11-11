@@ -9,6 +9,8 @@ order: 6
 navLabel: "Growth hormone evaluation"
 cardBlurb: "Testing for adult growth hormone deficiency."
 icon: "growth"
+photo: stones
+photoPosition: "50% 60%"
 serviceName: "Adult growth hormone deficiency evaluation"
 routes: ["clinic"]
 audience: ["men", "women"]

@@ -327,9 +327,12 @@ server.close();
 // ------------------------------------------------------------ launch gate
 const confirmTotal = pages.reduce((n, p) => n + p.confirms.length, 0);
 const held = pages.filter((p) => p.onHold);
+const photoData = JSON.parse(await readFile(path.join(root, 'src/data/photos.json'), 'utf8'));
+const unlicensed = Object.values(photoData.photos).filter((ph) => ph.rights === 'confirm');
 if (LAUNCH) {
   if (confirmTotal) err('launch', `${confirmTotal} [[CONFIRM]] markers remain across ${pages.filter((p) => p.confirms.length).length} pages`);
   for (const p of held) err('launch', `${p.url} is still on hold or in draft`);
+  if (!photoData.rightsConfirmed && unlicensed.length) err('launch', `${unlicensed.length} photos copied from the old site need a confirmed licence (set rightsConfirmed in src/data/photos.json)`);
 }
 
 // ------------------------------------------------------------------ report
@@ -383,6 +386,14 @@ md.push('## Every distinct fact to confirm', '');
 md.push(`${allAsks.size} distinct facts. Answer each once in \`src/config/clinic.ts\` or in the page copy and it clears everywhere it appears.`, '');
 md.push('| Fact needed | Pages |', '| --- | --- |');
 for (const [ask, set] of [...allAsks].sort((a, b) => b[1].size - a[1].size)) md.push(`| ${esc(ask)} | ${set.size} |`);
+
+md.push('', '## Photos', '');
+md.push(`Every photo was copied from the clinic's current site. Licences confirmed: ${photoData.rightsConfirmed ? 'yes' : 'no'}. Before-and-after photos cleared for public use: ${photoData.resultsConsent ? 'yes' : 'no'}.`, '');
+md.push('| File | Alt text | Taken from | Licence | Note |', '| --- | --- | --- | --- | --- |');
+for (const ph of Object.values(photoData.photos)) md.push(`| ${ph.file} | ${esc(ph.alt)} | ${ph.from} | ${ph.rights === 'free' ? esc(ph.licence || 'free') : 'confirm'} | ${esc(ph.note || '')} |`);
+for (const r of photoData.results) md.push(`| ${r.file} | ${esc(r.alt)} | ${r.from} | confirm consent | Shown only in review builds until resultsConsent is true |`);
+md.push('', 'Left out on purpose:', '');
+for (const n of photoData.notUsed) md.push(`- ${n.file}: ${n.why}`);
 
 if (warnings.length) md.push('', '## Warnings', '', ...warnings.map((w) => `- ${w}`));
 if (errors.length) md.push('', '## Errors', '', ...errors.map((e) => `- ${e}`));

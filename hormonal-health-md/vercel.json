@@ -8,11 +8,6 @@
       "statusCode": 301
     },
     {
-      "source": "/benefits-of-treatment",
-      "destination": "/treatments",
-      "statusCode": 301
-    },
-    {
       "source": "/contact-us",
       "destination": "/contact",
       "statusCode": 301

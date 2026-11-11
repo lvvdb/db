@@ -4,6 +4,7 @@ import Base from './Base.astro';
 import PageHero from '../components/PageHero.astro';
 import LabPanel from '../components/art/LabPanel.astro';
 import Icon from '../components/Icon.astro';
+import Photo from '../components/Photo.astro';
 import Steps from '../components/Steps.astro';
 import Faq from '../components/Faq.astro';
 import TrustBlock from '../components/TrustBlock.astro';
@@ -21,6 +22,8 @@ interface Props {
   headline: string;
   lede: string;
   updated: string;
+  photo?: string;
+  photoPosition?: string;
   panelTitle: string;
   panelRows: { label: string; at: number; status: 'Low' | 'In range' | 'High' | 'Borderline' }[];
   checkTitle: string;
@@ -52,7 +55,16 @@ const crumbs = [
   schema={[faqNode(p.path, p.faqs)]}
 >
   <PageHero crumbs={crumbs} eyebrow={p.eyebrow} headline={p.headline} lede={p.lede} hasAside>
-    <LabPanel slot="aside" title={p.panelTitle} rows={p.panelRows} />
+    <div slot="aside" class:list={['aud-art', { 'aud-art--photo': p.photo }]}>
+      {
+        p.photo && (
+          <div class="aud-art__img">
+            <Photo name={p.photo} sizes="(min-width: 62rem) 26rem, 88vw" position={p.photoPosition} eager />
+          </div>
+        )
+      }
+      <div class="aud-art__panel"><LabPanel title={p.panelTitle} rows={p.panelRows} /></div>
+    </div>
   </PageHero>
 
   <section class="section section--paper">
@@ -188,5 +200,24 @@ const crumbs = [
     margin: 0;
     color: var(--ink-soft);
     line-height: 1.55;
+  }
+  .aud-art--photo {
+    position: relative;
+    width: min(100%, 30rem);
+    margin-inline: auto;
+  }
+  .aud-art__img {
+    width: 88%;
+    margin-left: auto;
+    aspect-ratio: 5 / 4;
+    overflow: hidden;
+    border-radius: var(--r-lg);
+    background: var(--sand);
+    box-shadow: var(--shadow-md);
+  }
+  .aud-art--photo .aud-art__panel {
+    position: relative;
+    width: min(21rem, 86%);
+    margin-top: -6.5rem;
   }
 </style>

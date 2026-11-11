@@ -487,11 +487,12 @@ address {
 /* Cards ------------------------------------------------------------------- */
 
 .card {
+  --card-pad: clamp(1.35rem, 2.4vw, 1.9rem);
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  padding: clamp(1.35rem, 2.4vw, 1.9rem);
+  padding: var(--card-pad);
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
@@ -1110,4 +1111,46 @@ mark.confirm {
   border-top: 1px solid var(--line);
   color: var(--ink);
   font-weight: 620;
+}
+
+/* Photos. <picture> steps out of layout so the <img> sizes against its frame. */
+picture {
+  display: contents;
+}
+.photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card--photo {
+  padding-top: 0;
+  overflow: hidden;
+}
+.card__img {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  margin: 0 calc(var(--card-pad) * -1) 0.4rem;
+  overflow: hidden;
+  background: var(--sand);
+}
+.card__img .photo {
+  transition: transform 0.6s var(--ease);
+}
+a.card:hover .card__img .photo {
+  transform: scale(1.05);
+}
+.card__img .icon-badge {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  background: rgb(255 255 255 / 0.94);
+  box-shadow: var(--shadow-sm);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card__img .photo,
+  a.card:hover .card__img .photo {
+    transition: none;
+    transform: none;
+  }
 }

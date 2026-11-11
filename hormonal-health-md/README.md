@@ -42,6 +42,8 @@ src/
   config/clinic.ts        Every fact about the clinic. Name, address and phone print from here.
   data/keyword-map.json   One primary search per page. The build fails on a duplicate.
   data/redirects.json     Old paths to new paths. Generates _redirects, _headers and vercel.json.
+  data/photos.json        Every photo: alt text, the old page it came from, licence status.
+  assets/photos/          The photos themselves, resized originals. Astro makes the web sizes.
   content/
     treatments/           Eight treatment pages (Markdown)
     conditions/           Five symptom pages
@@ -64,7 +66,7 @@ docs/
   seo-report.md           The hand-back report
   local-seo-playbook.md   Off-site checklist for the clinic, with paste-ready text
   site-audit.md           Generated. Titles, descriptions, H1s, redirects, overlap, markers
-  research/               Raw search re-run and live-site inventory from 9 November 2026
+  research/               Raw search re-run and live-site inventory from 9 November 2026, old site text from 11 November
 ```
 
 ## Titles, descriptions and confirmed differentiators
@@ -75,6 +77,15 @@ Titles and descriptions are written per page and stay under 60 and 155 character
 - **Per page:** add `titleSlot: "From $99"` to a page's frontmatter once that price is confirmed, and it takes the slot on that page.
 
 Neither should be set until the fact is true.
+
+## Photos
+
+Photos live in `src/assets/photos/`, and `src/data/photos.json` holds each one's alt text, the old page it came from and its licence status. Use one with `<Photo name="beach" sizes="..." />`. Astro writes AVIF and WebP at every useful width and never upscales a small original.
+
+Two flags in `photos.json` gate launch and the results gallery:
+
+- `rightsConfirmed`: `npm run check:launch` fails until the clinic confirms it holds a licence for every photo marked `confirm`.
+- `resultsConsent`: before and after photos only build publicly once each person is confirmed as a patient with a signed photo release. Until then they show in the drafts and review builds only, with a `[[CONFIRM]]` marker.
 
 ## Page status
 

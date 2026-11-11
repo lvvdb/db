@@ -2,7 +2,6 @@
 # Every rule is a single hop to a page that returns 200.
 
 /our-services  /treatments  301
-/benefits-of-treatment  /treatments  301
 /contact-us  /contact  301
 /testosterone-therapies  /treatments/testosterone-therapy  301
 /estrogen-treatments  /treatments/testosterone-therapy  301

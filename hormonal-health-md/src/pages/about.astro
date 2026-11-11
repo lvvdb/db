@@ -1,6 +1,7 @@
 ---
 import Simple from '../layouts/Simple.astro';
 import Steps from '../components/Steps.astro';
+import Photo from '../components/Photo.astro';
 import { clinic, nap } from '../config/clinic';
 import { entries, paths } from '../lib/content';
 
@@ -24,7 +25,36 @@ const areas = await entries('areas');
   crumbs={crumbs}
   fullClinic
   pageType="AboutPage"
+  hasAside
 >
+  <div slot="aside" class="about-art">
+    <Photo name="couplePark" sizes="(min-width: 62rem) 30rem, 92vw" position="50% 40%" eager />
+  </div>
+
+  <section class="section mission">
+    <div class="wrap mission__in">
+      <div class="mission__copy">
+        <p class="eyebrow">Our mission</p>
+        <h2>Get people healthy and <em>restore balance.</em></h2>
+        <p class="lede">
+          Our mission is to get people healthy, restore balance and help each person become the
+          best version of themselves. That starts with measuring your body chemistry, because a
+          proper assessment has to come before any plan.
+        </p>
+        <p>
+          No two people have the same chemistry, so no two plans are the same. We take your goals,
+          your history and your labs, then combine modern therapies, medication where it is
+          appropriate and nutrition planning into a plan built for you. It takes commitment on
+          both sides, and our team stays with you at every check-in so you feel better inside and
+          out.
+        </p>
+        <a class="link-arrow" href="/benefits-of-treatment">What treatment can and cannot do</a>
+      </div>
+      <div class="mission__img">
+        <Photo name="stones" sizes="(min-width: 62rem) 34rem, 92vw" position="50% 60%" />
+      </div>
+    </div>
+  </section>
   <section class="section section--paper">
     <div class="wrap--narrow">
       <div class="section-head">
@@ -67,7 +97,8 @@ const areas = await entries('areas');
           </dd>
         </div>
         <div><dt>Who provides care</dt><dd>[[CONFIRM: clinician name and credentials]] See the <a href="/team">team page</a>.</dd></div>
-        <div><dt>Owner</dt><dd>[[CONFIRM: owner or medical director of the clinic]]</dd></div>
+        <div><dt>Owner</dt><dd>{clinic.owner ? `${clinic.owner.name}, ${clinic.owner.title}` : '[[CONFIRM: owner of the clinic]]'}</dd></div>
+        {clinic.email && <div><dt>Email</dt><dd><a href={`mailto:${clinic.email}`}>{clinic.email}</a></dd></div>}
         <div><dt>Founded</dt><dd>[[CONFIRM: year the clinic opened]]</dd></div>
         <div><dt>Languages</dt><dd>[[CONFIRM: languages spoken by clinical and front desk staff]]</dd></div>
         <div><dt>Payment</dt><dd>[[CONFIRM: insurance and payment policy]] See <a href="/pricing">pricing</a>.</dd></div>
@@ -112,3 +143,40 @@ const areas = await entries('areas');
 
   <Steps />
 </Simple>
+
+<style>
+  .about-art {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: var(--r-lg);
+    background: var(--sand);
+    box-shadow: var(--shadow-md);
+  }
+  .mission__in {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+  @media (min-width: 62rem) {
+    .mission__in {
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    }
+  }
+  .mission__copy {
+    display: grid;
+    gap: 1.1rem;
+    max-width: 38rem;
+  }
+  .mission__copy h2 {
+    font-size: var(--step-4);
+  }
+  .mission__copy .link-arrow {
+    justify-self: start;
+  }
+  .mission__img {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: var(--r-lg);
+    background: var(--sand);
+  }
+</style>

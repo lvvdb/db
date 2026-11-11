@@ -9,6 +9,8 @@ order: 1
 navLabel: "Testosterone therapy"
 cardBlurb: "Low T testing and TRT, monitored by labs."
 icon: "pulse"
+photo: patch
+photoPosition: "50% 40%"
 serviceName: "Testosterone replacement therapy"
 routes: ["clinic", "telehealth"]
 audience: ["men"]

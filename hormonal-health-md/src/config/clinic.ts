@@ -21,6 +21,12 @@ export const clinic = {
   phoneDisplay: '(305) 219-4351',
   phoneE164: '+13052194351',
 
+  // Both from the contact page of the current site (hormonalhealthmd.com/contact-us,
+  // captured 9 and 11 Nov 2026): "CEO / Owner", "Please call Ian Arthur for an
+  // appointment" and a mailto link to this address.
+  email: 'Ian@hormonalhealthmd.com' as string | null,
+  owner: { name: 'Ian Arthur', title: 'CEO and owner' } as { name: string; title: string } | null,
+
   // Centre of the Google map embedded on the current site's homepage and contact page
   // (captured 9 Nov 2026). Replace with the verified Google Business Profile pin.
   geo: { lat: 25.98491, lng: -80.129626 } as { lat: number; lng: number } | null,

@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import ContentPage from '../../layouts/ContentPage.astro';
 import Icon from '../../components/Icon.astro';
+import Photo from '../../components/Photo.astro';
 import { entries, paths } from '../../lib/content';
 import { serviceNode } from '../../lib/schema';
 
@@ -46,7 +47,14 @@ const crumbs = [
   sources={d.sources}
   schema={[serviceNode({ path, name: d.serviceName, description: d.description })]}
 >
-  <div slot="aside" class="glance">
+  <div slot="aside" class:list={['glance', { 'glance--photo': d.photo }]}>
+    {
+      d.photo && (
+        <div class="glance__img">
+          <Photo name={d.photo} sizes="(min-width: 62rem) 28rem, 92vw" position={d.photoPosition} eager />
+        </div>
+      )
+    }
     <p class="glance__title"><Icon name={d.icon} /> At a glance</p>
     <dl>
       {
@@ -130,6 +138,15 @@ const crumbs = [
     border-radius: var(--r-lg);
     background: rgb(255 255 255 / 0.92);
     box-shadow: var(--shadow-md);
+  }
+  .glance--photo {
+    overflow: hidden;
+    padding-top: 0;
+  }
+  .glance__img {
+    aspect-ratio: 16 / 7;
+    margin: 0 calc(clamp(1.4rem, 3vw, 1.9rem) * -1) 1.3rem;
+    background: var(--sand);
   }
   .glance__title {
     display: flex;
