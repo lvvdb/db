@@ -21,6 +21,7 @@ Start with [`docs/seo-report.md`](docs/seo-report.md). It explains what was buil
 | `npm run build:staging` | Build the review version into `dist-staging/`: all pages and drafts, every page noindex, crawlers blocked, preview banner. |
 | `npm run preview:staging` | Serve `dist-staging/` at http://localhost:4323. |
 | `npm run check:sources` | Load every cited source with [webclaw](https://github.com/0xMassi/webclaw) and report any that are missing. |
+| `npm run export:obsidian` | Export the whole site as Obsidian notes into `obsidian/Hormonal Health MD`. Add `-- "/path/to/vault/Hormonal Health MD"` to write straight into a vault. |
 
 ## How unconfirmed facts work
 
@@ -127,6 +128,14 @@ cargo install --git https://github.com/0xMassi/webclaw.git --locked webclaw-cli
 DOI links are skipped by default because publishers usually refuse bots. Add `-- --doi` to include them, or `-- --only fda.gov` to check one site.
 
 Inside a cloud sandbox that sends all traffic through an inspecting proxy with no local DNS, stock webclaw cannot connect. `scripts/webclaw-proxy-sandbox.patch` is a two-part local patch against webclaw 0.7.2 that makes it trust the bundle named by `SSL_CERT_FILE` and leave name resolution to the proxy when `WEBCLAW_PROXY` is set. Apply it to a clone with `git apply`, build with `cargo build --release -p webclaw-cli`, and run with `WEBCLAW_PROXY="$HTTPS_PROXY"`. On a normal machine you do not need it.
+
+## Obsidian export
+
+`npm run export:obsidian` builds the public and drafts versions, then writes one note per page (all 47, drafts included) plus the SEO report, the local SEO playbook, the site audit, this README, the keyword map, the redirects and a checklist of every open fact.
+
+Each page note carries its URL, status, title tag, meta description, H1 and primary search as properties. Internal links become wikilinks, so backlinks and the graph view show the hub-and-spoke structure. `[[CONFIRM]]` markers become yellow highlights, and FAQs become folded callouts.
+
+The export writes and overwrites files but never deletes, so it is safe to point at a folder inside a vault. Notes are a snapshot: change the site in the repo, then export again.
 
 ## Deploying
 

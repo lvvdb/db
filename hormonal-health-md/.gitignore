@@ -6,3 +6,4 @@ dist-staging/
 .astro/
 .DS_Store
 *.log
+obsidian/

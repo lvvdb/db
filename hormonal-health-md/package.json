@@ -18,6 +18,7 @@
     "check": "npm run build && npm run qa",
     "check:launch": "npm run build && node scripts/qa.mjs --launch",
     "check:sources": "node scripts/check-sources.mjs",
+    "export:obsidian": "npm run build && npm run build:drafts && node scripts/export-obsidian.mjs",
     "build:staging": "SITE_STAGING=1 SHOW_DRAFTS=1 astro build --outDir dist-staging && node scripts/gen-redirects.mjs --staging dist-staging",
     "preview:staging": "node scripts/serve.mjs dist-staging 4323"
   },
@@ -26,5 +27,8 @@
     "@fontsource-variable/fraunces": "^5.3.0",
     "@fontsource-variable/instrument-sans": "^5.3.0",
     "astro": "^7.4.8"
+  },
+  "devDependencies": {
+    "turndown": "^7.2.0"
   }
 }
